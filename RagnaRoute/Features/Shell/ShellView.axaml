@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RagnaRoute.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:ui="using:FluentAvalonia.UI.Controls"
+		xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="RagnaRoute.Views.ShellView"
+        Icon="/Assets/avalonia-logo.ico"
+		x:CompileBindings="True"
+		x:DataType="vm:ShellViewModel"
+		UseLayoutRounding="True"
+        Title="RagnaRoute">
+	<Grid RowDefinitions="auto, *">
+		<StackPanel Margin="5,5,0,5" Grid.ColumnSpan="1" Orientation="Horizontal">
+			<TextBlock Text="RagnaRoute" />
+		</StackPanel>
+			
+		<ui:NavigationView x:Name="nav" Grid.Row="1" PaneDisplayMode="Auto" MenuItems="{Binding Trackers}" IsSettingsVisible="False">
+			<ui:NavigationView.MenuItemTemplate>
+				<DataTemplate DataType="{x:Type vm:TrackingViewModel}">
+					<ui:NavigationViewItem Content="{Binding Name}">
+						<ui:NavigationViewItem.Icon>
+							<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC4F;"/>
+						</ui:NavigationViewItem.Icon>
+					</ui:NavigationViewItem>
+				</DataTemplate>
+			</ui:NavigationView.MenuItemTemplate>
+
+			<ui:NavigationView.Content>
+				<ContentControl Content="{Binding #nav.SelectedItem}" />
+			</ui:NavigationView.Content>
+
+			<!--<ui:NavigationView.MenuItems>
+				<ui:NavigationViewItem Content="MVPs" />
+				<ui:NavigationViewItem Content="Daily Instances" />
+				<ui:NavigationViewItem Content="Eden Mission 1-39" />
+				<ui:NavigationViewItem Content="Eden Mission 40-69" />
+				<ui:NavigationViewItem Content="Eden Mission 70-99" />
+				<ui:NavigationViewItem Content="Eden Mission 100-110" />
+				<ui:NavigationViewItem Content="Eden Mission 120-140" />
+				<ui:NavigationViewItem Content="Eden Mission 130-190" />
+				<ui:NavigationViewItem Content="Eden Mission 175+" />
+				<ui:NavigationViewItem Content="Eden Mission 200+" />
+				<ui:NavigationViewItem Content="Eden Mission 200-230+" />
+				<ui:NavigationViewItem Content="Market" />
+			</ui:NavigationView.MenuItems>-->
+		</ui:NavigationView>
+	</Grid>
+</Window>
