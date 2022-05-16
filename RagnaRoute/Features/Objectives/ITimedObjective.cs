@@ -1,31 +1,43 @@
 ﻿using NodaTime;
 
 namespace RagnaRoute.Objectives;
+
+public enum TimeState { Before, During, After, Completed, Indeterminate }
+
 public interface ITimedObjective
 {
     /// <summary>
-    /// When the objective starts
+    /// When the Objective starts
     /// </summary>
-    Interval Start { get; }
+    Instant Start { get; }
 
     /// <summary>
-    /// When the objective ends
-    /// If null, then the objective ends immediately end after starting
+    /// Duration where the Objective is active
     /// </summary>
-    Interval? End { get; }
+    Duration Duration { get; }
 
     /// <summary>
-    /// Duration from last update until the objective will start
+    /// When the Objective ends
+    /// </summary>
+    Instant End { get; }
+
+    /// <summary>
+    /// Duration from last update until the Objective will start
     /// </summary>
     Duration TimeUntilStarting { get; }
 
     /// <summary>
-    /// Duration from last update until the objective will end
+    /// Duration from last update until the Objective will end
     /// </summary>
     Duration TimeUntilEnding { get; }
 
     /// <summary>
-    /// Update the objective with the current time
+    /// TimeState the Objective is currently in
+    /// </summary>
+    TimeState State { get; }
+
+    /// <summary>
+    /// Update the Objective with the current time
     /// </summary>
     /// <param name="current"></param>
     void Update(Instant current);

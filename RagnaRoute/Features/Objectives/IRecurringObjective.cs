@@ -9,7 +9,7 @@ public interface IRecurringObjective : ITimedObjective
     Instant? LastReset { get; }
 
     /// <summary>
-    /// Reset the object's LastReset time to now
+    /// Reset the object's LastReset time to the current time
     /// </summary>
     void Reset();
 

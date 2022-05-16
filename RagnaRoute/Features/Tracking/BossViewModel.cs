@@ -34,6 +34,13 @@ public class BossViewModel : ViewModelBase
         set => this.RaiseAndSetIfChanged(ref _timeUntilEnding, value);
     }
 
+    private TimeState _timeState;
+    public TimeState TimeState
+    {
+        get => _timeState;
+        set => this.RaiseAndSetIfChanged(ref _timeState, value);
+    }
+
     public SpawnObjective Objective { get; }
 
     public BossViewModel(string name, long hp, MonsterElement element, MonsterRace race, MonsterSize size)
@@ -54,8 +61,9 @@ public class BossViewModel : ViewModelBase
     {
         Objective.Update(SystemClock.Instance.GetCurrentInstant());
 
-        TimeUntilStarting = (int) Objective.TimeUntilStarting.TotalSeconds;
-        TimeUntilEnding = (int)Objective.TimeUntilEnding.TotalSeconds;
+        TimeUntilStarting = (int)Math.Round(Objective.TimeUntilStarting.TotalSeconds, MidpointRounding.ToEven);
+        TimeUntilEnding = (int)Math.Round(Objective.TimeUntilEnding.TotalSeconds, MidpointRounding.ToEven);
+        TimeState = Objective.State;
     }
 
     public void ResetObjective()

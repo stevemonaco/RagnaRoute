@@ -1,20 +1,20 @@
-﻿using NodaTime;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using NodaTime;
 
 namespace RagnaRoute.Objectives;
 public class SpawnObjective : IRecurringObjective
 {
-    public Interval Start { get; private set; }
-    public Interval? End { get; private set; }
+    public Instant Start { get; private set; }
+    public Duration Duration { get; private set; }
+
+    public Instant End => Start + Duration;
 
     public Duration TimeUntilStarting { get; private set; }
     public Duration TimeUntilEnding { get; private set; }
 
     public Instant? LastReset { get; private set; }
+
+    public TimeState State { get; private set; } = TimeState.Indeterminate;
 
     private readonly Duration _respawnMinimum;
     private readonly Duration _respawnMaximum;
@@ -33,18 +33,15 @@ public class SpawnObjective : IRecurringObjective
     /// <inheritdoc/>
     public void Update(Instant current)
     {
-        if (LastReset is null)
-            return;
-
         _lastUpdate = current;
 
-        UpdateRemaining(current);
+        if (LastReset is not null)
+            UpdateRemaining(current);
     }
 
-    public void Reset()
-    {
-        LastReset = SystemClock.Instance.GetCurrentInstant();
-    }
+    /// <inheritdoc/>
+    public void Reset() =>
+        Reset(SystemClock.Instance.GetCurrentInstant());
 
     /// <inheritdoc/>
     public void Reset(Instant? resetTime)
@@ -62,5 +59,7 @@ public class SpawnObjective : IRecurringObjective
 
         TimeUntilStarting = _respawnMinimum - (instant - LastReset.Value);
         TimeUntilEnding = _respawnMaximum - (instant - LastReset.Value);
+
+        State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
     }
 }

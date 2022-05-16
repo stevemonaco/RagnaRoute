@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RagnaRoute.Model;
+using RagnaRoute.Objectives;
 
 namespace RagnaRoute.ViewModels;
 public class BossTrackingViewModel : TrackingViewModel

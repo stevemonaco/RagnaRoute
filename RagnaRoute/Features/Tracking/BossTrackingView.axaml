@@ -15,6 +15,7 @@
 					<TextBlock Margin="8,0,0,0" Text="{Binding HP}" />
 					<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilStarting}" />
 					<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding}" />
+					<TextBlock Margin="8,0,0,0" Text="{Binding TimeState}" />
 					<Button Margin="8,0,0,0" Command="{Binding ResetObjectiveCommand}" Content="Reset" />
 				</StackPanel>
 			</DataTemplate>
