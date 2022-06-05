@@ -6,7 +6,6 @@ public class SpawnObjective : IRecurringObjective
 {
     public Instant Start { get; private set; }
     public Duration Duration { get; private set; }
-
     public Instant End => Start + Duration;
 
     public Duration TimeUntilStarting { get; private set; }
@@ -52,13 +51,13 @@ public class SpawnObjective : IRecurringObjective
             UpdateRemaining(_lastUpdate.Value);
     }
 
-    private void UpdateRemaining(Instant instant)
+    private void UpdateRemaining(Instant current)
     {
         if (LastReset is null)
             return;
 
-        TimeUntilStarting = _respawnMinimum - (instant - LastReset.Value);
-        TimeUntilEnding = _respawnMaximum - (instant - LastReset.Value);
+        TimeUntilStarting = _respawnMinimum - (current - LastReset.Value);
+        TimeUntilEnding = _respawnMaximum - (current - LastReset.Value);
 
         State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
     }

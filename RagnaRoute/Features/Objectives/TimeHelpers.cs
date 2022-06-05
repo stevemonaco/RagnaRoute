@@ -16,4 +16,34 @@ internal static class TimeHelpers
         else
             throw new InvalidOperationException($"{nameof(DetermineTimeState)} with a positive {nameof(timeUntilStarting)} '{timeUntilStarting}' and negative {nameof(timeUntilEnding)} '{timeUntilEnding}'");
     }
+
+    //public static ZonedDateTime ToZonedDateTime(this Instant instant)
+    //{
+
+    //}
+
+    /// <summary>
+    /// Constructs an Interval from two LocalDateTime using the system default time zone
+    /// </summary>
+    /// <param name="start">Start of the Interval</param>
+    /// <param name="end">End of the Interval</param>
+    /// <returns></returns>
+    public static Interval LocalDateTimesToInterval(LocalDateTime start, LocalDateTime end)
+    {
+        var zone = DateTimeZoneProviders.Tzdb.GetSystemDefault();
+
+        return LocalDateTimesToInterval(start, end, zone);
+    }
+
+    /// <summary>
+    /// Constructs an Interval from two LocalDateTime using the specified time zone
+    /// </summary>
+    /// <param name="start">Start of the Interval</param>
+    /// <param name="end">End of the Interval</param>
+    /// <param name="zone">Time zone to map with</param>
+    /// <returns></returns>
+    public static Interval LocalDateTimesToInterval(LocalDateTime start, LocalDateTime end, DateTimeZone zone)
+    {
+        return new Interval(start.InZoneLeniently(zone).ToInstant(), end.InZoneLeniently(zone).ToInstant());
+    }
 }
