@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="using:RagnaRoute.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:CompileBindings="True"
+			 x:DataType="vm:KillQuestTrackingViewModel"
+             x:Class="RagnaRoute.Views.KillQuestTrackingView">
+	<ItemsControl Items="{Binding Quests}">
+		<ItemsControl.ItemTemplate>
+			<DataTemplate DataType="{x:Type vm:KillQuestViewModel}">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="{Binding Name}" />
+					<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilStarting}" />
+					<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding}" />
+					<Button Margin="8,0,0,0" Command="{Binding ResetObjectiveCommand}" Content="Reset" />
+				</StackPanel>
+			</DataTemplate>
+		</ItemsControl.ItemTemplate>
+	</ItemsControl>
+</UserControl>

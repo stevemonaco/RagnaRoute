@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RagnaRoute.ViewModels;
-public abstract class TrackingViewModel : ViewModelBase
+public abstract class TrackingGroupViewModel : ViewModelBase
 {
     private string _name;
     public string Name

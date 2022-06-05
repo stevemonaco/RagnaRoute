@@ -11,7 +11,7 @@ public enum MonsterElement
     Wind1, Wind2, Wind3, Wind4,
     Poison1, Poison2, Poison3, Poison4,
     Holy1, Holy2, Holy3, Holy4,
-    Shadow1, Shadow2, Shadow3, Shadow4,
+    Dark1, Dark2, Dark3, Dark4,
     Ghost1, Ghost2, Ghost3, Ghost4,
     Undead1, Undead2, Undead3, Undead4
 }

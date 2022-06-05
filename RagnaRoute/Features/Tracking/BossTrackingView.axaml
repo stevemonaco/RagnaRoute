@@ -7,18 +7,23 @@
 			 x:CompileBindings="True"
 			 x:DataType="vm:BossTrackingViewModel"
              x:Class="RagnaRoute.Views.BossTrackingView">
-	<ItemsControl Items="{Binding Bosses}">
-		<ItemsControl.ItemTemplate>
-			<DataTemplate DataType="{x:Type vm:BossViewModel}">
-				<StackPanel Orientation="Horizontal">
-					<TextBlock Text="{Binding Name}" />
-					<TextBlock Margin="8,0,0,0" Text="{Binding HP}" />
-					<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilStarting}" />
-					<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding}" />
-					<TextBlock Margin="8,0,0,0" Text="{Binding TimeState}" />
-					<Button Margin="8,0,0,0" Command="{Binding ResetObjectiveCommand}" Content="Reset" />
-				</StackPanel>
-			</DataTemplate>
-		</ItemsControl.ItemTemplate>
-	</ItemsControl>
+	<ScrollViewer>
+		<ItemsRepeater Items="{Binding Bosses}">
+			<ItemsRepeater.Layout>
+				<StackLayout Orientation="Vertical" />
+			</ItemsRepeater.Layout>
+			<ItemsRepeater.ItemTemplate>
+				<DataTemplate DataType="{x:Type vm:BossViewModel}">
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="{Binding Name}" />
+						<TextBlock Margin="8,0,0,0" Text="{Binding HP}" />
+						<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilStarting}" />
+						<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding}" />
+						<TextBlock Margin="8,0,0,0" Text="{Binding TimeState}" />
+						<Button Margin="8,0,0,0" Command="{Binding ResetObjectiveCommand}" Content="Reset" />
+					</StackPanel>
+				</DataTemplate>
+			</ItemsRepeater.ItemTemplate>
+		</ItemsRepeater>
+	</ScrollViewer>
 </UserControl>

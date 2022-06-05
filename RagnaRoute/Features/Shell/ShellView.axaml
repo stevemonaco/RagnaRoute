@@ -19,7 +19,7 @@
 			
 		<ui:NavigationView x:Name="nav" Grid.Row="1" PaneDisplayMode="Auto" MenuItems="{Binding Trackers}" IsSettingsVisible="False">
 			<ui:NavigationView.MenuItemTemplate>
-				<DataTemplate DataType="{x:Type vm:TrackingViewModel}">
+				<DataTemplate DataType="{x:Type vm:TrackingGroupViewModel}">
 					<ui:NavigationViewItem Content="{Binding Name}">
 						<ui:NavigationViewItem.Icon>
 							<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC4F;"/>

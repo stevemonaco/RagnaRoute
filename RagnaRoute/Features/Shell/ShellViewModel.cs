@@ -1,4 +1,5 @@
 using Avalonia.Threading;
+using RagnaRoute.Data;
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
@@ -6,29 +7,29 @@ using System.Collections.ObjectModel;
 namespace RagnaRoute.ViewModels;
 public class ShellViewModel : ViewModelBase
 {
-    private ObservableCollection<TrackingViewModel> _trackers;
-    public ObservableCollection<TrackingViewModel> Trackers
+    private ObservableCollection<TrackingGroupViewModel> _trackers;
+    public ObservableCollection<TrackingGroupViewModel> Trackers
     {
         get => _trackers;
         set => this.RaiseAndSetIfChanged(ref _trackers, value);
     }
 
-    private readonly DispatcherTimer _timer;
+    private readonly DispatcherTimer _objectiveTimer;
 
-    public ShellViewModel()
+    public ShellViewModel(MonsterStore monsterStore)
     {
         _trackers = new()
         {
-            new BossTrackingViewModel(),
-            new BossTrackingViewModel(),
-            new BossTrackingViewModel()
+            new BossTrackingViewModel(monsterStore),
+            new KillQuestTrackingViewModel(),
+            new KillQuestTrackingViewModel()
         };
 
-        _timer = new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal, _timer_Tick);
-        _timer.Start();
+        _objectiveTimer = new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal, ObjectiveTimer_Tick);
+        _objectiveTimer.Start();
     }
 
-    private void _timer_Tick(object? sender, EventArgs e)
+    private void ObjectiveTimer_Tick(object? sender, EventArgs e)
     {
         foreach (var tracker in Trackers)
             tracker.UpdateObjective();
