@@ -1,0 +1,24 @@
+{
+	"order":
+	[
+		"Baphomet"
+	],
+	"killObjectives":
+	[
+		"Baphomet": {
+			"objectiveName": "Baphomet",
+			"objectiveType": "Kill",
+			"minimumRespawn": 60,
+			"maximumRespawn": 120,
+			"notification": "silent",
+			"information": [ "@go prt_hidden" ]
+		},
+		"Baphomet": {
+			"objectiveName": "Baphomet",
+			"objectiveType": "Kill",
+			"minimumRespawn": 60,
+			"maximumRespawn": 120,
+			"notification": "normal"
+		}
+	]
+}

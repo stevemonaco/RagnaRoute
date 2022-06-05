@@ -1,0 +1,164 @@
+[
+	{
+		"name": "Booster [1]",
+		"description": "Kill Fabre (10)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp prt_fild06" ]
+	},
+	{
+		"name": "Booster [11]",
+		"description": "Kill Snake (10), Spore (10), and Wormtail (10)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp pay_fild02" ]
+	},
+	{
+		"name": "Booster [20]",
+		"description": "Kill Poison Spore (20)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp mjolnir_06" ]
+	},
+	{
+		"name": "Booster [35]",
+		"description": "Kill Martin (30), Giearth (10), and Skeleton Worker (30)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp mjo_dun02", "@warp mjo_dun03" ]
+	},
+	{
+		"name": "Booster [50]",
+		"description": "Kill Swordfish (30), Merman (30), and Strouf (30)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp iz_dun03", "@warp iz_dun03" ]
+	},
+	{
+		"name": "Booster [65]",
+		"description": "Kill Munak (30), Bongun (30), and Sohee (40)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "" ]
+	},
+	{
+		"name": "Booster [80]",
+		"description": "Kill Clock (20), Alarm (20), and Rideword (20)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "" ]
+	},
+	{
+		"name": "Booster [85]",
+		"description": "Kill Permeter (20), Freezer (30), and Heater (30)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp tur_dun04", "@warp tur_dun03", "@warp tur_dun02" ]
+	},
+	{
+		"name": "Booster [99]",
+		"description": "Kill [99-115] Monsters: Water/Medium/Formless (30) -> Sting and Anolian",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp gl_sew03", "@warp gl_sew04" ]
+	},
+	{
+		"name": "Booster [115]",
+		"description": "Kill [115-130] Monsters: Earth/Large/Demi-Human (30) -> Bungisngis",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp ma_fild02" ]
+	},
+	{
+		"name": "Booster [130]",
+		"description": "Kill [130-145] Monsters: Dark/Small/Insect (30) -> Banshee and Horned Scaraba",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp abbey01", "@warp dic_dun01" ]
+	},
+	{
+		"name": "Booster [145]",
+		"description": "Kill [145-160] Monsters: Earth/Medium/Small (30) -> "Big Ben and Neo Punk",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp c_tower2_" ]
+	},
+	{
+		"name": "Booster [160]",
+		"description": "Kill Big Bell (60), Owl Viscount (1), Owl Marquis (1)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp c_tower3_" ]
+	},
+	{
+		"name": "Booster [175]",
+		"description": "Kill Ice Ghost (20), Flame Ghost (20), Contaminated Raydric (20)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp gl_cas01_" ]
+	},
+	{
+		"name": "Booster [190]",
+		"description": "Kill White Porcellio (10), Abyssman (20), Jewel (10)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp ein_dun03" ]
+	},
+	{
+		"name": "Booster [200]",
+		"description": "Kill Lude Gal (40)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp nif_dun01" ]
+	},
+	{
+		"name": "Booster [215]",
+		"description": "Kill Mutant Chimera Amitera (40)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp amicitia1" ]
+	},
+	{
+		"name": "Booster [230]",
+		"description": "Kill Mutant Chimera Fulgor (40)",
+		"type": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp amicitia2" ]
+	},
+]

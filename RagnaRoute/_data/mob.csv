@@ -1,0 +1,2895 @@
+Name,Id,Level,Hp,BaseExp,JobExp,Size,Race,Element,Custom
+Scorpion,1001,16,153,16900,11500,Small,Insect,Fire1,False
+Poring,1002,1,60,15000,4000,Medium,Plant,Water1,False
+Hornet,1004,11,90,15800,9000,Small,Insect,Wind1,False
+Familiar,1005,24,427,20000,15200,Small,Brute,Dark1,False
+Fabre,1007,6,72,15800,6500,Small,Insect,Earth1,False
+Pupa,1008,4,66,15700,5500,Small,Insect,Earth1,False
+Condor,1009,12,114,16000,9500,Medium,Brute,Wind1,False
+Willow,1010,8,91,16000,7500,Medium,Plant,Earth1,False
+Chonchon,1011,5,57,15000,6000,Small,Insect,Wind1,False
+Roda Frog,1012,13,160,16200,10000,Medium,Fish,Water1,False
+Wolf,1013,45,1219,36900,30100,Medium,Brute,Earth1,False
+Spore,1014,18,280,17500,12500,Medium,Plant,Water1,False
+Zombie,1015,17,234,18900,11200,Medium,Undead,Undead1,False
+Archer Skeleton,1016,50,1646,43600,32700,Medium,Undead,Undead1,False
+Creamy,1018,23,378,19600,14800,Small,Insect,Wind1,False
+Peco Peco,1019,25,446,20400,15600,Large,Brute,Fire1,False
+Mandragora,1020,13,156,17000,10000,Medium,Plant,Earth3,False
+Orc Warrior,1023,44,1434,36100,29300,Medium,DemiHuman,Earth1,False
+Wormtail,1024,17,200,18000,12000,Medium,Plant,Earth1,False
+Boa,1025,18,217,18300,12500,Medium,Brute,Earth1,False
+Munak,1026,58,2445,54800,42200,Medium,Undead,Undead1,False
+Soldier Skeleton,1028,34,804,28400,19800,Medium,Undead,Undead1,False
+Isis,1029,59,2092,51000,45700,Large,Demon,Dark1,False
+Anacondaq,1030,100,8510,138700,131600,Medium,Brute,Poison1,False
+Poporing,1031,30,524,22900,18100,Medium,Plant,Poison1,False
+Verit,1032,52,1944,47900,36200,Medium,Undead,Undead1,False
+Elder Willow,1033,34,599,25900,21000,Medium,Plant,Fire2,False
+Thara Frog,1034,40,1157,30000,25100,Medium,Fish,Water2,False
+Hunter Fly,1035,63,2050,58800,53200,Small,Insect,Wind2,False
+Ghoul,1036,61,2614,62000,48000,Medium,Undead,Undead2,False
+Side Winder,1037,70,2736,67700,62100,Medium,Brute,Poison1,False
+Osiris,1038,68,1175840,12276000,10044000,Medium,Undead,Undead4,False
+Baphomet,1039,81,668000,21808900,16705300,Large,Demon,Dark3,False
+Golem,1040,61,2245,56400,50800,Large,Formless,Neutral3,False
+Mummy,1041,55,2155,51200,39000,Medium,Undead,Undead2,False
+Steel Chonchon,1042,48,1199,37900,32800,Small,Insect,Wind1,False
+Obeaune,1044,53,2158,44600,39300,Medium,Fish,Water2,False
+Marc,1045,56,2522,47700,42400,Medium,Fish,Water2,False
+Doppelganger,1046,77,380000,17226000,12528000,Medium,Demon,Dark3,False
+Peco Peco Egg,1047,7,75,15200,7000,Small,Formless,Neutral3,False
+Thief Bug Egg,1048,20,344,18100,13500,Small,Insect,Dark1,False
+Picky,1049,9,95,15400,8000,Small,Brute,Fire1,False
+Picky,1050,10,89,15500,8500,Small,Brute,Fire1,False
+Thief Bug,1051,21,354,18800,14000,Small,Insect,Neutral3,False
+Rocker,1052,15,185,17400,11000,Medium,Insect,Earth1,False
+Thief Bug Female,1053,28,531,21900,17100,Medium,Insect,Dark1,False
+Thief Bug Male,1054,30,595,22900,18100,Medium,Insect,Dark1,False
+Muka,1055,23,468,20500,14800,Large,Plant,Earth1,False
+Smokie,1056,29,591,23500,17600,Small,Brute,Earth1,False
+Yoyo,1057,38,898,30000,23700,Small,Brute,Earth1,False
+Metaller,1058,55,1687,46600,41300,Medium,Insect,Fire1,False
+Mistress,1059,78,378000,18414000,15066000,Small,Insect,Wind4,False
+Bigfoot,1060,29,587,23500,17600,Large,Brute,Earth1,False
+Nightmare,1061,69,2872,59800,64100,Large,Demon,Ghost3,False
+Santa Poring,1062,1,55,200,200,Medium,Plant,Holy1,False
+Lunatic,1063,3,55,15000,5000,Small,Brute,Neutral3,False
+Megalodon,1064,46,1335,39700,29200,Medium,Undead,Undead1,False
+Strouf,1065,61,3052,56400,50800,Large,Fish,Water3,False
+Vadon,1066,45,1252,35200,30100,Small,Fish,Water1,False
+Cornutus,1067,48,1450,37900,32800,Small,Fish,Water1,False
+Hydra,1068,34,854,25900,21000,Small,Plant,Water2,False
+Swordfish,1069,57,2600,48800,43500,Large,Fish,Water2,False
+Kukre,1070,42,1111,32800,27700,Small,Fish,Water1,False
+Pirate Skeleton,1071,48,1411,41600,31000,Medium,Undead,Undead1,False
+Kaho,1072,98,7045,134900,127800,Medium,Demon,Fire4,False
+Crab,1073,43,1233,33600,28500,Small,Fish,Water1,False
+Shellfish,1074,50,1680,39700,34600,Small,Fish,Water1,False
+Skeleton,1076,27,612,23500,15600,Medium,Undead,Undead1,False
+Poison Spore,1077,26,456,20900,16100,Medium,Plant,Poison1,False
+Red Plant,1078,1,5,0,0,Small,Plant,Earth1,False
+Blue Plant,1079,1,10,0,0,Small,Plant,Earth1,False
+Green Plant,1080,1,5,0,0,Small,Plant,Earth1,False
+Yellow Plant,1081,1,6,0,0,Small,Plant,Earth1,False
+White Plant,1082,1,7,0,0,Small,Plant,Earth1,False
+Shining Plant,1083,1,20,0,0,Small,Plant,Holy1,False
+Black Mushroom,1084,1,5,0,0,Small,Plant,Earth1,False
+Red Mushroom,1085,1,5,0,0,Small,Plant,Earth1,False
+Golden Thief Bug,1086,65,222750,10206000,7776000,Large,Insect,Fire2,False
+Orc Hero,1087,50,362000,5346000,4860000,Large,DemiHuman,Earth2,False
+Vocal,1088,18,3317,4900,3900,Medium,Insect,Earth1,False
+Toad,1089,27,660,8100,9100,Medium,Fish,Water1,False
+Mastering,1090,42,1260,15700,17700,Medium,Plant,Water1,False
+Dragon Fly,1091,47,1035,18000,20200,Small,Insect,Wind1,False
+Vagabond Wolf,1092,93,8203,85300,130000,Medium,Brute,Earth1,False
+Eclipse,1093,31,625,10300,11600,Medium,Brute,Neutral3,False
+Ambernite,1094,19,340,17800,13000,Large,Insect,Water1,False
+Andre,1095,33,724,26500,20400,Small,Insect,Earth1,False
+Angeling,1096,77,19800,168300,134600,Medium,Angel,Holy4,False
+Ant Egg,1097,28,530,21900,17100,Small,Formless,Neutral3,False
+Anubis,1098,105,38826,301300,359700,Large,DemiHuman,Undead2,False
+Argiope,1099,75,3105,79400,73400,Large,Insect,Poison1,False
+Argos,1100,47,1005,37000,31900,Large,Insect,Poison1,False
+Baphomet Jr.,1101,57,2035,48800,43500,Small,Demon,Dark1,False
+Bathory,1102,86,5242,103500,97000,Medium,DemiHuman,Dark1,False
+Caramel,1103,25,518,21400,15600,Small,Brute,Earth1,False
+Coco,1104,38,836,30000,23700,Small,Brute,Earth1,False
+Deniro,1105,31,671,25300,19200,Small,Insect,Earth1,False
+Desert Wolf,1106,103,9447,158500,150700,Medium,Brute,Fire1,False
+Baby Desert Wolf,1107,14,140,16400,10500,Small,Brute,Fire1,False
+Deviace,1108,60,3135,52100,46800,Medium,Fish,Water4,False
+Deviruchi,1109,93,8912,125600,118500,Small,Demon,Dark1,False
+Dokebi,1110,68,2820,65100,59500,Small,Demon,Dark1,False
+Drainliar,1111,47,1162,37000,31900,Small,Brute,Dark2,False
+Drake,1112,91,804500,30909600,20898000,Medium,Undead,Undead1,False
+Drops,1113,2,45,15000,4500,Medium,Plant,Fire1,False
+Dustiness,1114,62,2026,57600,52000,Small,Insect,Wind2,False
+Eddga,1115,65,947500,10395000,7425000,Large,Brute,Fire1,False
+Eggyra,1116,53,1676,40200,41500,Medium,Formless,Ghost2,False
+Evil Druid,1117,80,5149,95500,76600,Large,Undead,Undead4,False
+Flora,1118,59,2301,53500,45700,Large,Plant,Earth1,False
+Frilldora,1119,57,1821,48800,43500,Medium,Brute,Fire1,False
+Ghostring,1120,90,26700,236800,223300,Medium,Demon,Ghost4,False
+Giearth,1121,42,1118,34400,27700,Small,Demon,Earth1,False
+Goblin,1122,48,1058,37900,32800,Medium,DemiHuman,Wind1,False
+Goblin,1123,44,931,34400,29300,Medium,DemiHuman,Fire1,False
+Goblin,1124,44,930,34400,29300,Medium,DemiHuman,Poison1,False
+Goblin,1125,49,1494,40700,33700,Medium,DemiHuman,Earth1,False
+Goblin,1126,56,2342,47700,42400,Medium,DemiHuman,Water1,False
+Hode,1127,63,2676,61700,53200,Medium,Brute,Earth2,False
+Horn,1128,32,705,25900,19800,Medium,Insect,Earth1,False
+Horong,1129,66,2304,62500,56900,Small,Formless,Fire4,False
+Jakk,1130,63,2054,58800,53200,Medium,Formless,Fire2,False
+Joker,1131,90,6022,110300,103800,Large,DemiHuman,Wind4,False
+Khalitzburg,1132,118,23986,286600,236800,Large,Undead,Undead1,False
+Kobold,1133,107,10483,184500,175900,Medium,DemiHuman,Wind2,False
+Kobold,1134,102,9152,156500,148700,Medium,DemiHuman,Poison2,False
+Kobold,1135,101,9078,154500,146700,Medium,DemiHuman,Fire2,False
+Kobold,1136,31,10,458250000,458250000,Medium,DemiHuman,Poison2,False
+Kobold,1137,31,10,458250000,458250000,Medium,DemiHuman,Fire2,False
+Magnolia,1138,53,1984,44600,39300,Small,Demon,Water1,False
+Mantis,1139,65,2719,64200,55600,Medium,Insect,Earth1,False
+Marduk,1140,73,2893,76600,70600,Large,DemiHuman,Fire1,False
+Marina,1141,42,1209,32800,27700,Small,Plant,Water2,False
+Marine Sphere,1142,51,1924,42600,37300,Small,Plant,Water2,False
+Marionette,1143,90,7166,99300,109300,Small,Demon,Ghost3,False
+Marse,1144,47,1456,37000,31900,Small,Fish,Water2,False
+Martin,1145,39,1056,30700,24400,Small,Brute,Earth2,False
+Matyr,1146,58,2087,49900,44600,Medium,Brute,Dark1,False
+Maya,1147,55,380000,8928000,6696000,Large,Insect,Earth4,False
+Medusa,1148,102,10045,156500,148700,Medium,Demon,Neutral2,False
+Minorous,1149,58,1893,49900,44600,Large,Brute,Fire2,False
+Moonlight Flower,1150,79,324000,18374400,13572000,Medium,Demon,Fire3,False
+Myst,1151,49,1223,38800,33700,Large,Formless,Poison1,False
+Orc Skeleton,1152,53,2077,49000,37100,Medium,Undead,Undead1,False
+Orc Zombie,1153,51,1908,46800,35200,Medium,Undead,Undead1,False
+Pasana,1154,79,3510,85400,79400,Medium,DemiHuman,Fire2,False
+Petite,1155,86,5799,108600,97000,Medium,Dragon,Earth1,False
+Petite,1156,79,3556,85400,79400,Medium,Dragon,Wind1,False
+Pharaoh,1157,85,900000,22968000,16704000,Large,DemiHuman,Dark3,False
+Phen,1158,52,1963,43600,38300,Medium,Fish,Water2,False
+Phreeoni,1159,71,300000,6380000,9000000,Large,Brute,Neutral3,False
+Piere,1160,32,696,25900,19800,Small,Insect,Earth1,False
+Plankton,1161,40,1232,30000,25100,Small,Plant,Water3,False
+Rafflesia,1162,86,5819,108600,97000,Small,Plant,Earth1,False
+Raydric,1163,115,18408,224600,215000,Large,DemiHuman,Dark2,False
+Requiem,1164,71,3089,73800,67800,Medium,DemiHuman,Dark1,False
+Sandman,1165,61,2887,59200,50800,Medium,Formless,Earth3,False
+Savage,1166,59,2301,53500,45700,Large,Brute,Earth2,False
+Savage Babe,1167,14,180,17200,10500,Small,Brute,Earth1,False
+Skeleton Worker,1169,44,1240,37800,27600,Medium,Undead,Undead1,False
+Sohee,1170,64,2875,60000,54400,Medium,Demon,Water1,False
+Stainer,1174,21,365,18800,14000,Small,Insect,Wind1,False
+Tarou,1175,22,420,19200,14400,Small,Brute,Dark1,False
+Vitata,1176,35,756,27800,21600,Small,Insect,Earth1,False
+Zenorc,1177,54,1816,45600,40300,Medium,DemiHuman,Dark1,False
+Zerom,1178,70,2687,67700,62100,Medium,DemiHuman,Fire1,False
+Whisper,1179,46,1109,32500,32800,Small,Demon,Ghost3,False
+Nine Tail,1180,72,2783,75200,69200,Medium,Brute,Fire3,False
+Thief Mushroom,1182,1,15,0,0,Small,Plant,Earth1,False
+Chonchon,1183,5,63,1800,1300,Small,Insect,Wind1,False
+Fabre,1184,1,30,100,0,Small,Insect,Earth1,False
+Whisper,1185,34,1796,24100,36800,Small,Undead,Ghost1,False
+Giant Whisper,1186,66,2570,33100,35500,Small,Demon,Ghost2,False
+Bongun,1188,59,2510,56100,43200,Medium,Undead,Undead1,False
+Orc Archer,1189,78,4835,88000,77900,Medium,DemiHuman,Earth1,False
+Orc Lord,1190,55,552000,7812000,6138000,Large,DemiHuman,Earth4,False
+Mimic,1191,56,1939,47700,42400,Medium,Formless,Neutral3,False
+Wraith,1192,77,5168,90600,72300,Large,Undead,Undead4,False
+Alarm,1193,88,5562,106900,100400,Medium,Formless,Neutral3,False
+Arclouze,1194,107,10020,193700,175900,Medium,Insect,Earth2,False
+Rideword,1195,74,3222,78000,72000,Small,Formless,Neutral3,False
+Skeleton Prisoner,1196,91,9194,134200,108800,Medium,Undead,Undead3,False
+Zombie Prisoner,1197,89,8045,119400,96700,Medium,Undead,Undead3,False
+Dark Priest,1198,98,12090,148300,121100,Medium,Demon,Undead4,False
+Punk,1199,82,3869,97000,90500,Small,Plant,Wind1,False
+Zealotus,1200,105,61350,466600,426100,Medium,DemiHuman,Neutral3,False
+Rybio,1201,98,8700,134900,127800,Large,Demon,Neutral2,False
+Phendark,1202,102,11000,156500,148700,Large,DemiHuman,Neutral2,False
+Mysteltainn,1203,130,70000,514700,274200,Large,Formless,Dark4,False
+Ogretooth,1204,114,59000,347400,275400,Medium,Formless,Dark3,False
+Executioner,1205,101,40200,291600,200400,Large,Formless,Dark2,False
+Anolian,1206,109,15547,188700,180100,Medium,Fish,Water2,False
+Sting,1207,104,10143,168500,152700,Medium,Formless,Earth3,False
+Wanderer,1208,120,19307,265200,254400,Medium,Demon,Wind1,False
+Cramp,1209,82,3898,97000,90500,Small,Brute,Poison2,False
+Brilight,1211,71,2772,73800,67800,Small,Insect,Fire1,False
+Iron Fist,1212,47,4221,64600,68400,Medium,Insect,Neutral3,False
+High Orc,1213,81,4193,95400,88900,Large,DemiHuman,Fire2,False
+Choco,1214,48,1080,37900,32800,Small,Brute,Fire1,False
+Stem Worm,1215,84,4530,100200,93700,Medium,Plant,Wind1,False
+Penomena,1216,85,4589,101800,95300,Medium,Fish,Poison1,False
+Abysmal Knight,1219,122,23297,307100,294800,Large,DemiHuman,Dark4,False
+Desert Wolf,1220,103,9447,20900,14300,Medium,Brute,Fire1,False
+Savage,1221,26,2092,16000,10100,Large,Brute,Earth2,False
+Fabre,1229,2,63,100,100,Small,Insect,Earth1,False
+Pupa,1230,2,427,100,200,Small,Insect,Earth1,False
+Creamy,1231,16,595,4300,2900,Small,Insect,Wind1,False
+Peco Peco Egg,1232,3,420,200,200,Small,Formless,Neutral3,False
+Yoyo,1234,19,879,6100,3800,Small,Brute,Earth1,False
+Smoking Orc,1235,24,1400,11700,7200,Medium,DemiHuman,Earth1,False
+Ant Egg,1236,4,420,200,200,Small,Formless,Neutral3,False
+Andre,1237,17,688,4900,3200,Small,Insect,Earth1,False
+Piere,1238,18,733,5500,3500,Small,Insect,Earth1,False
+Deniro,1239,19,760,6100,3800,Small,Insect,Earth1,False
+Picky,1240,3,80,200,100,Small,Brute,Fire1,False
+Picky,1241,4,83,200,200,Small,Brute,Fire1,False
+Marin,1242,37,987,27900,23000,Medium,Plant,Water2,False
+Sasquatch,1243,72,3163,75200,69200,Large,Brute,Neutral3,False
+Christmas Jakk,1244,63,1901,52600,30900,Medium,Formless,Fire2,False
+Christmas Goblin,1245,48,1107,12700,7700,Medium,DemiHuman,Wind1,False
+Christmas Cookie,1246,37,733,27900,23000,Small,DemiHuman,Holy2,False
+Antonio,1247,10,10,100,100,Medium,DemiHuman,Holy3,False
+Cruiser,1248,41,919,32000,26900,Medium,Formless,Neutral3,False
+Myst Case,1249,39,879,29300,24400,Medium,Formless,Neutral3,False
+Chepet,1250,42,4950,65700,92700,Medium,DemiHuman,Fire1,False
+Stormy Knight,1251,92,630500,24828000,15110000,Large,Formless,Wind4,False
+Hatii,1252,98,1275500,45532800,30690000,Large,Brute,Water4,False
+Gargoyle,1253,100,8772,138700,131600,Medium,Demon,Wind3,False
+Raggler,1254,48,1148,37900,32800,Small,Brute,Wind1,False
+Nereid,1255,98,9550,141600,127800,Small,Brute,Earth1,False
+Pest,1256,89,5747,108600,102100,Small,Brute,Dark2,False
+Injustice,1257,95,7952,129200,122100,Medium,Undead,Dark2,False
+Goblin Archer,1258,55,1575,46600,41300,Small,DemiHuman,Poison1,False
+Gryphon,1259,105,60720,564600,319400,Large,Brute,Wind4,False
+Dark Frame,1260,76,3520,80900,74900,Medium,Demon,Dark3,False
+Wild Rose,1261,70,2682,67700,62100,Small,Brute,Wind1,False
+Mutant Dragonoid,1262,65,50706,191300,641500,Large,Dragon,Fire2,False
+Wind Ghost,1263,80,4008,86900,80900,Medium,Demon,Wind3,False
+Merman,1264,60,2940,52100,46800,Medium,DemiHuman,Water3,False
+Cookie,1265,35,666,26500,21600,Small,DemiHuman,Neutral3,False
+Aster,1266,50,1509,41600,34600,Small,Fish,Earth1,False
+Carat,1267,103,9222,158500,150700,Medium,Demon,Wind2,False
+Bloody Knight,1268,116,68500,477600,429600,Large,Formless,Dark4,False
+Clock,1269,81,5556,100100,88900,Medium,Formless,Earth2,False
+Clock Tower Manager,1270,90,6400,110300,103800,Large,Formless,Neutral4,False
+Alligator,1271,57,2430,48800,43500,Medium,Brute,Water1,False
+Dark Lord,1272,96,1190900,42854400,27900000,Large,Demon,Undead4,False
+Orc Lady,1273,45,1520,36900,30100,Medium,DemiHuman,Earth2,False
+Megalith,1274,65,2451,61200,55600,Large,Formless,Neutral4,False
+Alice,1275,100,9230,138700,131600,Medium,DemiHuman,Neutral3,False
+Raydric Archer,1276,82,4437,97000,90500,Medium,Demon,Dark2,False
+Greatest General,1277,55,1575,46600,41300,Medium,Formless,Fire2,False
+Stalactic Golem,1278,68,2590,65100,59500,Large,Formless,Neutral4,False
+Tri Joint,1279,66,2530,65600,56900,Small,Insect,Earth1,False
+Goblin Steamrider,1280,66,2241,62500,56900,Medium,DemiHuman,Wind2,False
+Sage Worm,1281,70,2872,67700,62100,Small,Brute,Neutral3,False
+Kobold Archer,1282,108,11053,186600,178000,Small,DemiHuman,Fire1,False
+Chimera,1283,70,26406,271300,234900,Large,Brute,Fire3,False
+Archer Guardian,1285,74,28634,100,100,Large,DemiHuman,Neutral4,False
+Knight Guardian,1286,86,30214,100,100,Large,DemiHuman,Neutral4,False
+Soldier Guardian,1287,56,15670,100,100,Large,DemiHuman,Neutral1,False
+Emperium,1288,90,100,0,0,Small,Angel,Holy1,False
+Maya Purple,1289,81,77670,644200,325800,Large,Insect,Earth4,False
+Skeleton General,1290,139,180130,1061400,1335100,Medium,Undead,Undead1,False
+Wraith Dead,1291,121,25990,335100,277200,Large,Undead,Undead4,False
+Mini Demon,1292,117,19402,258300,247500,Small,Demon,Dark1,False
+Creamy Fear,1293,117,25084,258300,247500,Small,Insect,Wind1,False
+Killer Mantis,1294,141,180141,1130300,1359700,Medium,Insect,Earth1,False
+Owl Baron,1295,120,21000,265200,254400,Large,Demon,Neutral3,False
+Kobold Leader,1296,112,13520,171800,157100,Medium,DemiHuman,Wind2,False
+Ancient Mummy,1297,114,27157,244600,201700,Medium,Undead,Undead2,False
+Zombie Master,1298,119,25510,289100,239000,Medium,Undead,Undead1,False
+Goblin Leader,1299,55,21692,233600,250300,Medium,DemiHuman,Wind1,False
+Caterpillar,1300,121,25656,319900,292400,Small,Insect,Earth1,False
+Am Mut,1301,141,181487,1001400,1334800,Small,Demon,Dark1,False
+Dark Illusion,1302,96,46255,495400,454900,Large,Demon,Undead4,False
+Giant Hornet,1303,120,26521,265200,254400,Small,Insect,Wind1,False
+Giant Spider,1304,117,25001,258300,247500,Large,Insect,Poison1,False
+Ancient Worm,1305,121,24005,304700,292400,Large,Insect,Poison1,False
+Leib Olmai,1306,118,24001,273600,249800,Large,Brute,Earth1,False
+Cat o' Nine Tails,1307,79,23600,207400,289600,Medium,Demon,Fire3,False
+Panzer Goblin,1308,52,1471,23400,25200,Medium,DemiHuman,Wind2,False
+Gajomart,1309,140,185098,1181000,1425700,Small,Formless,Fire4,False
+Majoruros,1310,107,11801,184500,175900,Large,Brute,Fire2,False
+Gullinbursti,1311,120,25098,278400,254400,Large,Brute,Earth2,False
+Turtle General,1312,110,1442000,55987200,41164200,Large,Brute,Earth2,False
+Mobster,1313,58,2253,49900,44600,Medium,DemiHuman,Neutral1,False
+Permeter,1314,90,6575,110300,103800,Medium,Brute,Neutral2,False
+Assaulter,1315,100,8977,138700,131600,Medium,DemiHuman,Wind2,False
+Solider,1316,92,8768,129900,116700,Medium,Brute,Earth2,False
+Seal,1317,47,1371,37000,31900,Medium,Brute,Water1,False
+Heater,1318,98,8180,134900,127800,Medium,Brute,Fire2,False
+Freezer,1319,94,9990,127400,120300,Medium,Brute,Water2,False
+Owl Duke,1320,92,7381,123800,116700,Large,Demon,Neutral3,False
+Dragon Tail,1321,86,4680,103500,97000,Medium,Insect,Wind2,False
+Spring Rabbit,1322,88,6684,112200,100400,Medium,Brute,Earth2,False
+Sea Otter,1323,48,1820,37900,32800,Medium,Brute,Water3,False
+Treasure Chest,1324,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1325,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1326,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1327,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1328,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1329,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1330,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1331,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1332,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1333,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1334,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1335,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1336,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1337,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1338,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1339,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1340,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1341,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1342,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1343,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1344,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1345,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1346,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1347,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1348,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1349,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1350,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1351,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1352,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1353,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1354,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1355,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1356,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1357,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1358,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1359,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1360,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1361,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1362,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1363,99,0,0,0,Small,Formless,Neutral1,False
+Assaulter,1364,98,7798,0,0,Medium,Demon,Wind2,False
+Apocalypse,1365,121,22090,304700,292400,Large,Formless,Neutral3,False
+Lava Golem,1366,103,8452,158500,150700,Large,Formless,Fire4,False
+Blazer,1367,101,8121,154500,146700,Medium,Demon,Fire2,False
+Geographer,1368,73,3866,80400,70600,Medium,Plant,Earth3,False
+Grand Peco,1369,75,3150,79400,73400,Large,Brute,Fire2,False
+Succubus,1370,119,24960,262900,252100,Medium,Demon,Dark3,False
+False Angel,1371,105,10988,162500,154700,Small,Angel,Holy3,False
+Goat,1372,80,3980,86900,80900,Medium,Brute,Fire3,False
+Lord of the Dead,1373,94,603883,26227200,17262600,Large,Demon,Dark3,False
+Incubus,1374,120,28000,265200,254400,Medium,Demon,Dark3,False
+The Paper,1375,97,8500,133000,125900,Medium,Formless,Neutral3,False
+Harpy,1376,83,4423,98600,92100,Medium,Demon,Wind3,False
+Elder,1377,92,7341,123800,116700,Large,DemiHuman,Neutral4,False
+Demon Pungus,1378,91,6466,122000,114900,Small,Demon,Poison3,False
+Nightmare Terror,1379,107,13289,184500,175900,Large,Demon,Dark3,False
+Driller,1380,65,2719,64200,55600,Medium,Brute,Earth1,False
+Grizzly,1381,66,2241,62500,56900,Large,Brute,Fire3,False
+Diabolic,1382,104,10572,160500,152700,Small,Demon,Dark2,False
+Explosion,1383,100,7813,138700,131600,Small,Brute,Fire3,False
+Deleter,1384,105,10000,162500,154700,Medium,Dragon,Fire2,False
+Deleter,1385,105,10000,162500,154700,Medium,Dragon,Fire2,False
+Sleeper,1386,81,5160,100100,88900,Medium,Formless,Earth2,False
+Gig,1387,100,8721,138700,131600,Small,Brute,Fire2,False
+Arc Angeling,1388,84,25100,178900,145500,Medium,Angel,Holy3,False
+Dracula,1389,75,350000,17186400,12276000,Large,Demon,Dark4,False
+Violy,1390,118,20557,260600,249800,Medium,DemiHuman,Neutral2,False
+Galapago,1391,45,1221,36900,30100,Small,Brute,Earth1,False
+Rotar Zairo,1392,48,1088,37900,32800,Large,Formless,Wind2,False
+Mummy,1393,55,2155,0,0,Medium,Undead,Undead2,False
+Zombie,1394,17,234,0,0,Medium,Undead,Undead1,False
+Wind Crystal,1395,1,15,0,0,Small,Formless,Neutral1,False
+Earth Crystal,1396,1,15,0,0,Small,Formless,Neutral1,False
+Fire Crystal,1397,1,15,0,0,Small,Formless,Neutral1,False
+Water Crystal,1398,1,15,0,0,Small,Formless,Neutral1,False
+Baphomet,1399,68,1264000,4122500,1255300,Large,Demon,Dark3,False
+Karakasa,1400,72,3092,75200,69200,Medium,Formless,Neutral3,False
+Shinobi,1401,95,8000,129200,122100,Medium,DemiHuman,Dark3,False
+Poisonous Toad,1402,87,4876,105200,98700,Medium,Brute,Poison2,False
+Firelock Soldier,1403,88,7524,117500,95100,Medium,Undead,Undead2,False
+Miyabi Doll,1404,85,5188,101800,95300,Medium,Demon,Dark1,False
+Tengu,1405,98,10196,141600,127800,Large,Demon,Earth2,False
+Kapha,1406,83,5470,98600,92100,Medium,Fish,Water1,False
+Bloody Butterfly,1408,94,7030,127400,120300,Medium,Insect,Wind2,False
+Dumpling Child,1409,60,2098,52100,46800,Small,DemiHuman,Neutral1,False
+Enchanted Peach Tree,1410,92,8777,129900,116700,Medium,Plant,Earth2,False
+Taoist Hermit,1412,96,8266,131100,124000,Large,Formless,Neutral2,False
+Hermit Plant,1413,90,6052,110300,103800,Small,Plant,Fire2,False
+Baby Leopard,1415,68,2590,58600,62700,Small,Brute,Ghost1,False
+Evil Nymph,1416,97,8491,133000,125900,Medium,Demon,Dark3,False
+Zipper Bear,1417,90,6620,110300,103800,Medium,Brute,Dark1,False
+Evil Snake Lord,1418,105,1101000,43200000,34650000,Large,Brute,Ghost3,False
+Familiar,1419,24,427,0,0,Small,Brute,Dark1,False
+Archer Skeleton,1420,50,1646,0,0,Medium,Undead,Undead1,False
+Isis,1421,59,2092,0,0,Large,Demon,Dark1,False
+Hunter Fly,1422,63,2050,0,0,Small,Insect,Wind2,False
+Ghoul,1423,61,2614,0,0,Medium,Undead,Undead2,False
+Side Winder,1424,70,2736,0,0,Medium,Brute,Poison1,False
+Obeaune,1425,53,2158,0,0,Medium,Fish,Water2,False
+Marc,1426,56,2522,0,0,Medium,Fish,Water2,False
+Nightmare,1427,69,2872,0,0,Large,Demon,Ghost3,False
+Poison Spore,1428,26,456,0,0,Medium,Plant,Poison1,False
+Argiope,1429,75,3105,0,0,Large,Insect,Poison1,False
+Argos,1430,47,1005,0,0,Large,Insect,Poison1,False
+Baphomet Jr.,1431,57,2035,0,0,Small,Demon,Dark1,False
+Desert Wolf,1432,103,9447,0,0,Medium,Brute,Fire1,False
+Deviruchi,1433,64,2300,0,0,Small,Demon,Dark1,False
+Drainliar,1434,47,1162,0,0,Small,Brute,Dark2,False
+Evil Druid,1435,80,5149,0,0,Large,Undead,Undead4,False
+Jakk,1436,63,2054,0,0,Medium,Formless,Fire2,False
+Joker,1437,90,6022,0,0,Large,DemiHuman,Wind4,False
+Khalitzburg,1438,118,23986,0,0,Large,Undead,Undead1,False
+High Orc,1439,81,4193,0,0,Large,DemiHuman,Fire2,False
+Stem Worm,1440,84,4530,0,0,Medium,Plant,Wind1,False
+Penomena,1441,85,4589,0,0,Medium,Fish,Poison1,False
+Sasquatch,1442,72,3163,0,0,Large,Brute,Neutral3,False
+Cruiser,1443,41,919,0,0,Medium,Formless,Neutral3,False
+Chepet,1444,42,4950,0,0,Medium,DemiHuman,Fire1,False
+Raggler,1445,48,1148,0,0,Small,Brute,Wind1,False
+Injustice,1446,95,7952,0,0,Medium,Undead,Dark2,False
+Gryphon,1447,105,60720,0,0,Large,Brute,Wind4,False
+Dark Frame,1448,76,3520,0,0,Medium,Demon,Dark3,False
+Mutant Dragonoid,1449,65,50706,0,0,Large,Dragon,Fire2,False
+Wind Ghost,1450,80,4008,0,0,Medium,Demon,Wind3,False
+Merman,1451,60,2940,0,0,Medium,DemiHuman,Water2,False
+Orc Lady,1452,45,1520,0,0,Medium,DemiHuman,Earth2,False
+Raydric Archer,1453,82,4437,0,0,Medium,Demon,Dark2,False
+Tri Joint,1454,66,2530,0,0,Small,Insect,Earth1,False
+Kobold Archer,1455,108,11053,0,0,Small,DemiHuman,Fire1,False
+Chimera,1456,70,26406,0,0,Large,Brute,Fire3,False
+Mantis,1457,65,2719,0,0,Medium,Insect,Earth1,False
+Marduk,1458,73,2893,0,0,Large,DemiHuman,Fire1,False
+Marionette,1459,62,2209,0,0,Small,Demon,Ghost3,False
+Matyr,1460,58,2087,0,0,Medium,Brute,Dark1,False
+Minorous,1461,58,1893,0,0,Large,Brute,Fire2,False
+Orc Skeleton,1462,53,2077,0,0,Medium,Undead,Undead1,False
+Orc Zombie,1463,51,1908,0,0,Medium,Undead,Undead1,False
+Pasana,1464,79,3510,0,0,Medium,DemiHuman,Fire2,False
+Petite,1465,86,5799,0,0,Medium,Dragon,Earth1,False
+Petite,1466,79,3556,0,0,Medium,Dragon,Wind1,False
+Raydric,1467,115,18408,0,0,Large,DemiHuman,Dark2,False
+Requim,1468,71,3089,0,0,Medium,DemiHuman,Dark1,False
+Skeleton Worker,1469,44,1240,0,0,Medium,Undead,Undead1,False
+Zerom,1470,70,2687,0,0,Medium,DemiHuman,Fire1,False
+Nine Tail,1471,72,2783,0,0,Medium,Brute,Fire3,False
+Bongun,1472,59,2510,0,0,Medium,Undead,Undead1,False
+Orc Archer,1473,78,4835,0,0,Medium,DemiHuman,Earth1,False
+Mimic,1474,56,1939,0,0,Medium,Formless,Neutral3,False
+Wraith,1475,77,5168,0,0,Large,Undead,Undead4,False
+Alarm,1476,88,5562,0,0,Medium,Formless,Neutral3,False
+Arclouze,1477,77,4320,0,0,Medium,Insect,Earth2,False
+Rideword,1478,74,3222,0,0,Small,Formless,Neutral3,False
+Skeleton Prisoner,1479,91,9194,0,0,Medium,Undead,Undead3,False
+Zombie Prisoner,1480,89,8045,0,0,Medium,Undead,Undead3,False
+Punk,1481,82,3869,0,0,Small,Plant,Wind1,False
+Zealotus,1482,105,61350,0,0,Medium,DemiHuman,Neutral3,False
+Rybio,1483,98,8700,0,0,Large,Demon,Neutral2,False
+Phendark,1484,102,11000,0,0,Large,DemiHuman,Neutral2,False
+Mysteltainn,1485,130,70000,0,0,Large,Formless,Dark4,False
+Ogretooth,1486,114,59000,0,0,Medium,Formless,Dark3,False
+Executioner,1487,101,40200,0,0,Large,Formless,Dark2,False
+Anolian,1488,109,15547,0,0,Medium,Fish,Water2,False
+Sting,1489,104,14143,0,0,Medium,Formless,Earth3,False
+Wanderer,1490,120,19307,0,0,Medium,Demon,Wind1,False
+Dokebi,1491,68,2820,0,0,Small,Demon,Dark1,False
+Samurai Specter,1492,100,901000,45100800,32729400,Large,DemiHuman,Dark3,False
+Dryad,1493,68,3640,68300,59500,Medium,Plant,Earth4,False
+Beetle King,1494,55,2061,48900,41300,Small,Insect,Earth1,False
+Stone Shooter,1495,64,2101,60000,54400,Medium,Plant,Fire3,False
+Wooden Golem,1497,72,3914,78900,69200,Large,Plant,Earth4,False
+Wootan Shooter,1498,67,3096,66900,58200,Medium,DemiHuman,Earth2,False
+Wootan Fighter,1499,67,2327,63800,58200,Medium,DemiHuman,Fire2,False
+Parasite,1500,76,3222,80900,74900,Medium,Plant,Wind2,False
+Bring it on!,1502,99,95000000,4711500,1255300,Medium,Plant,Poison1,False
+Gibbet,1503,105,12999,162500,154700,Large,Demon,Dark1,False
+Dullahan,1504,108,19546,205200,168700,Medium,Undead,Undead2,False
+Loli Ruri,1505,109,15280,188700,180100,Large,Demon,Dark4,False
+Disguise,1506,103,13895,166400,150700,Medium,Demon,Earth4,False
+Bloody Murderer,1507,110,14099,190800,182200,Large,DemiHuman,Dark3,False
+Quve,1508,100,11090,152500,124700,Small,Undead,Undead1,False
+Lude,1509,101,11574,169900,139000,Small,Undead,Undead1,False
+Heirozoist,1510,102,12000,156500,148700,Small,Demon,Dark2,False
+Amon Ra,1511,69,1009000,12006000,9396000,Large,DemiHuman,Earth3,False
+Yao Jun,1512,87,6996,115700,93500,Medium,Undead,Undead2,False
+Mao Guai,1513,89,5292,108600,102100,Medium,Brute,Wind2,False
+Zhu Po Long,1514,82,3943,97000,90500,Medium,Dragon,Wind2,False
+Baby Hatii,1515,94,10016,93300,87400,Medium,Brute,Water2,False
+Mi Gao,1516,83,5335,103500,92100,Medium,Formless,Earth3,False
+Jing Guai,1517,80,5187,91200,80900,Medium,Demon,Earth3,False
+White Lady,1518,97,720500,40089600,27144000,Large,DemiHuman,Water2,False
+Green Maiden,1519,49,23900,107800,44700,Medium,DemiHuman,Neutral2,False
+Boiled Rice,1520,15,777,300,300,Medium,Plant,Water1,False
+Alice,1521,100,9230,0,0,Medium,DemiHuman,Neutral3,False
+Ancient Mummy,1522,115,29157,0,0,Medium,Undead,Undead2,False
+Firelock Soldier,1523,88,7524,0,0,Medium,Undead,Undead2,False
+Baby Leopard,1524,68,2590,0,0,Small,Brute,Ghost1,False
+Bathory,1525,86,5242,0,0,Medium,DemiHuman,Dark1,False
+Bloody Butterfly,1526,94,7030,0,0,Medium,Insect,Wind2,False
+Clock Tower Manager,1527,90,6400,0,0,Large,Formless,Neutral4,False
+Clock,1528,81,5556,0,0,Medium,Formless,Earth2,False
+Evil Snake Lord,1529,105,1101000,0,0,Large,Brute,Ghost3,False
+Dracula,1530,75,350000,0,0,Large,Demon,Dark4,False
+Taoist Hermit,1531,96,8266,0,0,Large,Formless,Neutral2,False
+Explosion,1532,100,7813,0,0,Small,Brute,Fire3,False
+Seal,1533,47,1371,0,0,Medium,Brute,Water1,False
+Goblin,1534,48,1058,0,0,Medium,DemiHuman,Wind1,False
+Goblin,1535,44,931,0,0,Medium,DemiHuman,Fire1,False
+Goblin,1536,44,930,0,0,Medium,DemiHuman,Poison1,False
+Goblin,1537,49,1494,0,0,Medium,DemiHuman,Earth1,False
+Goblin,1538,56,2342,0,0,Medium,DemiHuman,Water1,False
+Goblin Leader,1539,55,21692,0,0,Medium,DemiHuman,Wind1,False
+Golem,1540,61,2245,0,0,Large,Formless,Neutral3,False
+Greatest General,1541,55,1575,0,0,Medium,Formless,Fire2,False
+Incantation Samurai,1542,100,901000,0,0,Large,DemiHuman,Dark3,False
+Kapha,1543,83,5470,0,0,Medium,Fish,Water1,False
+Karakasa,1544,72,3092,0,0,Medium,Formless,Neutral3,False
+Kobold,1545,107,10483,0,0,Medium,DemiHuman,Wind2,False
+Kobold,1546,102,9152,0,0,Medium,DemiHuman,Poison2,False
+Kobold,1547,101,9078,0,0,Medium,DemiHuman,Fire2,False
+Kobold Leader,1548,112,13520,0,0,Medium,DemiHuman,Wind2,False
+Lava Golem,1549,103,8452,0,0,Large,Formless,Fire4,False
+Enchanted Peach Tree,1550,92,8777,0,0,Medium,Plant,Earth2,False
+Marse,1551,47,1456,0,0,Small,Fish,Water2,False
+Miyabi Doll,1552,85,5188,0,0,Medium,Demon,Dark1,False
+Myst,1553,49,1223,0,0,Large,Formless,Poison1,False
+Nightmare Terror,1554,107,13289,0,0,Large,Demon,Dark3,False
+Parasite,1555,76,3222,0,0,Medium,Plant,Wind2,False
+Poisonous Toad,1556,87,4876,0,0,Medium,Brute,Poison2,False
+Rotar Zairo,1557,48,1088,0,0,Large,Formless,Wind2,False
+Sandman,1558,61,2887,0,0,Medium,Formless,Earth3,False
+Scorpion,1559,16,153,0,0,Small,Insect,Fire1,False
+Shinobi,1560,95,8000,0,0,Medium,DemiHuman,Dark3,False
+Smokie,1561,29,591,0,0,Small,Brute,Earth1,False
+Soldier Skeleton,1562,34,804,0,0,Medium,Undead,Undead1,False
+Tengu,1563,98,10196,0,0,Large,Demon,Earth2,False
+Evil Nymph,1564,97,8491,0,0,Medium,Demon,Dark3,False
+Hermit Plant,1565,90,6052,0,0,Small,Plant,Fire2,False
+Wraith Dead,1566,86,10035,0,0,Large,Undead,Undead4,False
+Ancient Worm,1567,83,4140,0,0,Large,Insect,Poison1,False
+Angeling,1568,77,19800,0,0,Medium,Angel,Holy4,False
+Bloody Knight,1569,116,68500,0,0,Large,Formless,Dark4,False
+Cramp,1570,82,3898,0,0,Small,Brute,Poison2,False
+Deviace,1571,60,3135,0,0,Medium,Fish,Water4,False
+Drops,1572,2,45,0,0,Medium,Plant,Fire1,False
+Elder,1573,92,7341,0,0,Large,DemiHuman,Neutral4,False
+Elder Willow,1574,34,599,0,0,Medium,Plant,Fire2,False
+Flora,1575,59,2301,0,0,Large,Plant,Earth1,False
+Ghostring,1576,90,26700,0,0,Medium,Demon,Ghost4,False
+Goblin Archer,1577,55,1575,0,0,Small,DemiHuman,Poison1,False
+Horong,1578,66,2304,0,0,Small,Formless,Fire4,False
+Hydra,1579,34,854,0,0,Small,Plant,Water2,False
+Incubus,1580,120,28000,0,0,Medium,Demon,Dark3,False
+Vocal,1581,18,3317,0,0,Medium,Insect,Earth1,False
+Deviling,1582,66,16890,119700,118900,Medium,Demon,Dark4,False
+Tao Gunka,1583,110,1252000,54000000,39600000,Large,Demon,Neutral3,False
+Tamruan,1584,73,3195,76600,70600,Large,Demon,Dark3,False
+Mime Monkey,1585,1,6000,196900,135100,Medium,Plant,Water1,False
+Leaf Cat,1586,64,2635,63000,54400,Small,Brute,Earth1,False
+Kraben,1587,70,2901,61000,65400,Medium,Formless,Ghost2,False
+Christmas Orc,1588,44,1047,11700,7200,Medium,DemiHuman,Earth1,False
+Mandragora,1589,13,156,0,0,Medium,Plant,Earth3,False
+Geographer,1590,73,3866,0,0,Medium,Plant,Earth3,False
+Lunatic,1591,29,2334,0,0,Small,Brute,Neutral3,False
+Gangster,1592,40,8000,0,0,Medium,DemiHuman,Neutral1,False
+Ancient Mummy,1593,52,8613,0,0,Medium,Undead,Undead3,False
+Freezer,1594,94,9990,0,0,Medium,Brute,Water2,False
+Marin,1595,37,987,0,0,Medium,Plant,Water2,False
+Tamruan,1596,73,3195,0,0,Large,Demon,Dark3,False
+Gargoyle,1597,100,8772,0,0,Medium,Demon,Wind3,False
+Blazzer,1598,101,8121,0,0,Medium,Demon,Fire2,False
+Giant Whisper,1599,66,2570,0,0,Small,Demon,Ghost2,False
+Heater,1600,96,7480,0,0,Medium,Brute,Fire2,False
+Permeter,1601,90,6575,0,0,Medium,Brute,Neutral2,False
+Solider,1602,92,8768,0,0,Medium,Brute,Earth2,False
+Bigfoot,1603,29,587,0,0,Large,Brute,Earth1,False
+Giant Hornet,1604,82,3960,0,0,Small,Insect,Wind1,False
+Dark Illusion,1605,96,46255,0,0,Large,Demon,Undead4,False
+Baby Hatii,1606,94,10016,0,0,Medium,Brute,Water2,False
+Christmas Goblin,1607,25,1176,0,0,Medium,DemiHuman,Wind1,False
+Thief Bug Male,1608,19,583,0,0,Medium,Insect,Dark1,False
+Zhu Po Long,1609,82,3943,272700,69200,Medium,Dragon,Wind2,False
+Munak,1610,30,2872,0,0,Medium,Undead,Undead4,False
+Bongun,1611,59,2510,0,0,Medium,Undead,Undead4,False
+Yao Jun,1612,56,9981,0,0,Medium,Undead,Undead4,False
+Metaling,1613,81,4300,95400,88900,Small,Formless,Neutral1,False
+Mineral,1614,96,8300,131100,124000,Small,Formless,Neutral2,False
+Obsidian,1615,97,10088,139600,125900,Small,Formless,Earth2,False
+Pitman,1616,90,7208,115800,103800,Large,Undead,Earth2,False
+Old Stove,1617,92,7400,123800,116700,Large,Formless,Neutral1,False
+Ungoliant,1618,94,27070,410000,245600,Large,Insect,Poison2,False
+Porcellio,1619,85,5544,106800,95300,Small,Insect,Earth3,False
+Noxious,1620,87,5430,94700,103900,Medium,Formless,Ghost3,False
+Venomous,1621,87,4770,105200,98700,Medium,Formless,Poison1,False
+Teddy Bear,1622,91,7238,122000,114900,Small,Formless,Neutral3,False
+RSX-0806,1623,100,1001000,43200000,31680000,Large,Formless,Neutral3,False
+Old Stove,1624,92,7400,0,0,Large,Formless,Neutral1,False
+Porcellio,1625,85,5544,50700,31200,Small,Insect,Earth3,False
+Hellion Revenant,1626,79,8600,100,100,Medium,Demon,Undead3,False
+Anopheles,1627,95,7238,129200,122100,Small,Insect,Wind3,False
+Holden,1628,85,6228,106800,95300,Small,Brute,Earth2,False
+Hill Wind,1629,43,2870,17000,17000,Medium,Brute,Wind3,False
+White Lady,1630,97,720500,40089600,27144000,Large,DemiHuman,Wind3,False
+Green Maiden,1631,82,3901,97000,90500,Medium,DemiHuman,Wind2,False
+Gremlin,1632,118,20313,260600,249800,Large,Demon,Dark2,False
+Beholder,1633,120,19280,265200,254400,Small,Formless,Wind2,False
+Seyren Windsor,1634,142,204962,1775100,1966100,Medium,Demon,Fire3,False
+Eremes Guile,1635,140,220525,1671400,1771700,Medium,Demon,Poison4,False
+Howard Alt-Eisen,1636,142,378100,1705500,1797800,Medium,DemiHuman,Water4,False
+Margaretha Sorin,1637,140,250800,1543200,1545700,Medium,DemiHuman,Holy3,False
+Cecil Damon,1638,141,200255,1656700,1819900,Medium,DemiHuman,Wind3,False
+Kathryne Keyron,1639,141,209780,1348400,1775600,Medium,DemiHuman,Ghost3,False
+Lord Knight Seyren,1640,160,2680000,0,0,Medium,Demon,Fire4,False
+Assassin Cross Eremes,1641,160,1230000,0,0,Medium,Demon,Poison4,False
+Whitesmith Howard,1642,160,3750000,0,0,Medium,DemiHuman,Earth4,False
+High Priest Margaretha,1643,160,2800000,0,0,Medium,DemiHuman,Holy4,False
+Sniper Cecil,1644,160,4140000,0,0,Medium,DemiHuman,Wind4,False
+High Wizard Kathryne,1645,160,4500000,0,0,Medium,DemiHuman,Ghost3,False
+Lord Knight Seyren,1646,160,4680000,301766400,191505600,Medium,Demon,Fire4,False
+Assassin Cross Eremes,1647,160,4230000,272025000,173091600,Medium,Demon,Poison4,False
+Whitesmith Howard,1648,160,6750000,231075000,146520000,Medium,DemiHuman,Earth4,False
+High Priest Margaretha,1649,160,4800000,225225000,138600000,Medium,DemiHuman,Holy4,False
+Sniper Cecil,1650,160,4140000,266947200,169408800,Medium,DemiHuman,Wind4,False
+High Wizard Kathryne,1651,160,4500000,210600000,133650000,Medium,DemiHuman,Ghost3,False
+Egnigem Cenia,1652,136,40327,369900,360300,Medium,DemiHuman,Fire2,False
+Wickebine Tres,1653,132,43191,331100,311500,Medium,DemiHuman,Poison3,False
+Armeyer Dinze,1654,134,46878,318200,389800,Medium,DemiHuman,Earth3,False
+Errende Ebecee,1655,133,42764,315900,299800,Medium,DemiHuman,Holy2,False
+Kavach Icarus,1656,135,43079,346700,348100,Medium,DemiHuman,Wind2,False
+Laurell Weinder,1657,133,40282,292500,361300,Medium,DemiHuman,Ghost2,False
+Egnigem Cenia,1658,141,2910088,68536000,102300000,Medium,DemiHuman,Fire2,False
+Wickebine Tres,1659,132,43191,0,0,Medium,DemiHuman,Poison3,False
+Armeyer Dinze,1660,134,46878,0,0,Medium,DemiHuman,Earth3,False
+Errende Ebecee,1661,133,42764,0,0,Medium,DemiHuman,Holy2,False
+Kavach Icarus,1662,135,43079,0,0,Medium,DemiHuman,Wind2,False
+Laurell Weinder,1663,133,40282,0,0,Medium,DemiHuman,Ghost2,False
+Photon Cannon,1664,66,8000,42000,30000,Medium,Formless,Neutral2,False
+Photon Cannon,1665,67,7500,31500,40000,Medium,Formless,Neutral2,False
+Photon Cannon,1666,64,7100,42000,30000,Medium,Formless,Neutral2,False
+Photon Cannon,1667,65,7800,31500,40000,Medium,Formless,Neutral2,False
+Archdam,1668,119,20700,262900,252100,Large,DemiHuman,Neutral3,False
+Dimik,1669,77,10000,0,0,Medium,Formless,Neutral2,False
+Dimik,1670,116,17552,256000,245200,Medium,Formless,Wind2,False
+Dimik,1671,116,23840,256000,245200,Medium,Formless,Water2,False
+Dimik,1672,116,21920,268800,245200,Medium,Formless,Earth2,False
+Dimik,1673,116,16940,256000,245200,Medium,Formless,Fire2,False
+Monemus,1674,88,80000,0,0,Large,Formless,Fire3,False
+Venatu,1675,77,12717,0,0,Medium,Formless,Fire2,False
+Venatu,1676,113,15900,220200,210600,Medium,Formless,Neutral2,False
+Venatu,1677,113,14717,220200,210600,Medium,Formless,Wind2,False
+Venatu,1678,113,21040,231200,210600,Medium,Formless,Earth2,False
+Venatu,1679,113,21810,220200,210600,Medium,Formless,Water2,False
+Hill Wind,1680,101,9100,154500,146700,Medium,Brute,Wind3,False
+Gemini-S58,1681,135,108999,607100,524800,Medium,Formless,Water1,False
+Remover,1682,121,32235,335100,277200,Medium,Undead,Undead2,False
+Photon Cannon,1683,66,8000,0,0,Medium,Formless,Fire2,False
+Archdam,1684,119,20700,0,0,Large,Angel,Neutral3,False
+Vesper,1685,128,3802000,175500000,123750000,Large,Brute,Holy2,False
+Orc Baby,1686,43,1122,35200,28500,Small,DemiHuman,Earth1,False
+Grove,1687,55,2090,48900,41300,Medium,Brute,Earth2,False
+Lady Tanee,1688,80,360000,18374400,13050000,Large,Plant,Wind3,False
+White Lady,1689,97,720500,0,0,Large,DemiHuman,Wind3,False
+Spring Rabbit,1690,12,15,0,0,Medium,Brute,Neutral1,False
+Kraben,1691,70,2901,0,0,Medium,Formless,Ghost2,False
+Breeze,1692,92,6755,123800,116700,Medium,Formless,Wind3,False
+Plasma,1693,119,20600,236700,265200,Small,Formless,Ghost4,False
+Plasma,1694,118,16789,260600,249800,Small,Formless,Fire4,False
+Plasma,1695,116,24975,268800,245200,Small,Formless,Earth4,False
+Plasma,1696,117,18955,258300,247500,Small,Formless,Dark4,False
+Plasma,1697,115,24651,224600,215000,Small,Formless,Water4,False
+Death Word,1698,114,16390,222400,212800,Medium,Formless,Neutral3,False
+Ancient Mimic,1699,112,14700,218000,208400,Large,Formless,Neutral3,False
+Dame of Sentinel,1700,127,34538,366400,352300,Medium,Angel,Neutral4,False
+Mistress of Shelter,1701,125,27000,314300,302000,Medium,Angel,Holy3,False
+Baroness of Retribution,1702,121,22152,304700,292400,Medium,Angel,Dark3,False
+Lady Solace,1703,123,24729,309500,297200,Medium,Angel,Holy3,False
+Odium of Thanatos,1704,129,40200,334300,375800,Large,Undead,Ghost4,False
+Despero of Thanatos,1705,129,41111,334300,375800,Large,Undead,Ghost4,False
+Maero of Thanatos,1706,129,42599,334300,375800,Medium,Undead,Ghost4,False
+Dolor of Thanatos,1707,129,45000,334300,375800,Small,Undead,Ghost4,False
+Thanatos Phantom,1708,99,1445660,77964000,96527700,Large,Demon,Ghost4,False
+Odium of Thanatos,1709,129,40200,0,0,Large,Undead,Ghost4,False
+Despero of Thanatos,1710,129,41111,0,0,Large,Undead,Ghost4,False
+Maero of Thanatos,1711,129,42599,0,0,Medium,Undead,Ghost4,False
+Dolor of Thanatos,1712,129,45000,0,0,Small,Undead,Ghost4,False
+Acidus,1713,130,48430,373900,359800,Large,Dragon,Holy2,False
+Ferus,1714,126,25668,363900,349800,Large,Dragon,Fire2,False
+Novus,1715,90,6670,110300,103800,Small,Dragon,Neutral1,False
+Acidus,1716,130,40718,373900,359800,Large,Dragon,Wind2,False
+Ferus,1717,126,39054,382000,349800,Large,Dragon,Earth2,False
+Novus,1718,84,5028,100200,93700,Small,Dragon,Neutral1,False
+Detardeurus,1719,135,6005000,280800000,188100000,Large,Dragon,Dark3,False
+Hydrolancer,1720,121,41500,408500,245400,Large,Dragon,Dark2,False
+Dragon Egg,1721,119,20990,262900,252100,Medium,Dragon,Neutral2,False
+Jakk,1722,99,10310,5600,4500,Medium,Formless,Fire2,False
+Cecil Damon,1723,82,30000,0,0,Medium,DemiHuman,Wind3,False
+Photon Cannon,1724,66,8000,0,0,Medium,Formless,Neutral2,False
+Poring,1725,1,50,0,0,Medium,Plant,Water1,False
+Lunatic,1726,3,60,0,0,Small,Brute,Neutral3,False
+Savage Babe,1727,7,182,0,0,Small,Brute,Earth1,False
+Baby Desert Wolf,1728,14,140,16400,10500,Small,Brute,Fire1,False
+Baphomet Jr.,1729,50,8578,0,0,Small,Demon,Dark1,False
+Deviruchi,1730,64,2300,0,0,Small,Demon,Dark1,False
+Doppelganger,1731,77,380000,31320000,25056000,Large,Angel,Ghost2,False
+Treasure Chest,1732,98,500,0,0,Small,Formless,Neutral1,False
+Kiehl,1733,90,523500,1806700,1053200,Medium,Formless,Dark2,False
+Kiel D-01,1734,125,2502000,117000000,79200000,Medium,Formless,Dark2,False
+Alicel,1735,115,18000,224600,215000,Medium,Demon,Neutral3,False
+Aliot,1736,112,15669,218000,208400,Medium,Demon,Neutral3,False
+Aliza,1737,112,14450,218000,208400,Medium,DemiHuman,Neutral3,False
+Constant,1738,108,12050,186600,178000,Small,Formless,Dark3,False
+Alicel,1739,115,18000,0,0,Medium,Demon,Neutral3,False
+Aliot,1740,112,15669,0,0,Medium,Demon,Neutral3,False
+Christmas Cookie,1741,37,733,0,0,Small,DemiHuman,Holy2,False
+Carat,1742,103,9222,0,0,Medium,Demon,Wind2,False
+Myst Case,1743,39,879,0,0,Medium,Formless,Neutral3,False
+Wild Rose,1744,70,2682,0,0,Small,Brute,Wind1,False
+Constant,1745,108,2000,150300,112600,Small,Demon,Dark3,False
+Aliza,1746,112,14450,0,0,Medium,DemiHuman,Neutral3,False
+Boa,1747,18,217,0,0,Medium,Brute,Earth1,False
+Anacondaq,1748,100,8510,0,0,Medium,Brute,Poison1,False
+Medusa,1749,102,10045,0,0,Medium,Demon,Neutral2,False
+Red Plant,1750,1,100,0,0,Small,Plant,Earth1,False
+Valkyrie Randgris,1751,141,3205000,130000000,121000000,Large,Angel,Holy4,False
+Skogul,1752,126,34240,363900,349800,Medium,Demon,Dark3,False
+Frus,1753,128,39520,368900,354800,Medium,Demon,Dark3,False
+Skeggiold,1754,131,53290,360900,242900,Small,Angel,Holy2,False
+Skeggiold,1755,131,52280,360700,242500,Small,Angel,Holy2,False
+Hydrolancer,1756,121,41500,0,0,Large,Dragon,Dark2,False
+Acidus,1757,130,48430,0,0,Large,Dragon,Holy2,False
+Ferus,1758,126,25668,0,0,Large,Dragon,Fire2,False
+Acidus,1759,130,40718,0,0,Large,Dragon,Wind2,False
+Ferus,1760,126,39054,0,0,Large,Dragon,Earth2,False
+Skogul,1761,126,34240,0,0,Medium,Demon,Dark3,False
+Frus,1762,128,39520,0,0,Medium,Demon,Dark3,False
+Skeggiold,1763,131,53290,0,0,Small,Angel,Holy2,False
+Skeggiold,1764,131,52280,0,0,Small,Angel,Holy2,False
+Valkyrie,1765,141,1005000,650000,550000,Large,Angel,Holy4,False
+Angeling,1766,99,128430,0,0,Small,Angel,Holy3,False
+Deviling,1767,99,128430,0,0,Small,Angel,Holy3,False
+Gloom Under Night,1768,139,3005000,140400000,99000000,Large,Formless,Ghost3,False
+Agav,1769,128,40000,368900,354800,Medium,DemiHuman,Neutral4,False
+Echio,1770,126,31620,363900,349800,Medium,DemiHuman,Neutral4,False
+Vanberk,1771,123,24605,309500,297200,Medium,DemiHuman,Neutral4,False
+Isilla,1772,124,26324,311900,299600,Medium,DemiHuman,Neutral4,False
+Hodremlin,1773,122,23182,307100,294800,Medium,Demon,Dark3,False
+Seeker,1774,124,24500,311900,299600,Small,Formless,Wind3,False
+Snowier,1775,103,13934,158500,150700,Large,Formless,Water2,False
+Siroma,1776,98,11910,134900,127800,Small,Formless,Water3,False
+Ice Titan,1777,110,20820,190800,182200,Large,Formless,Water3,False
+Gazeti,1778,106,14000,182400,173800,Medium,Demon,Water1,False
+Ktullanux,1779,98,2626000,62134500,47497100,Large,Brute,Water4,False
+Muscipular,1780,105,12550,170600,154700,Medium,Plant,Earth1,False
+Drosera,1781,101,10878,162200,146700,Medium,Plant,Earth1,False
+Roween,1782,95,7385,129200,122100,Medium,Brute,Wind1,False
+Galion,1783,100,8821,138700,131600,Medium,Brute,Wind2,False
+Stapo,1784,95,8805,135600,122100,Small,Formless,Earth2,False
+Atroce,1785,113,1502000,70200000,47025000,Large,Brute,Dark3,False
+Agav,1786,128,40000,0,0,Medium,DemiHuman,Neutral4,False
+Echio,1787,126,31620,0,0,Medium,DemiHuman,Neutral2,False
+Ice Titan,1788,110,20820,0,0,Large,Formless,Water3,False
+Iceicle,1789,100,1012,9800,8000,Small,Formless,Water2,False
+Rafflesia,1790,86,5819,0,0,Small,Plant,Earth1,False
+Galion,1791,100,8821,0,0,Medium,Brute,Wind2,False
+Soccer Ball,1792,1,10,0,0,Small,Formless,Neutral1,False
+Megalith,1793,65,2451,0,0,Large,Formless,Neutral4,False
+Roween,1794,95,7385,0,0,Medium,Brute,Wind1,False
+Bloody Knight,1795,116,68500,0,0,Large,Angel,Ghost1,False
+Aunoe,1796,110,13050,190800,182200,Medium,DemiHuman,Neutral4,False
+Fanat,1797,120,21000,265200,254400,Medium,DemiHuman,Neutral4,False
+Treasure Chest,1798,99,0,0,0,Small,Formless,Neutral1,False
+Lord Knight Seyren,1799,99,1647590,261122400,70648600,Medium,DemiHuman,Fire4,False
+Assassin Cross Eremes,1800,99,1411230,220503600,71657100,Medium,DemiHuman,Poison4,False
+Mastersmith Howard,1801,99,1460000,216126300,63945000,Medium,DemiHuman,Earth4,False
+High Priest Margaretha,1802,99,1092910,229878000,59346000,Medium,DemiHuman,Holy4,False
+Sniper Cecil,1803,99,1349000,221022000,68670000,Medium,DemiHuman,Wind4,False
+High Wizard Kathryne,1804,99,1069920,216442800,73651500,Medium,DemiHuman,Ghost3,False
+Lord Knight Seyren,1805,99,1647590,435204000,141297300,Medium,DemiHuman,Fire4,False
+Assassin Cross Eremes,1806,99,1411230,367506000,143314200,Medium,DemiHuman,Poison4,False
+Mastersmith Howard,1807,99,1460000,360210600,127890000,Medium,DemiHuman,Earth4,False
+High Priest Margaretha,1808,99,1092910,383130000,118692000,Medium,DemiHuman,Holy4,False
+Sniper Cecil,1809,99,1349000,368370000,137340000,Medium,DemiHuman,Wind4,False
+High Wizard Kathryne,1810,99,1069920,360738000,147303000,Medium,DemiHuman,Ghost3,False
+Bandit,1811,18,641,0,0,Small,Brute,Earth1,False
+Delightful Lude,1812,10,20,0,0,Small,Undead,Undead1,False
+Hydrolancer,1813,99,1880000,216000000,90000000,Large,Angel,Ghost1,False
+Moonlight Flower,1814,80,30000,1485000,1350000,Medium,Brute,Fire3,False
+Rice Cake,1815,12,777,300,300,Medium,Formless,Neutral1,False
+Gourd,1816,12,1000,0,0,Medium,Formless,Neutral1,False
+Detarderous,1817,99,8880000,243000000,112500000,Large,Angel,Ghost2,False
+Alarm,1818,58,10647,0,0,Medium,Formless,Neutral3,False
+Bathory,1819,86,5242,0,0,Medium,DemiHuman,Dark1,False
+Bigfoot,1820,29,587,0,0,Large,Brute,Earth1,False
+Desert Wolf,1821,103,9447,0,0,Medium,Brute,Fire1,False
+Deviruchi,1822,64,2300,0,0,Small,Demon,Dark1,False
+Freezer,1823,94,9990,0,0,Medium,Brute,Water2,False
+Baby Hatii,1824,94,10016,0,0,Medium,Brute,Water2,False
+Christmas Goblin,1825,25,1176,0,0,Medium,DemiHuman,Wind1,False
+Myst,1826,39,879,0,0,Large,Formless,Poison1,False
+Sasquatch,1827,30,3163,0,0,Large,Brute,Neutral3,False
+Gullinbrusti,1828,20,20,0,0,Large,Brute,Earth2,False
+Sword Guardian,1829,133,70000,292500,185500,Large,DemiHuman,Neutral4,False
+Bow Guardian,1830,132,63000,285500,181100,Large,DemiHuman,Neutral4,False
+Salamander,1831,138,80390,384700,392500,Large,Formless,Fire3,False
+Ifrit,1832,146,6935000,435240000,267300000,Large,Formless,Fire4,False
+Kasa,1833,135,70128,363900,423900,Large,Formless,Fire3,False
+Salamander,1834,138,80390,0,0,Large,Formless,Fire3,False
+Kasa,1835,135,70128,0,0,Large,Formless,Fire3,False
+Magmaring,1836,110,13079,190800,182200,Small,Formless,Fire2,False
+Imp,1837,129,36830,371400,357300,Small,Demon,Fire3,False
+Knocker,1838,126,43900,382000,349800,Small,Demon,Earth1,False
+Byrogue,1839,135,92544,502100,304800,Medium,DemiHuman,Neutral1,False
+Golden Savage,1840,99,500,100,100,Large,Brute,Earth2,False
+Snake Lord's Minion,1841,15,10,100,100,Medium,Brute,Earth1,False
+Snake Lord's Minion,1842,23,15,100,100,Medium,Brute,Poison1,False
+Snake Lord's Minion,1843,43,18,100,100,Medium,Brute,Poison1,False
+Snake Lord's Minion,1844,47,25,100,100,Large,Demon,Dark1,False
+Treasure Box,1845,98,500,0,0,Small,Formless,Neutral1,False
+Dream Metal,1846,90,1499,100,100,Small,Formless,Holy1,False
+Poring,1847,98,10000500,54000000,45000000,Medium,Angel,Ghost1,False
+Baphomet,1848,50,45000,45000,45000,Large,Demon,Dark3,False
+Osiris,1849,60,125000,90000,90000,Medium,Undead,Undead4,False
+Orc Hero,1850,50,175000,135000,135000,Large,DemiHuman,Earth4,False
+Mobster,1851,61,7991,0,0,Medium,DemiHuman,Neutral1,False
+Angeling,1852,99,120,0,0,Small,Angel,Holy3,False
+Deviling,1853,99,120,0,0,Small,Angel,Holy3,False
+Muka,1854,17,610,12300,5400,Large,Plant,Earth1,False
+Poison Spore,1855,19,665,16700,8400,Medium,Plant,Poison1,False
+Magnolia,1856,26,3195,35400,22300,Small,Demon,Water1,False
+Marin,1857,15,742,2900,2000,Medium,Plant,Water2,False
+Plankton,1858,10,354,2100,1600,Small,Plant,Water3,False
+Mandragora,1859,12,405,4100,2900,Medium,Plant,Earth3,False
+Coco,1860,17,817,5400,3500,Small,Brute,Earth1,False
+Choco,1861,43,4278,56900,56900,Small,Brute,Fire1,False
+Martin,1862,18,1109,6000,3800,Small,Brute,Earth2,False
+Spring Rabbit,1863,25,4500,0,0,Medium,Brute,Earth2,False
+Zombie Slaughter,1864,124,40440,343000,284100,Medium,Undead,Undead3,False
+Ragged Zombie,1865,123,38574,340400,281800,Medium,Undead,Undead3,False
+Hellhound,1866,115,17168,224600,215000,Small,Demon,Dark1,False
+Banshee,1867,130,48666,373900,359800,Medium,Demon,Dark2,False
+Banshee,1868,130,48666,0,0,Medium,Demon,Dark2,False
+Flame Skull,1869,121,21276,274300,307600,Small,Demon,Ghost3,False
+Necromancer,1870,133,91304,299000,328900,Medium,Undead,Undead4,False
+Falling Bishop,1871,138,5655000,175500000,103950000,Medium,Demon,Dark2,False
+Hell Fly,1872,127,502000,0,0,Medium,Angel,Neutral4,False
+Beelzebub,1873,147,6805000,0,0,Small,Demon,Ghost4,False
+Beelzebub,1874,147,4805000,458250000,387750000,Large,Demon,Ghost4,False
+Tristan III,1875,80,43000,100,100,Medium,Undead,Undead4,False
+Lord of the Dead,1876,99,99000000,7092500,1950500,Large,Demon,Dark3,False
+Crystal,1877,1,15,0,0,Small,Formless,Neutral1,False
+Mystic Plant,1878,1,20,0,0,Small,Plant,Holy1,False
+Eclipse,1879,6,1800,0,0,Medium,Brute,Neutral3,False
+Leshij,1880,81,5499,100100,88900,Medium,Plant,Earth3,False
+Lesavka,1881,82,6216,101800,90500,Medium,Plant,Earth4,False
+Baba-Yaga,1882,87,6498,105200,98700,Medium,DemiHuman,Water1,False
+Kikimora,1883,85,7140,101800,95300,Medium,DemiHuman,Water3,False
+Mavka,1884,84,5421,105200,93700,Medium,Plant,Earth3,False
+Gopinich,1885,97,1120500,42854400,29016000,Large,Brute,Earth3,False
+Mavka,1886,84,5421,0,0,Medium,Plant,Earth3,False
+Freezer,1887,94,9990,0,0,Medium,Brute,Water2,False
+Baby Hatii,1888,61,15199,4500,4500,Medium,Brute,Water2,False
+Marozka's Guard,1889,73,100000,49500,45000,Large,Brute,Water4,False
+The Immortal Koshei,1890,85,599321,49500,45000,Large,Brute,Earth3,False
+Valkyrie,1891,141,1005000,0,0,Large,Angel,Holy4,False
+Lolo Ruri,1892,109,15280,0,0,Large,Demon,Dark4,False
+Abysmal Knight,1893,122,23297,0,0,Large,DemiHuman,Dark4,False
+Pouring,1894,15,777,300,300,Small,Plant,Water3,False
+Seyren Windsor,1895,91,88902,0,0,Medium,Demon,Fire3,False
+Kathryne Keyron,1896,92,47780,0,0,Medium,DemiHuman,Ghost3,False
+Baphomet,1897,81,668000,0,0,Large,Demon,Dark3,False
+Zombie,1898,12,434,0,0,Medium,Undead,Undead1,False
+Sword Guardian,1899,133,70000,0,0,Large,DemiHuman,Neutral4,False
+Archer Guardian,1900,80,80404,0,0,Large,DemiHuman,Neutral4,False
+Condor,1901,10,15,4500,4500,Small,Brute,Holy1,False
+Treasure Box,1902,99,49,0,0,Small,Formless,Holy1,False
+Treasure Box,1903,99,49,0,0,Small,Formless,Holy1,False
+Bomb Poring,1904,28,1000000,20700,12800,Small,Formless,Neutral1,False
+Barricade,1905,98,600500,0,0,Large,Formless,Neutral1,False
+Barricade,1906,98,600,0,0,Large,Formless,Neutral1,False
+Guardian Stone,1907,90,120500,0,0,Small,Formless,Neutral1,False
+Guardian Stone,1908,90,120500,0,0,Small,Formless,Neutral1,False
+Food Storage,1909,90,750,0,0,Large,Formless,Neutral1,False
+Food Depot,1910,90,750,0,0,Large,Formless,Neutral1,False
+Neutrality Flag,1911,90,650,0,0,Large,Formless,Neutral1,False
+Lion Flag,1912,90,650,0,0,Large,Formless,Neutral1,False
+Eagle Flag,1913,90,650,0,0,Large,Formless,Neutral1,False
+Blue Crystal,1914,90,750,0,0,Large,Formless,Neutral1,False
+Pink Crystal,1915,90,750,0,0,Large,Formless,Neutral1,False
+Satan Morroc,1916,151,7000000,0,0,Large,Demon,Dark4,False
+Wounded Morroc,1917,151,5000000,263250000,167310000,Large,Demon,Dark4,False
+Incarnation of Morroc,1918,132,63900,285500,181100,Large,Angel,Dark1,False
+Incarnation of Morroc,1919,132,64922,331100,210100,Medium,Demon,Dark3,False
+Incarnation of Morroc,1920,133,94800,339300,207900,Medium,Demon,Undead3,False
+Incarnation of Morroc,1921,134,77389,299500,223000,Medium,Demon,Ghost3,False
+Shadow of Morroc,1922,132,63900,0,0,Large,Angel,Dark1,False
+Shadow of Morroc,1923,132,64922,0,0,Medium,Demon,Dark3,False
+Shadow of Morroc,1924,133,94800,0,0,Medium,Demon,Undead3,False
+Shadow of Morroc,1925,134,77389,0,0,Medium,Demon,Ghost3,False
+Jakk,1926,1,1000,0,0,Medium,Formless,Fire2,False
+Whisper,1927,1,1000,0,0,Small,Demon,Ghost3,False
+Deviruchi,1928,46,500,0,0,Small,Demon,Dark1,False
+Unsealed Baphomet,1929,98,4520500,244080000,113400000,Large,Demon,Dark3,False
+Piamette,1930,90,3000500,0,0,Small,DemiHuman,Neutral1,False
+Wish Maiden,1931,98,3567700,0,0,Large,Angel,Ghost1,False
+Garden Keeper,1932,80,100,0,0,Small,Formless,Earth2,False
+Garden Watcher,1933,81,300000,0,0,Medium,Angel,Neutral4,False
+Blue Flower,1934,98,10500,0,0,Medium,Plant,Earth1,False
+Red Flower,1935,98,10500,0,0,Medium,Plant,Earth1,False
+Yellow Flower,1936,98,10500,0,0,Medium,Plant,Earth1,False
+Constant,1937,108,11000,0,0,Small,Formless,Dark3,False
+Treasure Chest,1938,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1939,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1940,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1941,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1942,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1943,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1944,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1945,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1946,99,0,0,0,Small,Formless,Neutral1,False
+Piamette,1947,90,500500,0,0,Small,DemiHuman,Neutral1,False
+Egnigem Cenia,1948,136,40327,0,0,Medium,DemiHuman,Fire2,False
+Camp Guardian,1949,86,457599,0,0,Large,DemiHuman,Neutral4,False
+Camp Guardian,1950,80,241212,0,0,Large,DemiHuman,Neutral4,False
+Crystal,1951,1,15,0,0,Small,Formless,Neutral1,False
+Crystal,1952,1,15,0,0,Small,Formless,Neutral1,False
+Crystal,1953,1,15,0,0,Small,Formless,Neutral1,False
+Crystal,1954,1,15,0,0,Small,Formless,Neutral1,False
+Treasure Chest,1955,1,1,0,0,Small,Formless,Neutral1,False
+Naght Sieger,1956,99,5000000,216000000,90000000,Large,Demon,Ghost4,False
+Entweihen Crothen,1957,90,2400500,78650000,60750000,Medium,Demon,Dark4,False
+Thorny Skeleton,1958,89,5400000,0,0,Small,Demon,Dark4,False
+Thorn of Recovery,1959,89,350000,0,0,Small,Demon,Ghost4,False
+Thorn of Magic,1960,89,5400000,0,0,Small,Demon,Dark4,False
+Thorn of Purification,1961,89,5400000,0,0,Small,Demon,Dark4,False
+Christmas Thief,1962,10,15,0,0,Medium,DemiHuman,Neutral1,False
+New Year Doll,1963,49,23900,107800,44700,Medium,DemiHuman,Neutral2,False
+Nightmare,1964,30,2000,23000,17400,Large,Brute,Ghost3,False
+Wild Rose,1965,38,4000,0,0,Small,Brute,Wind1,False
+Doppelganger,1966,72,7800,0,0,Medium,Demon,Dark3,False
+Egnigem Cenia,1967,79,7800,0,0,Medium,DemiHuman,Fire2,False
+Strouf,1968,48,11990,277200,188800,Large,Fish,Water3,False
+Marc,1969,36,6900,88900,56200,Medium,Fish,Water2,False
+Obeune,1970,31,3952,57900,36600,Medium,Fish,Water2,False
+Vadon,1971,19,5000,12100,7600,Small,Fish,Water1,False
+Marina,1972,21,2087,19600,12600,Small,Plant,Water2,False
+Poring,1973,99,10,200,100,Medium,Plant,Water1,False
+Banshee Master,1974,118,20320,260600,249800,Medium,Demon,Dark2,False
+Beholder Master,1975,106,10135,182400,173800,Medium,Formless,Wind2,False
+Cobalt Mineral,1976,113,15800,220200,210600,Medium,Formless,Neutral2,False
+Heavy Metaling,1977,107,11500,184500,175900,Small,Formless,Neutral1,False
+Hell Vesper,1978,121,22100,304700,292400,Large,Formless,Neutral3,False
+Zakudam,1979,115,17200,224600,215000,Large,DemiHuman,Neutral3,False
+Kublin,1980,85,633600,4950000,4500000,Medium,DemiHuman,Earth1,False
+Orc Elite Guard,1981,81,44193,0,0,Large,DemiHuman,Fire2,False
+Orc Bowman,1982,78,54835,0,0,Medium,DemiHuman,Earth1,False
+Orc Undead,1983,87,80087,0,0,Medium,Undead,Undead1,False
+Orc Lady,1984,80,50058,0,0,Medium,DemiHuman,Earth2,False
+Dandelion Member,1985,37,45000,0,0,Medium,DemiHuman,Dark2,False
+Tatacho,1986,128,33336,387300,354800,Medium,Brute,Earth1,False
+Centipede,1987,125,24992,314300,302000,Medium,Insect,Poison2,False
+Nepenthes,1988,114,15099,222400,212800,Medium,Plant,Poison2,False
+Hillthrion,1989,123,21422,324900,297200,Small,Brute,Earth1,False
+Hardrock Mammoth,1990,137,1900944,9249000,4464700,Large,Brute,Earth3,False
+Tendrillion,1991,126,1397451,6550200,4141300,Medium,Brute,Earth2,False
+Cornus,1992,120,20722,265200,254400,Medium,Brute,Holy3,False
+Naga,1993,117,21099,271200,247500,Large,Brute,Earth2,False
+Luciola Vespa,1994,109,12466,188700,180100,Medium,Insect,Wind1,False
+Pinguicula,1995,105,13058,170600,154700,Medium,Plant,Earth3,False
+Tatacho,1997,128,33336,0,0,Medium,Brute,Earth1,False
+Hillslion,1998,123,21422,0,0,Small,Brute,Earth1,False
+Centipede Larva,1999,118,20667,260600,249800,Small,Insect,Poison1,False
+Male Game Master,2000,50,7000,0,0,Medium,DemiHuman,Neutral1,False
+Female Game Master,2001,50,7000,0,0,Medium,DemiHuman,Neutral1,False
+Talisman Ghost,2002,50,8000,179200,79400,Medium,Brute,Earth2,False
+Talisman Ghost,2003,97,720500,0,0,Large,DemiHuman,Water2,False
+Talisman Ghost,2004,63,16029,0,0,Medium,Demon,Dark3,False
+Plasma,2005,44,8200,0,0,Small,Formless,Water4,False
+Plasma,2006,49,5900,0,0,Small,Formless,Dark4,False
+Plasma,2007,43,5700,0,0,Small,Formless,Fire4,False
+Woomawang,2008,82,4000000,4950000,4500000,Large,Demon,Ghost2,False
+Woomawang,2009,82,2000000,4950000,4500000,Medium,Demon,Ghost2,False
+Ox,2010,66,500000,400,400,Large,Demon,Ghost1,False
+Tenacious Ghoul,2011,40,99999,48900,28000,Medium,Undead,Undead2,False
+Tenacious Zombie,2012,15,99999,2200,1500,Medium,Undead,Undead1,False
+Draco,2013,114,20099,233500,212800,Medium,Dragon,Earth1,False
+Draco Egg,2014,101,100000,120000,99000,Medium,Dragon,Earth4,False
+Dark Pinguicula,2015,113,17002,220200,210600,Medium,Plant,Poison2,False
+Aqua Elemental,2016,121,33209,304700,292400,Large,Formless,Water4,False
+Rata,2017,131,58299,506100,403700,Medium,DemiHuman,Earth3,False
+Duneyrr,2018,135,63342,559000,481500,Medium,DemiHuman,Earth3,False
+Ancient Tree,2019,144,388933,475000,361600,Large,Plant,Earth3,False
+Rhyncho,2020,139,337220,396900,302000,Medium,Formless,Water3,False
+Phylla,2021,139,345560,396900,302000,Medium,Formless,Water3,False
+Nidhoggur's Shadow,2022,117,3452000,280800000,193050000,Large,Dragon,Dark4,False
+Dark Shadow,2023,147,434300,495900,377500,Small,Formless,Dark2,False
+Bradium Golem,2024,133,45739,425900,237100,Large,Formless,Earth2,False
+Wild Gift Box,2025,10,10,3800,3800,Medium,Formless,Neutral1,False
+Runaway Dandelion Member,2026,90,552500,2475000,1125000,Medium,DemiHuman,Dark1,False
+Dark Shadow,2027,147,434300,0,0,Small,Formless,Dark2,False
+Hiden Priest,2030,90,240500,0,0,Large,Demon,Undead4,False
+Dandelion,2031,80,120000,0,0,Medium,DemiHuman,Dark2,False
+Forest Guardian,2032,50,99999,0,0,Small,Demon,Dark1,False
+Golden Tulip,2033,1,100,0,0,Small,Plant,Earth1,False
+Nihility Zem,2035,90,200500,0,0,Small,Insect,Earth1,False
+Valkyrie Randgris,2036,98,11780,0,0,Medium,Undead,Undead3,False
+Executioner,2039,65,28980,0,0,Large,Formless,Dark2,False
+Ogretooth,2040,71,29900,0,0,Medium,Formless,Dark3,False
+Mysteltainn,2041,76,33350,0,0,Large,Formless,Dark4,False
+Silver Sniper,2042,100,4500,0,0,Medium,Formless,Neutral1,False
+Magic Decoy,2043,100,2500,0,0,Medium,Formless,Fire1,False
+Magic Decoy,2044,100,2500,0,0,Medium,Formless,Water1,False
+Magic Decoy,2045,100,2500,0,0,Medium,Formless,Earth1,False
+Magic Decoy,2046,100,2500,0,0,Medium,Formless,Wind1,False
+Naga,2047,99,46708,0,0,Large,Brute,Earth2,False
+Dark Pinguicula,2048,99,8780,0,0,Medium,Plant,Poison2,False
+Bradium Golem,2049,99,45200,0,0,Large,Formless,Earth2,False
+Aqua Elemental,2050,99,33220,0,0,Large,Formless,Water4,False
+Dark Lord,2052,96,100000000,42854400,27900000,Large,Demon,Undead4,False
+Strange Mouse,2057,1,4720,0,0,Small,Brute,Poison2,False
+Anopheles,2066,5,50,100,100,Small,Insect,Wind3,False
+Anopheles,2067,3,500,100,100,Small,Insect,Wind3,False
+Boitata,2068,93,1283990,4457300,3897500,Large,Brute,Fire3,False
+Iara,2069,79,5890,85400,79400,Medium,Fish,Water3,False
+Piranha,2070,75,4522,79400,73400,Large,Fish,Water3,False
+Headless Mule,2071,80,6620,86900,80900,Large,Demon,Fire3,False
+Jaguar,2072,71,3914,77400,67800,Medium,Brute,Earth2,False
+Toucan,2073,70,3640,67700,62100,Medium,Brute,Wind2,False
+Curupira,2074,68,3096,68300,59500,Medium,DemiHuman,Earth1,False
+Ragunta,2075,99,53822010,999999900,999999900,Large,Formless,Ghost4,False
+Shadow of Deception,2076,105,190800,0,0,Medium,Demon,Wind3,False
+Shadow of Illusion,2077,105,244400,0,0,Medium,Demon,Dark3,False
+Shadow of Pleasure,2078,105,206660,0,0,Medium,Demon,Dark3,False
+Crystal,2079,77,7777777,207777700,188888800,Large,Formless,Neutral3,False
+Crystal,2080,15,1250,36100,29300,Large,Formless,Neutral3,False
+Strange Hydra,2081,34,854,0,0,Small,Plant,Water2,False
+Piranha,2082,75,4522,0,0,Large,Fish,Water3,False
+One-Horned Scaraba,2083,130,51100,261000,264600,Small,Insect,Earth1,False
+Two-Horned Scaraba,2084,134,58900,289000,300000,Small,Insect,Earth1,False
+Antler Scaraba,2085,136,62600,316500,346700,Medium,Insect,Earth2,False
+Rake Scaraba,2086,139,67700,349500,395500,Medium,Insect,Earth2,False
+Scaraba Queen,2087,140,2441600,26664300,11671000,Large,Insect,Earth3,False
+Scaraba Egg,2088,125,63000,260000,198000,Small,Insect,Neutral1,False
+Scaraba Egg,2089,126,66000,260000,198000,Small,Insect,Neutral1,False
+Antler Scaraba Egg,2090,127,69000,260000,198000,Small,Insect,Neutral1,False
+Rake Scaraba Egg,2091,128,72000,260000,198000,Small,Insect,Neutral1,False
+Dolomedes,2092,132,54591,335100,340100,Large,Insect,Water3,False
+Botaring,2093,15,15,300,300,Small,Formless,Holy1,False
+Orc Hero,2094,50,362000,100500,100500,Large,DemiHuman,Earth2,False
+Eddga,2095,65,947500,100500,100500,Large,Brute,Fire1,False
+Osiris,2096,68,475840,100500,100500,Medium,Undead,Undead4,False
+Dracula,2097,75,350000,110500,100500,Large,Demon,Dark4,False
+Doppelganger,2098,77,380000,110500,100500,Medium,Demon,Dark3,False
+Mistress,2099,78,378000,100500,100500,Small,Insect,Wind4,False
+Baphomet,2100,81,668000,110500,100500,Large,Demon,Dark3,False
+Lord of the Dead,2101,94,603883,120600,100500,Large,Demon,Dark3,False
+Dark Lord,2102,96,1190900,120600,100500,Large,Demon,Undead4,False
+Ktullanux,2103,98,2626000,120600,100500,Large,Brute,Water4,False
+Evil Snake Lord,2104,105,1101000,120600,110500,Large,Brute,Ghost3,False
+Turtle General,2105,110,1442000,120600,110500,Large,Brute,Earth2,False
+Vesper,2106,128,3802000,130600,110500,Large,Brute,Holy2,False
+Fallen Bishop Hibram,2107,138,5655000,130600,110500,Medium,Demon,Dark2,False
+Gloom Under Night,2108,139,3005000,130600,110500,Large,Formless,Ghost3,False
+Valkyrie Randgris1,2109,141,3205000,130600,110500,Large,Angel,Holy4,False
+Ifrit,2110,146,6935000,130600,110500,Large,Formless,Fire4,False
+Whitesmith Howard,2111,160,6750000,130600,110500,Medium,DemiHuman,Earth4,False
+Lord Knight Seyren,2112,160,4680000,130600,110500,Medium,DemiHuman,Fire4,False
+Assassin Cross Eremes,2113,160,4230000,130600,110500,Medium,DemiHuman,Poison4,False
+Anopheles,2126,100,8000,0,0,Small,Insect,Wind3,False
+Hornet,2127,110,9000,0,0,Small,Insect,Wind1,False
+Hornet,2128,120,10000,0,0,Small,Insect,Wind1,False
+Luciola Vespa,2129,130,11000,0,0,Medium,Insect,Wind1,False
+Luciola Vespa,2130,140,12000,0,0,Medium,Insect,Wind1,False
+Lost Dragon,2131,135,608920,1950000,1980000,Large,Dragon,Dark3,False
+Pom Spider,2132,145,122110,520600,530300,Medium,Insect,Earth3,False
+Angra Mantis,2133,144,91720,506300,463300,Medium,Insect,Earth2,False
+Parus,2134,142,86990,475100,461300,Small,Brute,Earth2,False
+Creeper,2135,100,1000,0,0,Medium,Plant,Earth1,False
+Little Fatum,2136,142,85100,487500,429000,Small,DemiHuman,Wind2,False
+Miming,2137,140,81200,461500,415800,Small,Formless,Neutral1,False
+Nydhoggur Memory,2138,130,10,0,0,Small,Formless,Neutral1,False
+Nydhoggur Memory,2139,130,10,0,0,Small,Formless,Neutral1,False
+Nydhoggur Memory,2140,130,10,0,0,Small,Formless,Neutral1,False
+Nydhoggur Memory,2141,130,10,0,0,Small,Formless,Neutral1,False
+Nydhoggur Memory,2142,130,10,0,0,Small,Formless,Neutral1,False
+Nydhoggur Memory,2143,130,10,0,0,Small,Formless,Neutral1,False
+Antler Scaraba,2144,136,62600,0,0,Medium,Insect,Earth2,False
+Rake Scaraba,2145,139,67700,0,0,Medium,Insect,Earth2,False
+Shade of Dragon,2146,117,300000,0,0,Large,Dragon,Dark4,False
+White Plant,2147,1,60,2700,2000,Medium,Plant,Water1,False
+Blue Plant,2148,1,60,2700,2000,Medium,Plant,Water1,False
+Savage Babe,2149,1,60,2700,2000,Medium,Plant,Water1,False
+Ripe Watermelon,2150,12,10,0,0,Medium,Plant,Water1,False
+Rafflesia Alnoldi,2151,80,5149,91200,80900,Medium,Plant,Earth1,False
+Comodo,2152,81,4002,95400,88900,Medium,Brute,Poison3,False
+Cendrawasih,2153,84,5556,100200,93700,Medium,Angel,Wind1,False
+Banaspaty,2154,85,4680,101800,95300,Small,Formless,Fire3,False
+Butoijo,2155,88,7524,106900,100400,Large,Demon,Fire2,False
+Leak,2156,94,1266000,23640000,15006000,Large,Demon,Dark2,False
+Banaspaty,2157,85,4680,0,0,Small,Formless,Fire3,False
+Hornet,2158,95,5000,0,0,Small,Insect,Wind1,False
+Giant Hornet,2159,110,11960,0,0,Small,Insect,Wind1,False
+Luciola Vespa,2160,130,16466,0,0,Medium,Insect,Wind1,False
+Gold One-Horn Scaraba,2161,130,204400,894000,882400,Small,Insect,Earth1,False
+Gold Two-Horn Scaraba,2162,134,235600,1006000,1000700,Small,Insect,Earth1,False
+Gold Antler Scaraba,2163,136,250400,1016000,1156100,Medium,Insect,Earth2,False
+Gold Rake Scaraba,2164,139,270800,1148000,1318900,Medium,Insect,Earth2,False
+Gold Queen Scaraba,2165,140,6441600,60511000,33671000,Large,Insect,Earth3,False
+Gold One-Horn Scaraba Egg,2166,125,126000,600000,594000,Small,Insect,Earth1,False
+Gold Two-Horn Scaraba Egg,2167,126,132000,600000,594000,Small,Insect,Earth1,False
+Gold Antler Scaraba Egg,2168,127,138000,600000,594000,Small,Insect,Earth1,False
+Gold Rake Scaraba Egg,2169,128,144000,600000,594000,Small,Insect,Earth1,False
+Gold Antler Scaraba,2170,136,250400,0,0,Medium,Insect,Earth2,False
+Gold Rake Scaraba,2171,139,270800,0,0,Medium,Insect,Earth2,False
+Gold One-Horn Scaraba,2172,130,204400,0,0,Small,Insect,Earth1,False
+Gold Two-Horn Scaraba,2173,134,235600,0,0,Small,Insect,Earth1,False
+Deep Sea Vadon,2174,95,120000,75000,75000,Small,Fish,Water1,False
+Deep Sea Marse,2175,95,120000,75000,75000,Small,Fish,Water2,False
+Deep Sea Crab,2176,95,120000,75000,75000,Small,Fish,Water1,False
+Deep Sea Cornutus,2177,100,160000,75000,82500,Small,Fish,Water1,False
+Deep Sea Shellfish,2178,100,160000,75000,82500,Small,Fish,Water2,False
+Deep Sea Kukre,2179,100,160000,75000,82500,Small,Insect,Water1,False
+Deep Sea Strouf,2180,145,400000,100000,110000,Large,Fish,Water3,False
+Deep Sea Sword Fish,2181,145,400000,100000,110000,Large,Fish,Water2,False
+Deep Sea Marc,2182,145,400000,100000,110000,Medium,Fish,Water2,False
+Deep Sea Anolian,2183,151,700000,110000,121000,Medium,Fish,Water2,False
+Deep Sea Obeaune,2184,151,700000,110000,121000,Medium,Demon,Water3,False
+Deep Sea Kapha,2185,151,700000,110000,121000,Medium,Demon,Water2,False
+Coelacanth,2186,100,1200000,20000000,22000000,Large,Fish,Water2,False
+Gloomy Coelacanth,2187,100,2200000,50000000,55000000,Large,Fish,Water2,False
+Weird Coelacanth,2188,100,2200000,50000000,55000000,Large,Fish,Water2,False
+Mutant Coelacanth,2189,155,5200000,150000000,165000000,Large,Fish,Water2,False
+Violent Coelacanth,2190,155,5200000,150000000,165000000,Large,Fish,Water2,False
+Seaweed,2191,100,100000,0,0,Small,Fish,Water1,False
+Octopus,2192,90,6000,200000,100000,Small,Fish,Water2,False
+Octopus Leg,2193,90,500000,200000,100000,Small,Fish,Water2,False
+Giant Octopus,2194,95,500000,2000000,1000000,Large,Fish,Water2,False
+Kukre,2195,100,160000,0,0,Small,Insect,Water1,False
+Strouf,2196,145,400000,0,0,Large,Fish,Water3,False
+Red Eruma,2197,91,9900,122000,114900,Medium,Fish,Water2,False
+King Dramoh,2198,117,28800,258300,247500,Large,Fish,Water2,False
+Siorava,2199,87,6500,105200,98700,Small,Formless,Water1,False
+Taini,2200,1,1,0,0,Small,Formless,Neutral1,False
+Sropho,2201,113,24002,220200,210600,Medium,Fish,Water2,False
+Kraken,2202,124,5602800,98333200,105722200,Large,Fish,Water4,False
+Pot Dofle,2203,115,25211,224600,215000,Small,Fish,Water2,False
+Sedora,2204,110,22050,190800,182200,Medium,Fish,Water2,False
+Kraken Tentacle,2206,124,39190,0,0,Large,Fish,Water3,False
+Wild Rider,2208,95,33300,415000,165000,Large,Fish,Water2,False
+Thief Bug,2209,1,60,2700,2000,Medium,Plant,Water1,False
+Christmas Snow Rabbit,2210,1,60,2700,2000,Medium,Plant,Water1,False
+Christmas Teddy Bear,2211,1,60,2700,2000,Medium,Plant,Water1,False
+Stormy Knight,2212,92,100000000,24828000,15110000,Large,Formless,Wind4,False
+Wanderer,2213,81,8614,2700,2000,Medium,Demon,Wind1,False
+Evil Nymph,2214,85,6157,2700,2000,Medium,Demon,Dark3,False
+Kasa,2215,83,9815,2700,2000,Large,Formless,Fire3,False
+Salamander,2216,87,9517,2700,2000,Large,Formless,Fire3,False
+Teddy Bear,2217,85,14493,2700,2000,Small,Formless,Neutral3,False
+Octopus Tentacle,2218,1,60,2700,2000,Medium,Plant,Water1,False
+Giant Octopus,2219,1,60,2700,2000,Medium,Plant,Water1,False
+Messenger of Devil,2220,1,60,2700,2000,Medium,Plant,Water1,False
+Randel,2221,141,478745,3236700,3175200,Medium,DemiHuman,Holy3,False
+Flamel,2222,141,316468,2639700,3046500,Medium,DemiHuman,Fire3,False
+Celia,2223,141,253145,2210700,2510200,Medium,DemiHuman,Ghost3,False
+Chen,2224,141,279562,2568400,2614900,Medium,Demon,Water4,False
+Gertie,2225,141,266926,2426700,2670600,Medium,Demon,Poison4,False
+Alphoccio,2226,142,256202,2219200,2682400,Medium,DemiHuman,Wind3,False
+Trentini,2227,142,204962,1599500,1748600,Medium,DemiHuman,Wind3,False
+Paladin Randel,2228,160,3163000,1800000,1000000,Medium,DemiHuman,Holy4,False
+Creator Flamel,2229,160,2531750,1800000,1000000,Medium,DemiHuman,Fire4,False
+Professor Celia,2230,160,2025160,1800000,1000000,Medium,DemiHuman,Ghost3,False
+Champion Chen,2231,160,2236500,1800000,1000000,Medium,DemiHuman,Water4,False
+Stalker Gertie,2232,160,2135410,1800000,1000000,Medium,Demon,Poison4,False
+Clown Alphoccio,2233,160,2049620,1800000,1000000,Medium,DemiHuman,Wind4,False
+Gypsy Trentini,2234,160,2049620,1800000,1000000,Medium,DemiHuman,Wind4,False
+Paladin Randel,2235,160,6870000,367448900,214956600,Medium,DemiHuman,Holy4,False
+Creator Flamel,2236,160,4230000,261178500,144669400,Medium,DemiHuman,Fire4,False
+Professor Celia,2237,160,3847804,251365400,138038500,Medium,DemiHuman,Ghost3,False
+Champion Chen,2238,160,4249350,255678400,161423500,Medium,Demon,Water4,False
+Stalker Gertie,2239,160,4057279,221034900,148020000,Medium,Demon,Poison4,False
+Clown Alphoccio,2240,160,3894278,211301800,135793400,Medium,DemiHuman,Wind4,False
+Gypsy Trentini,2241,160,3894278,223187900,140970200,Medium,DemiHuman,Wind4,False
+Desert Wolf,2242,135,551578,0,0,Medium,Demon,Neutral1,False
+Desert Wolf,2243,130,274531,0,0,Small,Demon,Neutral1,False
+Dark Martial Arts Master,2244,130,300,0,0,Medium,Undead,Water4,False
+Experience Test,2245,1,100,10000,10000,Medium,DemiHuman,Water1,False
+Wootan Fighter,2246,95,9000,140000,200000,Medium,DemiHuman,Fire2,False
+Mi Gao,2247,95,20000,140000,200000,Medium,Formless,Earth3,False
+Golden Poring,2248,1,15,0,0,Medium,Plant,Water1,False
+Angry Student Pyuriel,2249,141,2205000,150012300,132000000,Medium,DemiHuman,Fire4,False
+Warrior Laura,2250,136,500255,1656700,1516600,Small,DemiHuman,Fire2,False
+Gioia,2251,146,2507989,150345100,143390100,Large,Formless,Wind4,False
+Elvira,2252,138,501765,1784700,1492500,Small,Formless,Wind3,False
+General Daehyun,2253,142,2500148,150156100,140164200,Large,DemiHuman,Earth3,False
+Samurai Soheon,2254,137,502015,1571500,1379400,Medium,DemiHuman,Wind3,False
+Dark Guardian Kades,2255,143,2505000,160400000,144100000,Large,Formless,Dark3,False
+Rudo,2256,135,501489,1363300,1364900,Small,Angel,Holy3,False
+Piamette,2257,1,50,0,0,Medium,Plant,Water1,False
+Piamette,2258,1,50,0,0,Medium,Plant,Water1,False
+Garden Keeper,2259,1,50,0,0,Medium,Plant,Water1,False
+Garden Keeper,2260,1,50,0,0,Medium,Plant,Water1,False
+Garden Watcher,2261,1,50,0,0,Medium,Plant,Water1,False
+Garden Watcher,2262,1,50,0,0,Medium,Plant,Water1,False
+Wish Maiden,2263,1,50,0,0,Medium,Plant,Water1,False
+Armeyer Dinze,2264,1,50,0,0,Medium,Plant,Water1,False
+Armeyer Dinze,2265,1,50,0,0,Medium,Plant,Water1,False
+Errende Ebecee,2266,1,50,0,0,Medium,Plant,Water1,False
+Errende Ebecee,2267,1,50,0,0,Medium,Plant,Water1,False
+Kavach Icarus,2268,1,50,0,0,Medium,Plant,Water1,False
+Kavach Icarus,2269,1,50,0,0,Medium,Plant,Water1,False
+Laurell Weinder,2270,1,50,0,0,Medium,Plant,Water1,False
+Laurell Weinder,2271,1,50,0,0,Medium,Plant,Water1,False
+Wickebine Tres,2272,1,50,0,0,Medium,Plant,Water1,False
+Wickebine Tres,2273,1,50,0,0,Medium,Plant,Water1,False
+Egnigem Cenia,2274,1,50,0,0,Medium,Plant,Water1,False
+Egnigem Cenia,2275,1,50,0,0,Medium,Plant,Water1,False
+Doppelganger,2276,1,50,0,0,Medium,Plant,Water1,False
+Warrior Laura,2277,136,500255,0,0,Small,DemiHuman,Fire2,False
+Elvira,2278,138,501765,0,0,Small,Formless,Wind3,False
+Samurai Soheon,2279,137,502015,0,0,Medium,DemiHuman,Wind3,False
+Rudo,2280,135,501489,0,0,Small,Angel,Holy3,False
+Dark Shadow,2281,147,204109,1150000,1333200,Small,Formless,Dark2,False
+Dark Frame,2282,145,180018,1010100,1320300,Medium,Demon,Dark3,False
+Dark Priest,2283,141,181878,1054800,1425700,Medium,Demon,Undead4,False
+Dark Axe Kobold,2284,145,194830,1104000,1416300,Medium,DemiHuman,Wind2,False
+Dark Hammer Kobold,2285,142,181340,1036000,1339800,Medium,DemiHuman,Poison2,False
+Dark Mace Kobold,2286,141,182830,1012000,1359600,Medium,DemiHuman,Fire2,False
+Dark Kobold Archer,2287,142,180530,1057000,1333200,Small,DemiHuman,Fire1,False
+Treasure Chest,2288,140,5,0,0,Small,Formless,Holy1,False
+Fabre,2289,1,50,0,0,Medium,Plant,Water1,False
+Thief Bug,2290,1,50,0,0,Medium,Plant,Water1,False
+Hornet,2291,1,50,0,0,Medium,Plant,Water1,False
+Horn,2292,1,50,0,0,Medium,Plant,Water1,False
+Beetle King,2293,1,50,0,0,Medium,Plant,Water1,False
+Argiope,2294,1,50,0,0,Medium,Plant,Water1,False
+Giant Spider,2295,1,50,0,0,Medium,Plant,Water1,False
+Killer Mantis,2296,1,50,0,0,Medium,Plant,Water1,False
+Giant Hornet,2297,1,50,0,0,Medium,Plant,Water1,False
+Dragon Tail,2298,1,50,0,0,Medium,Plant,Water1,False
+Stainer,2299,1,50,0,0,Medium,Plant,Water1,False
+Chonchon,2300,1,50,0,0,Medium,Plant,Water1,False
+Steel Chonchon,2301,1,50,0,0,Medium,Plant,Water1,False
+Hunter Fly,2302,1,50,0,0,Medium,Plant,Water1,False
+Maya,2303,1,50,0,0,Medium,Plant,Water1,False
+Queen Scaraba,2304,1,50,0,0,Medium,Plant,Water1,False
+Ungoliant,2305,1,50,0,0,Medium,Plant,Water1,False
+Golden Thief Bug,2306,65,100000000,10206000,7776000,Large,Insect,Fire2,False
+Mistress,2307,1,50,0,0,Medium,Plant,Water1,False
+Zanzou,2308,140,5,0,0,Small,Formless,Holy1,False
+Bungisngis,2309,121,25513,319900,292400,Large,DemiHuman,Earth2,False
+Engkanto,2310,125,23948,314300,302000,Medium,DemiHuman,Neutral2,False
+Manananggal,2311,107,20451,184500,175900,Medium,Demon,Dark2,False
+Mangkukulam,2312,110,20151,190800,182200,Medium,Demon,Neutral2,False
+Tikbalang,2313,115,22131,224600,215000,Large,Brute,Wind3,False
+Tiyanak,2314,105,17146,162500,154700,Small,Demon,Dark2,False
+Wakwak,2315,111,20012,215800,206200,Small,Demon,Dark2,False
+Jejeling,2316,100,10247,145600,131600,Large,Plant,Earth2,False
+Bangungot,2317,115,1519517,100,100,Medium,Demon,Dark2,False
+Bangungot,2318,99,1409758,0,0,Medium,Demon,Dark2,False
+Buwaya,2319,151,4090365,300001200,308172000,Large,Dragon,Water4,False
+Bakonawa,2320,156,3351884,0,0,Large,Dragon,Water4,False
+Bakonawa,2321,156,3351884,0,0,Large,Dragon,Water4,False
+Bakonawa,2322,156,3351884,251011100,257966600,Large,Dragon,Water4,False
+Bomb Poring,2323,100,50000,0,0,Small,Formless,Neutral1,False
+Penomena,2324,100,50000,0,0,Medium,Fish,Poison1,False
+Baphomet,2325,57,7510,0,0,Small,Demon,Dark1,False
+Galapago,2326,45,7513,0,0,Small,Brute,Earth1,False
+Bangungot,2327,115,250,78154100,83732100,Medium,Demon,Dark2,False
+Drum,2328,1,200,0,0,Small,Formless,Neutral1,False
+Buwaya's Egg,2329,100,10000,0,0,Small,Formless,Neutral3,False
+Slave,2330,135,20145,0,0,Small,Plant,Earth1,False
+Seaweed,2331,100,10,0,0,Small,Fish,Water1,False
+Buwaya,2332,138,30000,0,0,Small,Plant,Water4,False
+Weakpoint,2333,138,20,0,0,Small,Plant,Water4,False
+Wakwak,2334,145,194830,0,0,Small,Demon,Dark2,False
+Bakonawa's Treasure,2335,140,5,0,0,Small,Formless,Holy1,False
+Domovoi,2336,38,694,15500,14300,Small,Brute,Earth1,False
+Monster,2337,151,10000,0,0,Small,Insect,Ghost4,False
+Manananggal,2338,107,204511,0,0,Medium,Demon,Dark2,False
+Mangkukulam,2339,110,102154,0,0,Medium,Demon,Neutral2,False
+Tiyanak,2340,105,50211,0,0,Small,Demon,Dark2,False
+2011 RWC Boss,2341,141,3205000,130000000,121000000,Large,Angel,Holy4,False
+Diabolic,2342,83,9815,0,0,Small,Demon,Dark2,False
+Hidden Mob,2343,151,10000,0,0,Small,Insect,Ghost4,False
+Wish Maiden,2344,83,9815,0,0,Small,Demon,Dark2,False
+Zealotus,2345,83,9815,0,0,Small,Demon,Dark2,False
+Ktullanux,2346,83,9815,0,0,Small,Demon,Dark2,False
+Eddga,2347,83,9815,0,0,Small,Demon,Dark2,False
+Mao Guai,2348,83,9815,0,0,Small,Demon,Dark2,False
+Loli Ruri,2349,83,9815,0,0,Small,Demon,Dark2,False
+Sedora,2350,83,9815,0,0,Small,Demon,Dark2,False
+Chepet,2351,83,9815,0,0,Small,Demon,Dark2,False
+RSX 0805,2352,100,10000000,0,0,Large,Formless,Neutral3,False
+Minorous (Nightmare),2353,121,27141,304700,292400,Large,Brute,Fire2,False
+Mummy (Nightmare),2354,117,22557,284100,234600,Medium,Undead,Undead2,False
+Verit (Nightmare),2355,115,21034,247000,203800,Medium,Undead,Undead1,False
+Mimic (Nightmare),2356,137,63101,320100,356800,Medium,Formless,Neutral3,False
+Mimic (Nightmare),2357,137,63101,0,0,Medium,Formless,Neutral3,False
+Arclouze (Nightmare),2358,134,48013,250600,303900,Medium,Insect,Earth2,False
+Arclouze (Nightmare),2359,134,48013,0,0,Medium,Insect,Earth2,False
+Ancient Mummy (Nightmare),2360,141,90157,471200,528100,Medium,Undead,Undead2,False
+Ancient Mummy (Nightmare),2361,141,90157,0,0,Medium,Undead,Undead2,False
+Amon Ra (Nightmare),2362,145,2515784,162648700,143229500,Large,DemiHuman,Earth3,False
+Menblatt,2363,143,82200,415000,451500,Medium,Insect,Wind2,False
+Petal,2364,141,81031,405800,443600,Medium,Brute,Wind1,False
+Cenere,2365,146,130131,711700,753900,Small,Plant,Wind1,False
+Antique Book,2366,148,134615,722500,774800,Small,Formless,Neutral3,False
+Lichtern,2367,149,131211,718700,752500,Small,Formless,Water4,False
+Lichtern,2368,147,131513,707100,766900,Small,Formless,Ghost4,False
+Lichtern,2369,149,135718,720100,793600,Small,Formless,Fire4,False
+Lichtern,2370,151,133451,721400,753700,Small,Formless,Earth4,False
+Faithful Manager,2371,155,151548,867600,858100,Large,Formless,Neutral4,False
+Soil,2372,1,15,0,0,Small,Plant,Earth1,False
+Rock,2373,1,15,0,0,Small,Plant,Earth1,False
+Thicket,2374,1,15,0,0,Small,Plant,Earth1,False
+Incarnation of Morroc,2375,100,4444,0,0,Medium,Demon,Undead3,False
+Incarnation of Morroc,2376,100,2000,0,0,Medium,Demon,Dark3,False
+Novus,2377,1,12,0,0,Small,Dragon,Neutral1,False
+Antler Scaraba,2378,136,30000,0,0,Medium,Insect,Earth2,False
+Socks Stealing Raccoon,2379,10,10,0,0,Small,Brute,Earth1,False
+Gift Stealing Raccoon,2380,10,10,0,0,Small,Brute,Earth1,False
+Kraken Leg,2384,128,2051260,24744300,11838400,Large,Fish,Water3,False
+Kraken Leg,2385,128,2051260,24744300,11838400,Large,Fish,Water3,False
+Kraken Leg,2386,128,2051260,24744300,11838400,Large,Fish,Water3,False
+Kraken Leg,2387,128,2051260,24744300,11838400,Large,Fish,Water3,False
+Kraken Leg,2388,128,2051260,24744300,11838400,Large,Fish,Water3,False
+Kraken Leg,2389,128,2051260,0,0,Large,Fish,Water3,False
+Kraken Leg,2390,128,2051260,0,0,Large,Fish,Water3,False
+Kraken Leg,2391,128,2051260,0,0,Large,Fish,Water3,False
+Kraken Leg,2392,128,2051260,0,0,Large,Fish,Water3,False
+Kraken Leg,2393,128,2051260,0,0,Large,Fish,Water3,False
+Merman,2394,106,36080,796200,1194200,Medium,Fish,Water4,False
+Seiren,2395,108,61568,2926000,3128000,Medium,Fish,Water4,False
+Poseidon,2396,110,61568,3078400,3667600,Large,Fish,Water4,False
+Baby Kraken,2397,93,45710,2285500,2371600,Small,Fish,Water3,False
+Little Poring,2398,1,40,1800,1000,Small,Plant,Water1,False
+Poring,2401,1,60,0,0,Medium,Plant,Water1,False
+Poporing,2402,30,524,9900,11200,Medium,Plant,Poison1,False
+Poporing,2403,30,524,9900,11200,Medium,Plant,Poison1,False
+Dead Plankton,2404,9,95,3100,2300,Small,Undead,Undead1,False
+Weak Skeleton,2405,18,280,19200,11700,Medium,Undead,Undead1,False
+Weak Soldier Skeleton,2406,23,468,21500,13900,Medium,Undead,Undead1,False
+Sailor Skeleton,2407,19,310,19500,12200,Medium,Undead,Undead1,False
+Dummy 10,2408,10,1999999999,0,0,Medium,Formless,Neutral1,False
+Dummy 50,2409,50,1999999999,0,0,Small,Formless,Neutral1,False
+Dummy 100,2410,100,1999999999,0,0,Medium,Formless,Neutral1,False
+Dummy 150,2411,150,1999999999,0,0,Large,Formless,Neutral1,False
+Dummy 10,2413,10,1999999999,0,0,Medium,Formless,Fire1,False
+Knight Seyren,2415,98,13260,147500,98700,Medium,DemiHuman,Fire3,False
+Assassin Eremes,2416,98,9029,157500,74200,Medium,DemiHuman,Poison4,False
+Blacksmith Howard,2417,98,11803,137500,82000,Medium,DemiHuman,Water4,False
+Hunter Cecil,2418,98,8835,137500,83400,Medium,DemiHuman,Wind3,False
+Wizard Kathryne,2419,98,7092,137500,96700,Medium,DemiHuman,Ghost3,False
+Priest Margaretha,2420,98,9192,107500,81700,Medium,DemiHuman,Holy3,False
+Crusader Egnigem,2421,98,13440,94800,146400,Medium,DemiHuman,Fire2,False
+Rogue Wickebine,2422,98,11712,87000,122700,Medium,DemiHuman,Poison3,False
+Alchemist Armeyer,2423,98,11376,90700,180900,Medium,DemiHuman,Earth3,False
+Bard Kavach,2424,98,12637,88600,158200,Medium,DemiHuman,Wind2,False
+Dancer Josephina,2425,98,12637,98600,158200,Medium,DemiHuman,Wind2,False
+Sage Laurell,2426,98,9868,94000,192000,Medium,DemiHuman,Ghost2,False
+Monk Errende,2427,98,11168,90500,100000,Medium,DemiHuman,Holy2,False
+Knight Seyren,2428,98,13260,0,0,Medium,DemiHuman,Fire3,False
+Assassin Eremes,2429,98,9029,0,0,Medium,DemiHuman,Poison4,False
+Blacksmith Howard,2430,98,11803,0,0,Medium,DemiHuman,Water4,False
+Hunter Cecil,2431,98,8835,0,0,Medium,DemiHuman,Wind3,False
+Wizard Kathryne,2432,98,7092,0,0,Medium,DemiHuman,Ghost3,False
+Priest Margaretha,2433,98,9192,0,0,Medium,DemiHuman,Holy3,False
+Crusader Egnigem,2434,98,13440,0,0,Medium,DemiHuman,Fire2,False
+Rogue Wickebine,2435,98,11712,0,0,Medium,DemiHuman,Poison3,False
+Alchemist Armeyer,2436,98,11376,0,0,Medium,DemiHuman,Earth3,False
+Bard Kavach,2437,98,12637,0,0,Medium,DemiHuman,Wind2,False
+Dancer Josephina,2438,98,12637,0,0,Medium,DemiHuman,Wind2,False
+Sage Laurell,2439,98,9868,0,0,Medium,DemiHuman,Ghost2,False
+Monk Errende,2440,98,11168,0,0,Medium,DemiHuman,Holy2,False
+The Last One,2441,99,265203,10626700,8774700,Medium,DemiHuman,Fire4,False
+King of the Alley,2442,99,268800,10881000,8900000,Medium,DemiHuman,Fire4,False
+Aira,2443,99,270000,11000000,9000000,Medium,DemiHuman,Fire3,False
+Kuluna,2444,99,270000,11000000,9000000,Medium,DemiHuman,Ghost3,False
+Mallina,2445,99,270000,11000000,9000000,Medium,DemiHuman,Earth4,False
+Ezella,2446,99,270000,11000000,9000000,Medium,DemiHuman,Wind3,False
+Lune,2447,99,270000,11000000,9000000,Medium,DemiHuman,Water3,False
+Morin,2448,99,270000,11000000,9000000,Medium,DemiHuman,Dark3,False
+Nasarin,2449,99,270000,11000000,9000000,Medium,DemiHuman,Poison2,False
+Thief Poring,2450,1,30,0,0,Medium,Plant,Water1,False
+Strange Baby Orc,2451,1,30,0,0,Medium,Plant,Water1,False
+Treasure Chest,2452,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2453,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2454,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2455,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2456,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2457,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2458,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2459,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2460,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2461,99,0,0,0,Small,Formless,Neutral1,False
+Treasure Chest,2462,99,0,0,0,Small,Formless,Neutral1,False
+Zombie,2464,130,135600,666600,879800,Medium,Undead,Undead1,False
+Wraith,2465,133,100168,699900,923700,Large,Undead,Undead4,False
+Ghoul,2466,132,208100,711100,938600,Medium,Undead,Undead2,False
+Arclouze,2467,133,80811,1100,1400,Small,Insect,Earth2,False
+Raydric,2468,135,184080,815300,381900,Medium,Undead,Dark2,False
+Raydric Archer,2469,136,144370,712400,515700,Medium,Undead,Dark2,False
+Abysmal Knight,2470,142,225789,929200,911600,Large,Undead,Dark4,False
+Khalitzburg,2471,143,236851,877100,806400,Large,Undead,Undead1,False
+Bloody Knight,2472,143,246751,1022400,1203500,Large,Undead,Dark4,False
+Undead Knight,2473,145,950033,8000900,7435100,Medium,Undead,Undead2,False
+Undead Knight,2474,145,848011,7983600,6621800,Medium,Undead,Undead2,False
+Corrupted Soul,2475,150,1820000,109995300,110466200,Large,Demon,Earth3,False
+Amdarias,2476,150,4290000,114566200,120836300,Large,Undead,Undead4,False
+Nightmare Wander Man,2477,151,130682,990700,947500,Medium,Demon,Wind1,False
+Nightmare Rideword,2478,146,103220,525000,871200,Small,Formless,Neutral3,False
+Nightmare Mimic,2479,143,24958,138400,129400,Medium,Formless,Neutral3,False
+Nightmare Evil Druid,2480,134,72837,337000,323700,Large,Undead,Undead4,False
+Nightmare Wraith Dead,2481,110,15579,209800,172700,Large,Undead,Undead4,False
+Nightmare Baphomet,2483,154,4008000,130853400,110254900,Large,Demon,Dark3,False
+Nightmare Baphomet Jr.,2484,141,49675,1308500,1002300,Small,Demon,Dark1,False
+Nightmare Chimera,2485,140,528120,5426000,5167800,Large,Brute,Fire3,False
+Aged Cornutus,2501,100,160000,75000,75000,Small,Fish,Water1,False
+Aged Deviace,2502,60,3135,65800,74000,Medium,Fish,Water4,False
+Aged Hydra,2503,34,854,23300,26300,Small,Plant,Water2,False
+Aged Kukre,2504,100,160000,75000,75000,Small,Insect,Water1,False
+Aged Marc,2505,145,400000,100000,100000,Medium,Fish,Water2,False
+Aged Marina,2506,42,1209,34000,38100,Small,Plant,Water2,False
+Aged Marine Sphere,2507,42,1209,34000,38100,Small,Plant,Water2,False
+Aged Marse,2508,95,120000,75000,75000,Small,Fish,Water2,False
+Aged Merman,2509,60,2940,61600,69200,Medium,DemiHuman,Water3,False
+Aged Obeaune,2510,53,2158,0,0,Medium,Fish,Water2,False
+Aged Phen,2511,52,9815,117000,376500,Medium,Fish,Water2,False
+Aged Plankton,2512,60,6160,83500,280500,Small,Plant,Water3,False
+Aged Strouf,2513,61,3052,62600,70500,Large,Fish,Water3,False
+Aged Swordfish,2514,57,2600,52500,59000,Large,Fish,Water2,False
+Aged Vadon,2515,45,6520,85500,289500,Small,Fish,Water1,False
+Faceworm,2528,140,482427,3880000,435600,Large,Insect,Poison1,False
+Faceworm Queen,2529,155,50000000,20000000,22000000,Large,Insect,Poison4,False
+Dark Faceworm,2530,144,5000000,10000000,8800000,Large,Insect,Poison2,False
+Venom Bug,2531,140,10000,0,0,Small,Insect,Poison1,False
+Red Faceworm Queen,2532,155,50000000,20000000,22000000,Large,Insect,Fire1,False
+Green Faceworm Queen,2533,155,50000000,20000000,22000000,Large,Insect,Earth1,False
+Blue Faceworm Queen,2534,155,50000000,20000000,22000000,Large,Insect,Water1,False
+Yellow Faceworm Queen,2535,155,50000000,20000000,22000000,Large,Insect,Wind1,False
+Monster 3,2536,151,10000,0,0,Small,Insect,Ghost4,False
+Monster 4,2537,151,10000,0,0,Small,Formless,Ghost4,False
+King Poring,2538,10,1000,500000,500000,Large,Formless,Neutral1,False
+Monster 5,2539,151,10000,0,0,Small,Formless,Ghost4,False
+Faceworm Egg,2540,140,10,1000,1200,Medium,Insect,Poison1,False
+Faceworm Larva,2541,145,260380,1000,1300,Medium,Insect,Poison2,False
+Doyen Irene,2542,101,433110,1136000,2973500,Medium,DemiHuman,Neutral1,False
+1st Payon Soldier,2543,101,20099,108300,295600,Medium,DemiHuman,Neutral1,False
+2nd Payon Soldier,2544,101,21099,113600,297300,Medium,DemiHuman,Neutral1,False
+1st Guard Dog,2545,101,20099,94400,292300,Medium,Brute,Earth1,False
+2nd Guard Dog,2546,101,21099,101400,294000,Medium,Brute,Fire1,False
+Arhi,2549,90,100000,890000,455000,Medium,DemiHuman,Neutral1,False
+Dio Anemos,2550,95,200000,944000,443000,Medium,DemiHuman,Neutral1,False
+Geffen Shoplifter,2551,100,300000,978000,403100,Medium,DemiHuman,Neutral1,False
+Geffen Bully,2552,100,300000,978000,403100,Medium,DemiHuman,Neutral1,False
+Geffen Gang Member,2553,100,300000,978000,403100,Medium,DemiHuman,Neutral1,False
+Faymont,2554,105,400000,1166000,480700,Medium,DemiHuman,Neutral1,False
+Ordre,2555,110,600000,1561000,534700,Medium,DemiHuman,Neutral1,False
+Blut Hase,2556,120,1000000,2056000,1101100,Medium,DemiHuman,Ghost2,False
+Kuro Akuma,2557,130,1200000,2610000,1323300,Medium,DemiHuman,Neutral1,False
+Ifodes,2558,140,1400000,4615000,2079000,Medium,DemiHuman,Neutral1,False
+Licheniyes,2559,145,1600000,5206000,2651500,Medium,DemiHuman,Neutral1,False
+Odoric,2560,150,2000000,6002700,4426000,Medium,DemiHuman,Neutral1,False
+Ju,2561,155,5000000,7533500,5734300,Medium,DemiHuman,Neutral1,False
+Dwigh,2562,160,7000000,15131700,13530000,Medium,DemiHuman,Ghost2,False
+Fay Kanavian,2563,160,8000000,15797500,12162800,Medium,DemiHuman,Ghost2,False
+Fenrir,2564,160,20000000,32330000,33000000,Medium,DemiHuman,Ghost2,False
+Alphonse,2565,150,1000000,0,0,Medium,DemiHuman,Earth2,False
+Alphonse Jr,2566,150,100000,0,0,Medium,DemiHuman,Earth3,False
+Geffen Bully,2567,50,10000,21200,22700,Medium,DemiHuman,Neutral1,False
+Geffen Gang Member,2568,50,10000,21200,22700,Medium,DemiHuman,Neutral1,False
+Swift Zombie Slaughter,2603,124,202200,1715000,4261500,Medium,Undead,Undead3,False
+Solid Zombie Prisoner,2604,89,80450,597000,1450500,Medium,Undead,Undead3,False
+Zombie Master Ringleader,2605,119,127550,1445500,3585000,Medium,Undead,Undead1,False
+Furious Zombie,2606,17,1170,94500,168000,Medium,Undead,Undead1,False
+Elusive Zakudam,2607,115,86000,1123000,3225000,Large,DemiHuman,Neutral3,False
+Swift Yoyo,2608,38,4490,150000,355500,Small,Brute,Earth1,False
+Solid Yoyo,2609,38,8980,150000,355500,Small,Brute,Earth1,False
+Wormtail Ringleader,2610,17,1000,90000,180000,Medium,Plant,Earth1,False
+Furious Wootan Fighter,2611,67,11635,319000,873000,Medium,DemiHuman,Fire2,False
+Elusive Wood Goblin,2612,81,27495,500500,1333500,Medium,Plant,Earth3,False
+Swift Wolf,2613,45,6095,184500,451500,Medium,Brute,Earth1,False
+Solid Wind Ghost,2614,80,40080,434500,1213500,Medium,Demon,Wind3,False
+Willow Ringleader,2615,8,455,80000,112500,Medium,Plant,Earth1,False
+Furious Wild Rose,2616,70,13410,338500,931500,Small,Brute,Wind1,False
+Elusive Evil Nymph,2617,97,42455,665000,1888500,Medium,Demon,Dark3,False
+Solid Whisper,2618,46,11090,162500,492000,Small,Demon,Ghost3,False
+Weak Skeleton Ringleader,2619,18,1400,96000,175500,Medium,Undead,Undead1,False
+Furious Wanderer,2620,120,96535,1326000,3816000,Medium,Demon,Wind1,False
+Elusive Violy,2621,118,102785,1303000,3747000,Medium,DemiHuman,Neutral2,False
+Swift Violy,2622,118,102785,1303000,3747000,Medium,DemiHuman,Neutral2,False
+Solid Violy,2623,118,205570,1303000,3747000,Medium,DemiHuman,Neutral2,False
+Venomous Ringleader,2624,87,23850,526000,1480500,Medium,Formless,Poison1,False
+Furious Venatu,2625,113,79500,1101000,3159000,Medium,Formless,Neutral2,False
+Elusive Vavayaga,2626,87,32490,526000,1480500,Medium,DemiHuman,Water1,False
+Swift Vanberk,2627,123,123025,1547500,4458000,Medium,DemiHuman,Neutral4,False
+Solid Vadon,2628,45,12520,176000,451500,Small,Fish,Water1,False
+Ungoliant Ringleader,2629,94,135350,2050000,3684000,Large,Insect,Poison2,False
+Furious Toucan,2630,70,18200,338500,931500,Medium,Brute,Wind2,False
+Elusive Tiyanak,2631,105,85730,812500,2320500,Small,Demon,Dark2,False
+Solid Thief Bug,2632,21,2380,94000,210000,Small,Insect,Neutral3,False
+Thief Bug Ringleader,2633,21,1190,94000,210000,Small,Insect,Neutral3,False
+Furious Thief Bug,2634,21,1190,94000,210000,Small,Insect,Neutral3,False
+Elusive Thara Frog,2635,40,5785,150000,376500,Medium,Fish,Water2,False
+Swift Teddy Bear,2636,91,36190,610000,1723500,Small,Formless,Neutral3,False
+Solid Tatacho,2637,128,333360,1936500,5322000,Medium,Brute,Earth1,False
+Tarou Ringleader,2638,22,2100,96000,216000,Small,Brute,Dark1,False
+Furious Tamruan,2639,73,15975,383000,1059000,Large,Demon,Dark3,False
+Elusive Sting,2640,104,50715,842500,2290500,Medium,Formless,Earth3,False
+Swift Stem Worm,2641,84,22650,501000,1405500,Medium,Plant,Wind1,False
+Solid Steel Chonchon,2642,48,11990,189500,492000,Small,Insect,Wind1,False
+Stapo Ringleader,2643,95,44025,678000,1831500,Small,Formless,Earth2,False
+Furious Stalactic Golem,2644,68,12950,325500,892500,Large,Formless,Neutral4,False
+Elusive Stainer,2645,21,1825,94000,210000,Small,Insect,Wind1,False
+Swift Spore,2646,18,1400,87500,187500,Medium,Plant,Water1,False
+Solid Solider,2647,92,87680,649500,1750500,Medium,Brute,Earth2,False
+Soldier Skeleton Ringleader,2648,34,4020,142000,297000,Medium,Undead,Undead1,False
+Furious Soldier Skeleton,2649,34,4020,142000,297000,Medium,Undead,Undead1,False
+Elusive Lady Solace,2650,123,123645,1547500,4458000,Medium,Angel,Holy3,False
+Swift Sohee,2651,64,14375,300000,816000,Medium,Demon,Water1,False
+Solid Snowier,2652,103,139340,792500,2260500,Large,Formless,Water2,False
+Boa Ringleader,2653,18,1085,91500,187500,Medium,Brute,Earth1,False
+Furious Smokie,2654,29,2955,117500,264000,Small,Brute,Earth1,False
+Elusive Sleeper,2655,81,25800,500500,1333500,Medium,Formless,Earth2,False
+Swift Sleeper,2656,81,25800,500500,1333500,Medium,Formless,Earth2,False
+Solid Skogul,2657,126,342400,1819500,5247000,Medium,Demon,Dark3,False
+Skeleton General Ringleader,2658,139,900650,5307000,20027700,Medium,Undead,Undead1,False
+Furious Skeleton General,2659,139,900650,5307000,20027700,Medium,Undead,Undead1,False
+Elusive Skeleton Worker,2660,44,6200,189000,414000,Medium,Undead,Undead1,False
+Swift Siroma,2661,98,59550,674500,1917000,Small,Formless,Water3,False
+Solid Side Winder,2662,70,27360,338500,931500,Medium,Brute,Poison1,False
+Side Winder Ringleader,2663,70,13680,338500,931500,Medium,Brute,Poison1,False
+Furious Shinobi,2664,95,40000,646000,1831500,Medium,DemiHuman,Dark3,False
+Elusive Mistress of Shelter,2665,125,135000,1571500,4530000,Medium,Angel,Holy3,False
+Swift Shellfish,2666,50,8400,198500,519000,Small,Fish,Water1,False
+Solid Cecil Damon,2667,141,2002550,8283500,27299200,Medium,DemiHuman,Wind3,False
+Sea Otter Ringleader,2668,48,9100,189500,492000,Medium,Brute,Water3,False
+Furious Lamp Rey,2669,110,110250,954000,2733000,Medium,Fish,Water2,False
+Elusive Scorpion,2670,16,765,84500,172500,Small,Insect,Fire1,False
+Swift Savage Babe,2671,14,900,86000,157500,Small,Brute,Earth1,False
+Solid Savage,2672,59,23010,267500,685500,Large,Brute,Earth2,False
+Savage Ringleader,2673,59,11505,267500,685500,Large,Brute,Earth2,False
+Furious Sandman,2674,61,14435,296000,762000,Medium,Formless,Earth3,False
+Elusive Salamander,2675,138,401950,1923500,5888800,Large,Formless,Fire3,False
+Swift Sailor Skeleton,2676,19,1550,29000,64500,Medium,Undead,Undead1,False
+Solid Roween,2677,95,73850,646000,1831500,Medium,Brute,Wind1,False
+Roda Frog Ringleader,2678,13,800,81000,150000,Medium,Fish,Water1,False
+Furious Roda Frog,2679,13,800,81000,150000,Medium,Fish,Water1,False
+Elusive Rocker,2680,15,925,87000,165000,Medium,Insect,Earth1,False
+Swift Rideword,2681,74,16110,390000,1080000,Small,Formless,Neutral3,False
+Solid Rideword,2682,74,32220,390000,1080000,Small,Formless,Neutral3,False
+Dumpling Child Ringleader,2683,60,10490,260500,702000,Small,DemiHuman,Neutral1,False
+Furious Baroness of Retribution,2684,121,110760,1523500,4386000,Medium,Angel,Dark3,False
+Elusive Baroness of Retribution,2685,121,110760,1523500,4386000,Medium,Angel,Dark3,False
+Swift Baroness of Retribution,2686,121,110760,1523500,4386000,Medium,Angel,Dark3,False
+Solid Requiem,2687,71,30890,369000,1017000,Medium,DemiHuman,Dark1,False
+Remover Ringleader,2688,121,161175,1675500,4158000,Medium,Undead,Undead2,False
+Elusive Red Eruma,2689,91,49500,610000,1723500,Medium,Fish,Water2,False
+Swift Raydric,2690,115,92040,1123000,3225000,Large,DemiHuman,Dark2,False
+Solid Raydric,2691,115,184080,1123000,3225000,Large,DemiHuman,Dark2,False
+Laurell Weinder Ringleader,2692,133,201410,1462500,5420200,Medium,DemiHuman,Ghost2,False
+Furious Rake Scaraba,2693,139,338500,1747500,5933400,Medium,Insect,Earth2,False
+Elusive Raggler,2694,48,5740,189500,492000,Small,Brute,Wind1,False
+Swift Rafflesia,2695,86,29095,543000,1455000,Small,Plant,Earth1,False
+Poring Ringleader,2696,1,275,75000,60000,Medium,Plant,Water1,False
+Furious Poring,2697,1,275,75000,60000,Medium,Plant,Water1,False
+Elusive Poring,2698,1,275,75000,60000,Medium,Plant,Water1,False
+Swift Poring,2699,1,275,75000,60000,Medium,Plant,Water1,False
+Solid Porcellio,2700,85,55440,534000,1429500,Small,Insect,Earth3,False
+Poporing Ringleader,2701,30,2620,114500,271500,Medium,Plant,Poison1,False
+Furious Poporing,2702,30,2620,114500,271500,Medium,Plant,Poison1,False
+Elusive Poporing,2703,30,2620,114500,271500,Medium,Plant,Poison1,False
+Swift Poison Toad,2704,87,24380,526000,1480500,Medium,Brute,Poison2,False
+Solid Poison Spore,2705,26,4560,104500,241500,Medium,Plant,Poison1,False
+Plasma Ringleader,2706,119,103000,1183500,3978000,Small,Formless,Ghost4,False
+Furious Plankton,2707,40,6160,150000,376500,Small,Plant,Water3,False
+Elusive Pitman,2708,90,36040,579000,1557000,Large,Undead,Earth2,False
+Swift Piranha,2709,75,22610,397000,1101000,Large,Fish,Water3,False
+Solid Dark Pinguicula,2710,113,170020,1101000,3159000,Medium,Plant,Poison2,False
+Pinguicula Ringleader,2711,105,65290,853000,2320500,Medium,Plant,Earth3,False
+Furious Picky,2712,10,445,77500,127500,Small,Brute,Fire1,False
+Elusive Phen,2713,52,9815,218000,574500,Medium,Fish,Water2,False
+Swift Petite,2714,86,28995,543000,1455000,Medium,Dragon,Earth1,False
+Solid Petite,2715,86,57990,543000,1455000,Medium,Dragon,Earth1,False
+Penomena Ringleader,2716,85,22945,509000,1429500,Medium,Fish,Poison1,False
+Furious Penomena,2717,85,22945,509000,1429500,Medium,Fish,Poison1,False
+Elusive Peco Peco,2718,25,2230,102000,234000,Large,Brute,Fire1,False
+Swift Pasana,2719,79,17550,427000,1191000,Medium,DemiHuman,Fire2,False
+Solid Parasite,2720,76,32220,404500,1123500,Medium,Plant,Wind2,False
+Owl Duke Ringleader,2721,92,36905,619000,1750500,Large,Demon,Neutral3,False
+Furious Orc Warrior,2722,44,7170,180500,439500,Medium,DemiHuman,Earth1,False
+Elusive Orc Zombie,2723,51,9540,234000,528000,Medium,Undead,Undead1,False
+Swift Orc Skeleton,2724,53,10385,245000,556500,Medium,Undead,Undead1,False
+Solid Orc Lady,2725,45,15200,184500,451500,Medium,DemiHuman,Earth2,False
+Dame of Sentinel Ringleader,2726,127,172690,1832000,5284500,Medium,Angel,Neutral4,False
+Furious Noxious,2727,87,27150,473500,1558500,Medium,Formless,Ghost3,False
+Elusive Novus,2728,90,33350,551500,1557000,Small,Dragon,Neutral1,False
+Swift Novus,2729,90,33350,551500,1557000,Small,Dragon,Neutral1,False
+Solid Novus,2730,90,66700,551500,1557000,Small,Dragon,Neutral1,False
+Novus Ringleader,2731,90,33350,551500,1557000,Small,Dragon,Neutral1,False
+Furious Nightmare Terror,2732,107,66445,922500,2638500,Large,Demon,Dark3,False
+Elusive Wraith Dead (Nightmare),2733,110,77895,1049000,2590500,Large,Undead,Undead4,False
+Furious Wanderer (Nightmare),2734,151,653410,4953500,14213100,Medium,Demon,Wind1,False
+Solid Nephentes,2735,114,150990,1112000,3192000,Medium,Plant,Poison2,False
+Necromancer Ringleader,2736,133,456520,1495000,4933500,Medium,Undead,Undead4,False
+Furious Myst Case,2737,39,4395,146500,366000,Medium,Formless,Neutral3,False
+Elusive Muscipular,2738,105,62750,853000,2320500,Medium,Plant,Earth1,False
+Swift Mummy,2739,55,10775,256000,585000,Medium,Undead,Undead2,False
+Solid Mummy,2740,55,21550,256000,585000,Medium,Undead,Undead2,False
+Muka Ringleader,2741,23,2340,102500,222000,Large,Plant,Earth1,False
+Furious Incarnation of Morroc,2742,132,319500,1427500,2717500,Large,Angel,Dark1,False
+Elusive Incarnation of Morroc,2743,132,319500,1427500,2717500,Large,Angel,Dark1,False
+Swift Incarnation of Morroc,2744,132,319500,1427500,2717500,Large,Angel,Dark1,False
+Solid Holden,2745,85,62280,534000,1429500,Small,Brute,Earth2,False
+Miyabi Doll Ringleader,2746,85,25940,509000,1429500,Medium,Demon,Dark1,False
+Furious Minorous,2747,58,9465,249500,669000,Large,Brute,Fire2,False
+Elusive Minorous,2748,58,9465,249500,669000,Large,Brute,Fire2,False
+Swift Minorous,2749,58,9465,249500,669000,Large,Brute,Fire2,False
+Solid Mineral,2750,96,83000,655500,1860000,Small,Formless,Neutral2,False
+Miming Ringleader,2751,140,406000,2307500,6237000,Small,Formless,Neutral1,False
+Furious Mimic,2752,56,9695,238500,636000,Medium,Formless,Neutral3,False
+Elusive Mimic,2753,56,9695,238500,636000,Medium,Formless,Neutral3,False
+Swift Metaller,2754,55,8435,233000,619500,Medium,Insect,Fire1,False
+Solid Metaling,2755,81,43000,477000,1333500,Small,Formless,Neutral1,False
+Metaling Ringleader,2756,81,21500,477000,1333500,Small,Formless,Neutral1,False
+Furious Merman,2757,60,14700,260500,702000,Medium,DemiHuman,Water3,False
+Elusive Menblatt,2758,143,411000,2075000,6773200,Medium,Insect,Wind2,False
+Swift Medusa,2759,102,50225,782500,2230500,Medium,Demon,Neutral2,False
+Solid Martin,2760,39,10560,153500,366000,Small,Brute,Earth2,False
+Marionette Ringleader,2761,90,35830,496500,1639500,Small,Demon,Ghost3,False
+Furious Marin,2762,37,4935,139500,345000,Medium,Plant,Water2,False
+Elusive Marduk,2763,73,14465,383000,1059000,Large,DemiHuman,Fire1,False
+Swift Mantis,2764,65,13595,321000,834000,Medium,Insect,Earth1,False
+Solid Mandragora,2765,13,1560,85000,150000,Medium,Plant,Earth3,False
+Manananggal Ringleader,2766,107,102255,922500,2638500,Medium,Demon,Dark2,False
+Furious Majoruros,2767,107,59005,922500,2638500,Large,Brute,Fire2,False
+Elusive Magnolia,2768,53,9920,223000,589500,Small,Demon,Water1,False
+Swift Magmaring,2769,110,65395,954000,2733000,Small,Formless,Fire2,False
+Solid Lunatic,2770,3,480,75000,75000,Small,Brute,Neutral3,False
+Lunatic Ringleader,2771,3,240,75000,75000,Small,Brute,Neutral3,False
+Furious Lude,2772,101,57870,849500,2085000,Small,Undead,Undead1,False
+Elusive Luciola Vespa,2773,109,62330,943500,2701500,Medium,Insect,Wind1,False
+Swift Loli Ruri,2774,109,76400,943500,2701500,Large,Demon,Dark4,False
+Solid Enchanted Peach Tree,2775,92,87770,649500,1750500,Medium,Plant,Earth2,False
+Baby Poring Ringleader,2776,1,200,9000,15000,Small,Plant,Water1,False
+Furious Little Fatum,2777,142,425500,2437500,6435000,Small,DemiHuman,Wind2,False
+Elusive Jing Guai,2778,80,25935,456000,1213500,Medium,Demon,Earth3,False
+Swift Les,2779,82,31080,509000,1357500,Medium,Plant,Earth4,False
+Solid Leib Olmai,2780,118,240010,1368000,3747000,Large,Brute,Earth1,False
+Leaf Cat Ringleader,2781,64,13175,315000,816000,Small,Brute,Earth1,False
+Swift Kobold Archer,2784,108,55265,933000,2670000,Small,DemiHuman,Fire1,False
+Solid Kobold,2785,107,104830,922500,2638500,Medium,DemiHuman,Wind2,False
+Knocker Ringleader,2786,126,219500,1910000,5247000,Small,Demon,Earth1,False
+Furious Beetle King,2787,55,10305,244500,619500,Small,Insect,Earth1,False
+Elusive Kasa,2788,135,350640,1819500,6359100,Large,Formless,Fire3,False
+Swift Karakasa,2789,72,15460,376000,1038000,Medium,Formless,Neutral3,False
+Solid Isis,2790,59,20920,255000,685500,Large,Demon,Dark1,False
+Isilla Ringleader,2791,124,131620,1559500,4494000,Medium,DemiHuman,Neutral4,False
+Furious Injustice,2792,95,39760,646000,1831500,Medium,Undead,Dark2,False
+Elusive Mi Gao,2793,83,26675,517500,1381500,Medium,Formless,Earth3,False
+Swift Ice Titan,2794,110,104100,954000,2733000,Large,Formless,Water3,False
+Solid Iara,2795,79,58900,427000,1191000,Medium,Fish,Water3,False
+Yao Jun Ringleader,2796,87,34980,578500,1402500,Medium,Undead,Undead2,False
+Furious Hunter Fly,2797,63,10250,294000,798000,Small,Insect,Wind2,False
+Elusive Hornet,2798,11,450,79000,135000,Small,Insect,Wind1,False
+Swift Uni-horn Scaraba,2799,130,255500,1305000,3969900,Small,Insect,Earth1,False
+Solid Horn,2800,32,7050,129500,297000,Medium,Insect,Earth1,False
+Hodremlin Ringleader,2801,122,115910,1535500,4422000,Medium,Demon,Dark3,False
+Furious Hode,2802,63,13380,308500,798000,Medium,Brute,Earth2,False
+Elusive Hill Wind,2803,101,45500,772500,2200500,Medium,Brute,Wind3,False
+Swift Hill Wind,2804,101,45500,772500,2200500,Medium,Brute,Wind3,False
+Solid High Orc,2805,81,41930,477000,1333500,Large,DemiHuman,Fire2,False
+Harpy Ringleader,2806,83,22115,493000,1381500,Medium,Demon,Wind3,False
+Furious Harpy,2807,83,22115,493000,1381500,Medium,Demon,Wind3,False
+Elusive Grove,2808,55,10450,244500,619500,Medium,Brute,Earth2,False
+Swift Greatest General,2809,55,7875,233000,619500,Medium,Formless,Fire2,False
+Solid Grand Peco,2810,75,31500,397000,1101000,Large,Brute,Fire2,False
+Grand Peco Ringleader,2811,75,15750,397000,1101000,Large,Brute,Fire2,False
+Furious Golem,2812,61,11225,282000,762000,Large,Formless,Neutral3,False
+Elusive Goblin,2813,48,5290,189500,492000,Medium,DemiHuman,Wind1,False
+Swift Goblin,2814,48,5290,189500,492000,Medium,DemiHuman,Wind1,False
+Solid Goat,2815,80,39800,434500,1213500,Medium,Brute,Fire3,False
+Goat Ringleader,2816,80,19900,434500,1213500,Medium,Brute,Fire3,False
+Furious Dark Hammer Kobold,2817,142,906700,5180000,20097000,Medium,DemiHuman,Poison2,False
+Elusive Dark Hammer Kobold,2818,142,906700,5180000,20097000,Medium,DemiHuman,Poison2,False
+Swift Dark Shadow,2819,147,1020545,5750000,19998000,Small,Formless,Dark2,False
+Solid Dark Shadow,2820,147,2041090,5750000,19998000,Small,Formless,Dark2,False
+Giant Hornet Ringleader,2821,120,132605,1326000,3816000,Small,Insect,Wind1,False
+Furious Ghoul,2822,61,13070,310000,720000,Medium,Undead,Undead2,False
+Elusive Ghoul,2823,61,13070,310000,720000,Medium,Undead,Undead2,False
+Swift Geographer,2824,73,19330,402000,1059000,Medium,Plant,Earth3,False
+Solid Geographer,2825,73,38660,402000,1059000,Medium,Plant,Earth3,False
+Gargoyle Ringleader,2826,100,43860,693500,1974000,Medium,Demon,Wind3,False
+Furious Gargoyle,2827,100,43860,693500,1974000,Medium,Demon,Wind3,False
+Elusive Galion,2828,100,44105,693500,1974000,Medium,Brute,Wind2,False
+Swift Seal,2829,47,6855,185000,478500,Medium,Brute,Water1,False
+Solid Freezer,2830,94,99900,637000,1804500,Medium,Brute,Water2,False
+Freezer Ringleader,2831,94,49950,637000,1804500,Medium,Brute,Water2,False
+Furious Ferus,2832,126,195270,1910000,5247000,Large,Dragon,Earth2,False
+Elusive Familiar,2833,24,2135,100000,228000,Small,Brute,Dark1,False
+Swift False Angel,2834,105,54940,812500,2320500,Small,Angel,Holy3,False
+Solid Fabre,2835,6,720,79000,97500,Small,Insect,Earth1,False
+Fabre Ringleader,2836,6,360,79000,97500,Small,Insect,Earth1,False
+Furious Explosion,2837,100,39065,693500,1974000,Small,Brute,Fire3,False
+Elusive Evil Druid,2838,80,25745,477500,1149000,Large,Undead,Undead4,False
+Swift Elder Willow,2839,34,2995,129500,315000,Medium,Plant,Fire2,False
+Solid Elder Willow,2840,34,5990,129500,315000,Medium,Plant,Fire2,False
+Echio Ringleader,2841,126,158100,1819500,5247000,Medium,DemiHuman,Neutral4,False
+Furious Dustiness,2842,62,10130,288000,780000,Small,Insect,Wind2,False
+Swift Dryad,2843,68,18200,341500,892500,Medium,Plant,Earth4,False
+Solid Drosera,2844,101,108780,811000,2200500,Medium,Plant,Earth1,False
+Drops Ringleader,2845,2,230,75000,67500,Medium,Plant,Fire1,False
+Furious Driller,2846,65,13595,321000,834000,Medium,Brute,Earth1,False
+Elusive Drainliar,2847,47,5810,185000,478500,Small,Brute,Dark2,False
+Swift Dragon Tail,2848,86,23400,517500,1455000,Medium,Insect,Wind2,False
+Solid Draco,2849,114,200990,1167500,3192000,Medium,Dragon,Earth1,False
+Dolomedes Ringleader,2850,132,272955,1675500,5101800,Large,Insect,Water3,False
+Furious Dokebi,2851,68,14100,325500,892500,Small,Demon,Dark1,False
+Elusive Disguise,2852,103,69475,832000,2260500,Medium,Demon,Earth4,False
+Swift Dimik,2853,116,87760,1280000,3678000,Medium,Formless,Wind2,False
+Solid Deviruchi,2854,93,89120,628000,1777500,Small,Demon,Dark1,False
+Baby Desert Wolf Ringleader,2855,14,700,82000,157500,Small,Brute,Fire1,False
+Furious Baby Desert Wolf,2856,14,700,82000,157500,Small,Brute,Fire1,False
+Elusive Deniro,2857,31,3355,126500,288000,Small,Insect,Earth1,False
+Swift Death Word,2858,114,81950,1112000,3192000,Medium,Formless,Neutral3,False
+Solid Death Word,2859,114,163900,1112000,3192000,Medium,Formless,Neutral3,False
+Death Word Ringleader,2860,114,81950,1112000,3192000,Medium,Formless,Neutral3,False
+Furious Dark Priest,2861,98,60450,741500,1816500,Medium,Demon,Undead4,False
+Elusive Zhu Po Long,2862,82,19715,485000,1357500,Medium,Dragon,Wind2,False
+Swift Creamy,2863,23,1890,98000,222000,Small,Insect,Wind1,False
+Solid Cornutus,2864,48,14500,189500,492000,Small,Fish,Water1,False
+Cookie Ringleader,2865,35,3330,132500,324000,Small,DemiHuman,Neutral3,False
+Furious Constant,2866,108,60250,933000,2670000,Small,Formless,Dark3,False
+Elusive Comodo,2867,81,20010,477000,1333500,Medium,Brute,Poison3,False
+Swift Coco,2868,38,4180,150000,355500,Small,Brute,Earth1,False
+Solid Coco,2869,38,8360,150000,355500,Small,Brute,Earth1,False
+Clock Ringleader,2870,81,27780,500500,1333500,Medium,Formless,Earth2,False
+Furious Clock,2871,81,27780,500500,1333500,Medium,Formless,Earth2,False
+Elusive Chonchon,2872,5,285,75000,90000,Small,Insect,Wind1,False
+Swift Centipede,2873,125,124960,1571500,4530000,Medium,Insect,Poison2,False
+Solid Cenere,2874,146,1301310,3558500,11309100,Small,Plant,Wind1,False
+Celia Ringleader,2875,141,1265725,11053500,37653000,Medium,DemiHuman,Ghost3,False
+Furious Caterpillar,2876,121,128280,1599500,4386000,Small,Insect,Earth1,False
+Elusive Carat,2877,103,46110,792500,2260500,Medium,Demon,Wind2,False
+Swift Caramel,2878,25,2590,107000,234000,Small,Brute,Earth1,False
+Solid Bungisngis,2879,121,255130,1599500,4386000,Large,DemiHuman,Earth2,False
+Breeze Ringleader,2880,92,33775,619000,1750500,Medium,Formless,Wind3,False
+Furious Breeze,2881,92,33775,619000,1750500,Medium,Formless,Wind3,False
+Elusive Bradium Golem,2882,133,228695,2129500,3557400,Large,Formless,Earth2,False
+Swift Bloody Butterfly,2883,94,35150,637000,1804500,Medium,Insect,Wind2,False
+Bigfoot Ringleader,2884,29,2935,117500,264000,Large,Brute,Earth1,False
+Furious Bathory,2885,86,26210,517500,1455000,Medium,DemiHuman,Dark1,False
+Elusive Banshee Master,2886,118,101600,1303000,3747000,Medium,Demon,Dark2,False
+Swift Banshee,2887,130,243330,1869500,5397000,Medium,Demon,Dark2,False
+Solid Banaspaty,2888,85,46800,509000,1429500,Small,Formless,Fire3,False
+Assaulter Ringleader,2889,100,44885,693500,1974000,Medium,DemiHuman,Wind2,False
+Furious Argos,2890,47,5025,185000,478500,Large,Insect,Poison1,False
+Elusive Argiope,2891,75,15525,397000,1101000,Large,Insect,Poison1,False
+Swift Argiope,2892,75,15525,397000,1101000,Large,Insect,Poison1,False
+Solid Arclouze,2893,107,100200,968500,2638500,Medium,Insect,Earth2,False
+Arclouze Ringleader,2894,107,50100,968500,2638500,Medium,Insect,Earth2,False
+Furious Apocalypse,2895,121,110450,1523500,4386000,Large,Formless,Neutral3,False
+Elusive Antler Scaraba,2896,136,313000,1582500,5200800,Medium,Insect,Earth2,False
+Swift Antique Book,2897,148,673075,3612500,11622600,Small,Formless,Neutral3,False
+Solid Antique Book,2898,148,1346150,3612500,11622600,Small,Formless,Neutral3,False
+Furious Anolian,2899,109,77735,943500,2701500,Medium,Fish,Water2,False
+Elusive Angra Mantis,2900,144,458600,2531500,6949800,Medium,Insect,Earth2,False
+Swift Angra Mantis,2901,144,458600,2531500,6949800,Medium,Insect,Earth2,False
+Solid Andre,2902,33,7240,132500,306000,Small,Insect,Earth1,False
+Ancient Mimic Ringleader,2903,112,73500,1090000,3126000,Large,Formless,Neutral3,False
+Furious Anacondaq,2904,100,42550,693500,1974000,Medium,Brute,Poison1,False
+Elusive Ambernite,2905,19,1700,89000,195000,Large,Insect,Water1,False
+Swift Rafflesia Arnoldi,2906,80,25745,456000,1213500,Medium,Plant,Earth1,False
+Solid Alligator,2907,57,24300,244000,652500,Medium,Brute,Water1,False
+Aliza Ringleader,2908,112,72250,1090000,3126000,Medium,DemiHuman,Neutral3,False
+Furious Alicel,2909,115,90000,1123000,3225000,Medium,Demon,Neutral3,False
+Elusive Alarm,2910,88,27810,534500,1506000,Medium,Formless,Neutral3,False
+Swift Agav,2911,128,200000,1844500,5322000,Medium,DemiHuman,Neutral4,False
+Solid Acidus,2912,130,407180,1869500,5397000,Large,Dragon,Wind2,False
+Acidus Ringleader,2913,130,203590,1869500,5397000,Large,Dragon,Wind2,False
+Geffen Shoplifter,2914,50,10000,21200,22700,Medium,DemiHuman,Neutral1,False
+Big Ben,2916,160,222240,1489400,1401100,Medium,Formless,Earth2,False
+Big Bell,2917,163,166860,1502600,1691500,Medium,Formless,Neutral3,False
+Time Keeper,2918,165,256000,1579600,1773800,Large,Formless,Neutral4,False
+Neo Punk,2919,155,154760,1174800,1323700,Small,Plant,Wind1,False
+Arc Elder,2920,168,293640,1817200,3506500,Large,DemiHuman,Neutral4,False
+Owl Viscount,2921,168,295240,1817200,2361900,Large,Demon,Neutral3,False
+Owl Viscount,2922,168,295240,0,0,Large,Demon,Neutral3,False
+Owl Marquis,2923,170,630000,4349400,2761200,Large,Demon,Neutral3,False
+Elder Willow,2924,34,599,5800,6500,Medium,Plant,Fire2,False
+Willow,2925,8,91,1500,1100,Medium,Plant,Earth1,False
+Harpy,2926,83,4423,33000,38000,Medium,Demon,Wind3,False
+Mineral,2927,96,8300,40100,50600,Small,Formless,Neutral2,False
+Gibbet,2928,105,12999,48600,43700,Large,Demon,Dark1,False
+Plasma,2929,116,24975,108800,75300,Small,Formless,Earth4,False
+Solace,2930,123,24729,122100,120400,Medium,Angel,Holy3,False
+Metaling,2931,81,4300,26200,26800,Small,Formless,Neutral1,False
+Poporing,2932,30,524,4900,5600,Medium,Plant,Poison1,False
+Deviling,2933,66,16890,59800,59400,Medium,Demon,Dark4,False
+Arc Angeling,2934,84,25100,89400,72700,Medium,Angel,Holy3,False
+Taoist Hermit,2935,96,8266,45100,28100,Large,Formless,Neutral2,False
+Ghostring,2936,1,10,0,0,Small,Plant,Neutral1,False
+Loki,2937,145,1215600,25000000,25000000,Medium,DemiHuman,Neutral1,False
+Magic Seal,2938,140,10000000,100,769800,Large,Formless,Neutral1,False
+Evil Shadow,2939,138,112000,745600,658100,Large,Demon,Dark2,False
+Evil Shadow,2940,141,127650,810300,851100,Medium,Demon,Dark2,False
+Evil Shadow,2941,142,153400,886300,740900,Large,Demon,Dark2,False
+Evil Believer,2942,151,8256000,100865300,108784900,Large,Demon,Dark3,False
+Cursed Soldier,2948,110,18574,190700,203600,Medium,Undead,Undead3,False
+Cursed Sentinel,2949,110,14099,163400,148000,Large,DemiHuman,Dark3,False
+Broken Mind,2950,110,13520,154500,171200,Medium,Demon,Dark3,False
+Floating Word,2951,110,11276,116600,113700,Small,Demon,Ghost3,False
+Like Love,2952,110,14008,150500,183300,Medium,Demon,Wind3,False
+Cursed Memory,2953,110,18045,180200,178500,Medium,Undead,Undead3,False
+Colorless Vow,2954,110,19194,193900,206900,Medium,Undead,Undead3,False
+Old Friendship,2955,110,12614,130600,146000,Medium,Undead,Undead2,False
+Sweet Slaughter,2956,110,13986,196000,174500,Large,Undead,Undead1,False
+Forgotten Name,2957,120,19546,150500,163300,Medium,Undead,Undead2,False
+Fatal Days,2958,120,24240,205200,222800,Medium,Demon,Dark3,False
+Torturous Redeemer,2959,120,103342,1059000,921500,Medium,DemiHuman,Earth3,False
+Flamecross,2960,149,10000,0,0,Small,Insect,Ghost4,False
+Torturous Redeemer,2961,120,103342,100,100,Medium,DemiHuman,Earth3,False
+Decorated Evil Tree,2987,148,544444,444400,1588800,Large,Demon,Undead3,False
+Wicked Vice Plant Manager,2988,149,44,0,0,Medium,Undead,Dark3,False
+Vicious Cookie,2989,149,187760,666600,733200,Small,Demon,Dark3,False
+Corrupt Cruiser,2990,140,188999,0,0,Medium,Demon,Undead3,False
+Evil Dwelling Box,2991,148,259000,666600,733200,Medium,Demon,Dark3,False
+Creepy Demon,2992,140,4444,66600,73200,Small,Undead,Dark3,False
+Malicious Baby Ghost,2993,145,444444,444400,1588800,Small,Demon,Dark3,False
+Dancing Marionette,2994,148,280000,444400,1588800,Small,Demon,Ghost1,False
+Abandoned Teddy Bear,2995,148,180000,666600,733200,Small,Demon,Undead3,False
+Celine Kimi,2996,160,66666666,444444400,403333200,Large,Undead,Ghost1,False
+Kimi's Phantom,2997,160,66666666,0,0,Large,Undead,Ghost1,False
+Wounded Morroc,2998,158,1771440,1239000,1610400,Large,Demon,Neutral3,False
+Morroc's Necromancer,2999,158,4000000,210600000,133650000,Medium,DemiHuman,Neutral3,False
+Morroc's Necromancer,3000,101,80000000,231075000,146520000,Medium,DemiHuman,Earth4,False
+Morroc's Ghoul,3001,158,295240,123900,161000,Medium,Demon,Neutral3,False
+Morroc's Osiris,3002,158,442860,123900,161000,Medium,Demon,Neutral3,False
+Morroc's Archer Skeleton,3003,158,295240,123900,161000,Medium,Demon,Neutral3,False
+Morroc's Wraith,3004,158,100000,123900,161000,Large,Demon,Neutral3,False
+Morroc's Verit,3005,158,442860,123900,161000,Medium,Demon,Neutral3,False
+Morroc's Lude,3006,158,885720,123900,161000,Small,Demon,Neutral3,False
+Death Soul,3007,158,99999999,20000000,20000000,Small,Demon,Neutral3,False
+Morroc Hidden,3008,158,295240,15000000,10000000,Small,Demon,Neutral3,False
+Morroc's Necromancer,3009,101,80000000,10000000,10000000,Medium,DemiHuman,Earth4,False
+Corrupt Orc Baby,3010,158,250000,1239000,1610400,Small,DemiHuman,Earth2,False
+Corrupt Baby Desert Wolf,3011,158,232890,1239000,1610400,Small,Brute,Fire2,False
+Corrupt Familiar,3012,158,222550,1239000,1610400,Small,Fish,Water2,False
+Corrupt Orc Warrior,3013,158,300000,1239000,1610400,Medium,DemiHuman,Earth2,False
+Corrupt Desert Wolf,3014,158,292450,1239000,1610400,Medium,Brute,Fire2,False
+Corrupt Phen,3015,158,284110,1239000,1610400,Medium,Fish,Water2,False
+Corrupt Orc Zombie,3016,158,375000,1239000,1610400,Medium,DemiHuman,Undead2,False
+Corrupt Verit,3017,158,352715,1239000,1610400,Medium,Brute,Undead2,False
+Corrupt Megalodon,3018,158,347413,1239000,1610400,Medium,Fish,Undead2,False
+Fire Condor,3020,141,125114,702100,748100,Medium,Brute,Fire2,False
+Fire Sandman,3021,143,130501,720700,773400,Medium,Formless,Fire3,False
+Fire Frilldora,3022,147,141301,780700,819900,Medium,Brute,Fire3,False
+Fire Golem,3023,148,180213,891200,946400,Large,Formless,Fire4,False
+Fire Pit,3026,17,10,5800,4300,Medium,Undead,Undead1,False
+Fire Bug,3027,150,234,5800,4700,Medium,Undead,Undead1,False
+Sonia,3028,17,20,5800,4300,Medium,Undead,Undead1,False
+Reaper Yanku,3029,159,50000000,30000000,33000000,Large,Undead,Undead4,False
+Monster 7,3038,151,10000,0,0,Small,Formless,Ghost4,False
+Blazing Morocc Reincarnation,3039,149,8000000,285500,181100,Large,Angel,Dark1,False
+Distorted Morocc Reincarnation,3040,149,6400000,331100,210100,Medium,Demon,Dark3,False
+Freezing Morocc Reincarnation,3041,149,7700000,299500,223000,Medium,Demon,Water3,False
+Angry Mimic,3061,1,30,0,0,Medium,Formless,Neutral1,False
+Ferre,3069,125,48430,308800,263100,Small,Demon,Earth2,False
+Ferre,3070,126,40718,360700,242500,Small,Demon,Water2,False
+Ferre,3071,127,53290,360900,242900,Small,Demon,Water2,False
+Ferre,3072,128,52280,372900,223500,Small,Demon,Earth2,False
+Awakened Ferre,3073,140,19471800,313200000,272030000,Large,Demon,Undead3,False
+Time Holder,3074,170,25000000,458250000,387750000,Large,Demon,Neutral4,False
+Brinaranea's Hatchling,3088,165,319500,5000000,5000000,Large,Insect,Water2,False
+Crazed Kasa,3089,165,231250,5000000,5000000,Large,Formless,Fire4,False
+Crazed Salamander,3090,165,272063,5000000,5000000,Large,Formless,Fire3,False
+Brinaranea,3091,165,81650000,115600,114800,Large,Demon,Water3,False
+Muspellskoll,3092,165,55620000,10000000,10000000,Large,Demon,Fire3,False
+Brinaranea's Core,3093,1,99,0,0,Small,Formless,Ghost4,False
+Muspelskoll's Core,3094,1,25000,0,0,Small,Formless,Ghost4,False
+God's Shadow,3095,1,30000,0,0,Small,Formless,Ghost4,False
+Reincarnated Morroc,3096,175,80000000,100000000,100000000,Small,Demon,Holy3,False
+Desperate Morroc,3097,175,120000000,150000000,150000000,Medium,Demon,Dark2,False
+Origin of Morroc,3098,170,6516000,0,0,Large,Demon,Dark4,False
+Repose of Morroc,3099,170,2900000,0,0,Large,Demon,Dark4,False
+Death Mana,3100,1,30,0,0,Small,Formless,Neutral4,False
+Brilliant Mana,3101,1,30,0,0,Small,Formless,Neutral4,False
+Life Mana,3102,1,30,0,0,Small,Formless,Neutral4,False
+Earth Mana,3103,1,30,0,0,Small,Formless,Neutral4,False
+Cold Mana,3104,1,30,0,0,Small,Formless,Neutral4,False
+Apostle Ahat,3105,165,9000000,50000000,50000000,Small,Angel,Fire2,False
+Apostle Shnaim,3106,165,8000000,40000000,40000000,Medium,Demon,Water2,False
+Jitterbug,3108,135,2614000,3680400,2317000,Large,Demon,Undead2,False
+Jitterbug,3109,135,2614000,3680400,2317000,Large,Demon,Undead2,False
+Charleston 3,3124,145,23671401,313200000,247300000,Large,Demon,Neutral3,False
+Step,3125,130,55403,308800,239200,Small,Demon,Neutral1,False
+Lockstep,3126,131,71056,360900,220900,Medium,Demon,Neutral2,False
+N Type,3127,132,73644,360700,220500,Medium,Demon,Neutral1,False
+Security Gear,3128,133,68018,372900,203200,Medium,Demon,Neutral2,False
+Corrupted Steward,3139,160,271200,1333200,1759600,Medium,Undead,Undead1,False
+Corrupted Monk,3140,163,200336,1399800,1847400,Large,Undead,Undead4,False
+Grand Chamberlain in Pain,3141,162,416200,1422200,1877200,Medium,Undead,Undead2,False
+Maggot,3142,163,161622,2200,2800,Medium,Insect,Earth2,False
+Corrupted Palace Guard,3143,165,368160,1630600,763800,Large,DemiHuman,Dark2,False
+Wandering Archer,3144,166,288740,1424800,1031400,Medium,Demon,Dark2,False
+Corrupted Abysmal Knight,3145,172,451578,1858400,1823200,Large,DemiHuman,Dark4,False
+Suffering Khalitzburg,3146,173,473702,1754200,1612800,Large,Undead,Undead1,False
+Bloody Knight,3147,173,493502,2044800,2407000,Large,Formless,Dark4,False
+Agony of the Royal Knight,3148,175,1900070,16001800,14870200,Large,DemiHuman,Neutral4,False
+Grudge of the Royal Knight,3149,175,1696020,15967200,13243600,Large,DemiHuman,Neutral4,False
+Realized Amdarias,3150,180,42900000,229132000,241673000,Large,Undead,Undead4,False
+Realized Root of Corruption,3151,180,18200000,100000000,100000000,Large,Demon,Earth3,False
+Maggot,3152,163,161622,2200,2800,Medium,Insect,Earth2,False
+Excavator Robot,3153,163,166860,1502600,1691500,Medium,Formless,Neutral3,False
+Recon Robot,3154,165,256000,1579600,1773800,Large,Formless,Neutral4,False
+Repair Robot,3155,155,154760,1174800,1323700,Small,Plant,Wind1,False
+Exploration Rover,3156,168,293640,1817200,3506500,Large,DemiHuman,Neutral4,False
+Ruin Grace Believer,3157,100,61350,466600,387400,Medium,DemiHuman,Neutral2,False
+Ruin Grace Believer,3158,100,61350,466600,387400,Medium,DemiHuman,Neutral2,False
+Illegal Promotion,3159,100,10,0,0,Small,Formless,Neutral2,False
+Shooting Target,3169,0,0,0,0,Small,Formless,Neutral1,False
+Shooting Target,3170,0,0,0,0,Small,Formless,Neutral1,False
+Rotar Zairo,3175,113,15900,159100,122100,Large,Formless,Wind2,False
+Gremlin,3176,118,20313,200900,139000,Large,Demon,Dark2,False
+Beholder,3177,118,20313,200900,139000,Large,Demon,Dark2,False
+Acidus,3178,130,48430,308800,239200,Large,Dragon,Dark2,False
+Acidus,3179,130,40718,293800,203200,Large,Dragon,Wind2,False
+Wywern,3180,117,300000,0,0,Large,Dragon,Dark4,False
+Captain Ferlock,3181,130,3000000,308800,239200,Large,Dragon,Dark2,False
+Sarah Irene,3190,160,100000000,0,0,Medium,DemiHuman,Neutral1,False
+Gigantes,3191,160,6653400,0,100,Medium,Demon,Dark2,False
+Gigantes,3192,160,9870000,0,0,Medium,Demon,Dark2,False
+Ancient Medium Gigantes,3193,160,1126300,0,0,Medium,Demon,Dark2,False
+Large Gigantes,3194,160,2482000,0,0,Large,Demon,Dark2,False
+Large Gigantes,3195,160,2784175,0,0,Large,Demon,Dark2,False
+Ancient Gigantes,3196,160,12063464,0,0,Large,Demon,Dark2,False
+Mutant Gargoyle,3197,150,256780,0,0,Medium,Demon,Wind3,False
+Mutant Galion,3198,150,293165,0,0,Medium,Brute,Wind2,False
+Wicked Mutant Dragon,3199,150,324891,0,0,Large,Dragon,Fire2,False
+Wicked Chimera,3200,150,301158,0,0,Large,Brute,Fire3,False
+Organic Pumpkin,3202,10,40,2000,1300,Small,Plant,Water1,False
+Inorganic Pumpkin,3203,10,40,2000,1300,Small,Plant,Water1,False
+Eremes Guile,3208,179,2380000,7000000,3500000,Medium,Demon,Poison4,False
+Magaleta Sorin,3209,177,2448000,8000000,4000000,Medium,DemiHuman,Holy4,False
+Katrinn Keyron,3210,177,2040000,6000000,3000000,Medium,DemiHuman,Ghost4,False
+Shecil Damon,3211,179,2142000,7000000,3500000,Medium,DemiHuman,Wind4,False
+Harword Alt-Eisen,3212,177,2720000,10000000,5000000,Medium,DemiHuman,Water4,False
+Seyren Windsor,3213,179,2448000,8000000,4000000,Medium,Demon,Fire4,False
+Guillotine Cross Eremes,3214,189,3150000,0,0,Medium,Demon,Poison4,False
+Arch Bishop Magaleta,3215,187,3600000,0,0,Medium,DemiHuman,Holy4,False
+Warlock Katrinn,3216,187,2700000,0,0,Medium,DemiHuman,Ghost4,False
+Ranger Shecil,3217,189,3150000,0,0,Medium,DemiHuman,Wind4,False
+Mechanic Harword,3218,187,4500000,0,0,Medium,DemiHuman,Earth4,False
+Rune Knight Seyren,3219,189,3600000,0,0,Medium,Demon,Fire4,False
+Guillotine Cross Eremes,3220,189,12600000,300000000,300000000,Medium,DemiHuman,Poison4,False
+Arch Bishop Margaretha,3221,187,14400000,300000000,300000000,Medium,DemiHuman,Holy4,False
+Ranger Cecil,3222,189,12600000,300000000,300000000,Medium,DemiHuman,Wind4,False
+Mechanic Howard,3223,187,18000000,300000000,300000000,Medium,DemiHuman,Water4,False
+Warlock Kathryne,3224,187,10800000,300000000,300000000,Medium,DemiHuman,Ghost4,False
+Rune Knight Seyren,3225,189,14400000,300000000,300000000,Medium,DemiHuman,Fire4,False
+Randel,3226,178,2550000,10000000,5000000,Medium,DemiHuman,Holy4,False
+Flamel,3227,176,2312000,8000000,4000000,Medium,DemiHuman,Fire4,False
+Celia,3228,178,2295000,9000000,4500000,Medium,DemiHuman,Ghost4,False
+Chen,3229,178,2261000,7000000,3500000,Medium,Demon,Water4,False
+Gertie,3230,178,2040000,8000000,4000000,Medium,Demon,Poison4,False
+Alphoccio,3231,176,2040000,6000000,3000000,Medium,DemiHuman,Wind4,False
+Trentini,3232,176,2040000,6000000,3000000,Medium,DemiHuman,Wind4,False
+Royal Guard Randel,3233,188,4500000,0,0,Medium,DemiHuman,Holy4,False
+Genetic Flamel,3234,186,3600000,0,0,Medium,DemiHuman,Fire4,False
+Sorcerer Celia,3235,188,4050000,0,0,Medium,DemiHuman,Ghost4,False
+Sura Chen,3236,188,3150000,0,0,Medium,Demon,Water4,False
+Shadow Chaser Gertie,3237,188,3600000,0,0,Medium,Demon,Poison4,False
+Minstrel Alphoccio,3238,186,3600000,0,0,Medium,DemiHuman,Wind4,False
+Wanderer Trentini,3239,186,3600000,0,0,Medium,DemiHuman,Wind4,False
+Royal Guard Randel,3240,188,18000000,300000000,300000000,Medium,DemiHuman,Holy4,False
+Genetic Flamel,3241,186,14400000,300000000,300000000,Medium,DemiHuman,Fire4,False
+Sorcerer Celia,3242,188,16200000,300000000,300000000,Medium,DemiHuman,Ghost4,False
+Sura Chen,3243,188,12600000,300000000,300000000,Medium,DemiHuman,Water4,False
+Shadow Chaser Gertie,3244,188,14400000,300000000,300000000,Medium,DemiHuman,Poison4,False
+Minstrel Alphoccio,3245,186,10800000,300000000,300000000,Medium,DemiHuman,Wind4,False
+Wanderer Trentini,3246,186,10800000,300000000,300000000,Medium,DemiHuman,Wind4,False
+Green Cenere,3247,150,140088,763500,769800,Small,Formless,Wind1,False
+Repair Robot Turbo,3248,158,186320,1320800,1448900,Small,Formless,Neutral2,False
+Explorer Robot Turbo,3249,171,318117,1982600,4102300,Large,Formless,Neutral4,False
+Can Robot,3250,155,30,6100,5800,Small,Formless,Neutral1,False
+Machine Component,3251,149,217650,659800,593100,Small,Formless,Dark2,False
+Machine Component,3252,153,245670,725500,701100,Medium,Formless,Dark1,False
+System message,3253,160,100,0,0,Large,Demon,Dark1,False
+T_W_O,3254,165,48000000,0,0,Large,Demon,Dark3,False
+Smelly Ghoul,3255,155,178652,1023300,1059800,Small,Plant,Wind1,False
+Smelly Zombie,3256,148,134615,685900,690300,Small,Formless,Neutral3,False
+Poring,3384,100,25000,143000,144000,Medium,Plant,Water1,False
+Lunatic,3385,100,25000,143000,144000,Small,Brute,Neutral3,False
+Fabre,3386,100,25000,143000,144000,Small,Insect,Earth1,False
+Picky,3387,100,25000,143000,144000,Small,Brute,Fire1,False
+Condor,3388,100,40000,155000,162000,Medium,Brute,Wind1,False
+Willow,3389,100,40000,155000,162000,Medium,Plant,Earth1,False
+Spore,3390,100,40000,155000,162000,Medium,Plant,Water1,False
+Poporing,3391,100,40000,155000,162000,Medium,Plant,Poison1,False
+Smokie,3392,100,55000,166000,179400,Small,Brute,Earth1,False
+Dokebi,3393,100,55000,140000,150000,Small,Demon,Dark1,False
+Bigfoot,3394,100,55000,140000,150000,Large,Brute,Earth1,False
+Wormtail,3395,100,55000,140000,150000,Medium,Plant,Earth1,False
+Wolf,3396,100,70000,140000,150000,Medium,Brute,Earth1,False
+Boa,3397,100,70000,140000,150000,Medium,Brute,Earth1,False
+Anacondaq,3398,100,70000,140000,150000,Medium,Brute,Poison1,False
+Marin,3399,100,85000,150000,165000,Medium,Plant,Water2,False
+Muka,3400,100,85000,150000,165000,Large,Plant,Earth1,False
+Peco Peco,3401,100,85000,150000,165000,Large,Brute,Fire1,False
+Deniro,3402,100,100000,150000,165000,Small,Insect,Earth1,False
+Piere,3403,100,100000,150000,165000,Small,Insect,Earth1,False
+Andre,3404,100,100000,150000,165000,Small,Insect,Earth1,False
+Golem,3405,100,115000,150000,165000,Large,Formless,Neutral3,False
+Scorpion,3406,100,100000,150000,165000,Small,Insect,Fire1,False
+Chonchon,3407,100,115000,150000,165000,Small,Insect,Wind1,False
+Metaller,3408,100,130000,150000,165000,Medium,Insect,Fire1,False
+Sandman,3409,100,130000,400000,210000,Medium,Formless,Earth3,False
+Raggler,3410,100,130000,400000,210000,Small,Brute,Wind1,False
+Dragon Tail,3411,100,145000,400000,210000,Medium,Insect,Wind2,False
+Grove,3412,100,145000,400000,210000,Medium,Brute,Earth2,False
+Sea Otter,3413,100,145000,400000,210000,Medium,Brute,Water3,False
+Galapago,3414,100,1221,400000,210000,Small,Brute,Earth1,False
+Seal,3415,100,160000,400000,210000,Medium,Brute,Water1,False
+Alligator,3416,100,160000,800000,400000,Medium,Brute,Water1,False
+Megalodon,3417,100,160000,800000,400000,Medium,Undead,Undead1,False
+Tri Joint,3418,100,175000,800000,400000,Small,Insect,Earth1,False
+Megalith,3419,100,175000,800000,400000,Large,Formless,Neutral4,False
+Dryad,3420,100,175000,800000,400000,Medium,Plant,Earth4,False
+Infinite Toad,3421,105,900000,1680000,2100000,Medium,Fish,Water1,False
+Infinite Wolf,3422,105,900000,1680000,2100000,Medium,Brute,Earth1,False
+Infinite Vocal,3423,105,900000,4752000,4800000,Medium,Insect,Earth1,False
+Infinite Eclipse,3424,105,900000,4582300,4628600,Medium,Brute,Neutral3,False
+Infinite Chimera,3425,105,900000,1200000,1500000,Large,Brute,Fire3,False
+Infinite Eddga,3426,101,1850000,10000000,10000000,Large,Brute,Fire1,False
+Infinite Osiris,3427,103,2850000,10000000,10000000,Medium,Undead,Undead4,False
+Infinite Phreeoni,3428,105,4750000,10000000,10000000,Large,Brute,Neutral3,False
+Infinite Orc Hero,3429,100,6650000,10000000,10000000,Large,DemiHuman,Earth2,False
+Infinite Tao Gunka,3430,110,8550000,10000000,10000000,Large,Demon,Neutral3,False
+Frozen Wolf,3442,140,80000,500000,500000,Medium,Brute,Water1,False
+Taffy,3443,145,100000,600000,600000,Medium,Brute,Earth1,False
+Watcher,3444,145,120000,700000,700000,Small,Formless,Wind1,False
+Enchanted Archer Skelet,3445,114,10000,0,0,Medium,Undead,Undead3,False
+Enchanted Skeleton,3446,114,10000,0,0,Medium,Undead,Undead3,False
+Enchanted Soldier Skele,3447,115,20000,0,0,Medium,Undead,Undead3,False
+Renovated Amdarais,3448,99,10000000,0,0,Large,Undead,Undead1,False
+Enhanced Amdarais,3449,98,66666,0,0,Large,Undead,Undead1,False
+Bijou,3450,115,10000000,6666600,6666600,Large,Undead,Undead4,False
+Immotal Corps,3451,158,198410,957500,785900,Medium,Demon,Undead4,False
+Zombie Guard,3452,145,124000,688700,480900,Medium,Undead,Undead4,False
+Suspicious Intruder,3454,103,20714,196300,200100,Medium,DemiHuman,Dark2,False
+Plate,3455,1,1,0,0,Small,Formless,Neutral1,False
+Weakened Stefan,3473,160,20000000,9645300,12115600,Large,Undead,Undead1,False
+Immortal Cursed Knight,3474,160,10000000,4798600,5157300,Large,Formless,Dark2,False
+Immortal Wind Ghost,3475,160,10000000,4798600,5157300,Medium,Demon,Wind2,False
+Immortal Zombie Soldier,3476,160,405694,1057000,1010000,Medium,Undead,Undead1,False
+Immortal Fortress Legion,3477,160,405694,1546400,1432000,Medium,Demon,Undead1,False
+Immortal Fortress Key Keeper,3478,160,423332,1546400,1432000,Medium,Undead,Undead2,False
+Immortal Zombie Assaulter,3479,160,405694,1546400,1432000,Medium,Undead,Undead1,False
+Immortal Cursed Zombie,3480,160,405694,1546400,1432000,Medium,Undead,Undead1,False
+Immortal Nightmare Shadow,3481,160,423330,1405900,1510000,Large,Demon,Dark1,False
+Immortal Angry Shadow,3482,160,388054,1405900,1510000,Medium,Demon,Dark1,False
+Immortal Death Shadow,3483,160,423330,1405900,1510000,Large,Demon,Dark1,False
+Stefan J.E Wolf,3484,160,20000000,280009000,267592000,Large,Undead,Undead2,False
+Butcher Soldier,3487,115,90000,0,0,Small,Demon,Undead4,False
+Scythe Soldier,3488,115,120000,0,0,Small,Demon,Undead4,False
+Bone Crash Soldier,3489,115,170000,0,0,Small,Demon,Undead4,False
+Immortal Commander,3490,160,500000,2500000,1500000,Medium,Demon,Undead4,False
+System Message,3493,160,100,0,0,Small,Plant,Earth1,False
+Eggring,3495,1,50,5000,3500,Medium,Plant,Earth1,False
+Leaf Lunatic,3496,3,44,5000,3500,Small,Brute,Neutral3,False
+Grass Fabre,3497,7,60,5500,4000,Small,Insect,Earth1,False
+Wild Hornet,3498,11,78,5700,4200,Small,Insect,Wind1,False
+Sweet Roda Frog,3499,14,140,6500,5000,Medium,Fish,Water1,False
+Hunter Desert Wolf,3500,17,113,7600,5800,Small,Brute,Fire1,False
+Trans Spore,3501,18,203,7400,5900,Medium,Plant,Water1,False
+Scout Basilisk,3502,20,243,9500,6200,Medium,Brute,Earth1,False
+Combat Basilisk,3503,140,180030,1067900,1351400,Medium,Brute,Earth2,False
+Combat Basilisk,3504,148,216036,1281500,1621700,Medium,Brute,Earth2,False
+Big Eggring,3505,25,142480,548600,690800,Medium,Plant,Earth3,False
+Jungle Madragora,3506,144,190570,1100000,1420000,Medium,Plant,Earth3,False
+Fruits Pom Spider,3507,150,156532,880900,895400,Medium,Insect,Earth3,False
+Eggring,3508,20,220,0,0,Medium,Plant,Earth1,False
+Pet Child,3621,120,3500000,120000000,60000000,Large,Brute,Dark3,False
+Special Guard,3622,100,21914,24200,22700,Medium,DemiHuman,Fire1,False
+Plasma R,3623,1,30,0,0,Small,Formless,Fire1,False
+Plasma G,3624,1,30,0,0,Small,Formless,Earth1,False
+Plasma B,3625,1,30,0,0,Small,Formless,Water1,False
+Upgraded Heart Hunter,3626,110,51785,588900,600000,Large,DemiHuman,Dark2,False
+Heart Hunter Guard,3627,105,41428,490800,500000,Medium,DemiHuman,Dark2,False
+Heart Hunter Ebel,3628,110,2800000,80000000,400000000,Medium,DemiHuman,Dark2,False
+Grudge of Broken Gun,3629,110,24911,390800,390800,Medium,Undead,Ghost2,False
+Elena Bolkova,3630,115,2000000,30000000,15000000,Medium,DemiHuman,Wind3,False
+Human Kimera,3631,100,36968,379800,329800,Medium,Brute,Neutral2,False
+Material Kimera,3632,100,36968,379800,328900,Medium,Brute,Fire2,False
+Venomous Chimera,3633,110,2800000,80000000,40000000,Large,Brute,Poison4,False
+Little Isis,3636,59,2092,27900,29800,Large,Demon,Dark1,False
+Diabolic,3669,104,10572,108600,107300,Small,Demon,Dark2,False
+Deleter,3670,105,10000,104900,103800,Medium,Dragon,Fire2,False
+Einherjar,3671,175,100000000,0,201000,Large,Demon,Dark4,False
+Household Bat,3672,24,10000000,5000,5000,Small,Brute,Dark1,False
+Household Elder Bat,3673,131,35000000,5000,5000,Small,Brute,Dark2,False
+Household Wolf,3674,100,50000000,5000,5000,Medium,Brute,Earth1,False
+Household Rat,3675,101,5000000,5000,5000,Small,Brute,Poison2,False
+Vengeful Soul,3676,245,216000000,170375000,185180000,Large,Formless,Neutral4,False
+Evolved Grief,3677,246,211100000,170375000,185180000,Large,Formless,Dark3,False
+Grief,3678,247,211100000,170375000,185180000,Large,Formless,Dark2,False
+Mist Shade,3679,248,196543434,170375000,185180000,Small,Formless,Holy4,False
+Wretched Screamer,3680,243,181100000,170375000,185180000,Large,Formless,Fire4,False
+Thistle,3681,244,194116000,170375000,185180000,Large,Formless,Ghost2,False
+Scatleton,3731,1,1,0,0,Large,Formless,Ghost4,False
+Shotgun Buffalo Bandit,3736,103,11819,158300,152900,Large,DemiHuman,Fire2,False
+Revolver Buffalo Bandit,3737,101,9700,144300,137300,Large,DemiHuman,Fire2,False
+Scimitar Buffalo Bandit,3738,107,14547,180700,171900,Large,DemiHuman,Fire2,False
+Coyote,3739,110,17854,185200,175700,Medium,Brute,Earth2,False
+Gaster,3740,141,90574,508000,471600,Medium,Formless,Poison2,False
+Mechaspider,3741,158,9799123,315089500,211279500,Large,Formless,Neutral2,False
+Purple Ore,3742,255,20,0,0,Small,Formless,Neutral1,False
+Sea Anemone,3743,1,10,0,0,Small,Formless,Neutral1,False
+Elite Shotgun Buffalo Bandit,3747,148,135292,762800,807700,Large,DemiHuman,Fire3,False
+Elite Revolver Buffalo Bandit,3748,151,160515,959700,909300,Large,DemiHuman,Fire3,False
+Elite Scimitar Buffalo Bandit,3749,152,174345,956300,1021700,Large,DemiHuman,Fire3,False
+Matt Drainliar,3750,131,42246,392800,376900,Small,Brute,Dark2,False
+Restless Zombie,3752,130,40984,362100,317700,Medium,Undead,Undead1,False
+Restless Ghoul,3753,136,67379,442200,393700,Medium,Undead,Undead2,False
+Sweet Nightmare,3754,135,61334,402300,402200,Large,Demon,Ghost2,False
+Ghastly Black Mushroom,3755,130,150000,243700,228400,Small,Plant,Earth1,False
+Bomi,3756,137,378510,1503400,1353300,Medium,DemiHuman,Ghost2,False
+Furious Dracula,3757,139,6909690,268275300,181788200,Large,Demon,Dark4,False
+Furious Moonlight,3758,118,4287803,140323800,96275900,Medium,Demon,Fire3,False
+Furious Nine Tail,3759,116,21875,231500,216900,Medium,Brute,Fire3,False
+Resentful Munak,3760,110,17728,184300,187600,Medium,Undead,Undead1,False
+Resentful Bongun,3761,112,19077,213700,186900,Medium,Undead,Undead1,False
+Resentful Sohee,3762,114,22414,200400,237300,Medium,Demon,Water2,False
+Resentful Archer Skeleton,3763,115,20843,201000,257000,Medium,Undead,Undead1,False
+Truthful Wizard,3764,118,121847,859900,769500,Small,Undead,Dark1,False
+Furious Hero,3765,117,24078,238100,228800,Medium,Undead,Undead3,False
+Swamp Arclouse,3787,106,1120,86400,90000,Medium,Insect,Earth2,False
+Brown Rat,3788,101,988,68100,72000,Small,Brute,Poison2,False
+Sweet Drops,3790,1,1,0,0,Large,Formless,Ghost4,False
+Furious Gazeti,3792,126,117139,675500,645400,Medium,Demon,Water1,False
+Furious Snowier,3793,129,105290,710600,671100,Large,Formless,Water2,False
+Furious Ice Titan,3794,133,137656,751900,713200,Large,Formless,Water3,False
+Solid Iceicle,3795,135,1012,20000,20000,Small,Formless,Water2,False
+Awaken Ktullanux,3796,135,13521442,277728400,193702300,Large,Brute,Water4,False
+Ominous Assulter,3799,160,592508,5421300,4837500,Medium,DemiHuman,Wind2,False
+Ominous Permeter,3800,157,508355,5080600,4166100,Medium,Brute,Neutral2,False
+Ominous Freezer,3801,159,549071,5489200,4391300,Medium,Brute,Water2,False
+Ominous Solider,3802,161,592310,5919000,4912800,Medium,Brute,Earth2,False
+Ominous Heater,3803,162,527390,5269900,4479400,Medium,Brute,Fire2,False
+Ominous Turtle General,3804,165,11628549,343185400,214680000,Large,Brute,Earth2,False
+Easter Egg,3805,3,25,400,400,Small,Formless,Neutral3,False
+Easter Egg,3806,3,25,400,400,Small,Formless,Neutral3,False
+YSF01 Seyren,3826,189,14400000,150000000,75000000,Medium,DemiHuman,Fire4,False
+Poisoned Apple,3900,1,1,0,0,Medium,Plant,Earth1,False
+Merretich 2,3901,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 3,3902,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 4,3903,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 5,3904,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 6,3905,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 7,3906,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 8,3907,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 9,3908,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 10,3909,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 11,3910,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 12,3911,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Pandaring,3913,1,60,2700,2000,Medium,Plant,Water1,False
+Merretich 1,3914,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Indepencering,3915,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 3,3916,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 4,3917,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 5,3918,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 6,3919,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 7,3920,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 8,3921,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 9,3922,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Foxring,3923,1,60,2700,2000,Medium,Plant,Water1,False
+Merretich 1,3924,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 2,3925,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 3,3926,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 4,3927,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 5,3928,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 6,3929,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 7,3930,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 8,3931,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 9,3932,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 1,3933,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 2,3934,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 3,3935,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 4,3936,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 5,3937,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 6,3938,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 7,3939,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 8,3940,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Monster Soul,3941,1,60,2700,2000,Medium,Plant,Water1,False
+muck,3942,16,153,10800,8100,Small,Insect,Fire1,False
+Merretich 1,3943,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 2,3944,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 3,3945,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 4,3946,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 5,3947,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 6,3948,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 7,3949,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 8,3950,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 9,3951,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 1,3952,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+MOONLIGHT_LADY,3953,16,153,10800,8100,Small,Insect,Fire1,False
+Merretich 1,3954,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 2,3955,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 3,3956,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Chronos_Instance06,3957,16,153,10800,8100,Small,Insect,Fire1,False
+Merretich 2,3958,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 2,3959,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 3,3960,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 4,3961,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 5,3962,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 6,3963,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 7,3964,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 8,3965,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 9,3966,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 1,3967,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Skeleton Puppet,3968,175,50000000,0,201000,Large,Demon,Water3,False
+Merretich 3,3969,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 4,3970,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Skelion,3971,1,1,0,0,Large,Formless,Ghost4,False
+Merretich 6,3972,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Merretich 7,3973,180,18200000,100000000,100000000,Large,DemiHuman,Earth3,False
+Mun Young,3974,240,189777643,170375000,185180000,Small,Demon,Dark3,False
+Justice Felsing,3975,239,174775432,184444300,185180000,Large,Demon,Ghost3,False
+Eckart Appleton,3976,101,465421,1538600,1016400,Large,Undead,Undead3,False
+Taki Matsushita,3977,238,156664345,155566400,185180000,Medium,Demon,Holy4,False
+Saikaku Yamane,3978,101,474353,1538600,1016400,Medium,Demon,Neutral3,False
+Zuhair Emre,3979,141,664145,1538600,1016400,Small,Formless,Ghost3,False
+Kavac Hilmiya,3980,141,632123,1538600,1016400,Medium,Angel,Poison3,False
+Fletcher Eigsti,3981,141,542312,1538600,1016400,Small,DemiHuman,Wind3,False
+Chen Hua,3982,141,712331,1538600,1016400,Large,Demon,Holy3,False
+Asta Fafner,3983,171,1054312,1538600,1016400,Large,Angel,Fire3,False
+Matilde Goldhammer,3984,171,1032483,1538600,1016400,Small,Fish,Water3,False
+Harald Heiligsturm,3985,171,1032483,1538600,1016400,Large,Angel,Holy4,False
+Sung Jiyeon,3986,241,803545464,1677721500,1677721500,Small,Demon,Undead3,False
+Mare Bello Fiore,3987,175,500000000,0,201000,Large,Demon,Water3,False
+Albedo,3988,175,500000000,0,201000,Large,Demon,Water3,False
+Skeleton Queen,3989,175,4000000000,0,201000,Large,Demon,Water3,False
+Ice Queen,3990,1,4000000000,0,201000,Large,Demon,Water3,False
+Poison Queen,3991,1,4000000000,0,201000,Medium,DemiHuman,Poison3,False
+Posessed Poring,3992,175,4000000000,0,201000,Small,Formless,Ghost3,False
+Demigod Harmonia,3993,1,4000000000,0,201000,Medium,DemiHuman,Undead3,False
+Demigod Nsphyx,3994,1,4000000000,0,201000,Small,DemiHuman,Fire2,False
+Fahrros,3995,1,500000,2700,2000,Medium,Plant,Water1,False
+Krampus,3996,25,1500000,16200,18300,Large,Brute,Fire1,False
+Ains Ooal Gown,3997,1,4000000000,0,201000,Small,Formless,Ghost3,False
+Shalltear Bloodfallen,3998,1,4000000000,0,201000,Large,Demon,Dark4,False
+Dark Lady,3999,175,4000000000,0,201000,Large,Demon,Dark4,False
+Dark Acolyte,12000,16,100000,10800,8100,Small,Insect,Fire1,False
+Dark Acolyte,12001,16,100000,10800,8100,Small,DemiHuman,Holy4,False
+Dark Acolyte,12002,16,100000,10800,8100,Small,DemiHuman,Holy4,False
+Dark Acolyte,12003,16,100000,10800,8100,Small,DemiHuman,Holy4,False
+Dark Acolyte,12004,16,100000,10800,8100,Small,DemiHuman,Holy4,False
+Guard5,12005,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard6,12006,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard7,12007,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard8,12008,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard9,12009,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard10,12010,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard11,12011,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard12,12012,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard13,12013,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard14,12014,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard15,12015,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard16,12016,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard17,12017,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard18,12018,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard19,12019,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard20,12020,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Guard21,12021,16,153,10800,8100,Small,DemiHuman,Holy4,False
+Crazed Acolyte,12022,31,1000,100000,100000,Small,DemiHuman,Holy4,False
+Guard23,12023,16,1500,10800,8100,Small,DemiHuman,Holy4,False
+Guard21,12024,16,2000,10800,8100,Small,DemiHuman,Holy4,False
+Guard25,12025,16,2000,10800,8100,Small,DemiHuman,Holy4,False
+Guard26,12026,16,2000,10800,8100,Small,DemiHuman,Holy4,False
+Guard27,12027,16,2000,10800,8100,Small,DemiHuman,Holy4,False
+Holy Acolyte,12029,16,15000,10800,8100,Small,DemiHuman,Holy4,False
+Holy Acolyte,12030,16,15000,10800,8100,Small,DemiHuman,Holy4,False
+Holy Acolyte,12031,16,15000,10800,8100,Small,DemiHuman,Holy4,False
+Holy Acolyte,12032,16,15000,10800,8100,Small,DemiHuman,Holy4,False
+Holy Acolyte,12033,16,15000,10800,8100,Small,DemiHuman,Holy4,False
+Constantine,12034,16,250000,10800,8100,Small,DemiHuman,Holy4,False
+Gabriel,12035,16,100000,10800,8100,Small,DemiHuman,Holy4,False
+Pharell,12036,16,100000,10800,8100,Small,DemiHuman,Holy4,False
+High Acolyte,12037,16,25000,10800,8100,Small,DemiHuman,Holy4,False
+High Acolyte,12038,16,25000,10800,8100,Small,DemiHuman,Holy4,False
+High Acolyte,12039,16,25000,10800,8100,Small,DemiHuman,Holy4,False
+High Acolyte,12040,16,25000,10800,8100,Small,DemiHuman,Holy4,False
+Decimus,12041,54,100000000,500000,500000,Small,DemiHuman,Holy4,False
+Basic_Instance02,12071,1,60,2700,2000,Medium,DemiHuman,Holy4,False
+Basic_Instance01,12072,1,60,2700,2000,Medium,DemiHuman,Holy4,False
+Pandaring,12073,1,60,2700,2000,Medium,DemiHuman,Holy4,False
+Foxring,12074,1,60,2700,2000,Medium,DemiHuman,Holy4,False
+Chronos,12075,1,60,2700,2000,Medium,DemiHuman,Holy4,False
+Chronos_Instance02,12076,16,153,10800,8100,Small,Insect,Fire1,False
+Chronos_Instance03,12077,16,153,10800,8100,Small,Insect,Fire1,False
+Chronos_Instance01,12078,16,153,10800,8100,Small,Insect,Fire1,False
+Chronos_Instance10,12079,16,153,10800,8100,Small,Insect,Fire1,False
+EVIL_BEING1,13120,61,2614,58300,65600,Medium,Undead,Undead2,False
+EVIL_BEING2,13121,80,5149,133900,128000,Large,Undead,Undead4,False
+EVIL_BEING3,13122,87,6996,128300,144500,Medium,Undead,Undead2,False
+EVIL_BEING4,13123,91,9194,156600,176300,Medium,Undead,Undead3,False
+This_is_Sparta_001,15000,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_001,15001,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_003,15003,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_004,15004,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_005,15005,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_006,15006,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_007,15007,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_008,15008,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_009,15009,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_010,15010,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_011,15011,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_012,15012,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_013,15013,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_014,15014,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_015,15015,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_016,15016,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_017,15017,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_018,15018,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_019,15019,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_020,15020,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_021,15021,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_022,15022,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_023,15023,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_024,15024,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_025,15025,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_026,15026,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_027,15027,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_028,15028,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_029,15029,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_030,15030,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_031,15031,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_032,15032,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_033,15033,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_034,15034,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_035,15035,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_036,15036,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_037,15037,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_038,15038,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_039,15039,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_040,15040,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_041,15041,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_042,15042,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_043,15043,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_044,15044,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_045,15045,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_046,15046,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_047,15047,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_048,15048,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_049,15049,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_050,15050,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_051,15051,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_052,15052,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_053,15053,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_054,15054,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_055,15055,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_056,15056,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_057,15057,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_058,15058,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_059,15059,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_060,15060,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_061,15061,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_062,15062,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_063,15063,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_064,15064,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_065,15065,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_066,15066,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_067,15067,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_068,15068,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_069,15069,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_070,15070,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_071,15071,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_072,15072,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_073,15073,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_074,15074,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_075,15075,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_076,15076,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_077,15077,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_078,15078,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_079,15079,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_080,15080,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_081,15081,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_082,15082,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_083,15083,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_084,15084,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_085,15085,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_086,15086,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_087,15087,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_088,15088,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_089,15089,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_090,15090,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_091,15091,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_092,15092,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_093,15093,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_094,15094,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_095,15095,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_096,15096,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_097,15097,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_098,15098,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_099,15099,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_100,15100,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_101,15101,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_102,15102,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_103,15103,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_104,15104,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_105,15105,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_106,15106,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_107,15107,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_108,15108,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_109,15109,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_110,15110,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_111,15111,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_112,15112,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_113,15113,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_114,15114,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_115,15115,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_116,15116,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_117,15117,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_118,15118,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_119,15119,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_120,15120,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_121,15121,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_122,15122,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_123,15123,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_124,15124,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_125,15125,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_126,15126,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_127,15127,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_128,15128,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_129,15129,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_130,15130,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_131,15131,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_132,15132,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_133,15133,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_134,15134,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_135,15135,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_136,15136,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_137,15137,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_138,15138,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_139,15139,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_140,15140,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_141,15141,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_142,15142,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_143,15143,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_144,15144,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_145,15145,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_146,15146,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_147,15147,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_148,15148,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_149,15149,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_150,15150,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_151,15151,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_152,15152,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_153,15153,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_154,15154,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_155,15155,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_156,15156,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_157,15157,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_158,15158,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_159,15159,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_160,15160,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_161,15161,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_162,15162,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_163,15163,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_164,15164,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_165,15165,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_166,15166,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_167,15167,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_168,15168,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_169,15169,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_170,15170,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_171,15171,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_172,15172,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_173,15173,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_174,15174,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_175,15175,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_176,15176,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_177,15177,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_178,15178,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_179,15179,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_180,15180,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_181,15181,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_182,15182,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_183,15183,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_184,15184,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_185,15185,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_186,15186,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_187,15187,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_188,15188,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_189,15189,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_190,15190,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_191,15191,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_192,15192,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_193,15193,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_194,15194,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_195,15195,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_196,15196,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_197,15197,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_198,15198,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_199,15199,1,1,100,100,Small,DemiHuman,Fire1,False
+This_is_Sparta_200,15200,1,1,100,100,Small,DemiHuman,Fire1,False
+Jakk,15300,1,1000,0,0,Medium,Formless,Fire2,False
+Jakk,15301,1,1000,0,0,Medium,Formless,Fire2,False
+Jakk,15302,1,1000,0,0,Medium,Formless,Fire2,False
+Jakk,15303,1,1000,0,0,Medium,Formless,Fire2,False
+Jakk,15304,1,1000,0,0,Medium,Formless,Fire2,False
+Jakk,15305,1,1000,0,0,Medium,Formless,Fire2,False
+Pandaring,15309,1,60,2700,2000,Medium,Plant,Water1,False
+Foxring,15310,1,60,2700,2000,Medium,Plant,Water1,False
+Pandaring,15311,1,60,2700,2000,Medium,Plant,Water1,False
+Foxring,15312,1,60,2700,2000,Medium,Plant,Water1,False
+Pandaring,15313,1,60,2700,2000,Medium,Plant,Water1,False
+Cache Mimic,15314,1,10,500,500,Small,Plant,Neutral1,False
+Cache Mimic,15315,1,10,500,500,Small,Plant,Neutral1,False
+Cache Mimic,15316,1,10,500,500,Small,Plant,Neutral1,False
+Cache Mimic2,15317,1,10,500,500,Small,Plant,Neutral1,False
+Monster 5,15318,191,10000,0,0,Small,Formless,Ghost4,False
+Monster 6,15319,191,10000,0,0,Small,Formless,Ghost4,False
+Maneater,15400,243,216555444,160475000,126180000,Medium,Plant,Poison3,False
+Devil's Helmet,15401,244,213545464,160375000,125180000,Large,Plant,Earth4,False
+Mutant Fabre,15402,241,223545464,210375000,175180000,Large,Plant,Holy3,False
+Manchineel Tree,15404,251,803545464,1677721500,1677721500,Large,Plant,Poison4,False
+Tethys,15406,251,803545464,1677721500,1677721500,Medium,Fish,Water4,False
+Naiad,15407,236,181445554,121475000,106180000,Small,Fish,Fire3,False
+Leucosia,15408,235,191440905,123375000,115180000,Medium,Fish,Ghost3,False
+Leviathan,15409,231,185441556,210375000,175180000,Large,Fish,Wind4,False
+Ancient Salamander,15410,224,181445554,121475000,106180000,Small,Dragon,Neutral3,False
+Etirabys,15411,227,161440905,123375000,115180000,Medium,Dragon,Poison4,False
+Scorpio,15412,231,803545464,1677721500,1677721500,Medium,Dragon,Water4,False
+Miiudir,15413,221,173333242,210375000,175180000,Large,Dragon,Dark4,False
+The Chariot,15414,251,803545464,1677721500,1677721500,Medium,DemiHuman,Dark3,False
+The Griefer,15415,243,803545464,1677721500,1677721500,Large,Formless,Poison4,False
+The Fool,20050,250,205632123,160375000,185180000,Medium,DemiHuman,Poison3,False
+The Hierophant,20051,251,208054312,165375000,185180000,Large,DemiHuman,Fire3,False
+The Emperor,20052,252,205542312,175375000,185180000,Large,DemiHuman,Wind3,False
+The High Priestess,20053,253,205664145,180375000,185180000,Small,DemiHuman,Ghost3,False
+New Year's Rat,20054,22,420,13500,15200,Small,Brute,Dark1,False
+Guardian Angel,20055,250,123456789,133700,133700,Small,Formless,Ghost3,False
+Black Wraith,20056,1,1,0,0,Large,Formless,Ghost4,False
+Sybarite,20077,16,153,10800,8100,Small,Insect,Fire1,False
+Rubyria,20078,16,153,10800,8100,Small,Insect,Fire1,False
+Wagon cc,20079,16,153,10800,8100,Small,Insect,Fire1,False
+Ruchan,20080,16,153,10800,8100,Small,Insect,Fire1,False
+Iridium,20081,16,153,10800,8100,Small,Insect,Fire1,False
+Dazzley,20082,16,153,10800,8100,Small,Insect,Fire1,False
+Seraphon,20083,16,153,10800,8100,Small,Insect,Fire1,False
+Mercenary_PG01,20084,16,153,10800,8100,Small,Insect,Fire1,False
+Mercenary_PG02,20085,16,153,10800,8100,Small,Insect,Fire1,False
+Mercenary_PG03,20086,16,153,10800,8100,Small,Insect,Fire1,False
+Mercenary_PG04,20087,16,153,10800,8100,Small,Insect,Fire1,False
+Mercenary_PG05,20088,16,153,10800,8100,Small,Insect,Fire1,False
+Mercenary_PG06,20089,16,153,10800,8100,Small,Insect,Fire1,False
+Dark Willow,20101,38,1325,40000,30000,Medium,Plant,Earth1,False
+Dark Mandragora,20102,39,237,71500,36500,Medium,Plant,Earth3,False
+Dark Stem Worm,20103,43,1620,44000,31500,Medium,Plant,Wind1,False
+Dark Spore,20104,44,1694,60500,60000,Medium,Plant,Water1,False
+Dark Orc Warrior,20105,68,3100,105000,170000,Medium,DemiHuman,Earth1,False
+Dark Orc Lady,20106,67,2850,130000,117500,Medium,DemiHuman,Earth2,False
+Dark Orc Baby,20107,63,2500,57500,77000,Small,DemiHuman,Earth1,False
+Dark High Orc,20108,72,3700,204000,179000,Large,DemiHuman,Fire2,False
+Dark Orc Archer,20109,69,2750,107000,80500,Medium,DemiHuman,Earth1,False
+Desert Frilldora,20110,69,4200,327500,270500,Medium,Brute,Earth2,False
+Desert Sandman,20111,71,5000,434000,350500,Medium,Formless,Earth3,False
+Desert Hode,20112,65,4800,394500,220500,Medium,Brute,Earth2,False
+Red Teddy Bear,20255,155,328072,1997200,2250300,Small,Formless,Fire1,False
+Yellow Teddy Bear,20256,176,1051983,9563500,6694400,Small,Formless,Wind1,False
+Green Teddy Bear,20257,157,331960,2164600,2511700,Small,Formless,Poison1,False
+White Teddy Bear,20258,155,311841,2033400,2359500,Small,Formless,Neutral1,False
+Blue Teddy Bear,20259,152,280657,1830000,2123500,Small,Formless,Water1,False
+Shining Teddy Bear,20260,160,10724874,179344400,161861400,Large,Formless,Holy4,False
+Hardworking Pitman,20261,154,305605,0,0,Large,Demon,Earth2,False
+Soul Fragment,20262,153,290324,1893100,2196700,Small,Formless,Neutral2,False
+Haunted Obsidian,20263,156,318593,0,0,Small,Formless,Earth2,False
+Red Teddy Bear,20264,152,328072,0,0,Small,Formless,Fire1,False
+Yellow Teddy Bear,20265,155,328072,0,0,Small,Formless,Wind1,False
+Green Teddy Bear,20266,157,331960,0,0,Small,Formless,Poison1,False
+White Teddy Bear,20267,155,311841,0,0,Small,Formless,Neutral1,False
+Blue Teddy Bear,20268,152,280657,0,0,Small,Formless,Water1,False
+Ancient Tri Joint,20270,164,694500,7583900,5688000,Small,Insect,Earth1,False
+Ancient Stalactic Golem,20271,167,725400,7921400,5941000,Large,Formless,Neutral4,False
+Ancient Megalith,20272,166,708500,7736800,5802600,Large,Formless,Neutral4,False
+Ancient Tao Gunka,20273,169,19280000,400155200,300116400,Large,Demon,Neutral3,False
+Ancient Stone Shooter,20274,166,692500,7562100,5671600,Medium,Plant,Fire3,False
+Ancient Wootan Shooter,20275,164,702100,7666900,5750200,Medium,DemiHuman,Earth2,False
+Ancient Wootan Fighter,20276,167,725500,7922500,5941800,Medium,DemiHuman,Fire2,False
+Ancient Wootan Defender,20277,169,20154000,400155200,300116400,Large,DemiHuman,Fire4,False
+Ancient Megalith,20278,166,708500,0,0,Large,Formless,Neutral4,False
+Ancient Wootan Shooter,20279,164,702100,0,0,Medium,DemiHuman,Earth2,False
+Ancient Wootan Fighter,20280,167,725500,0,0,Medium,DemiHuman,Fire2,False
+Heart Hunter Bellare,20355,120,30159,335100,268100,Medium,DemiHuman,Neutral2,False
+Senior Heart Hunter Bellare,20356,165,473302,4302700,3011900,Medium,DemiHuman,Neutral3,False
+Heart Hunter Sanare,20357,120,30159,335100,268100,Medium,DemiHuman,Neutral2,False
+Greater Heart Hunter Sanare,20358,168,482327,4384800,3069400,Medium,DemiHuman,Neutral2,False
+Plaga,20359,164,466948,4245000,2971500,Medium,Dragon,Neutral2,False
+Mutant Plaga,20360,178,760548,13828200,9698700,Medium,Dragon,Neutral2,False
+Dolor,20361,122,40204,446700,357400,Medium,DemiHuman,Poison2,False
+Mutant Dolor,20362,173,742501,13550000,9450000,Medium,Brute,Poison3,False
+Venenum,20363,123,40720,462400,362000,Medium,Brute,Neutral2,False
+Mutant Venenum,20364,176,755670,13739400,9617600,Medium,DemiHuman,Neutral3,False
+Twin Caput,20365,125,41735,463700,371000,Medium,DemiHuman,Dark2,False
+Mutant Twin Caput,20366,175,750501,13645400,9551800,Medium,DemiHuman,Dark2,False
+Contaminated Raydric,20367,185,2372683,16947700,11863400,Large,DemiHuman,Dark3,False
+Contaminated Raydric Archer,20368,184,2355718,16826600,11778600,Medium,Demon,Dark3,False
+Frozen Gargoyle,20369,186,2377139,16979600,11885700,Medium,Demon,Water3,False
+Contaminated Sting,20370,187,2297907,16413600,11489500,Medium,Formless,Earth3,False
+Prison Breaker,20371,186,2375279,16966300,11876400,Small,Undead,Undead2,False
+Rigid Blazer,20372,178,1222580,13841600,9689100,Medium,Demon,Neutral2,False
+Rigid Nightmare Terror,20373,179,1223377,13848900,9694200,Large,Demon,Dark3,False
+Rigid Sky Deleter,20374,174,1186915,13517400,9462200,Medium,Dragon,Neutral2,False
+Rigid Earth Deleter,20375,173,1178369,13439700,9407800,Medium,Dragon,Neutral2,False
+Rigid Explosion,20376,171,1157859,13253300,9277300,Small,Brute,Neutral2,False
+Rigid Kaho,20377,173,1173468,13395200,9376600,Medium,Demon,Dark2,False
+Rigid Lava Golem,20378,177,1229661,13906000,9734200,Large,Formless,Neutral2,False
+Ice Ghost,20379,189,2418315,17273700,12091600,Medium,Demon,Water3,False
+Flame Ghost,20380,189,2410282,17216300,12051400,Medium,Demon,Fire3,False
+R48-85-Bestia,20381,174,8885000,400150000,300450000,Large,Brute,Neutral4,False
+Twin Caput,20382,125,41735,0,0,Medium,DemiHuman,Dark2,False
+King Schmitd Von Walter,20386,175,9200000,259875000,606375000,Medium,DemiHuman,Neutral3,False
+King Schmitd Von Walter,20387,175,45000000,259875000,606375000,Medium,DemiHuman,Neutral4,False
+Khalitzburg Knight,20388,110,46350,2086200,2014700,Medium,DemiHuman,Undead1,False
+Khalitzburg Knight,20389,175,946350,6286200,6214700,Medium,DemiHuman,Undead1,False
+White Knight,20390,111,58650,4377900,4401300,Large,DemiHuman,Holy1,False
+White Knight,20391,175,922000,10377900,10401300,Large,DemiHuman,Holy1,False
+Fallen Maid,20392,110,68145,1063000,1022200,Medium,Demon,Neutral2,False
+Dark Knight,20394,175,1152000,7334800,6351100,Large,Undead,Dark4,False
+Guardian Stone,20400,90,2000000,0,0,Small,Formless,Neutral1,False
+Guardian Stone,20401,90,2000000,0,0,Small,Formless,Neutral1,False
+Emperium,20402,90,68430,0,0,Small,Angel,Holy1,False
+Rigid Muspellskoll,20419,188,55620000,970605000,679423500,Large,Demon,Fire3,False
+Contaminated Wanderer,20420,187,2387582,17054200,11937900,Medium,Demon,Wind2,False
+Contaminated Spider Queen,20421,195,74530159,1492469500,1044728600,Large,Demon,Dark3,False
+Contaminated Dark Lord,20422,194,74289189,1489536400,1042675500,Large,Demon,Undead4,False
+White Lady,20423,1,1,0,0,Large,Formless,Ghost4,False
+Moonlight,20424,1,1,0,0,Large,Formless,Ghost4,False
+Phreeoni,20425,1,1,0,0,Large,Formless,Ghost4,False
+Cursed Flame,20426,175,10000,0,0,Small,Formless,Neutral1,False
+Cursed Flame,20427,175,10000,0,0,Small,Formless,Neutral1,False
+Cursed Flame,20428,175,10000,0,0,Small,Formless,Neutral1,False
+GA Stance 1,20430,250,123456789,133700,133700,Small,Formless,Ghost3,False
+GA Stance 2,20431,250,123456789,133700,133700,Small,Formless,Ghost3,False
+GA Stance 3,20432,250,123456789,133700,133700,Small,Formless,Ghost3,False
+GA Stance 4,20433,250,123456789,133700,133700,Small,Formless,Ghost3,False
+GA Stance 5,20434,250,123456789,133700,133700,Small,Formless,Ghost3,False
+GA Stance 6,20435,250,123456789,133700,133700,Small,Formless,Ghost3,False
+Tormented Soul,20436,99,30000000,0,0,Medium,Formless,Ghost4,False
+Bone Ferus,20516,206,3474420,98629300,14323200,Large,Undead,Undead4,False
+Bone Acidus,20517,205,3491700,103423200,13478500,Large,Undead,Undead4,False
+Chaotic Baphomet,20520,178,21278744,425574900,297902400,Large,Demon,Dark3,False
+Chaotic Andrea,20521,177,1057444,9614000,6729800,Medium,DemiHuman,Holy3,False
+Chaotic Anes,20522,177,1056411,9603700,6722600,Medium,DemiHuman,Neutral3,False
+Chaotic Silvano,20523,177,1057650,9615000,6730500,Medium,DemiHuman,Neutral3,False
+Chaotic Cecilia,20524,177,1057547,9614000,6729800,Medium,DemiHuman,Neutral3,False
+Chaotic Baphomet Jr.,20525,177,1057444,9616100,6729200,Small,Demon,Dark1,False
+Chaotic Side Winder,20526,176,1051983,19127000,13388800,Medium,Brute,Poison1,False
+Chaotic Hunter Fly,20527,175,1045087,9500800,6650600,Small,Insect,Wind2,False
+Chaotic Mantis,20528,174,1039216,9447400,6613200,Medium,Insect,Earth1,False
+Chaotic Ghostring,20529,173,1033446,9395000,6576500,Medium,Demon,Ghost4,False
+Chaotic Killer Mantis,20530,177,1058167,9619700,6737800,Medium,Insect,Earth1,False
+Chaotic Poporing,20531,173,1032638,9387600,6571300,Medium,Plant,Poison1,False
+Chaotic Stem Worm,20532,172,1027071,9337000,6535900,Medium,Plant,Wind1,False
+Chaotic Baphomet Jr.,20533,177,1057444,0,0,Small,Demon,Dark1,False
+Valkyrie,20534,141,8050000,1000000,1000000,Large,Angel,Holy4,False
+Valkyrie,20535,141,8050000,1000000,1000000,Large,Angel,Holy4,False
+Nameless Swordsman,20536,180,75910088,105440000,186000000,Medium,DemiHuman,Fire2,False
+Nameless Swordman,20537,178,1519762,522900,446100,Medium,DemiHuman,Fire2,False
+Nameless Acolyte,20538,176,1500486,486000,454500,Medium,DemiHuman,Holy2,False
+Nameless Merchant,20539,175,1507840,489500,490900,Medium,DemiHuman,Earth3,False
+Eremes Guille,20540,170,100,0,0,Medium,Formless,Neutral1,False
+Rekenber Gunman,20541,174,1485755,1010300,757700,Medium,DemiHuman,Neutral2,False
+Rekenber Guard,20542,173,1475486,920700,690500,Medium,DemiHuman,Neutral2,False
+Rekenber Scientist,20543,172,1469107,920700,690500,Medium,DemiHuman,Neutral3,False
+Red Mineral,20558,190,2435702,0,0,Large,Formless,Neutral4,False
+Purple Mineral,20559,190,2435543,0,0,Large,Formless,Neutral4,False
+Green Mineral,20560,190,2435702,0,0,Large,Formless,Neutral4,False
+White Mineral,20561,190,2436177,0,0,Large,Formless,Neutral4,False
+Hidden Mob,20562,170,100,0,0,Medium,Formless,Neutral1,False
+Hidden Mob 11,20569,185,100000,0,0,Small,Formless,Ghost4,False
+Orc Hero,20571,1,1,0,0,Large,Formless,Ghost4,False
+Himmelmez's Phantom,20572,195,450000000,229132400,219702400,Medium,Angel,Holy3,False
+Amdarais's Phantom,20573,192,450000000,229132400,219702400,Large,Demon,Dark3,False
+Mutated White Knight,20574,188,2450483,31506000,22054200,Large,Undead,Dark3,False
+Prime Corruption Root,20575,190,36760359,119990600,100847800,Large,Demon,Earth3,False
+Mutated Khalitzburg,20576,185,2401358,27015300,18910600,Medium,Undead,Dark3,False
+Cursed Raydric,20577,182,2362114,25308300,17715900,Medium,DemiHuman,Dark2,False
+Cursed Raydric Archer,20578,182,2362114,19977500,10533400,Medium,Undead,Dark2,False
+Thorn,20581,185,10,0,0,Small,Demon,Dark4,False
+Hidden Mob 8,20582,185,100000,0,0,Small,Formless,Ghost4,False
+Mutated White Knight,20583,185,2401358,0,0,Medium,Undead,Dark3,False
+Mutated Khalitzburg,20584,185,2401358,0,0,Medium,Undead,Dark3,False
+Cursed Raydric Archer,20585,182,2362114,0,0,Medium,Undead,Dark2,False
+Poisonous,20592,188,2407086,17193500,12035400,Medium,Formless,Ghost4,False
+Toxious,20593,188,2407556,17196800,12037800,Medium,Formless,Ghost4,False
+Green Mineral,20594,190,2435702,17397900,12178500,Large,Formless,Neutral4,False
+Red Mineral,20595,190,2435702,17397900,12178500,Large,Formless,Neutral4,False
+White Mineral,20596,190,2436177,17401300,12180900,Large,Formless,Neutral4,False
+Purple Mineral,20597,190,2435543,17396700,12177700,Large,Formless,Neutral4,False
+Jewelry Ant,20598,191,2445656,17469000,12228300,Medium,Insect,Neutral4,False
+Jewelry Ant,20599,191,2445656,0,0,Medium,Insect,Neutral4,False
+Jewel,20600,192,100,0,0,Large,Formless,Neutral4,False
+Jeweled Ungoliant,20601,197,37847096,370336400,189235500,Large,Insect,Neutral4,False
+White Porcellio,20602,188,2403326,17166600,12016600,Small,Insect,Earth4,False
+Abyssman,20603,190,2428577,17347000,12142900,Large,Brute,Neutral4,False
+Angelgolt,20604,196,2634990,17925100,12547600,Small,Angel,Holy4,False
+Angelgolt,20605,196,2634476,17921600,12545100,Small,Angel,Holy4,False
+Holy Frus,20606,201,2700802,18372800,12861000,Medium,Angel,Holy4,False
+Holy Skogul,20607,202,2714947,18469000,12928300,Medium,Angel,Holy4,False
+Arch Plasma,20608,198,7588702,59625500,41737900,Small,Formless,Holy4,False
+Spectrum Plasma,20609,197,7549720,59319200,41523400,Small,Formless,Ghost4,False
+Valkyrie Reginleif,20610,207,79619337,570040300,399028200,Large,Angel,Fire4,False
+Valkyrie Ingrid,20611,207,75393148,568413800,397889700,Large,Angel,Water4,False
+Purple Ferus,20612,202,3404262,24316200,17021300,Large,Dragon,Poison4,False
+Treasure Mimic,20613,204,3436608,24547200,17183000,Large,Formless,Neutral4,False
+Black Acidus,20614,205,3455504,24682200,17277500,Large,Dragon,Dark4,False
+Silver Acidus,20615,205,3456051,24682200,17277500,Large,Dragon,Ghost4,False
+Bone Ferus,20616,206,3474420,24817300,17372100,Large,Undead,Undead4,False
+Bone Acidus,20617,207,3491700,24940700,17458500,Large,Undead,Undead4,False
+Bone Detale,20618,209,88466828,615090800,430563600,Large,Undead,Undead4,False
+Gloom Under Night,20619,1,30,0,0,Small,Formless,Water1,False
+Red Pepper,20620,135,9500000,64010600,50024500,Medium,Formless,Fire3,False
+Greater Red Pepper,20621,185,300000000,401010600,110024500,Medium,Formless,Dark3,False
+Assistant Researcher,20622,137,238512,4143200,3304500,Medium,Formless,Neutral2,False
+Assistant Researcher,20623,187,2398802,12143200,9133400,Medium,Formless,Neutral2,False
+Dry Rafflesia,20624,140,248245,3145500,2012200,Small,Plant,Earth2,False
+Greater Dry Rafflesia,20625,190,2908909,10104400,8743200,Small,Plant,Earth2,False
+Special Alnoldi,20626,143,255483,3268000,1960000,Medium,Plant,Earth2,False
+Greater Special Alnoldi,20627,193,2954324,12368000,9460000,Medium,Plant,Earth2,False
+Broken Beta,20630,145,261170,2694400,1645800,Medium,Formless,Neutral2,False
+Broken Gardener Beta,20631,135,234017,2694400,1645800,Medium,Formless,Fire2,False
+Greater Broken Gardener Beta,20632,185,2379158,8694400,8645800,Medium,Formless,Fire2,False
+Broken Beta,20633,145,147134,2332100,1443200,Medium,Formless,Neutral2,False
+Broken Cleaner Beta,20634,144,150304,6394300,3345500,Medium,Formless,Neutral2,False
+Bath Manager,20635,145,150690,8694400,8645800,Medium,Formless,Fire2,False
+Bath Manager,20636,145,150304,8694400,8645800,Medium,Formless,Fire2,False
+Broken Warehouse Manager,20637,186,1900983,4355400,2100000,Small,DemiHuman,Neutral2,False
+Broken Guard Beta,20639,186,1909523,4144100,2655100,Medium,Formless,Wind2,False
+Broken Cleaning Robot,20640,130,182967,2651500,1464000,Small,Formless,Neutral2,False
+Broken Cleaning Robot,20641,175,1200685,3755100,2322100,Small,Formless,Neutral2,False
+Sweetie,20642,139,5011304,21380000,10220000,Medium,DemiHuman,Neutral3,False
+Boiling Phen,20643,139,133096,1239000,1610400,Medium,Fish,Water2,False
+Boiling Marc,20644,137,132060,1233300,555300,Medium,Fish,Water2,False
+Boiling Sword Fish,20645,138,133151,1444300,1088500,Large,Fish,Water2,False
+Boiling Piranha,20646,138,133024,1945400,1222100,Large,Fish,Water3,False
+Azure Princess,20647,141,1823441,8694400,8645800,Medium,Demon,Water3,False
+Boss Meow,20648,168,19298694,141334300,44333300,Small,Plant,Fire3,False
+Red Pitaya,20649,162,648023,4077200,2529900,Small,Brute,Fire1,False
+Yellow Pitaya,20650,164,658607,4344300,2744300,Small,Brute,Wind1,False
+Bue Pitaya,20651,165,662911,4422100,2433200,Small,Brute,Water1,False
+Violet Pitaya,20652,165,665510,4722100,2133200,Small,Brute,Poison1,False
+Green Pitaya,20653,166,668381,4133200,1774300,Small,Brute,Earth1,False
+Red Pitaya,20654,162,648023,0,0,Small,Brute,Fire1,False
+Yellow Pitaya,20655,164,658607,0,0,Small,Brute,Wind1,False
+Bue Pitaya,20656,165,662911,0,0,Small,Brute,Water1,False
+Violet Pitaya,20657,165,665510,0,0,Small,Brute,Poison1,False
+Green Pitaya,20658,166,668381,0,0,Small,Brute,Earth1,False
+Boss Meow,20659,138,7221377,101334300,34333300,Small,Plant,Fire3,False
+Red Pitaya,20660,132,158478,2077200,1529900,Small,Brute,Fire1,False
+Yellow Pitaya,20661,134,162599,2047200,1549900,Small,Brute,Wind1,False
+Bue Pitaya,20662,135,163655,3177200,1729900,Small,Brute,Water1,False
+Violet Pitaya,20663,135,165308,2375400,1642100,Small,Brute,Poison1,False
+Green Pitaya,20664,136,165105,3232100,1345600,Small,Brute,Earth1,False
+Verporta,20665,136,239037,4244200,3455400,Medium,Insect,Poison2,False
+Verporte,20666,186,2390934,11244200,9455400,Medium,Insect,Poison2,False
+Silva Papilia,20667,145,7374707,101010600,40024500,Large,Plant,Dark3,False
+Grand Papilia,20668,195,74730723,401010600,110024500,Large,Plant,Dark3,False
+Papilla,20669,188,240713,4321100,3106700,Medium,Insect,Dark2,False
+Greater Papilla,20670,188,2409593,14321100,8106700,Medium,Insect,Dark2,False
+Papilla Ruba,20671,139,240372,4321100,3106700,Medium,Insect,Fire2,False
+Greater Papilla Ruba,20672,190,3656403,14321100,8106700,Medium,Insect,Fire2,False
+Papilla Ruba,20673,150,2409593,14321100,8106700,Small,Insect,Wind1,False
+Papilla,20674,139,237484,4321100,3106700,Medium,Insect,Water3,False
+Greater Papilla Cae,20675,190,2405191,14321100,8106700,Medium,Insect,Water3,False
+Papilla Cae,20676,150,2409593,14321100,8106700,Small,Insect,Wind1,False
+Aries,20677,140,36702,6682500,4175000,Medium,DemiHuman,Fire2,False
+Greater Aries,20678,190,3656403,12682500,8175000,Medium,DemiHuman,Fire2,False
+Guardian Component,20679,99,20,0,0,Medium,DemiHuman,Neutral1,False
+Heart Hunter Skirmisher,20680,130,180367,1411600,1025600,Medium,DemiHuman,Neutral2,False
+Heart Hunter Skirmisher,20682,176,1208485,3934300,2044300,Medium,DemiHuman,Dark2,False
+Bookworm,20683,141,250264,4050000,4684000,Large,Insect,Earth2,False
+Roaming Spellbook,20684,144,256849,2256500,1192300,Medium,Formless,Neutral3,False
+Sewage Venenum,20685,142,290128,1455400,887400,Large,Demon,Dark2,False
+Sewage Cramp,20686,140,285388,1744100,1022100,Small,Brute,Poison1,False
+Sewage Waterfall,20687,141,287897,1333200,1002500,Medium,Formless,Poison2,False
+Elite Bellare,20688,143,295508,2111600,1125600,Medium,DemiHuman,Ghost1,False
+Magic-poisoned Dolor,20689,145,299350,1744500,1222100,Medium,DemiHuman,Ghost1,False
+Unleashed Magic,20690,144,291046,3223200,1443300,Medium,Formless,Ghost2,False
+Magic-poisoned Plaga,20691,192,2946697,18916500,13241700,Large,Demon,Poison3,False
+Magic-poisoned Sanare,20692,194,2979073,19714200,13799900,Medium,DemiHuman,Holy2,False
+Powerful Magic,20693,193,2961272,19124400,13386900,Medium,Formless,Ghost3,False
+Sharp Magic,20694,193,2960243,19707200,13795100,Medium,Formless,Ghost3,False
+Child Admin,20696,50,50000,200000,200000,Medium,Formless,Ghost3,False
+Child Admin,20697,50,50000,200000,200000,Medium,Formless,Ghost3,False
+Heart Hunter,20699,143,295508,2111600,1125600,Medium,DemiHuman,Ghost1,False
+Deep Sea Sropho,20801,147,456823,3031400,2122000,Medium,Fish,Water3,False
+Deep Sea Obeaune,20802,149,450238,3037800,2126500,Medium,Fish,Water2,False
+Deep Sea Deviace,20803,150,488355,3135200,2194600,Medium,Fish,Water4,False
+Deep Sea Marse,20804,149,475141,3016300,2111400,Small,Fish,Water2,False
+Deep Sea Merman,20805,148,467534,3037800,2126500,Medium,DemiHuman,Water3,False
+Deep Sea Sedora,20806,199,3075143,19167600,13417300,Medium,Fish,Wind3,False
+Deep Sea Swordfish,20807,199,3197411,19982700,13987900,Large,Fish,Water3,False
+Deep Sea Strouf,20808,145,3267419,19782800,13848000,Large,Fish,Water3,False
+Deep Sea Phen,20809,199,3097158,19314400,13520100,Medium,Fish,Water2,False
+Deep Sea King Dramoh,20810,205,3215698,20771300,14539900,Large,Fish,Water3,False
+Deep Sea Kraken,20811,204,71711800,651925400,586732800,Large,Fish,Water4,False
+Battle Warrior,20834,200,50000,71100,79800,Medium,DemiHuman,Earth2,False
+Dual Cannon,20835,200,30000,70900,79800,Medium,DemiHuman,Fire2,False
+Mother Net,20836,200,30000,70900,79800,Medium,DemiHuman,Fire2,False
+Infinity,20837,200,50000,68900,77600,Medium,Plant,Fire3,False
+Deep Sea Witch,20843,205,75746433,677044300,607333600,Large,Demon,Dark3,False
+Hidden Mob 9,20846,185,100000,0,0,Small,Formless,Ghost4,False
+Hidden Mob 10,20847,185,100000,0,0,Small,Formless,Ghost4,False
+Wooden Warrior,20848,200,50000,71100,79800,Medium,DemiHuman,Earth2,False
+Wooden Fairy,20849,200,30000,70900,79800,Medium,DemiHuman,Fire2,False
+Creeper,20850,200,50000,68900,77600,Medium,Plant,Fire3,False
+Hell Tree,20851,200,50000,68900,77600,Medium,Plant,Fire3,False
+Deep Sea Sropho,20877,113,24002,193400,190000,Medium,Fish,Water2,False
+Deep Sea Obeaune,20878,151,700000,110000,110000,Medium,Demon,Water3,False
+Deep Sea Deviace,20879,60,3135,65800,74000,Medium,Fish,Water4,False
+Deep Sea Marse,20880,95,120000,75000,75000,Small,Fish,Water2,False
+Deep Sea Merman,20881,60,2940,61600,69200,Medium,DemiHuman,Water3,False
+Deep Sea Sedora,20882,110,22050,185300,173900,Medium,Fish,Water2,False
+Deep Sea Swordfish,20883,145,400000,100000,100000,Large,Fish,Water3,False
+Deep Sea Strouf,20884,145,400000,100000,100000,Large,Fish,Water3,False
+Deep Sea Phen,20885,158,284110,1239000,1610400,Medium,Fish,Water2,False
+Rotten Tree,20886,236,11421722,44866500,30144500,Large,Plant,Dark4,False
+Melted Poring,20887,230,7295524,41829700,28166500,Medium,Plant,Poison3,False
+Grave Worm,20888,238,11797121,43600700,30456900,Large,Insect,Poison4,False
+Brain Sucker,20889,235,10734022,48036400,32722800,Medium,Insect,Dark2,False
+Mosquilo,20890,233,9358623,48778400,32792700,Medium,Insect,Wind3,False
+Unknown Creature,20891,240,732318780,1486774600,867758800,Large,Formless,Neutral3,False
+Sakray,20892,240,1840543445,245455600,183780000,Medium,DemiHuman,Fire4,False
+Tiara,20893,240,1280400838,215455600,163780000,Medium,Undead,Holy3,False
+Undead Knight,20894,234,11435423,36654400,24314700,Large,Undead,Undead1,False
+Undead Soldier,20895,230,11282935,34106500,30065400,Small,Undead,Undead4,False
+Undead Archer,20896,233,11422240,30543300,26455500,Small,Undead,Undead4,False
+Undead Wizard,20897,238,11671994,30976600,25534300,Small,DemiHuman,Ghost4,False
+Undead Magician,20898,235,11520638,32143400,20966600,Small,Undead,Dark4,False
+Undead Noble,20899,239,11723545,35153300,30873400,Small,DemiHuman,Undead4,False
+Undead Servant,20900,234,11482495,33143400,28654300,Small,Undead,Undead4,False
+Mutant Chimera Rabiter,20920,243,9064251,24433300,21444300,Small,Formless,Fire3,False
+Mutant Chimera Fulgor,20921,244,8900729,24350100,23103200,Medium,Brute,Water3,False
+Mutant Chimera Napeo,20922,244,8700729,21415000,24342100,Medium,Plant,Wind3,False
+Mutant Chimera Galensis,20923,244,9300729,22372000,21111000,Medium,DemiHuman,Earth3,False
+Mutant Chimera Amitera,20924,227,5814712,23108000,25121500,Medium,Brute,Earth3,False
+Mutant Chimera Litus,20925,228,6140768,24353500,24333300,Medium,DemiHuman,Wind3,False
+Mutant Chimera Fillia,20926,229,5766824,25700500,21281000,Medium,Brute,Fire3,False
+Mutant Chimera Vanilaqus,20927,230,6092880,25585300,21173900,Medium,Formless,Water3,False
+Mutant Chimera Theone,20928,245,334435343,816000000,780000000,Large,Formless,Neutral3,False
+Giant Caput,20929,213,4439942,21744100,21022100,Large,Formless,Neutral2,False
+Dolorian,20930,214,4660787,21744500,21222100,Medium,DemiHuman,Poison3,False
+Plagarion,20931,215,4881632,24256500,22192300,Large,Demon,Neutral2,False
+Deadre,20932,214,3732100,23655400,21455400,Medium,DemiHuman,Dark2,False
+Venedi,20933,213,4439942,21455400,22887400,Large,Demon,Dark2,False
+R001-Bestia,20934,215,37957533,801010600,240024500,Large,Brute,Dark2,False
+Gan Ceann,20935,215,4681632,25848600,18154800,Medium,Formless,Neutral1,False
+Disguiser,20936,254,8965513,22323300,16744500,Medium,Demon,Undead2,False
+Brutal Murderer,20937,214,4960787,27244400,17224400,Large,DemiHuman,Neutral2,False
+Ghost Cube,20938,213,4439942,33063100,22564300,Small,Undead,Undead1,False
+Lude Gal,20939,213,4439942,33020100,23114000,Small,Undead,Undead2,False
+Blue Moon Loli Ruri,20940,255,9301992,27905400,20934300,Large,Demon,Dark4,False
+Grote,20941,253,9929035,29754300,25334200,Large,Demon,Dark1,False
+Pierrotzoist,20942,255,9701992,27654300,20153300,Small,Demon,Dark2,False
+Witch of Death,20943,255,398844882,1277044300,1207333600,Large,DemiHuman,Dark2,False
+Mutant Chimera Rabiter,21048,243,9064251,0,0,Small,Formless,Fire3,False
+Mutant Chimera Fulgor,21049,244,8900729,0,0,Medium,Brute,Water3,False
+Mutant Chimera Napeo,21050,244,8700729,0,0,Medium,Plant,Wind3,False
+Mutant Chimera Galensis,21051,244,9300729,0,0,Medium,DemiHuman,Earth3,False
+Disguiser,21052,254,8965513,0,0,Medium,Demon,Undead2,False
+Blue Moon Loli Ruri,21053,255,9301992,0,0,Large,Demon,Dark4,False
+Grote,21054,253,9929035,0,0,Large,Demon,Dark1,False
+Pierrotzoist,21055,255,9701992,0,0,Small,Demon,Dark2,False
+Giant Caput,21056,213,4439942,0,0,Large,Formless,Neutral2,False
+Dolorian,21057,214,4660787,0,0,Medium,DemiHuman,Poison3,False
+Plagarion,21058,215,4881632,0,0,Large,Demon,Neutral2,False
+Deadre,21059,214,3732100,0,0,Medium,DemiHuman,Dark2,False
+Venedi,21060,142,4439942,0,0,Large,Demon,Dark2,False
+Unidentified Creature,21061,240,1032318780,1486774600,867758800,Large,Formless,Neutral3,False
+Unidentified Creature,21062,240,1332318780,1486774600,867758800,Large,Formless,Neutral3,False
+Unidentified Creature,21063,240,1632318780,1486774600,867758800,Large,Formless,Neutral3,False
+Kiel D-01,21290,1,1,0,0,Large,Formless,Ghost4,False
+Diligent Andre,21386,167,839882,8047500,6180000,Small,Insect,Earth3,False
+Diligent Soldier Andre,21387,164,943547,8334700,6248600,Medium,Insect,Earth4,False
+Diligent Andre Larva,21388,164,819978,6479700,4687000,Small,Insect,Earth2,False
+Diligent Deniro,21389,167,819978,8047500,6180000,Small,Insect,Earth3,False
+Diligent Piere,21390,167,825541,8047500,6180000,Small,Insect,Earth3,False
+Mushy Ant Egg,21391,164,659810,6433400,5076400,Small,Formless,Neutral3,False
+Gutsy Giearth,21392,168,864988,8156500,6165500,Small,Demon,Dark3,False
+Gutsy Familiar,21393,166,761002,8047500,6180000,Small,Brute,Dark2,False
+Diligent Vitata,21394,169,879511,8334700,6248600,Small,Insect,Poison4,False
+Silent Maya,21395,172,98000000,107856000,103392000,Large,Insect,Earth4,False
+Diligent Andre,21431,167,839882,0,0,Small,Insect,Earth3,False
+Diligent Deniro,21432,167,819978,0,0,Small,Insect,Earth3,False
+Diligent Piere,21433,167,825541,0,0,Small,Insect,Earth3,False
+Diligent Vitata,21435,169,879511,0,0,Small,Insect,Poison4,False
+Baphomet,21502,1,1,0,0,Large,Formless,Ghost4,False
