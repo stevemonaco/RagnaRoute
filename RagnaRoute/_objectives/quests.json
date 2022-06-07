@@ -1,0 +1,12 @@
+[
+	{
+		"name": "MVP Tracker",
+		"fileName": "boss.json",
+		"kind": "boss"
+	},
+	{
+		"name": "Boosters",
+		"fileName": "booster.json",
+		"kind": "kill"
+	}
+]

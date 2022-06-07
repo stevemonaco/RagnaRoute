@@ -40,6 +40,15 @@
     <None Update="_data\mob.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="_objectives\booster.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="_objectives\boss.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="_objectives\quests.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Features\Shell\ShellView.axaml.cs">
@@ -47,6 +56,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="_quests\" />
+    <Folder Include="_objectives\" />
   </ItemGroup>
 </Project>

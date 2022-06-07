@@ -73,7 +73,7 @@
 	},
 	{
 		"name": "Booster [99]",
-		"description": "Kill [99-115] Monsters: Water/Medium/Formless (30) -> Sting and Anolian",
+		"description": "Kill [99-115] Monsters: Water/Medium/Formless (30)\nSting and Anolian",
 		"type": "Kill",
 		"minimumRespawn": 60,
 		"maximumRespawn": 120,
@@ -82,7 +82,7 @@
 	},
 	{
 		"name": "Booster [115]",
-		"description": "Kill [115-130] Monsters: Earth/Large/Demi-Human (30) -> Bungisngis",
+		"description": "Kill [115-130] Monsters: Earth/Large/Demi-Human (30)\nBungisngis",
 		"type": "Kill",
 		"minimumRespawn": 60,
 		"maximumRespawn": 120,
@@ -91,7 +91,7 @@
 	},
 	{
 		"name": "Booster [130]",
-		"description": "Kill [130-145] Monsters: Dark/Small/Insect (30) -> Banshee and Horned Scaraba",
+		"description": "Kill [130-145] Monsters: Dark/Small/Insect (30)\nBanshee and Horned Scaraba",
 		"type": "Kill",
 		"minimumRespawn": 60,
 		"maximumRespawn": 120,
@@ -100,7 +100,7 @@
 	},
 	{
 		"name": "Booster [145]",
-		"description": "Kill [145-160] Monsters: Earth/Medium/Small (30) -> "Big Ben and Neo Punk",
+		"description": "Kill [145-160] Monsters: Earth/Medium/Small (30)\nBig Ben and Neo Punk",
 		"type": "Kill",
 		"minimumRespawn": 60,
 		"maximumRespawn": 120,
@@ -160,5 +160,5 @@
 		"maximumRespawn": 120,
 		"notification": "silent",
 		"information": [ "@warp amicitia2" ]
-	},
+	}
 ]

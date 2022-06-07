@@ -3,6 +3,7 @@ using RagnaRoute.Objectives;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
 using System.Text;
@@ -15,6 +16,8 @@ public class KillQuestViewModel : ViewModelBase
     public ReactiveCommand<Unit, Unit> ResetObjectiveCommand { get; }
 
     public string Name { get; }
+    public string? Description { get; init; }
+    public ObservableCollection<string>? Information { get; init; }
 
     private int _timeUntilStarting;
     public int TimeUntilStarting
@@ -39,11 +42,12 @@ public class KillQuestViewModel : ViewModelBase
 
     public ScheduledObjective Objective { get; }
 
-    public KillQuestViewModel(string name)
+    public KillQuestViewModel(string name, ScheduledObjective objective)
     {
         Name = name;
+        Objective = objective;
+        ResetObjectiveCommand = ReactiveCommand.Create(ResetObjective);
 
-        Objective = new ScheduledObjective();
         Objective.Reset(SystemClock.Instance.GetCurrentInstant());
     }
 
@@ -54,5 +58,10 @@ public class KillQuestViewModel : ViewModelBase
         TimeUntilStarting = (int)Math.Round(Objective.TimeUntilStarting.TotalSeconds, MidpointRounding.ToEven);
         TimeUntilEnding = (int)Math.Round(Objective.TimeUntilEnding.TotalSeconds, MidpointRounding.ToEven);
         TimeState = Objective.State;
+    }
+
+    public void ResetObjective()
+    {
+
     }
 }
