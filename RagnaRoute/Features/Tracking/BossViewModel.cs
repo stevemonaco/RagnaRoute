@@ -1,5 +1,5 @@
 ﻿using NodaTime;
-using RagnaRoute.Model;
+using RagnaRoute.Features.Data;
 using RagnaRoute.Objectives;
 using ReactiveUI;
 using System;

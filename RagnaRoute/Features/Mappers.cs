@@ -1,4 +1,4 @@
-﻿using RagnaRoute.Features.Data;
+﻿using RagnaRoute.Data;
 using RagnaRoute.Objectives;
 
 namespace RagnaRoute.ViewModels;

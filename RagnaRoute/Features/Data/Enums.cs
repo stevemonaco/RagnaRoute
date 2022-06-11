@@ -1,10 +1,10 @@
-﻿namespace RagnaRoute.Model;
+﻿namespace RagnaRoute.Features.Data;
 
 public enum MonsterRace { Angel, Brute, DemiHuman, Demon, Dragon, Fish, Formless, Insect, Plant, Player, Undead }
 public enum MonsterSize { Small, Medium, Large }
 public enum MonsterElement
 {
-    Neutral1, Neutral2, Neutral3, Neutral4, 
+    Neutral1, Neutral2, Neutral3, Neutral4,
     Water1, Water2, Water3, Water4,
     Earth1, Earth2, Earth3, Earth4,
     Fire1, Fire2, Fire3, Fire4,
