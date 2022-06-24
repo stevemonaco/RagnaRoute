@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using RagnaRoute.Data;
+using RagnaRoute.Services;
 using RagnaRoute.ViewModels;
 using Serilog;
 using System;
@@ -34,14 +35,7 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
     {
         var monsterStore = MonsterStore.LoadMonstersFromCsv(@"_data/mob.csv");
         services.AddSingleton(monsterStore);
-
-        //builder.RegisterType<ViewModels.MessageBoxViewModel>().As<IMessageBoxViewModel>();
-        //var windowManager = new WindowManager(new ViewLocator());
-
-        //services.AddSingleton<IWindowManager>(windowManager);
-        //services.AddSingleton<IFileSelectService, FileSelectService>();
-        //services.AddSingleton<IDiskExploreService, DiskExploreService>();
-        //services.AddSingleton<IThemeService, ThemeService>();
+        services.AddTransient<TrackerService>();
     }
 
     public void ConfigureViews(IServiceCollection services)

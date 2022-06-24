@@ -49,6 +49,7 @@
 									<TextBlock Text="{Binding Name}" FontWeight="Bold" />
 									<TextBlock HorizontalAlignment="Right" Margin="8,0,0,0" Text="{Binding TimeUntilStarting}" />
 									<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding}" />
+									<TextBlock Margin="8,0,0,0" Text="{Binding TimeState}" />
 								</StackPanel>
 								<TextBlock Text="{Binding Description}" Width="{ReflectionBinding #card.Width}" TextWrapping="Wrap" />
 								<StackPanel Background="#20204C" Orientation="Horizontal">
@@ -68,7 +69,7 @@
 											</DataTemplate>
 										</ItemsControl.ItemTemplate>
 									</ItemsControl>
-									<Button HorizontalAlignment="Right" Margin="8,0,0,0" Command="{Binding ResetObjectiveCommand}" Content="Reset" />
+									<Button HorizontalAlignment="Right" Margin="8,0,0,0" Command="{ReflectionBinding CompleteObjective}" Content="Complete" />
 								</StackPanel>
 							</StackPanel>
 						</Border>

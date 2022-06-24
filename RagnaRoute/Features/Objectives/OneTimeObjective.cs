@@ -39,5 +39,7 @@ public class OneTimeObjective : ITimedObjective
     public void Complete()
     {
         State = TimeState.Completed;
+        TimeUntilStarting = Duration.MaxValue;
+        TimeUntilEnding = Duration.MaxValue;
     }
 }

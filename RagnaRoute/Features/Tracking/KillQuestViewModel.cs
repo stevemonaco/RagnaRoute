@@ -1,19 +1,15 @@
-﻿using NodaTime;
-using RagnaRoute.Objectives;
-using ReactiveUI;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Reactive;
-using System.Text;
-using System.Threading.Tasks;
+using ReactiveUI;
+using NodaTime;
+using RagnaRoute.Objectives;
 
 namespace RagnaRoute.ViewModels;
 
 public class KillQuestViewModel : ViewModelBase
 {
-    public ReactiveCommand<Unit, Unit> ResetObjectiveCommand { get; }
+    public ReactiveCommand<Unit, Unit> CompleteObjectiveCommand { get; }
 
     public string Name { get; }
     public string? Description { get; init; }
@@ -46,9 +42,9 @@ public class KillQuestViewModel : ViewModelBase
     {
         Name = name;
         Objective = objective;
-        ResetObjectiveCommand = ReactiveCommand.Create(ResetObjective);
+        CompleteObjectiveCommand = ReactiveCommand.Create(CompleteObjective);
 
-        Objective.Reset(SystemClock.Instance.GetCurrentInstant());
+        //Objective.Complete(SystemClock.Instance.GetCurrentInstant());
     }
 
     public void UpdateObjective()
@@ -60,8 +56,9 @@ public class KillQuestViewModel : ViewModelBase
         TimeState = Objective.State;
     }
 
-    public void ResetObjective()
+    public void CompleteObjective()
     {
-
+        Objective.Complete();
+        UpdateObjective();
     }
 }

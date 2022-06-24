@@ -4,18 +4,28 @@ namespace RagnaRoute.Objectives;
 public interface IRecurringObjective : ITimedObjective
 {
     /// <summary>
-    /// Instant the objective was last reset
+    /// Instant the objective was last completed
     /// </summary>
-    Instant? LastReset { get; }
+    Instant? LastCompletion { get; }
 
     /// <summary>
-    /// Reset the object's LastReset time to the current time
+    /// Moves the Objective to the next Followup without completing it
+    /// </summary>
+    void Next();
+
+    /// <summary>
+    /// Completes the objective at the current time
+    /// </summary>
+    void Complete();
+
+    /// <summary>
+    /// Completes the objective at the given time
+    /// </summary>
+    /// <param name="completionTime"></param>
+    void Complete(Instant? completionTime);
+
+    /// <summary>
+    /// Resets the objective's completion state
     /// </summary>
     void Reset();
-
-    /// <summary>
-    /// Reset the objective's last reset time
-    /// </summary>
-    /// <param name="resetTime"></param>
-    void Reset(Instant? resetTime);
 }

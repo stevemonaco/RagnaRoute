@@ -11,7 +11,7 @@ public class SpawnObjective : IRecurringObjective
     public Duration TimeUntilStarting { get; private set; }
     public Duration TimeUntilEnding { get; private set; }
 
-    public Instant? LastReset { get; private set; }
+    public Instant? LastCompletion { get; private set; }
 
     public TimeState State { get; private set; } = TimeState.Indeterminate;
 
@@ -34,31 +34,43 @@ public class SpawnObjective : IRecurringObjective
     {
         _lastUpdate = current;
 
-        if (LastReset is not null)
+        if (LastCompletion is not null)
             UpdateRemaining(current);
     }
 
     /// <inheritdoc/>
-    public void Reset() =>
-        Reset(SystemClock.Instance.GetCurrentInstant());
+    public void Next()
+    {
+        throw new NotImplementedException();
+    }
 
     /// <inheritdoc/>
-    public void Reset(Instant? resetTime)
+    public void Complete() =>
+        Complete(SystemClock.Instance.GetCurrentInstant());
+
+    /// <inheritdoc/>
+    public void Complete(Instant? resetTime)
     {
-        LastReset = resetTime;
+        LastCompletion = resetTime;
 
         if (_lastUpdate is not null)
             UpdateRemaining(_lastUpdate.Value);
     }
 
+    public void Reset()
+    {
+        LastCompletion = null;
+        UpdateRemaining(SystemClock.Instance.GetCurrentInstant());
+    }
+
     private void UpdateRemaining(Instant current)
     {
-        if (LastReset is null)
+        if (LastCompletion is null)
             return;
 
-        TimeUntilStarting = _respawnMinimum - (current - LastReset.Value);
-        TimeUntilEnding = _respawnMaximum - (current - LastReset.Value);
+        TimeUntilStarting = _respawnMinimum - (current - LastCompletion.Value);
+        TimeUntilEnding = _respawnMaximum - (current - LastCompletion.Value);
 
-        State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
+        State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding, LastCompletion);
     }
 }

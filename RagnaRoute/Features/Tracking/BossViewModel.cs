@@ -54,7 +54,7 @@ public class BossViewModel : ViewModelBase
         ResetObjectiveCommand = ReactiveCommand.Create(ResetObjective);
 
         Objective = new SpawnObjective(Duration.FromSeconds(15), Duration.FromSeconds(25));
-        Objective.Reset(SystemClock.Instance.GetCurrentInstant());
+        Objective.Complete(SystemClock.Instance.GetCurrentInstant());
     }
 
     public void UpdateObjective()
@@ -68,7 +68,7 @@ public class BossViewModel : ViewModelBase
 
     public void ResetObjective()
     {
-        Objective.Reset(SystemClock.Instance.GetCurrentInstant());
+        Objective.Complete(SystemClock.Instance.GetCurrentInstant());
         UpdateObjective();
     }
 }
