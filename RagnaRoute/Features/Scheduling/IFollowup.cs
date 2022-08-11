@@ -1,11 +1,6 @@
 ﻿using NodaTime;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace RagnaRoute.Features.Schedule;
+namespace RagnaRoute.Scheduling;
 
 public interface IFollowup
 {

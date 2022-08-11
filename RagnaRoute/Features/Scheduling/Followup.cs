@@ -2,7 +2,7 @@
 using NodaTime;
 using RagnaRoute.Objectives;
 
-namespace RagnaRoute.Features.Schedule;
+namespace RagnaRoute.Scheduling;
 public class Followup : IFollowup
 {
     private readonly Func<Instant, Interval?> _nextFollowup;

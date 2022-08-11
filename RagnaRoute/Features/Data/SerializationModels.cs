@@ -1,11 +1,12 @@
-﻿using RagnaRoute.Features.Data;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace RagnaRoute.Data;
 
-public enum QuestKind { Boss, Kill }
+public enum QuestKind { Boss, Kill, Instance }
+public enum NotificationLevel { Silent, Low, High, Urgent }
 
-public record QuestHeaderModel(string Name, string FileName, QuestKind Kind);
+public record QuestGroupHeaderModel(string Name, string FileName, QuestKind Kind);
 public record KillQuestModel(string Name, string Description, List<string> Information);
+public record BossQuestModel(string ObjectiveName, QuestKind ObjectiveType, int MinimumRespawn, int MaximumRespawn, NotificationLevel Notification, List<string> Information, int? MobId);
 
 public record MonsterModel(string Name, int Id, long HP, int BaseExp, int JobExp, MonsterElement Element, MonsterRace Race, MonsterSize Size);

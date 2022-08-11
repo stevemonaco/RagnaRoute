@@ -1,7 +1,7 @@
 ﻿using NodaTime;
 using NodaTime.Extensions;
 using RagnaRoute.Data;
-using RagnaRoute.Features.Schedule;
+using RagnaRoute.Scheduling;
 using RagnaRoute.Objectives;
 
 namespace RagnaRoute.ViewModels;
@@ -24,6 +24,25 @@ public static class Mappers
         {
             Description = model.Description,
             Information = new(model.Information)
+        };
+    }
+
+    public static BossQuestViewModel ToViewModel(this BossQuestModel model)
+    {
+        return new BossQuestViewModel(model.ObjectiveName, Duration.FromMinutes(model.MinimumRespawn), Duration.FromMinutes(model.MaximumRespawn))
+        {
+            Id = model.MobId
+        };
+    }
+
+    public static BossQuestViewModel ToViewModel(this BossQuestModel model, MonsterModel monsterModel)
+    {
+        return new BossQuestViewModel(model.ObjectiveName, Duration.FromMinutes(model.MinimumRespawn), Duration.FromMinutes(model.MaximumRespawn))
+        {
+            HP = monsterModel.HP,
+            Element = monsterModel.Element,
+            Race = monsterModel.Race,
+            Size = monsterModel.Size
         };
     }
 }

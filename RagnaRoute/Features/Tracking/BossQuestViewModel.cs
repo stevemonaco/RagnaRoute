@@ -1,24 +1,27 @@
 ﻿using NodaTime;
-using RagnaRoute.Features.Data;
+using RagnaRoute.Data;
 using RagnaRoute.Objectives;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RagnaRoute.ViewModels;
-public class BossViewModel : ViewModelBase
+public class BossQuestViewModel : ViewModelBase
 {
     public ReactiveCommand<Unit, Unit> ResetObjectiveCommand { get; }
 
     public string Name { get; }
-    public long HP { get; set; }
-    public MonsterElement Element { get; set; }
-    public MonsterRace Race { get; set; }
-    public MonsterSize Size { get; set; }
+    public int? Id { get; init; }
+    public long? HP { get; init; }
+    public MonsterElement? Element { get; init; }
+    public MonsterRace? Race { get; init; }
+    public MonsterSize? Size { get; init; }
+    public ObservableCollection<string> Information { get; init; }
 
     private int _timeUntilStarting;
     public int TimeUntilStarting
@@ -41,20 +44,23 @@ public class BossViewModel : ViewModelBase
         set => this.RaiseAndSetIfChanged(ref _timeState, value);
     }
 
+    private bool _isHidden;
+    public bool IsHidden
+    {
+        get => _isHidden;
+        set => this.RaiseAndSetIfChanged(ref _isHidden, value);
+    }
+
     public SpawnObjective Objective { get; }
 
-    public BossViewModel(string name, long hp, MonsterElement element, MonsterRace race, MonsterSize size)
+    public BossQuestViewModel(string name, Duration minimumSpawnDuration, Duration maximumSpawnDuration)
     {
         Name = name;
-        HP = hp;
-        Element = element;
-        Race = race;
-        Size = size;
 
-        ResetObjectiveCommand = ReactiveCommand.Create(ResetObjective);
+        ResetObjectiveCommand = ReactiveCommand.Create(ResetObjective, outputScheduler: RxApp.TaskpoolScheduler);
 
-        Objective = new SpawnObjective(Duration.FromSeconds(15), Duration.FromSeconds(25));
-        Objective.Complete(SystemClock.Instance.GetCurrentInstant());
+        Objective = new SpawnObjective(minimumSpawnDuration, maximumSpawnDuration);
+        //Objective.Complete(SystemClock.Instance.GetCurrentInstant());
     }
 
     public void UpdateObjective()

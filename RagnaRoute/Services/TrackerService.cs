@@ -12,8 +12,14 @@ using System.Threading.Tasks;
 namespace RagnaRoute.Services;
 public class TrackerService
 {
+    private readonly MonsterStore _monsterStore;
     private string _trackerFileName = @"_objectives\quests.json";
     private string _trackerPath = @"_objectives\";
+
+    public TrackerService(MonsterStore monsterStore)
+    {
+        _monsterStore = monsterStore;
+    }
 
     public async Task<IList<TrackingGroupViewModel>> ReadTrackers()
     {
@@ -26,30 +32,44 @@ public class TrackerService
         };
 
         var questsContent = await File.ReadAllTextAsync(_trackerFileName);
-        var quests = JsonSerializer.Deserialize<List<QuestHeaderModel>>(questsContent, jsonOptions);
+        var questGroups = JsonSerializer.Deserialize<List<QuestGroupHeaderModel>>(questsContent, jsonOptions);
 
-        if (quests is null)
+        if (questGroups is null)
             return trackers;
 
-        foreach (var quest in quests)
+        foreach (var questGroup in questGroups)
         {
-            var questPath = Path.Combine(_trackerPath, quest.FileName);
-            var questContent = await File.ReadAllTextAsync(questPath);
+            var groupPath = Path.Combine(_trackerPath, questGroup.FileName);
+            var groupContent = await File.ReadAllTextAsync(groupPath);
 
-            if (quest.Kind == QuestKind.Boss)
+            if (questGroup.Kind == QuestKind.Boss)
             {
+                var bossQuests = JsonSerializer.Deserialize<List<BossQuestModel>>(groupContent, jsonOptions);
 
+                if (bossQuests is null)
+                    continue;
+
+                var bossQuestViewModels = bossQuests
+                    .Select(x => x.MobId is int ? x.ToViewModel(_monsterStore.Monsters.First(y => y.Id == x.MobId))
+                        : x.ToViewModel());
+
+                var trackingVm = new BossQuestTrackingViewModel(bossQuestViewModels)
+                {
+                    Name = questGroup.Name
+                };
+
+                trackers.Add(trackingVm);
             }
-            else if (quest.Kind == QuestKind.Kill)
+            else if (questGroup.Kind == QuestKind.Kill)
             {
-                var killQuests = JsonSerializer.Deserialize<List<KillQuestModel>>(questContent, jsonOptions);
+                var killQuests = JsonSerializer.Deserialize<List<KillQuestModel>>(groupContent, jsonOptions);
 
                 if (killQuests is null)
                     continue;
 
                 var trackingVm = new KillQuestTrackingViewModel()
                 {
-                    Name = quest.Name,
+                    Name = questGroup.Name,
                     Quests = new(killQuests.Select(x => x.ToViewModel()))
                 };
 

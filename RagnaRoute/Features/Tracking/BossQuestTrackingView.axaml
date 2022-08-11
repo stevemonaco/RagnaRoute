@@ -5,15 +5,15 @@
 			 xmlns:vm="using:RagnaRoute.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 x:CompileBindings="True"
-			 x:DataType="vm:BossTrackingViewModel"
-             x:Class="RagnaRoute.Views.BossTrackingView">
+			 x:DataType="vm:BossQuestTrackingViewModel"
+             x:Class="RagnaRoute.Views.BossQuestTrackingView">
 	<ScrollViewer>
 		<ItemsRepeater Items="{Binding Bosses}">
 			<ItemsRepeater.Layout>
 				<StackLayout Orientation="Vertical" />
 			</ItemsRepeater.Layout>
 			<ItemsRepeater.ItemTemplate>
-				<DataTemplate DataType="{x:Type vm:BossViewModel}">
+				<DataTemplate DataType="{x:Type vm:BossQuestViewModel}">
 					<StackPanel Orientation="Horizontal">
 						<TextBlock Text="{Binding Name}" />
 						<TextBlock Margin="8,0,0,0" Text="{Binding HP}" />

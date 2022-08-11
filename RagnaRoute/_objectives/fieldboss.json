@@ -1,0 +1,719 @@
+[
+	{
+		"objectiveName": "Osiris",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp moc_pryd04" ],
+		"mobId": 1038
+	},
+	{
+		"objectiveName": "Baphomet",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp prt_maze03" ],
+		"mobId": 1039
+	},
+	{
+		"objectiveName": "Doppelganger",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp gef_dun02" ],
+		"mobId": 1046
+	},
+	{
+		"objectiveName": "Mistress",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp mjolnir_04" ],
+		"mobId": 1059
+	},
+	{
+		"objectiveName": "Golden Thief Bug",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp prt_sewb4" ],
+		"mobId": 1086
+	},
+	{
+		"objectiveName": "Orc Hero",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp gef_fild03" ],
+		"mobId": 1087
+	},
+	{
+		"objectiveName": "Drake",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp treasure02" ],
+		"mobId": 1112
+	},
+	{
+		"objectiveName": "Eddga",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp pay_fild10" ],
+		"mobId": 1115
+	},
+	{
+		"objectiveName": "Maya",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp anthell02" ],
+		"mobId": 1147
+	},
+	{
+		"objectiveName": "Moonlight Flower",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp pay_dun04" ],
+		"mobId": 1150
+	},
+	{
+		"objectiveName": "Pharaoh",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp in_sphinx5" ],
+		"mobId": 1157
+	},
+	{
+		"objectiveName": "Phreeoni",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp moc_fild17" ],
+		"mobId": 1159
+	},
+	{
+		"objectiveName": "Orc Lord",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp gef_fild10" ],
+		"mobId": 1190
+	},
+	{
+		"objectiveName": "Knight of Windstorm",
+		"objectiveType": "Kill",
+		"minimumRespawn": 0,
+		"maximumRespawn": 0,
+		"notification": "silent",
+		"information": [ "@warp " ],
+		"mobId": 1251
+	},
+	{
+		"objectiveName": "Garm",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp xmas_fild01" ],
+		"mobId": 1252
+	},
+	{
+		"objectiveName": "Dark Lord",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp gl_chyard" ],
+		"mobId": 1272
+	},
+	{
+		"objectiveName": "Turtle General",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp tur_dun04" ],
+		"mobId": 1312
+	},
+	{
+		"objectiveName": "Lord of Death",
+		"objectiveType": "Kill",
+		"minimumRespawn": 0,
+		"maximumRespawn": 0,
+		"notification": "silent",
+		"information": [ "@warp " ],
+		"mobId": 1373
+	},
+	{
+		"objectiveName": "Dracula",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp gef_dun01" ],
+		"mobId": 1389
+	},
+	{
+		"objectiveName": "Evil Snake Lord",
+		"objectiveType": "Kill",
+		"minimumRespawn": 94,
+		"maximumRespawn": 104,
+		"notification": "silent",
+		"information": [ "@warp gon_dun03" ],
+		"mobId": 1418
+	},
+	{
+		"objectiveName": "Incantation Samurai",
+		"objectiveType": "Kill",
+		"minimumRespawn": 91,
+		"maximumRespawn": 101,
+		"notification": "silent",
+		"information": [ "@warp ama_dun03" ],
+		"mobId": 1492
+	},
+	{
+		"objectiveName": "Amon Ra",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp moc_pryd06" ],
+		"mobId": 1511
+	},
+	{
+		"objectiveName": "Tao Gunka",
+		"objectiveType": "Kill",
+		"minimumRespawn": 300,
+		"maximumRespawn": 310,
+		"notification": "silent",
+		"information": [ "@warp beach_dun" ],
+		"mobId": 1583
+	},
+	{
+		"objectiveName": "RSX 0806",
+		"objectiveType": "Kill",
+		"minimumRespawn": 125,
+		"maximumRespawn": 135,
+		"notification": "silent",
+		"information": [ "@warp ein_dun02" ],
+		"mobId": 1623
+	},
+	{
+		"objectiveName": "Bacsojin",
+		"objectiveType": "Kill",
+		"minimumRespawn": 116,
+		"maximumRespawn": 126,
+		"notification": "silent",
+		"information": [ "@warp lou_dun03" ],
+		"mobId": 1630
+	},
+	{
+		"objectiveName": "BioLab 3",
+		"objectiveType": "Kill",
+		"minimumRespawn": 95,
+		"maximumRespawn": 150,
+		"notification": "silent",
+		"information": [ "@warp lhz_dun03" ]
+	},
+	{
+		"objectiveName": "Ygnizem",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 210,
+		"notification": "silent",
+		"information": [ "@warp lhz_dun02" ],
+		"mobId": 1658
+	},
+	{
+		"objectiveName": "Vesper",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp jupe_core" ],
+		"mobId": 1685
+	},
+	{
+		"objectiveName": "Lady Tanee",
+		"objectiveType": "Kill",
+		"minimumRespawn": 420,
+		"maximumRespawn": 430,
+		"notification": "silent",
+		"information": [ "@warp ayo_dun02" ],
+		"mobId": 1688
+	},
+	{
+		"objectiveName": "Detale",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp abyss_03" ],
+		"mobId": 1719
+	},
+	{
+		"objectiveName": "Kiel D-01",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp kh_dun02" ],
+		"mobId": 1734
+	},
+	{
+		"objectiveName": "Valkyrie Randgris",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"information": [ "@warp odin_tem03" ],
+		"mobId": 1751
+	},
+	{
+		"objectiveName": "Gloom Under Night",
+		"objectiveType": "Kill",
+		"minimumRespawn": 300,
+		"maximumRespawn": 310,
+		"notification": "silent",
+		"information": [ "@warp ra_san05" ],
+		"mobId": 1768
+	},
+	{
+		"objectiveName": "Atroce",
+		"objectiveType": "Kill",
+		"minimumRespawn": 0,
+		"maximumRespawn": 0,
+		"notification": "silent",
+		"information": [ "@warp " ],
+		"mobId": 1785
+	},
+	{
+		"objectiveName": "Ifrit",
+		"objectiveType": "Kill",
+		"minimumRespawn": 660,
+		"maximumRespawn": 670,
+		"notification": "silent",
+		"information": [ "@warp thor_v03" ],
+		"mobId": 1832
+	},
+	{
+		"objectiveName": "Fallen Bishop",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp abbey02" ],
+		"mobId": 1871
+	},
+	{
+		"objectiveName": "Beelzebub",
+		"objectiveType": "Kill",
+		"minimumRespawn": 720,
+		"maximumRespawn": 730,
+		"notification": "silent",
+		"information": [ "@warp abbey03" ],
+		"mobId": 1874
+	},
+	{
+		"objectiveName": "Gopinich",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp mosk_dun03" ],
+		"mobId": 1885
+	},
+	{
+		"objectiveName": "Wounded Morroc",
+		"objectiveType": "Kill",
+		"minimumRespawn": 720,
+		"maximumRespawn": 730,
+		"notification": "silent",
+		"information": [ "@warp moc_fild22" ],
+		"mobId": 1917
+	},
+	{
+		"objectiveName": "Boitata",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 130,
+		"notification": "silent",
+		"information": [ "@warp bra_dun02" ],
+		"mobId": 2068
+	},
+	{
+		"objectiveName": "Queen Scaraba",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp dic_dun02" ],
+		"mobId": 2087
+	},
+	{
+		"objectiveName": "Leak",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp dew_dun01" ],
+		"mobId": 2156
+	},
+	{
+		"objectiveName": "Gold Queen Scaraba",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp dic_dun03" ],
+		"mobId": 2165
+	},
+	{
+		"objectiveName": "Kraken",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 150,
+		"notification": "silent",
+		"information": [ "@warp iz_dun05" ],
+		"mobId": 2202
+	},
+	{
+		"objectiveName": "BioLab 4",
+		"objectiveType": "Kill",
+		"minimumRespawn": 0,
+		"maximumRespawn": 0,
+		"notification": "silent",
+		"information": [ "@warp lhz_dun04" ]
+	},
+	{
+		"objectiveName": "Pyuriel",
+		"objectiveType": "Kill",
+		"minimumRespawn": 0,
+		"maximumRespawn": 0,
+		"notification": "silent",
+		"information": [ "@warp " ],
+		"mobId": 2249
+	},
+	{
+		"objectiveName": "Gioia",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"information": [ "@warp gld2_ald" ],
+		"mobId": 2251
+	},
+	{
+		"objectiveName": "Daehyon",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"information": [ "@warp gld2_pay" ],
+		"mobId": 2253
+	},
+	{
+		"objectiveName": "Kades",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"information": [ "@warp gld2_gef" ],
+		"mobId": 2255
+	},
+	{
+		"objectiveName": "Nightmare Amon Ra",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp moc_prydn2" ],
+		"mobId": 2362
+	},
+	{
+		"objectiveName": "The Last One (Bio2)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 240,
+		"maximumRespawn": 540,
+		"notification": "silent",
+		"information": [ "@warp lhz_dun02" ],
+		"mobId": 2441
+	},
+	{
+		"objectiveName": "King of the Alley (Bio2)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 240,
+		"maximumRespawn": 540,
+		"notification": "silent",
+		"information": [ "@warp lhz_dun02" ],
+		"mobId": 2442
+	},
+	{
+		"objectiveName": "Nightmare Baphomet",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp gl_cas02_" ],
+		"mobId": 2483
+	},
+	{
+		"objectiveName": "Time Holder",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 120,
+		"notification": "silent",
+		"information": [ "@warp c_tower3_" ],
+		"mobId": 3074
+	},
+	{
+		"objectiveName": "BioLab 5",
+		"objectiveType": "Kill",
+		"minimumRespawn": 0,
+		"maximumRespawn": 0,
+		"notification": "silent",
+		"information": [ "@warp lhz_dun05" ]
+	},
+	{
+		"objectiveName": "Big Eggring",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 90,
+		"notification": "silent",
+		"information": [ "@warp lasa_dun01" ],
+		"mobId": 3505
+	},
+	{
+		"objectiveName": "Venomous Chimera",
+		"objectiveType": "Kill",
+		"minimumRespawn": 300,
+		"maximumRespawn": 310,
+		"notification": "silent",
+		"information": [ "@warp slabw01" ],
+		"mobId": 3633
+	},
+	{
+		"objectiveName": "Spider Chariot",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp rockmi1" ],
+		"mobId": 3741
+	},
+	{
+		"objectiveName": "Furious Dracula",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp gef_d01_i" ],
+		"mobId": 3757
+	},
+	{
+		"objectiveName": "Furious Moonlight",
+		"objectiveType": "Kill",
+		"minimumRespawn": 0,
+		"maximumRespawn": 0,
+		"notification": "silent",
+		"information": [ "@warp " ],
+		"mobId": 3758
+	},
+	{
+		"objectiveName": "Awaken Ktullanux",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp ice_d03_i" ],
+		"mobId": 3796
+	},
+	{
+		"objectiveName": "Ominous Turtle General",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp tur_d04_i" ],
+		"mobId": 3804
+	},
+	{
+		"objectiveName": "Shining Teddy Bear",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp ein_d02_i" ],
+		"mobId": 20260
+	},
+	{
+		"objectiveName": "Ancient Tao Gunka",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp com_d02_i" ],
+		"mobId": 20273
+	},
+	{
+		"objectiveName": "Ancient Wootan Defender",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp com_d02_i" ],
+		"mobId": 20277
+	},
+	{
+		"objectiveName": "R48-85-Bestia",
+		"objectiveType": "Kill",
+		"minimumRespawn": 30,
+		"maximumRespawn": 40,
+		"notification": "silent",
+		"information": [ "@warp sp_rudus2" ],
+		"mobId": 20381
+	},
+	{
+		"objectiveName": "Rigid Muspellskoll",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp mag_dun03" ],
+		"mobId": 20419
+	},
+	{
+		"objectiveName": "Contaminated Spider Queen",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp gl_cas01_" ],
+		"mobId": 20421
+	},
+	{
+		"objectiveName": "Contaminated Dark Lord",
+		"objectiveType": "Kill",
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
+		"notification": "silent",
+		"information": [ "@warp gl_cas01_" ],
+		"mobId": 20422
+	},
+	{
+		"objectiveName": "Chaotic Baphomet",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp prt_mz03_i" ],
+		"mobId": 20520
+	},
+	{
+		"objectiveName": "Jeweled Ungoliant",
+		"objectiveType": "Kill",
+		"minimumRespawn": 125,
+		"maximumRespawn": 135,
+		"notification": "silent",
+		"information": [ "@warp ein_dun03" ],
+		"mobId": 20601
+	},
+	{
+		"objectiveName": "Valkyrie Reginleif",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"information": [ "@warp odin_past" ],
+		"mobId": 20610
+	},
+	{
+		"objectiveName": "Valkyrie Ingrid",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"information": [ "@warp odin_past" ],
+		"mobId": 20611
+	},
+	{
+		"objectiveName": "Bone Detale",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp abyss_04" ],
+		"mobId": 20618
+	},
+	{
+		"objectiveName": "Deep Sea Kraken",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp iz_d05_i" ],
+		"mobId": 20811
+	},
+	{
+		"objectiveName": "Deep Sea Witch",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"information": [ "@warp iz_d04_i" ],
+		"mobId": 20843
+	},
+	{
+		"objectiveName": "Mutant Chimera Theone",
+		"objectiveType": "Kill",
+		"minimumRespawn": 91,
+		"maximumRespawn": 101,
+		"notification": "silent",
+		"information": [ "@warp amicitia2" ],
+		"mobId": 20928
+	},
+	{
+		"objectiveName": "R001-Bestia",
+		"objectiveType": "Kill",
+		"minimumRespawn": 91,
+		"maximumRespawn": 101,
+		"notification": "silent",
+		"information": [ "@warp sp_rudus4" ],
+		"mobId": 20934
+	},
+	{
+		"objectiveName": "Witch of Death",
+		"objectiveType": "Kill",
+		"minimumRespawn": 91,
+		"maximumRespawn": 101,
+		"notification": "silent",
+		"information": [ "@warp nif_dun02" ],
+		"mobId": 20943
+	},
+	{
+		"objectiveName": "Silent Maya",
+		"objectiveType": "Kill",
+		"minimumRespawn": 120,
+		"maximumRespawn": 210,
+		"notification": "silent",
+		"information": [ "@warp " ],
+		"mobId": 21395
+	}
+]

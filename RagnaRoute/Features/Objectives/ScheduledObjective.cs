@@ -1,5 +1,5 @@
 ﻿using NodaTime;
-using RagnaRoute.Features.Schedule;
+using RagnaRoute.Scheduling;
 using System;
 
 namespace RagnaRoute.Objectives;

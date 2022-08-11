@@ -3,9 +3,9 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
 namespace RagnaRoute.Views;
-public partial class BossTrackingView : UserControl
+public partial class BossQuestTrackingView : UserControl
 {
-    public BossTrackingView()
+    public BossQuestTrackingView()
     {
         InitializeComponent();
     }
