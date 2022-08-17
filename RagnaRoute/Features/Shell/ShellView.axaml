@@ -13,11 +13,15 @@
 		UseLayoutRounding="True"
         Title="RagnaRoute">
 	<Grid RowDefinitions="auto, *">
-		<StackPanel Margin="5,5,0,5" Grid.ColumnSpan="1" Orientation="Horizontal">
+		<Grid ColumnDefinitions="auto, *" Margin="10,5,10,10">
 			<TextBlock Text="RagnaRoute" />
-		</StackPanel>
+			<StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+				<TextBlock Text="{Binding TrackerProfile.ProfileName}" />
+				<TextBlock Margin="5,0,0,0" Text="{Binding TrackerProfile.TrackerTime}" />
+			</StackPanel>
+		</Grid>
 			
-		<ui:NavigationView x:Name="nav" Grid.Row="1" SelectedItem="{Binding SelectedTracker}" PaneDisplayMode="Auto" MenuItems="{Binding Trackers}" IsSettingsVisible="False">
+		<ui:NavigationView x:Name="nav" Grid.Row="1" SelectedItem="{Binding TrackerProfile.SelectedTracker}" PaneDisplayMode="Auto" MenuItems="{Binding TrackerProfile.TrackingGroups}" IsSettingsVisible="False">
 			<ui:NavigationView.MenuItemTemplate>
 				<DataTemplate DataType="{x:Type vm:TrackingGroupViewModel}">
 					<ui:NavigationViewItem Content="{Binding Name}">

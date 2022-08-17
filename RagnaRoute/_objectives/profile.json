@@ -1,0 +1,16 @@
+{
+	"name": "ShiningMoon",
+	"timeZone":  "Etc/GMT+8",
+	"questGroups": [
+		{
+			"name": "Field Bosses",
+			"fileName": "fieldboss.json",
+			"kind": "boss"
+		},
+		{
+			"name": "Boosters",
+			"fileName": "booster.json",
+			"kind": "kill"
+		}
+	]
+}

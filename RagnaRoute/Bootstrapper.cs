@@ -5,10 +5,7 @@ using RagnaRoute.Data;
 using RagnaRoute.Services;
 using RagnaRoute.ViewModels;
 using Serilog;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace RagnaRoute;
@@ -23,17 +20,18 @@ public interface IAppBootstrapper<TViewModel> where TViewModel : class
 public class Bootstrapper : IAppBootstrapper<ShellViewModel>
 {
     private LoggerFactory _loggerFactory;
-    private bool _isStarting = true;
+
+    private const string _logFileName = @"log.txt";
+    private const string _monsterDataFileName = @"_data/mob.csv";
 
     public void ConfigureIoc(IServiceCollection services)
     {
-        _loggerFactory = CreateLoggerFactory("log.txt");
-        _isStarting = false;
+        _loggerFactory = CreateLoggerFactory(_logFileName);
     }
 
     public void ConfigureServices(IServiceCollection services)
     {
-        var monsterStore = MonsterStore.LoadMonstersFromCsv(@"_data/mob.csv");
+        var monsterStore = MonsterStore.LoadMonstersFromCsv(_monsterDataFileName);
         services.AddSingleton(monsterStore);
         services.AddTransient<TrackerService>();
     }

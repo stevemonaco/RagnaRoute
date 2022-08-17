@@ -1,13 +1,11 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Data.Core;
+using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using Microsoft.Extensions.DependencyInjection;
-using Splat;
-using Splat.Microsoft.Extensions.DependencyInjection;
 using RagnaRoute.ViewModels;
 using RagnaRoute.Views;
-using System;
-using RagnaRoute.Data;
 
 namespace RagnaRoute;
 public partial class App : Application
@@ -19,6 +17,9 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        // Remove Avalonia data validation so that Mvvm Toolkit's data validation works
+        ExpressionObserver.DataValidators.RemoveAll(x => x is DataAnnotationsValidationPlugin);
+
         var services = new ServiceCollection();
         var bootstrapper = new Bootstrapper();
         bootstrapper.ConfigureIoc(services);
@@ -27,12 +28,12 @@ public partial class App : Application
         bootstrapper.ConfigureViewModels(services);
         //await bootstrapper.LoadConfigurations(services);
 
-        services.UseMicrosoftDependencyResolver();
+        var provider = services.BuildServiceProvider();
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            var shellViewModel = Locator.Current.GetService<ShellViewModel>();
-            var shellView = Locator.Current.GetService<ShellView>();
+            var shellViewModel = provider.GetService<ShellViewModel>();
+            var shellView = provider.GetService<ShellView>();
             shellView!.DataContext = shellViewModel;
             desktop.MainWindow = shellView;
         }

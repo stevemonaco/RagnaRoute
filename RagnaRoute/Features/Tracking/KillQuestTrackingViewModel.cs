@@ -1,20 +1,12 @@
-﻿using RagnaRoute.Services;
-using ReactiveUI;
-using System.Collections.ObjectModel;
-using System.Reactive;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RagnaRoute.ViewModels;
 
-public class KillQuestTrackingViewModel : TrackingGroupViewModel
+public partial class KillQuestTrackingViewModel : TrackingGroupViewModel
 {
-    private ObservableCollection<KillQuestViewModel> _quests = new();
+    [ObservableProperty] private ObservableCollection<KillQuestViewModel> _quests = new();
     //private readonly IClipboardService _clipboardService;
-
-    public ObservableCollection<KillQuestViewModel> Quests
-    {
-        get => _quests;
-        set => this.RaiseAndSetIfChanged(ref _quests, value);
-    }
 
     //public ReactiveCommand<string, Unit> CopyObjectiveInformationCommand { get; }
 

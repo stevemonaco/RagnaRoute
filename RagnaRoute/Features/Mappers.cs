@@ -31,7 +31,8 @@ public static class Mappers
     {
         return new BossQuestViewModel(model.ObjectiveName, Duration.FromMinutes(model.MinimumRespawn), Duration.FromMinutes(model.MaximumRespawn))
         {
-            Id = model.MobId
+            Id = model.MobId,
+            Information = new(model.Information)
         };
     }
 
@@ -39,10 +40,12 @@ public static class Mappers
     {
         return new BossQuestViewModel(model.ObjectiveName, Duration.FromMinutes(model.MinimumRespawn), Duration.FromMinutes(model.MaximumRespawn))
         {
+            Id = model.MobId,
             HP = monsterModel.HP,
             Element = monsterModel.Element,
             Race = monsterModel.Race,
-            Size = monsterModel.Size
+            Size = monsterModel.Size,
+            Information = new(model.Information)
         };
     }
 }

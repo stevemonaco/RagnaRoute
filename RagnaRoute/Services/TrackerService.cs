@@ -1,19 +1,17 @@
 ﻿using RagnaRoute.Data;
 using RagnaRoute.ViewModels;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using NodaTime;
 
 namespace RagnaRoute.Services;
 public class TrackerService
 {
     private readonly MonsterStore _monsterStore;
-    private string _trackerFileName = @"_objectives\quests.json";
     private string _trackerPath = @"_objectives\";
 
     public TrackerService(MonsterStore monsterStore)
@@ -21,26 +19,31 @@ public class TrackerService
         _monsterStore = monsterStore;
     }
 
-    public async Task<IList<TrackingGroupViewModel>> ReadTrackers()
+    public async Task<TrackerProfileViewModel> ReadTrackerProfile(string profileFileName)
     {
-        var trackers = new List<TrackingGroupViewModel>();
-
         var jsonOptions = new JsonSerializerOptions()
         {
             PropertyNameCaseInsensitive = true,
             Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
         };
 
-        var questsContent = await File.ReadAllTextAsync(_trackerFileName);
-        var questGroups = JsonSerializer.Deserialize<List<QuestGroupHeaderModel>>(questsContent, jsonOptions);
+        var profileContent = await File.ReadAllTextAsync(profileFileName).ConfigureAwait(false);
+        var profile = JsonSerializer.Deserialize<TrackerProfileModel>(profileContent, jsonOptions);
 
-        if (questGroups is null)
-            return trackers;
+        if (profile is null)
+            throw new InvalidDataException($"Could not parse {profileFileName}");
+        
+        var zone = DateTimeZoneProviders.Tzdb.GetZoneOrNull(profile.TimeZone ?? "");
 
-        foreach (var questGroup in questGroups)
+        if (zone is null && profile.TimeZone is null)
+            throw new InvalidDataException($"Could not parse time zone: {profile.TimeZone}");
+
+        var profileVm = new TrackerProfileViewModel(profile.Name, zone);
+
+        foreach (var questGroup in profile.QuestGroups)
         {
             var groupPath = Path.Combine(_trackerPath, questGroup.FileName);
-            var groupContent = await File.ReadAllTextAsync(groupPath);
+            var groupContent = await File.ReadAllTextAsync(groupPath).ConfigureAwait(false);
 
             if (questGroup.Kind == QuestKind.Boss)
             {
@@ -50,7 +53,8 @@ public class TrackerService
                     continue;
 
                 var bossQuestViewModels = bossQuests
-                    .Select(x => x.MobId is int ? x.ToViewModel(_monsterStore.Monsters.First(y => y.Id == x.MobId))
+                    .Select(x => x.MobId is int 
+                        ? x.ToViewModel(_monsterStore.Monsters.First(y => y.Id == x.MobId))
                         : x.ToViewModel());
 
                 var trackingVm = new BossQuestTrackingViewModel(bossQuestViewModels)
@@ -58,7 +62,7 @@ public class TrackerService
                     Name = questGroup.Name
                 };
 
-                trackers.Add(trackingVm);
+                profileVm.TrackingGroups.Add(trackingVm);
             }
             else if (questGroup.Kind == QuestKind.Kill)
             {
@@ -73,10 +77,11 @@ public class TrackerService
                     Quests = new(killQuests.Select(x => x.ToViewModel()))
                 };
 
-                trackers.Add(trackingVm);
+                profileVm.TrackingGroups.Add(trackingVm);
             }
         }
+        profileVm.SelectedTracker = profileVm.TrackingGroups.FirstOrDefault();
 
-        return trackers;
+        return profileVm;
     }
 }

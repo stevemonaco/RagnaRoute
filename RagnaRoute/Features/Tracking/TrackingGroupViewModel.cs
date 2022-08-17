@@ -1,14 +1,9 @@
-﻿using ReactiveUI;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RagnaRoute.ViewModels;
-public abstract class TrackingGroupViewModel : ViewModelBase
+public abstract partial class TrackingGroupViewModel : ViewModelBase
 {
-    private string _name;
-    public string Name
-    {
-        get => _name;
-        set => this.RaiseAndSetIfChanged(ref _name, value);
-    }
+    [ObservableProperty] private string _name;
 
     public abstract void UpdateObjective();
 }

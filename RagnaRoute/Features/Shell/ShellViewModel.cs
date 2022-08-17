@@ -1,26 +1,14 @@
+using System.Threading.Tasks;
 using RagnaRoute.Data;
 using RagnaRoute.Services;
-using ReactiveUI;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RagnaRoute.ViewModels;
-public class ShellViewModel : ViewModelBase
+public partial class ShellViewModel : ViewModelBase
 {
-    private ObservableCollection<TrackingGroupViewModel> _trackers;
-    public ObservableCollection<TrackingGroupViewModel> Trackers
-    {
-        get => _trackers;
-        set => this.RaiseAndSetIfChanged(ref _trackers, value);
-    }
+    private const string _profileFileName = @"_objectives/profile.json";
 
-    private TrackingGroupViewModel? _selectedTracker;
-    public TrackingGroupViewModel? SelectedTracker
-    {
-        get => _selectedTracker;
-        set => this.RaiseAndSetIfChanged(ref _selectedTracker, value);
-    }
+    [ObservableProperty] private TrackerProfileViewModel? _trackerProfile;
 
     private readonly MonsterStore _monsterStore;
     private readonly TrackerService _trackerService;
@@ -33,14 +21,11 @@ public class ShellViewModel : ViewModelBase
 
     public async Task InitializeTrackers()
     {
-        var trackers = await _trackerService.ReadTrackers();
-        Trackers = new(trackers);
-        SelectedTracker = Trackers.FirstOrDefault();
+        TrackerProfile = await _trackerService.ReadTrackerProfile(_profileFileName);
     }
 
     public void UpdateObjectives()
     {
-        foreach (var tracker in Trackers)
-            tracker.UpdateObjective();
+        TrackerProfile?.UpdateObjectives();
     }
 }

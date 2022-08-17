@@ -23,6 +23,8 @@ public partial class ShellView : Window
 
         if (_viewModel is not null)
             await _viewModel.InitializeTrackers();
+
+        base.OnDataContextChanged(e);
     }
 
     private void ObjectiveTimer_Tick(object? sender, EventArgs e)

@@ -1,40 +1,21 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Reactive;
-using ReactiveUI;
 using NodaTime;
 using RagnaRoute.Objectives;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RagnaRoute.ViewModels;
 
-public class KillQuestViewModel : ViewModelBase
+public partial class KillQuestViewModel : ViewModelBase
 {
-    public ReactiveCommand<Unit, Unit> CompleteObjectiveCommand { get; }
-
     public string Name { get; }
     public string? Description { get; init; }
     public ObservableCollection<string>? Information { get; init; }
 
-    private int _timeUntilStarting;
-    public int TimeUntilStarting
-    {
-        get => _timeUntilStarting;
-        set => this.RaiseAndSetIfChanged(ref _timeUntilStarting, value);
-    }
-
-    private int _timeUntilEnding;
-    public int TimeUntilEnding
-    {
-        get => _timeUntilEnding;
-        set => this.RaiseAndSetIfChanged(ref _timeUntilEnding, value);
-    }
-
-    private TimeState _timeState;
-    public TimeState TimeState
-    {
-        get => _timeState;
-        set => this.RaiseAndSetIfChanged(ref _timeState, value);
-    }
+    [ObservableProperty] private int _timeUntilStarting;
+    [ObservableProperty] private int _timeUntilEnding;
+    [ObservableProperty] private TimeState _timeState;
 
     public ScheduledObjective Objective { get; }
 
@@ -42,7 +23,6 @@ public class KillQuestViewModel : ViewModelBase
     {
         Name = name;
         Objective = objective;
-        CompleteObjectiveCommand = ReactiveCommand.Create(CompleteObjective);
 
         //Objective.Complete(SystemClock.Instance.GetCurrentInstant());
     }
@@ -56,6 +36,7 @@ public class KillQuestViewModel : ViewModelBase
         TimeState = Objective.State;
     }
 
+    [RelayCommand]
     public void CompleteObjective()
     {
         Objective.Complete();
