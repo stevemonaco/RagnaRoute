@@ -18,6 +18,15 @@
 		"mobId": 1039
 	},
 	{
+		"objectiveName": "Baphomet (GD)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"warpLocation": "@warp gld_dun03",
+		"mobId": 1039
+	},
+	{
 		"objectiveName": "Doppelganger",
 		"objectiveType": "Kill",
 		"minimumRespawn": 120,
@@ -27,12 +36,30 @@
 		"mobId": 1046
 	},
 	{
+		"objectiveName": "Doppelganger",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"warpLocation": "@warp gld_dun04",
+		"mobId": 1046
+	},
+	{
 		"objectiveName": "Mistress",
 		"objectiveType": "Kill",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
 		"warpLocation": "@warp mjolnir_04",
+		"mobId": 1059
+	},
+	{
+		"objectiveName": "Mistress (GD)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"warpLocation": "@warp gld_dun02",
 		"mobId": 1059
 	},
 	{
@@ -72,6 +99,15 @@
 		"mobId": 1115
 	},
 	{
+		"objectiveName": "Eddga (GD)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"warpLocation": "@warp gld_dun01_2",
+		"mobId": 1115
+	},
+	{
 		"objectiveName": "Maya",
 		"objectiveType": "Kill",
 		"minimumRespawn": 120,
@@ -81,12 +117,30 @@
 		"mobId": 1147
 	},
 	{
+		"objectiveName": "Maya (GD)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"warpLocation": "@warp gld_dun02_2",
+		"mobId": 1147
+	},
+	{
 		"objectiveName": "Moonlight Flower",
 		"objectiveType": "Kill",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
 		"warpLocation": "@warp pay_dun04",
+		"mobId": 1150
+	},
+	{
+		"objectiveName": "Moonlight Flower (GD)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"warpLocation": "@warp gld_dun01",
 		"mobId": 1150
 	},
 	{
@@ -119,10 +173,10 @@
 	{
 		"objectiveName": "Knight of Windstorm",
 		"objectiveType": "Kill",
-		"minimumRespawn": 0,
-		"maximumRespawn": 0,
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
 		"notification": "silent",
-		"warpLocation": "@warp ",
+		"warpLocation": "@warp xmas_dun02",
 		"mobId": 1251
 	},
 	{
@@ -144,6 +198,15 @@
 		"mobId": 1272
 	},
 	{
+		"objectiveName": "Dark Lord (GD)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
+		"notification": "silent",
+		"warpLocation": "@warp gld_dun04_2",
+		"mobId": 1272
+	},
+	{
 		"objectiveName": "Turtle General",
 		"objectiveType": "Kill",
 		"minimumRespawn": 60,
@@ -151,15 +214,6 @@
 		"notification": "silent",
 		"warpLocation": "@warp tur_dun04",
 		"mobId": 1312
-	},
-	{
-		"objectiveName": "Lord of Death",
-		"objectiveType": "Kill",
-		"minimumRespawn": 0,
-		"maximumRespawn": 0,
-		"notification": "silent",
-		"warpLocation": "@warp ",
-		"mobId": 1373
 	},
 	{
 		"objectiveName": "Dracula",
@@ -191,8 +245,8 @@
 	{
 		"objectiveName": "Amon Ra",
 		"objectiveType": "Kill",
-		"minimumRespawn": 1,
-		"maximumRespawn": 1,
+		"minimumRespawn": 60,
+		"maximumRespawn": 70,
 		"notification": "silent",
 		"warpLocation": "@warp moc_pryd06",
 		"mobId": 1511
@@ -296,12 +350,48 @@
 		"mobId": 1768
 	},
 	{
-		"objectiveName": "Atroce",
+		"objectiveName": "Atroce (1)",
 		"objectiveType": "Kill",
-		"minimumRespawn": 0,
-		"maximumRespawn": 0,
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
 		"notification": "silent",
-		"warpLocation": "@warp ",
+		"warpLocation": "@warp ve_fild01",
+		"mobId": 1785
+	},
+	{
+		"objectiveName": "Atroce (2)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"warpLocation": "@warp ve_fild02",
+		"mobId": 1785
+	},
+	{
+		"objectiveName": "Atroce (3)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"warpLocation": "@warp ve_fild03",
+		"mobId": 1785
+	},
+	{
+		"objectiveName": "Atroce (4)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
+		"notification": "silent",
+		"warpLocation": "@warp ve_fild04",
+		"mobId": 1785
+	},
+	{
+		"objectiveName": "Atroce (GD)",
+		"objectiveType": "Kill",
+		"minimumRespawn": 480,
+		"maximumRespawn": 600,
+		"notification": "silent",
+		"warpLocation": "@warp gld_dun03_2",
 		"mobId": 1785
 	},
 	{
@@ -408,7 +498,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"warpLocation": "@warp ",
+		"warpLocation": "@warp gld2_prt",
 		"mobId": 2249
 	},
 	{
@@ -533,7 +623,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"warpLocation": "@warp ",
+		"warpLocation": "@warp pay_d03_i",
 		"mobId": 3758
 	},
 	{
@@ -713,7 +803,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 210,
 		"notification": "silent",
-		"warpLocation": "@warp ",
+		"warpLocation": "@warp ant_d02_i",
 		"mobId": 21395
 	}
 ]
