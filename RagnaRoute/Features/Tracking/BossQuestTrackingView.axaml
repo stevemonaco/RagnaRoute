@@ -47,13 +47,18 @@
 							</i:Interaction.Behaviors>
 							
 							<Grid RowDefinitions="auto,auto">
-								<TextBlock Text="{Binding Name}" FontWeight="Bold" HorizontalAlignment="Center" />
+								<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
 
 								<Grid Grid.Row="1" Background="{StaticResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
-									<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-										<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilStarting, Converter={x:Static con:AppConverters.DurationToString}}" />
-										<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding, Converter={x:Static con:AppConverters.DurationToString}}" />
-									</StackPanel>
+									<TextBlock HorizontalAlignment="Center">
+										<TextBlock.Text>
+											<MultiBinding Converter="{StaticResource TimeStateDurationToStringConverter}">
+												<Binding Path="TimeUntilStarting" />
+												<Binding Path="TimeUntilEnding" />
+												<Binding Path="TimeState" />
+											</MultiBinding>
+										</TextBlock.Text>
+									</TextBlock>
 
 									<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
 										<Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">

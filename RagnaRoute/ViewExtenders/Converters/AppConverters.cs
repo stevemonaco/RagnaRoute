@@ -1,15 +1,29 @@
 ﻿using Avalonia.Data.Converters;
 using NodaTime;
+using RagnaRoute.Objectives;
+using RagnaRoute.ViewModels;
+using System;
 
 namespace RagnaRoute.Converters;
 public static class AppConverters
 {
     public static readonly IValueConverter DurationToString =
-        new FuncValueConverter<Duration, string>(duration => duration.TotalSeconds switch
+        new FuncValueConverter<Duration, string>(duration => TimeHelpers.GetStringDuration(duration));
+
+    public static readonly IValueConverter BossToTimeString =
+        new FuncValueConverter<BossQuestViewModel?, string>(boss =>
+        {
+            if (boss is null)
+                return " ";
+
+            return boss.TimeState switch
             {
-                > 86400 => $"{duration.Days}d{duration.Hours}h",
-                > 3600 => $"{duration.Hours}h{duration.Minutes}m",
-                > 60 => $"{duration.Minutes}m",
-                _ => $"{duration.Seconds}s"
-            });
+                Objectives.TimeState.Before => $"{TimeHelpers.GetStringDuration(boss.TimeUntilStarting)} - {TimeHelpers.GetStringDuration(boss.TimeUntilEnding)}",
+                Objectives.TimeState.During => TimeHelpers.GetStringDuration(boss.TimeUntilEnding),
+                Objectives.TimeState.After => TimeHelpers.GetStringDuration(boss.TimeUntilEnding),
+                Objectives.TimeState.Completed => " ",
+                Objectives.TimeState.Indeterminate => " ",
+                _ => throw new ArgumentException()
+            };
+        });
 }

@@ -74,7 +74,7 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel
 
     public override void UpdateObjective()
     {
-        foreach (var boss in BossSource.Items)
+        foreach (var boss in BossSource.Items.Where(x => x.TimeState != TimeState.Indeterminate))
         {
             boss.UpdateObjective();
         }

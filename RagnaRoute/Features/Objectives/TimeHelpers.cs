@@ -46,4 +46,18 @@ internal static class TimeHelpers
     {
         return new Interval(start.InZoneLeniently(zone).ToInstant(), end.InZoneLeniently(zone).ToInstant());
     }
+
+    public static string GetStringDuration(Duration duration)
+    {
+        return duration.TotalSeconds switch
+        {
+            > 86400 => $"{duration.Days}d{duration.Hours}h",
+            > 3600 => $"{duration.Hours}h{duration.Minutes}m",
+            > 60 => $"{duration.Minutes}m",
+            < -84000 => $"-{duration.Days}d{duration.Hours}h",
+            < -3600 => $"-{duration.Hours}h{duration.Minutes}m",
+            < -60 => $"-{duration.Minutes}m",
+            _ => $"{duration.Seconds}s"
+        };
+    }
 }

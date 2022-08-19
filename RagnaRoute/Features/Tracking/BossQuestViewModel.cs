@@ -15,7 +15,7 @@ public partial class BossQuestViewModel : ViewModelBase
     public MonsterElement? Element { get; init; }
     public MonsterRace? Race { get; init; }
     public MonsterSize? Size { get; init; }
-    public string WarpLocation { get; init; }
+    public string? WarpLocation { get; init; }
 
     [ObservableProperty] private Duration _timeUntilStarting;
     [ObservableProperty] private Duration _timeUntilEnding;
