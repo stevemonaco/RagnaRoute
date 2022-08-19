@@ -12,6 +12,7 @@ public class SpawnObjective : IRecurringObjective
     public Duration TimeUntilEnding { get; private set; }
 
     public Instant? LastCompletion { get; private set; }
+    public Instant? LastRecurrence { get; private set; }
 
     public TimeState State { get; private set; } = TimeState.Indeterminate;
 
@@ -33,9 +34,7 @@ public class SpawnObjective : IRecurringObjective
     public void Update(Instant current)
     {
         _lastUpdate = current;
-
-        if (LastCompletion is not null)
-            UpdateRemaining(current);
+        UpdateRemaining(current);
     }
 
     /// <inheritdoc/>
@@ -49,9 +48,20 @@ public class SpawnObjective : IRecurringObjective
         Complete(SystemClock.Instance.GetCurrentInstant());
 
     /// <inheritdoc/>
-    public void Complete(Instant? resetTime)
+    public void Complete(Instant? completionTime)
     {
-        LastCompletion = resetTime;
+        LastCompletion = completionTime;
+        State = TimeState.Completed;
+    }
+
+    public void Recur() =>
+        Recur(SystemClock.Instance.GetCurrentInstant());
+
+    public void Recur(Instant recurTime)
+    {
+        LastRecurrence = recurTime;
+        TimeUntilStarting = _respawnMinimum;
+        TimeUntilEnding = _respawnMaximum;
 
         if (_lastUpdate is not null)
             UpdateRemaining(_lastUpdate.Value);
@@ -59,18 +69,19 @@ public class SpawnObjective : IRecurringObjective
 
     public void Reset()
     {
+        State = TimeState.Indeterminate;
         LastCompletion = null;
         UpdateRemaining(SystemClock.Instance.GetCurrentInstant());
     }
 
     private void UpdateRemaining(Instant current)
     {
-        if (LastCompletion is null)
+        if (State == TimeState.Completed || LastRecurrence is null)
             return;
 
-        TimeUntilStarting = _respawnMinimum - (current - LastCompletion.Value);
-        TimeUntilEnding = _respawnMaximum - (current - LastCompletion.Value);
+        TimeUntilStarting = _respawnMinimum - (current - LastRecurrence.Value);
+        TimeUntilEnding = _respawnMaximum - (current - LastRecurrence.Value);
 
-        State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding, LastCompletion);
+        State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
     }
 }

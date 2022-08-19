@@ -20,11 +20,9 @@ public partial class BossQuestTrackingView : UserControl
         AvaloniaXamlLoader.Load(this);
     }
 
-    private async void InfoButton_Clicked(object sender, RoutedEventArgs e)
+    private async void WarpLocation_Clicked(object sender, RoutedEventArgs e)
     {
-        if (sender is not Button button || button.DataContext is not string model)
-            return;
-
-        await _clipboardService.CopyTextAsync(model);
+        if (sender is Button { DataContext: string location })
+            await _clipboardService.CopyTextAsync(location);
     }
 }

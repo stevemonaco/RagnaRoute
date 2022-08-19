@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using RagnaRoute.Data;
 using RagnaRoute.Services;
+using RagnaRoute.ViewExtenders;
 using RagnaRoute.ViewModels;
 using Serilog;
 using System.Linq;
@@ -34,6 +35,7 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
         var monsterStore = MonsterStore.LoadMonstersFromCsv(_monsterDataFileName);
         services.AddSingleton(monsterStore);
         services.AddTransient<TrackerService>();
+        services.AddSingleton<ISchedulerProvider, SchedulerProvider>();
     }
 
     public void ConfigureViews(IServiceCollection services)

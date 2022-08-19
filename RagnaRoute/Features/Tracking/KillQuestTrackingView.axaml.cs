@@ -30,8 +30,20 @@ public partial class KillQuestTrackingView : UserControl
 
     private async void InfoButton_Clicked(object sender, RoutedEventArgs e)
     {
-        if (sender is not Button button || button.DataContext is not string model)
-            return;
+        if (sender is Button { DataContext: string model })
+        {
+            var result = await _clipboardService.CopyTextAsync(model);
+
+            if (result is true)
+            {
+                _popup.PlacementTarget = (Button)sender;
+                _popup.IsOpen = true;
+
+                await Task.Delay(2000); //, _popupCts.Token);
+                _popup.IsOpen = false;
+                _popup.PlacementTarget = null;
+            }
+        }
 
         //var previousCts = _popupCts;
         //if (previousCts != null)
@@ -40,17 +52,5 @@ public partial class KillQuestTrackingView : UserControl
         //}
 
         //_popupCts = new CancellationTokenSource();
-
-        var result = await _clipboardService.CopyTextAsync(model);
-
-        if (result is true)
-        {
-            _popup.PlacementTarget = button;
-            _popup.IsOpen = true;
-
-            await Task.Delay(2000); //, _popupCts.Token);
-            _popup.IsOpen = false;
-            _popup.PlacementTarget = null;
-        }
     }
 }

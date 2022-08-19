@@ -21,10 +21,6 @@ public class ScheduledObjective : IRecurringObjective
     private Instant? _lastUpdate;
     private Interval? _next;
 
-    public ScheduledObjective()
-    {
-    }
-
     public ScheduledObjective(Instant start, IFollowup followup)
     {
         Start = start;
@@ -78,14 +74,16 @@ public class ScheduledObjective : IRecurringObjective
             TimeUntilStarting = next.Value.Start - current;
             TimeUntilEnding = next.Value.End - current;
 
-            State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding, LastCompletion);
+            if (State != TimeState.Completed)
+                State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
         }
         else
         {
             TimeUntilStarting = Duration.MaxValue;
             TimeUntilEnding = Duration.MaxValue;
 
-            State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding, LastCompletion);
+            if (State != TimeState.Completed)
+                State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
         }
     }
 }

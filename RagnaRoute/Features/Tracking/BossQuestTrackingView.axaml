@@ -5,49 +5,71 @@
 			 xmlns:vm="using:RagnaRoute.ViewModels"
 			 xmlns:con="using:RagnaRoute.Converters"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
+			 xmlns:obj="using:RagnaRoute.Objectives"
+             xmlns:i="using:Avalonia.Xaml.Interactivity"
+             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 x:CompileBindings="True"
 			 x:DataType="vm:BossQuestTrackingViewModel"
-             x:Class="RagnaRoute.Views.BossQuestTrackingView">
+             x:Class="RagnaRoute.Views.BossQuestTrackingView">	
 	<Grid RowDefinitions="auto,*">
-		<StackPanel Orientation="Horizontal">
-			<TextBox Text="{Binding FilterText}" />
-			<ToggleButton IsChecked="{Binding ShouldShowHidden}" Content="Hidden" />
+		<StackPanel Margin="10" Orientation="Horizontal">
+			<TextBox MinWidth="200" Text="{Binding FilterText}" />
+			<ToggleButton Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden}" ToolTip.Tip="Show Hidden Entries">
+				<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7B3;"/>
+			</ToggleButton>
 		</StackPanel>
 		
 		<ScrollViewer Grid.Row="1">
 			<ItemsRepeater Items="{Binding Bosses}">
 				<ItemsRepeater.Layout>
-					<StackLayout Orientation="Vertical" />
+					<UniformGridLayout Orientation="Horizontal" MinItemWidth="300" ItemsStretch="None" MinRowSpacing="4" MinColumnSpacing="4" />
 				</ItemsRepeater.Layout>
 				<ItemsRepeater.ItemTemplate>
 					<DataTemplate DataType="{x:Type vm:BossQuestViewModel}">
-						<StackPanel Orientation="Horizontal">
-							<TextBlock Text="{Binding Name}" />
-							<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilStarting, Converter={x:Static con:AppConverters.DurationToString}}" />
-							<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding, Converter={x:Static con:AppConverters.DurationToString}}" />
-							<TextBlock Margin="8,0,0,0" Text="{Binding TimeState}" />
-
-							<ItemsControl Items="{Binding Information}">
-								<ItemsControl.ItemsPanel>
-									<ItemsPanelTemplate>
-										<WrapPanel Orientation="Horizontal" />
-									</ItemsPanelTemplate>
-								</ItemsControl.ItemsPanel>
-								<ItemsControl.ItemTemplate>
-									<DataTemplate>
-										<Button Background="Blue" Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
-											<Button.Content>
-												<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
-											</Button.Content>
-										</Button>
-									</DataTemplate>
-								</ItemsControl.ItemTemplate>
-							</ItemsControl>
+						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="10, 10, 6, 6">
+							<i:Interaction.Behaviors>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Indeterminate}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="Transparent" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Completed}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#5b6ee1" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.After}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#37946e" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.During}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#df6626" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Before}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#ac3232" />
+								</ia:DataTriggerBehavior>
+							</i:Interaction.Behaviors>
 							
-							<Button Margin="8,0,0,0" Command="{Binding ResetObjectiveCommand}" Content="Reset" />
-							<ToggleButton IsChecked="{Binding IsHidden}" Content="Hidden" />
-						</StackPanel>
+							<Grid RowDefinitions="auto,auto">
+								<TextBlock Text="{Binding Name}" FontWeight="Bold" HorizontalAlignment="Center" />
+
+								<Grid Grid.Row="1" Background="{StaticResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
+									<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+										<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilStarting, Converter={x:Static con:AppConverters.DurationToString}}" />
+										<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding, Converter={x:Static con:AppConverters.DurationToString}}" />
+									</StackPanel>
+
+									<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+										<Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
+											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
+										</Button>
+
+										<Button Margin="8,0,0,0" Command="{Binding RecurObjectiveCommand}" Content="Reset">
+											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
+										</Button>
+										<ToggleButton IsChecked="{Binding IsHidden}" ToolTip.Tip="Hide">
+											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7B3;"/>
+										</ToggleButton>
+									</StackPanel>
+								</Grid>
+							</Grid>
+						</Border>
 					</DataTemplate>
 				</ItemsRepeater.ItemTemplate>
 			</ItemsRepeater>

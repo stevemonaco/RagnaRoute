@@ -15,7 +15,7 @@ public partial class BossQuestViewModel : ViewModelBase
     public MonsterElement? Element { get; init; }
     public MonsterRace? Race { get; init; }
     public MonsterSize? Size { get; init; }
-    public ObservableCollection<string> Information { get; init; }
+    public string WarpLocation { get; init; }
 
     [ObservableProperty] private Duration _timeUntilStarting;
     [ObservableProperty] private Duration _timeUntilEnding;
@@ -28,6 +28,7 @@ public partial class BossQuestViewModel : ViewModelBase
     {
         Name = name;
         Objective = new SpawnObjective(minimumSpawnDuration, maximumSpawnDuration);
+        _timeState = Objective.State;
     }
 
     public void UpdateObjective()
@@ -37,6 +38,13 @@ public partial class BossQuestViewModel : ViewModelBase
         TimeUntilStarting = Objective.TimeUntilStarting;
         TimeUntilEnding = Objective.TimeUntilEnding;
         TimeState = Objective.State;
+    }
+
+    [RelayCommand]
+    public void RecurObjective()
+    {
+        Objective.Recur(SystemClock.Instance.GetCurrentInstant());
+        UpdateObjective();
     }
 
     [RelayCommand]

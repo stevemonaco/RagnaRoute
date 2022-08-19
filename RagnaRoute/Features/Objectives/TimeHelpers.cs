@@ -5,13 +5,10 @@ namespace RagnaRoute.Objectives;
 
 internal static class TimeHelpers
 {
-    public static TimeState DetermineTimeState(Duration timeUntilStarting, Duration timeUntilEnding, Instant? lastCompletion = default)
+    public static TimeState DetermineTimeState(Duration timeUntilStarting, Duration timeUntilEnding)
     {
-        if (lastCompletion is not null)
-            return TimeState.Completed;
-
         if (timeUntilStarting < Duration.Zero && timeUntilEnding < Duration.Zero)
-            return TimeState.Completed;
+            return TimeState.After;
         else if (timeUntilStarting <= Duration.Zero && timeUntilEnding > Duration.Zero)
             return TimeState.During;
         else if (timeUntilStarting > Duration.Zero && timeUntilEnding >= Duration.Zero)

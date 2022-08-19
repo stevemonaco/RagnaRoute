@@ -5,7 +5,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp moc_pryd04" ],
+		"warpLocation": "@warp moc_pryd04",
 		"mobId": 1038
 	},
 	{
@@ -14,7 +14,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp prt_maze03" ],
+		"warpLocation": "@warp prt_maze03",
 		"mobId": 1039
 	},
 	{
@@ -23,7 +23,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp gef_dun02" ],
+		"warpLocation": "@warp gef_dun02",
 		"mobId": 1046
 	},
 	{
@@ -32,7 +32,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp mjolnir_04" ],
+		"warpLocation": "@warp mjolnir_04",
 		"mobId": 1059
 	},
 	{
@@ -41,7 +41,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp prt_sewb4" ],
+		"warpLocation": "@warp prt_sewb4",
 		"mobId": 1086
 	},
 	{
@@ -50,7 +50,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp gef_fild03" ],
+		"warpLocation": "@warp gef_fild03",
 		"mobId": 1087
 	},
 	{
@@ -59,7 +59,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp treasure02" ],
+		"warpLocation": "@warp treasure02",
 		"mobId": 1112
 	},
 	{
@@ -68,7 +68,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp pay_fild10" ],
+		"warpLocation": "@warp pay_fild10",
 		"mobId": 1115
 	},
 	{
@@ -77,7 +77,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp anthell02" ],
+		"warpLocation": "@warp anthell02",
 		"mobId": 1147
 	},
 	{
@@ -86,7 +86,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp pay_dun04" ],
+		"warpLocation": "@warp pay_dun04",
 		"mobId": 1150
 	},
 	{
@@ -95,7 +95,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp in_sphinx5" ],
+		"warpLocation": "@warp in_sphinx5",
 		"mobId": 1157
 	},
 	{
@@ -104,7 +104,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp moc_fild17" ],
+		"warpLocation": "@warp moc_fild17",
 		"mobId": 1159
 	},
 	{
@@ -113,7 +113,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp gef_fild10" ],
+		"warpLocation": "@warp gef_fild10",
 		"mobId": 1190
 	},
 	{
@@ -122,7 +122,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"information": [ "@warp " ],
+		"warpLocation": "@warp ",
 		"mobId": 1251
 	},
 	{
@@ -131,7 +131,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp xmas_fild01" ],
+		"warpLocation": "@warp xmas_fild01",
 		"mobId": 1252
 	},
 	{
@@ -140,7 +140,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp gl_chyard" ],
+		"warpLocation": "@warp gl_chyard",
 		"mobId": 1272
 	},
 	{
@@ -149,7 +149,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp tur_dun04" ],
+		"warpLocation": "@warp tur_dun04",
 		"mobId": 1312
 	},
 	{
@@ -158,7 +158,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"information": [ "@warp " ],
+		"warpLocation": "@warp ",
 		"mobId": 1373
 	},
 	{
@@ -167,7 +167,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp gef_dun01" ],
+		"warpLocation": "@warp gef_dun01",
 		"mobId": 1389
 	},
 	{
@@ -176,7 +176,7 @@
 		"minimumRespawn": 94,
 		"maximumRespawn": 104,
 		"notification": "silent",
-		"information": [ "@warp gon_dun03" ],
+		"warpLocation": "@warp gon_dun03",
 		"mobId": 1418
 	},
 	{
@@ -185,16 +185,16 @@
 		"minimumRespawn": 91,
 		"maximumRespawn": 101,
 		"notification": "silent",
-		"information": [ "@warp ama_dun03" ],
+		"warpLocation": "@warp ama_dun03",
 		"mobId": 1492
 	},
 	{
 		"objectiveName": "Amon Ra",
 		"objectiveType": "Kill",
-		"minimumRespawn": 60,
-		"maximumRespawn": 70,
+		"minimumRespawn": 1,
+		"maximumRespawn": 1,
 		"notification": "silent",
-		"information": [ "@warp moc_pryd06" ],
+		"warpLocation": "@warp moc_pryd06",
 		"mobId": 1511
 	},
 	{
@@ -203,7 +203,7 @@
 		"minimumRespawn": 300,
 		"maximumRespawn": 310,
 		"notification": "silent",
-		"information": [ "@warp beach_dun" ],
+		"warpLocation": "@warp beach_dun",
 		"mobId": 1583
 	},
 	{
@@ -212,7 +212,7 @@
 		"minimumRespawn": 125,
 		"maximumRespawn": 135,
 		"notification": "silent",
-		"information": [ "@warp ein_dun02" ],
+		"warpLocation": "@warp ein_dun02",
 		"mobId": 1623
 	},
 	{
@@ -221,7 +221,7 @@
 		"minimumRespawn": 116,
 		"maximumRespawn": 126,
 		"notification": "silent",
-		"information": [ "@warp lou_dun03" ],
+		"warpLocation": "@warp lou_dun03",
 		"mobId": 1630
 	},
 	{
@@ -230,7 +230,7 @@
 		"minimumRespawn": 95,
 		"maximumRespawn": 150,
 		"notification": "silent",
-		"information": [ "@warp lhz_dun03" ]
+		"warpLocation": "@warp lhz_dun03"
 	},
 	{
 		"objectiveName": "Ygnizem",
@@ -238,7 +238,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 210,
 		"notification": "silent",
-		"information": [ "@warp lhz_dun02" ],
+		"warpLocation": "@warp lhz_dun02",
 		"mobId": 1658
 	},
 	{
@@ -247,7 +247,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp jupe_core" ],
+		"warpLocation": "@warp jupe_core",
 		"mobId": 1685
 	},
 	{
@@ -256,7 +256,7 @@
 		"minimumRespawn": 420,
 		"maximumRespawn": 430,
 		"notification": "silent",
-		"information": [ "@warp ayo_dun02" ],
+		"warpLocation": "@warp ayo_dun02",
 		"mobId": 1688
 	},
 	{
@@ -265,7 +265,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp abyss_03" ],
+		"warpLocation": "@warp abyss_03",
 		"mobId": 1719
 	},
 	{
@@ -274,7 +274,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp kh_dun02" ],
+		"warpLocation": "@warp kh_dun02",
 		"mobId": 1734
 	},
 	{
@@ -283,7 +283,7 @@
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
-		"information": [ "@warp odin_tem03" ],
+		"warpLocation": "@warp odin_tem03",
 		"mobId": 1751
 	},
 	{
@@ -292,7 +292,7 @@
 		"minimumRespawn": 300,
 		"maximumRespawn": 310,
 		"notification": "silent",
-		"information": [ "@warp ra_san05" ],
+		"warpLocation": "@warp ra_san05",
 		"mobId": 1768
 	},
 	{
@@ -301,7 +301,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"information": [ "@warp " ],
+		"warpLocation": "@warp ",
 		"mobId": 1785
 	},
 	{
@@ -310,7 +310,7 @@
 		"minimumRespawn": 660,
 		"maximumRespawn": 670,
 		"notification": "silent",
-		"information": [ "@warp thor_v03" ],
+		"warpLocation": "@warp thor_v03",
 		"mobId": 1832
 	},
 	{
@@ -319,7 +319,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp abbey02" ],
+		"warpLocation": "@warp abbey02",
 		"mobId": 1871
 	},
 	{
@@ -328,7 +328,7 @@
 		"minimumRespawn": 720,
 		"maximumRespawn": 730,
 		"notification": "silent",
-		"information": [ "@warp abbey03" ],
+		"warpLocation": "@warp abbey03",
 		"mobId": 1874
 	},
 	{
@@ -337,7 +337,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp mosk_dun03" ],
+		"warpLocation": "@warp mosk_dun03",
 		"mobId": 1885
 	},
 	{
@@ -346,7 +346,7 @@
 		"minimumRespawn": 720,
 		"maximumRespawn": 730,
 		"notification": "silent",
-		"information": [ "@warp moc_fild22" ],
+		"warpLocation": "@warp moc_fild22",
 		"mobId": 1917
 	},
 	{
@@ -355,7 +355,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
-		"information": [ "@warp bra_dun02" ],
+		"warpLocation": "@warp bra_dun02",
 		"mobId": 2068
 	},
 	{
@@ -364,7 +364,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
-		"information": [ "@warp dic_dun02" ],
+		"warpLocation": "@warp dic_dun02",
 		"mobId": 2087
 	},
 	{
@@ -373,7 +373,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
-		"information": [ "@warp dew_dun01" ],
+		"warpLocation": "@warp dew_dun01",
 		"mobId": 2156
 	},
 	{
@@ -382,7 +382,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
-		"information": [ "@warp dic_dun03" ],
+		"warpLocation": "@warp dic_dun03",
 		"mobId": 2165
 	},
 	{
@@ -391,7 +391,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 150,
 		"notification": "silent",
-		"information": [ "@warp iz_dun05" ],
+		"warpLocation": "@warp iz_dun05",
 		"mobId": 2202
 	},
 	{
@@ -400,7 +400,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"information": [ "@warp lhz_dun04" ]
+		"warpLocation": "@warp lhz_dun04"
 	},
 	{
 		"objectiveName": "Pyuriel",
@@ -408,7 +408,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"information": [ "@warp " ],
+		"warpLocation": "@warp ",
 		"mobId": 2249
 	},
 	{
@@ -417,7 +417,7 @@
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
-		"information": [ "@warp gld2_ald" ],
+		"warpLocation": "@warp gld2_ald",
 		"mobId": 2251
 	},
 	{
@@ -426,7 +426,7 @@
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
-		"information": [ "@warp gld2_pay" ],
+		"warpLocation": "@warp gld2_pay",
 		"mobId": 2253
 	},
 	{
@@ -435,7 +435,7 @@
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
-		"information": [ "@warp gld2_gef" ],
+		"warpLocation": "@warp gld2_gef",
 		"mobId": 2255
 	},
 	{
@@ -444,7 +444,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp moc_prydn2" ],
+		"warpLocation": "@warp moc_prydn2",
 		"mobId": 2362
 	},
 	{
@@ -453,7 +453,7 @@
 		"minimumRespawn": 240,
 		"maximumRespawn": 540,
 		"notification": "silent",
-		"information": [ "@warp lhz_dun02" ],
+		"warpLocation": "@warp lhz_dun02",
 		"mobId": 2441
 	},
 	{
@@ -462,7 +462,7 @@
 		"minimumRespawn": 240,
 		"maximumRespawn": 540,
 		"notification": "silent",
-		"information": [ "@warp lhz_dun02" ],
+		"warpLocation": "@warp lhz_dun02",
 		"mobId": 2442
 	},
 	{
@@ -471,7 +471,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
-		"information": [ "@warp gl_cas02_" ],
+		"warpLocation": "@warp gl_cas02_",
 		"mobId": 2483
 	},
 	{
@@ -480,7 +480,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
-		"information": [ "@warp c_tower3_" ],
+		"warpLocation": "@warp c_tower3_",
 		"mobId": 3074
 	},
 	{
@@ -489,7 +489,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"information": [ "@warp lhz_dun05" ]
+		"warpLocation": "@warp lhz_dun05"
 	},
 	{
 		"objectiveName": "Big Eggring",
@@ -497,7 +497,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 90,
 		"notification": "silent",
-		"information": [ "@warp lasa_dun01" ],
+		"warpLocation": "@warp lasa_dun01",
 		"mobId": 3505
 	},
 	{
@@ -506,7 +506,7 @@
 		"minimumRespawn": 300,
 		"maximumRespawn": 310,
 		"notification": "silent",
-		"information": [ "@warp slabw01" ],
+		"warpLocation": "@warp slabw01",
 		"mobId": 3633
 	},
 	{
@@ -515,7 +515,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp rockmi1" ],
+		"warpLocation": "@warp rockmi1",
 		"mobId": 3741
 	},
 	{
@@ -524,7 +524,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp gef_d01_i" ],
+		"warpLocation": "@warp gef_d01_i",
 		"mobId": 3757
 	},
 	{
@@ -533,7 +533,7 @@
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
-		"information": [ "@warp " ],
+		"warpLocation": "@warp ",
 		"mobId": 3758
 	},
 	{
@@ -542,7 +542,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp ice_d03_i" ],
+		"warpLocation": "@warp ice_d03_i",
 		"mobId": 3796
 	},
 	{
@@ -551,7 +551,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp tur_d04_i" ],
+		"warpLocation": "@warp tur_d04_i",
 		"mobId": 3804
 	},
 	{
@@ -560,7 +560,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp ein_d02_i" ],
+		"warpLocation": "@warp ein_d02_i",
 		"mobId": 20260
 	},
 	{
@@ -569,7 +569,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp com_d02_i" ],
+		"warpLocation": "@warp com_d02_i",
 		"mobId": 20273
 	},
 	{
@@ -578,7 +578,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp com_d02_i" ],
+		"warpLocation": "@warp com_d02_i",
 		"mobId": 20277
 	},
 	{
@@ -587,7 +587,7 @@
 		"minimumRespawn": 30,
 		"maximumRespawn": 40,
 		"notification": "silent",
-		"information": [ "@warp sp_rudus2" ],
+		"warpLocation": "@warp sp_rudus2",
 		"mobId": 20381
 	},
 	{
@@ -596,7 +596,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp mag_dun03" ],
+		"warpLocation": "@warp mag_dun03",
 		"mobId": 20419
 	},
 	{
@@ -605,7 +605,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp gl_cas01_" ],
+		"warpLocation": "@warp gl_cas01_",
 		"mobId": 20421
 	},
 	{
@@ -614,7 +614,7 @@
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
-		"information": [ "@warp gl_cas01_" ],
+		"warpLocation": "@warp gl_cas01_",
 		"mobId": 20422
 	},
 	{
@@ -623,7 +623,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp prt_mz03_i" ],
+		"warpLocation": "@warp prt_mz03_i",
 		"mobId": 20520
 	},
 	{
@@ -632,7 +632,7 @@
 		"minimumRespawn": 125,
 		"maximumRespawn": 135,
 		"notification": "silent",
-		"information": [ "@warp ein_dun03" ],
+		"warpLocation": "@warp ein_dun03",
 		"mobId": 20601
 	},
 	{
@@ -641,7 +641,7 @@
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
-		"information": [ "@warp odin_past" ],
+		"warpLocation": "@warp odin_past",
 		"mobId": 20610
 	},
 	{
@@ -650,7 +650,7 @@
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
-		"information": [ "@warp odin_past" ],
+		"warpLocation": "@warp odin_past",
 		"mobId": 20611
 	},
 	{
@@ -659,7 +659,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp abyss_04" ],
+		"warpLocation": "@warp abyss_04",
 		"mobId": 20618
 	},
 	{
@@ -668,7 +668,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp iz_d05_i" ],
+		"warpLocation": "@warp iz_d05_i",
 		"mobId": 20811
 	},
 	{
@@ -677,7 +677,7 @@
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
-		"information": [ "@warp iz_d04_i" ],
+		"warpLocation": "@warp iz_d04_i",
 		"mobId": 20843
 	},
 	{
@@ -686,7 +686,7 @@
 		"minimumRespawn": 91,
 		"maximumRespawn": 101,
 		"notification": "silent",
-		"information": [ "@warp amicitia2" ],
+		"warpLocation": "@warp amicitia2",
 		"mobId": 20928
 	},
 	{
@@ -695,7 +695,7 @@
 		"minimumRespawn": 91,
 		"maximumRespawn": 101,
 		"notification": "silent",
-		"information": [ "@warp sp_rudus4" ],
+		"warpLocation": "@warp sp_rudus4",
 		"mobId": 20934
 	},
 	{
@@ -704,7 +704,7 @@
 		"minimumRespawn": 91,
 		"maximumRespawn": 101,
 		"notification": "silent",
-		"information": [ "@warp nif_dun02" ],
+		"warpLocation": "@warp nif_dun02",
 		"mobId": 20943
 	},
 	{
@@ -713,7 +713,7 @@
 		"minimumRespawn": 120,
 		"maximumRespawn": 210,
 		"notification": "silent",
-		"information": [ "@warp " ],
+		"warpLocation": "@warp ",
 		"mobId": 21395
 	}
 ]
