@@ -1,17 +1,17 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Linq;
-using ReactiveUI;
 using System.Collections.Generic;
 using System.Reactive.Linq;
 using DynamicData;
 using DynamicData.Binding;
+using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
-using Avalonia.Threading;
-using RagnaRoute.Objectives;
-using System.Reactive.Concurrency;
-using RagnaRoute.ViewExtenders;
 using NodaTime;
+using RagnaRoute.Objectives;
+using RagnaRoute.ViewExtenders;
+using RagnaRoute.Services;
 
 namespace RagnaRoute.ViewModels;
 public partial class BossQuestTrackingViewModel : TrackingGroupViewModel
@@ -34,12 +34,13 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel
     };
 
     private readonly ISchedulerProvider _scheduler;
+    private readonly QuestService _questService;
 
-    public BossQuestTrackingViewModel(IEnumerable<BossQuestViewModel> bosses, ISchedulerProvider scheduler)
+    public BossQuestTrackingViewModel(IEnumerable<BossQuestViewModel> bosses, ISchedulerProvider scheduler, QuestService questService)
     {
         Name = "Field Bosses";
         _scheduler = scheduler;
-
+        _questService = questService;
         var filterTextChanged = this.WhenValueChanged(x => x.FilterText)
             .Select(CreateTextFilter);
 
@@ -78,5 +79,22 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel
         {
             boss.UpdateObjective();
         }
+    }
+
+    [RelayCommand(AllowConcurrentExecutions = true)]
+    public async Task RecurObjective(BossQuestViewModel viewModel)
+    {
+        var instant = SystemClock.Instance.GetCurrentInstant();
+        viewModel.Objective.Recur(instant);
+        viewModel.UpdateObjective();
+
+        await _questService.AddBossQuestCompletion(Name, viewModel.Name, instant);
+    }
+
+    [RelayCommand]
+    public void ResetObjective(BossQuestViewModel viewModel)
+    {
+        viewModel.Objective.Reset();
+        viewModel.UpdateObjective();
     }
 }

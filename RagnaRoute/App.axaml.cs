@@ -26,9 +26,11 @@ public partial class App : Application
         bootstrapper.ConfigureServices(services);
         bootstrapper.ConfigureViews(services);
         bootstrapper.ConfigureViewModels(services);
+        bootstrapper.ConfigureDbContext(services);
         //await bootstrapper.LoadConfigurations(services);
 
         var provider = services.BuildServiceProvider();
+        bootstrapper.EnsureDatabaseAvailable(provider);
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {

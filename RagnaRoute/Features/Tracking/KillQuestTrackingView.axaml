@@ -4,6 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			 xmlns:ui="using:FluentAvalonia.UI.Controls"
 			 xmlns:vm="using:RagnaRoute.ViewModels"
+			 xmlns:con="using:RagnaRoute.Converters"
+			 xmlns:obj="using:RagnaRoute.Objectives"
+             xmlns:i="using:Avalonia.Xaml.Interactivity"
+             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 x:CompileBindings="True"
 			 x:DataType="vm:KillQuestTrackingViewModel"
@@ -37,41 +41,66 @@
 		<ScrollViewer HorizontalScrollBarVisibility="Disabled">
 			<ItemsRepeater Items="{Binding Quests}" Margin="8 0 8 0">
 				<ItemsRepeater.Layout>
-					<!--<WrapLayout Orientation="Horizontal" HorizontalSpacing="8" VerticalSpacing="8" />-->
-					<UniformGridLayout Orientation="Horizontal" MaximumRowsOrColumns="3" MinItemWidth="300" ItemsStretch="Uniform" MinRowSpacing="8" MinColumnSpacing="8" />
+					<UniformGridLayout Orientation="Horizontal" MinItemWidth="300" ItemsStretch="None" MinRowSpacing="8" MinColumnSpacing="8" />
 				</ItemsRepeater.Layout>
 
 				<ItemsRepeater.ItemTemplate>
 					<DataTemplate DataType="{x:Type vm:KillQuestViewModel}">
-						<Border CornerRadius="8" Background="Transparent" BorderThickness="4" BorderBrush="Blue">
-							<StackPanel Name="card">
-								<StackPanel Background="#1B1B42" Orientation="Horizontal" ToolTip.Tip="{Binding Description}">
-									<TextBlock Text="{Binding Name}" FontWeight="Bold" />
-									<TextBlock HorizontalAlignment="Right" Margin="8,0,0,0" Text="{Binding TimeUntilStarting}" />
-									<TextBlock Margin="8,0,0,0" Text="{Binding TimeUntilEnding}" />
-									<TextBlock Margin="8,0,0,0" Text="{Binding TimeState}" />
+						<Border CornerRadius="10, 10, 6, 6" Background="Transparent" BorderThickness="2" BorderBrush="Black">
+							<i:Interaction.Behaviors>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Indeterminate}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="Transparent" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Completed}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#5b6ee1" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.After}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#37946e" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.During}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#df6626" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Before}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#ac3232" />
+								</ia:DataTriggerBehavior>
+							</i:Interaction.Behaviors>
+
+							<Grid RowDefinitions="auto,auto" ToolTip.Tip="{Binding Description}">
+								<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+									<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" />
+									<ui:FontIcon Margin="4,0,0,0" FontSize="24" FontWeight="Bold" FontFamily="Segoe MDL2 Assets" ToolTip.Tip="{Binding Description}" Glyph="&#xF142;" Foreground="Green" VerticalAlignment="Center" />
 								</StackPanel>
-								<TextBlock Text="{Binding Description}" Width="{ReflectionBinding #card.Width}" TextWrapping="Wrap" />
-								<StackPanel Background="#20204C" Orientation="Horizontal">
-									<ItemsControl Items="{Binding Information}">
-										<ItemsControl.ItemsPanel>
-											<ItemsPanelTemplate>
-												<WrapPanel Orientation="Horizontal" />
-											</ItemsPanelTemplate>
-										</ItemsControl.ItemsPanel>
-										<ItemsControl.ItemTemplate>
-											<DataTemplate>
-												<Button Background="Blue" Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
-													<Button.Content>
-														<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
-													</Button.Content>
-												</Button>
-											</DataTemplate>
-										</ItemsControl.ItemTemplate>
-									</ItemsControl>
-									<Button HorizontalAlignment="Right" Margin="8,0,0,0" Command="{ReflectionBinding CompleteObjective}" Content="Complete" />
-								</StackPanel>
-							</StackPanel>
+
+								<Grid Grid.Row="1" Background="{StaticResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
+									<TextBlock HorizontalAlignment="Center">
+										<TextBlock.Text>
+											<MultiBinding Converter="{StaticResource TimeStateDurationToStringConverter}">
+												<Binding Path="TimeUntilStarting" />
+												<Binding Path="TimeUntilEnding" />
+												<Binding Path="TimeState" />
+											</MultiBinding>
+										</TextBlock.Text>
+									</TextBlock>
+
+									<StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+										<ItemsRepeater Items="{Binding Information}">
+											<ItemsRepeater.Layout>
+												<StackLayout Orientation="Horizontal" Spacing="8" />
+											</ItemsRepeater.Layout>
+											<ItemsRepeater.ItemTemplate>
+												<DataTemplate>
+													<Button Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
+														<Button.Content>
+															<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
+														</Button.Content>
+													</Button>
+												</DataTemplate>
+											</ItemsRepeater.ItemTemplate>
+										</ItemsRepeater>
+										<Button HorizontalAlignment="Right" Margin="8,0,0,0" Command="{ReflectionBinding CompleteObjective}" Content="Complete" />
+									</StackPanel>
+								</Grid>
+							</Grid>
 						</Border>
 
 					</DataTemplate>

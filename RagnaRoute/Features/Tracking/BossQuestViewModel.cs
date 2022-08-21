@@ -3,8 +3,6 @@ using CommunityToolkit.Mvvm.Input;
 using NodaTime;
 using RagnaRoute.Data;
 using RagnaRoute.Objectives;
-using System;
-using System.Collections.ObjectModel;
 
 namespace RagnaRoute.ViewModels;
 public partial class BossQuestViewModel : ViewModelBase
@@ -40,17 +38,17 @@ public partial class BossQuestViewModel : ViewModelBase
         TimeState = Objective.State;
     }
 
-    [RelayCommand]
-    public void RecurObjective()
-    {
-        Objective.Recur(SystemClock.Instance.GetCurrentInstant());
-        UpdateObjective();
-    }
+    //[RelayCommand]
+    //public void RecurObjective()
+    //{
+    //    Objective.Recur(SystemClock.Instance.GetCurrentInstant());
+    //    UpdateObjective();
+    //}
 
-    [RelayCommand]
-    public void ResetObjective()
-    {
-        Objective.Complete(SystemClock.Instance.GetCurrentInstant());
-        UpdateObjective();
-    }
+    //[RelayCommand]
+    //public void ResetObjective()
+    //{
+    //    Objective.Complete(SystemClock.Instance.GetCurrentInstant());
+    //    UpdateObjective();
+    //}
 }

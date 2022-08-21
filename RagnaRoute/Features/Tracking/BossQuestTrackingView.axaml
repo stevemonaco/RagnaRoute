@@ -21,7 +21,7 @@
 		</StackPanel>
 		
 		<ScrollViewer Grid.Row="1">
-			<ItemsRepeater Items="{Binding Bosses}">
+			<ItemsRepeater x:Name="items" Items="{Binding Bosses}">
 				<ItemsRepeater.Layout>
 					<UniformGridLayout Orientation="Horizontal" MinItemWidth="300" ItemsStretch="None" MinRowSpacing="4" MinColumnSpacing="4" />
 				</ItemsRepeater.Layout>
@@ -65,7 +65,7 @@
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
 										</Button>
 
-										<Button Margin="8,0,0,0" Command="{Binding RecurObjectiveCommand}" Content="Reset">
+										<Button Margin="8,0,0,0" Command="{ReflectionBinding #items.DataContext.RecurObjectiveCommand}" CommandParameter="{Binding}" Content="Reset">
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
 										</Button>
 										<ToggleButton IsChecked="{Binding IsHidden}" ToolTip.Tip="Hide">

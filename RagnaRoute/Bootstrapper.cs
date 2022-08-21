@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using RagnaRoute.Data;
@@ -15,6 +16,8 @@ public interface IAppBootstrapper<TViewModel> where TViewModel : class
     void ConfigureServices(IServiceCollection services);
     void ConfigureViews(IServiceCollection services);
     void ConfigureViewModels(IServiceCollection services);
+    void ConfigureDbContext(IServiceCollection services);
+
     Task<bool> LoadConfigurations(IServiceCollection services);
 }
 
@@ -24,6 +27,7 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
 
     private const string _logFileName = @"log.txt";
     private const string _monsterDataFileName = @"_data/mob.csv";
+    private const string _connectionString = @"Filename=./_objectives/Completions.sqlite";
 
     public void ConfigureIoc(IServiceCollection services)
     {
@@ -36,6 +40,7 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
         services.AddSingleton(monsterStore);
         services.AddTransient<TrackerService>();
         services.AddSingleton<ISchedulerProvider, SchedulerProvider>();
+        services.AddTransient<QuestService>();
     }
 
     public void ConfigureViews(IServiceCollection services)
@@ -60,6 +65,13 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
             services.TryAddTransient(vmType);
     }
 
+    public void ConfigureDbContext(IServiceCollection services)
+    {
+        services.AddDbContextFactory<RagnaContext>(
+            options => options.UseSqlite(_connectionString, x => x.UseNodaTime())
+            );
+    }
+
     private LoggerFactory CreateLoggerFactory(string logName)
     {
         Log.Logger = new LoggerConfiguration()
@@ -71,6 +83,14 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
         var factory = new LoggerFactory();
         factory.AddSerilog(Log.Logger);
         return factory;
+    }
+
+    public void EnsureDatabaseAvailable(ServiceProvider provider)
+    {
+        using var context = provider.GetService<RagnaContext>()!;
+
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
     }
 
     public async Task<bool> LoadConfigurations(IServiceCollection services)

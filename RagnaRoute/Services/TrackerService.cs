@@ -8,18 +8,21 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using NodaTime;
 using RagnaRoute.ViewExtenders;
+using Microsoft.EntityFrameworkCore;
 
 namespace RagnaRoute.Services;
 public class TrackerService
 {
     private readonly MonsterStore _monsterStore;
     private readonly ISchedulerProvider _scheduler;
+    private readonly QuestService _questService;
     private string _trackerPath = @"_objectives\";
 
-    public TrackerService(MonsterStore monsterStore, ISchedulerProvider scheduler)
+    public TrackerService(MonsterStore monsterStore, ISchedulerProvider scheduler, QuestService questService)
     {
         _monsterStore = monsterStore;
         _scheduler = scheduler;
+        _questService = questService;
     }
 
     public async Task<TrackerProfileViewModel> ReadTrackerProfile(string profileFileName)
@@ -60,7 +63,7 @@ public class TrackerService
                         ? x.ToViewModel(_monsterStore.Monsters.First(y => y.Id == x.MobId))
                         : x.ToViewModel());
 
-                var trackingVm = new BossQuestTrackingViewModel(bossQuestViewModels, _scheduler)
+                var trackingVm = new BossQuestTrackingViewModel(bossQuestViewModels, _scheduler, _questService)
                 {
                     Name = questGroup.Name
                 };
