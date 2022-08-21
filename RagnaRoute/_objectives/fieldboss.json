@@ -495,8 +495,8 @@
 	{
 		"objectiveName": "Pyuriel",
 		"objectiveType": "Kill",
-		"minimumRespawn": 0,
-		"maximumRespawn": 0,
+		"minimumRespawn": 480,
+		"maximumRespawn": 490,
 		"notification": "silent",
 		"warpLocation": "@warp gld2_prt",
 		"mobId": 2249
@@ -620,8 +620,8 @@
 	{
 		"objectiveName": "Furious Moonlight",
 		"objectiveType": "Kill",
-		"minimumRespawn": 0,
-		"maximumRespawn": 0,
+		"minimumRespawn": 180,
+		"maximumRespawn": 190,
 		"notification": "silent",
 		"warpLocation": "@warp pay_d03_i",
 		"mobId": 3758
