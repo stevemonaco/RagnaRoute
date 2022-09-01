@@ -12,7 +12,7 @@
 		x:DataType="vm:ShellViewModel"
 		UseLayoutRounding="True"
         Title="RagnaRoute">
-	<Grid RowDefinitions="auto, *">
+	<Grid RowDefinitions="auto, *">			
 		<Grid ColumnDefinitions="auto, *" Margin="10,5,10,10">
 			<TextBlock Text="RagnaRoute" />
 			<StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -21,10 +21,10 @@
 			</StackPanel>
 		</Grid>
 			
-		<ui:NavigationView x:Name="nav" Grid.Row="1" SelectedItem="{Binding TrackerProfile.SelectedTracker}" PaneDisplayMode="Auto" MenuItems="{Binding TrackerProfile.TrackingGroups}" IsSettingsVisible="False">
+		<ui:NavigationView x:Name="nav" Grid.Row="1" SelectedItem="{Binding SelectedMenuItem}" PaneDisplayMode="Auto" MenuItems="{Binding MenuItems}" IsSettingsVisible="False">
 			<ui:NavigationView.MenuItemTemplate>
-				<DataTemplate DataType="{x:Type vm:TrackingGroupViewModel}">
-					<ui:NavigationViewItem Content="{Binding Name}">
+				<DataTemplate DataType="{x:Type vm:INavigationChild}">
+					<ui:NavigationViewItem Content="{Binding DisplayName}">
 						<ui:NavigationViewItem.Icon>
 							<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC4F;"/>
 						</ui:NavigationViewItem.Icon>

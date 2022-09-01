@@ -7,6 +7,7 @@ using RagnaRoute.Services;
 using RagnaRoute.ViewExtenders;
 using RagnaRoute.ViewModels;
 using Serilog;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ public interface IAppBootstrapper<TViewModel> where TViewModel : class
     void ConfigureViewModels(IServiceCollection services);
     void ConfigureDbContext(IServiceCollection services);
 
-    Task<bool> LoadConfigurations(IServiceCollection services);
+    Task<bool> LoadConfigurations(IServiceProvider provider);
 }
 
 public class Bootstrapper : IAppBootstrapper<ShellViewModel>
@@ -54,6 +55,7 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
     public void ConfigureViewModels(IServiceCollection services)
     {
         services.TryAddSingleton<ShellViewModel>();
+        services.TryAddSingleton<QuestHistoryViewModel>();
 
         var vmTypes = GetType()
             .Assembly
@@ -89,12 +91,15 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
     {
         using var context = provider.GetService<RagnaContext>()!;
 
-        context.Database.EnsureDeleted();
+        //context.Database.EnsureDeleted();
         context.Database.EnsureCreated();
     }
 
-    public async Task<bool> LoadConfigurations(IServiceCollection services)
+    public async Task<bool> LoadConfigurations(IServiceProvider provider)
     {
+        var questHistory = provider.GetService<QuestHistoryViewModel>()!;
+        await questHistory.InitializeProfiles();
+
         //var monsterStore = await MonsterStore.LoadMonstersFromCsvAsync(@"Assets/mob.csv");
         //services.AddSingleton(monsterStore);
 

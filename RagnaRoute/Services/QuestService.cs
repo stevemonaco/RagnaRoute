@@ -41,4 +41,27 @@ public class QuestService
 			.ToListAsync()
 			.ConfigureAwait(false);
 	}
+
+	public async Task<ICollection<string>> GetObjectiveFamilies()
+	{
+        using var context = _dbFactory.CreateDbContext();
+
+		return await context.BossQuestCompletions.AsNoTracking()
+			.Select(x => x.ObjectiveFamily)
+			.Distinct()
+			.ToListAsync()
+			.ConfigureAwait(false);
+    }
+
+    public async Task<ICollection<string>> GetObjectiveNames(string family)
+    {
+        using var context = _dbFactory.CreateDbContext();
+
+        return await context.BossQuestCompletions.AsNoTracking()
+			.Where(x => EF.Functions.Like(x.ObjectiveFamily, family))
+            .Select(x => x.ObjectiveName)
+            .Distinct()
+            .ToListAsync()
+            .ConfigureAwait(false);
+    }
 }

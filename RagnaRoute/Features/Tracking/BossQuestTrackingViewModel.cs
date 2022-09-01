@@ -12,9 +12,10 @@ using NodaTime;
 using RagnaRoute.Objectives;
 using RagnaRoute.ViewExtenders;
 using RagnaRoute.Services;
+using System.Reactive.Disposables;
 
 namespace RagnaRoute.ViewModels;
-public partial class BossQuestTrackingViewModel : TrackingGroupViewModel
+public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDisposable
 {
     public ReadOnlyObservableCollection<BossQuestViewModel> Bosses { get => _bosses; }
     private ReadOnlyObservableCollection<BossQuestViewModel> _bosses;
@@ -32,13 +33,14 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel
         TimeState.Indeterminate => 4,
         _ => throw new InvalidOperationException()
     };
-
     private readonly ISchedulerProvider _scheduler;
     private readonly QuestService _questService;
 
+    private readonly IDisposable _cleanup;
+    private bool _disposedValue;
+
     public BossQuestTrackingViewModel(IEnumerable<BossQuestViewModel> bosses, ISchedulerProvider scheduler, QuestService questService)
     {
-        Name = "Field Bosses";
         _scheduler = scheduler;
         _questService = questService;
         var filterTextChanged = this.WhenValueChanged(x => x.FilterText)
@@ -60,9 +62,11 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel
             .Filter(x => !x.IsHidden || ShouldShowHidden)
             .Filter(filterTextChanged)
             .Sort(sorter)
-            .ObserveOn(_scheduler.Main)
+            .ObserveOn(_scheduler.Visual)
             .Bind(out _bosses)
             .Subscribe();
+
+        _cleanup = new CompositeDisposable(BossSource);
     }
 
     private Func<BossQuestViewModel, bool> CreateTextFilter(string? text)
@@ -96,5 +100,27 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel
     {
         viewModel.Objective.Reset();
         viewModel.UpdateObjective();
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposedValue)
+        {
+            if (disposing)
+            {
+                _cleanup?.Dispose();
+            }
+
+            // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+            // TODO: set large fields to null
+            _disposedValue = true;
+        }
+    }
+
+    public void Dispose()
+    {
+        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
     }
 }

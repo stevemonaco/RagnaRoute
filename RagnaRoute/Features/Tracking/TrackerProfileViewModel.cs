@@ -23,14 +23,17 @@ public partial class TrackerProfileViewModel : ViewModelBase
             _clock = new ZonedClock(SystemClock.Instance, _timeZone, CalendarSystem.Julian);
     }
 
-    public void UpdateObjectives()
+    public void UpdateTime()
     {
         if (_clock is not null)
         {
             var time = _clock.GetCurrentLocalDateTime();
             TrackerTime = $"{time.Hour}:{time.Minute:D2}:{time.Second:D2}";
         }
+    }
 
+    public void UpdateObjectives()
+    {
         foreach (var tracker in TrackingGroups)
             tracker.UpdateObjective();
     }

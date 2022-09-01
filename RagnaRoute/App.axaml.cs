@@ -15,7 +15,7 @@ public partial class App : Application
         AvaloniaXamlLoader.Load(this);
     }
 
-    public override void OnFrameworkInitializationCompleted()
+    public override async void OnFrameworkInitializationCompleted()
     {
         // Remove Avalonia data validation so that Mvvm Toolkit's data validation works
         ExpressionObserver.DataValidators.RemoveAll(x => x is DataAnnotationsValidationPlugin);
@@ -27,10 +27,10 @@ public partial class App : Application
         bootstrapper.ConfigureViews(services);
         bootstrapper.ConfigureViewModels(services);
         bootstrapper.ConfigureDbContext(services);
-        //await bootstrapper.LoadConfigurations(services);
 
         var provider = services.BuildServiceProvider();
         bootstrapper.EnsureDatabaseAvailable(provider);
+        await bootstrapper.LoadConfigurations(provider);
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {

@@ -1,12 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
 using NodaTime;
 using RagnaRoute.Data;
 using RagnaRoute.Objectives;
 
 namespace RagnaRoute.ViewModels;
-public partial class BossQuestViewModel : ViewModelBase
+public partial class BossQuestViewModel : ViewModelBase, INavigationChild
 {
+    public string DisplayName { get; } = "Field Bosses";
     public string Name { get; }
     public int? Id { get; init; }
     public long? HP { get; init; }
@@ -25,6 +25,7 @@ public partial class BossQuestViewModel : ViewModelBase
     public BossQuestViewModel(string name, Duration minimumSpawnDuration, Duration maximumSpawnDuration)
     {
         Name = name;
+
         Objective = new SpawnObjective(minimumSpawnDuration, maximumSpawnDuration);
         _timeState = Objective.State;
     }
@@ -37,18 +38,4 @@ public partial class BossQuestViewModel : ViewModelBase
         TimeUntilEnding = Objective.TimeUntilEnding;
         TimeState = Objective.State;
     }
-
-    //[RelayCommand]
-    //public void RecurObjective()
-    //{
-    //    Objective.Recur(SystemClock.Instance.GetCurrentInstant());
-    //    UpdateObjective();
-    //}
-
-    //[RelayCommand]
-    //public void ResetObjective()
-    //{
-    //    Objective.Complete(SystemClock.Instance.GetCurrentInstant());
-    //    UpdateObjective();
-    //}
 }

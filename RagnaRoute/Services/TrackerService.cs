@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using NodaTime;
 using RagnaRoute.ViewExtenders;
 using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
 
 namespace RagnaRoute.Services;
 public class TrackerService
@@ -65,7 +66,8 @@ public class TrackerService
 
                 var trackingVm = new BossQuestTrackingViewModel(bossQuestViewModels, _scheduler, _questService)
                 {
-                    Name = questGroup.Name
+                    Name = questGroup.Name,
+                    DisplayName = questGroup.Name
                 };
 
                 profileVm.TrackingGroups.Add(trackingVm);
@@ -80,6 +82,7 @@ public class TrackerService
                 var trackingVm = new KillQuestTrackingViewModel()
                 {
                     Name = questGroup.Name,
+                    DisplayName = questGroup.Name,
                     Quests = new(killQuests.Select(x => x.ToViewModel()))
                 };
 

@@ -5,18 +5,25 @@ namespace RagnaRoute.ViewExtenders;
 
 public interface ISchedulerProvider
 {
+    /// <summary>
+    /// Thread is to be performed on any background thread
+    /// </summary>
     IScheduler Background { get; }
-    IScheduler Main { get; }
+
+    /// <summary>
+    /// Work is to be performed on a thread that supports UI
+    /// </summary>
+    IScheduler Visual { get; }
 }
 
 public class SchedulerProvider : ISchedulerProvider
 {
-    public IScheduler Main { get; }
+    public IScheduler Visual { get; }
     public IScheduler Background { get; }
 
     public SchedulerProvider()
     {
         Background = TaskPoolScheduler.Default;
-        Main = AvaloniaScheduler.Instance;
+        Visual = AvaloniaScheduler.Instance;
     }
 }

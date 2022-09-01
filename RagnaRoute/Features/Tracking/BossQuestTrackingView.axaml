@@ -27,7 +27,7 @@
 				</ItemsRepeater.Layout>
 				<ItemsRepeater.ItemTemplate>
 					<DataTemplate DataType="{x:Type vm:BossQuestViewModel}">
-						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="10, 10, 6, 6">
+						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="12, 12, 4, 4">
 							<i:Interaction.Behaviors>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Indeterminate}">
 									<ia:ChangePropertyAction PropertyName="Background" Value="Transparent" />
@@ -64,11 +64,10 @@
 										<Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
 										</Button>
-
 										<Button Margin="8,0,0,0" Command="{ReflectionBinding #items.DataContext.RecurObjectiveCommand}" CommandParameter="{Binding}" Content="Reset">
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
 										</Button>
-										<ToggleButton IsChecked="{Binding IsHidden}" ToolTip.Tip="Hide">
+										<ToggleButton Margin="8,0,0,0" IsChecked="{Binding IsHidden}" ToolTip.Tip="Hide">
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7B3;"/>
 										</ToggleButton>
 									</StackPanel>
