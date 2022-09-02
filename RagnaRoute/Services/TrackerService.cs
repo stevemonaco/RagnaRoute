@@ -1,5 +1,4 @@
-﻿using RagnaRoute.Data;
-using RagnaRoute.ViewModels;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,8 +7,8 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using NodaTime;
 using RagnaRoute.ViewExtenders;
-using Microsoft.EntityFrameworkCore;
-using System.Xml.Linq;
+using RagnaRoute.Data;
+using RagnaRoute.ViewModels;
 
 namespace RagnaRoute.Services;
 public class TrackerService
@@ -52,45 +51,71 @@ public class TrackerService
             var groupPath = Path.Combine(_trackerPath, questGroup.FileName);
             var groupContent = await File.ReadAllTextAsync(groupPath).ConfigureAwait(false);
 
-            if (questGroup.Kind == QuestKind.Boss)
+            TrackingGroupViewModel? trackingVm = questGroup.Kind switch
             {
-                var bossQuests = JsonSerializer.Deserialize<List<BossQuestModel>>(groupContent, jsonOptions);
+                QuestKind.Boss => await ReadBossQuestGroup(questGroup, groupContent, jsonOptions).ConfigureAwait(false),
+                QuestKind.Kill => ReadKillQuestGroup(questGroup, groupContent, jsonOptions),
+                _ => throw new NotSupportedException()
+            };
 
-                if (bossQuests is null)
-                    continue;
-
-                var bossQuestViewModels = bossQuests
-                    .Select(x => x.MobId is int 
-                        ? x.ToViewModel(_monsterStore.Monsters.First(y => y.Id == x.MobId))
-                        : x.ToViewModel());
-
-                var trackingVm = new BossQuestTrackingViewModel(bossQuestViewModels, _scheduler, _questService)
-                {
-                    Name = questGroup.Name,
-                    DisplayName = questGroup.Name
-                };
-
+            if (trackingVm is not null)
                 profileVm.TrackingGroups.Add(trackingVm);
-            }
-            else if (questGroup.Kind == QuestKind.Kill)
-            {
-                var killQuests = JsonSerializer.Deserialize<List<KillQuestModel>>(groupContent, jsonOptions);
-
-                if (killQuests is null)
-                    continue;
-
-                var trackingVm = new KillQuestTrackingViewModel()
-                {
-                    Name = questGroup.Name,
-                    DisplayName = questGroup.Name,
-                    Quests = new(killQuests.Select(x => x.ToViewModel()))
-                };
-
-                profileVm.TrackingGroups.Add(trackingVm);
-            }
         }
         profileVm.SelectedTracker = profileVm.TrackingGroups.FirstOrDefault();
 
         return profileVm;
+    }
+
+    private async Task<BossQuestTrackingViewModel?> ReadBossQuestGroup(TrackerGroupModel group, string content, JsonSerializerOptions options)
+    {
+        var states = await _questService.GetObjectives(group.Name, false);
+        var stateMap = states.ToDictionary(x => x.ObjectiveName, x => x);
+
+        var bossQuests = JsonSerializer.Deserialize<List<BossQuestModel>>(content, options);
+
+        if (bossQuests is null)
+            return null;
+
+        var bossQuestViewModels = bossQuests
+            .Select(x => x.MobId is int
+                ? x.ToViewModel(_monsterStore.Monsters.First(y => y.Id == x.MobId))
+                : x.ToViewModel())
+            .ToList();
+
+        foreach (var bossQuestViewModel in bossQuestViewModels)
+        {
+            if (stateMap.TryGetValue(bossQuestViewModel.Name, out var state))
+            {
+                bossQuestViewModel.IsHidden = state.IsHidden;
+
+                if (state.LastCompletion is Instant instant)
+                {
+                    bossQuestViewModel.UpdateObjective();
+                    bossQuestViewModel.Objective.Recur(instant);
+                    bossQuestViewModel.UpdateObjective();
+                }
+            }
+        }
+
+        return new BossQuestTrackingViewModel(bossQuestViewModels, _scheduler, _questService)
+        {
+            Name = group.Name,
+            DisplayName = group.Name
+        };
+    }
+
+    private KillQuestTrackingViewModel? ReadKillQuestGroup(TrackerGroupModel group, string content, JsonSerializerOptions options)
+    {
+        var killQuests = JsonSerializer.Deserialize<List<KillQuestModel>>(content, options);
+
+        if (killQuests is null)
+            return null;
+
+        return new KillQuestTrackingViewModel()
+        {
+            Name = group.Name,
+            DisplayName = group.Name,
+            Quests = new(killQuests.Select(x => x.ToViewModel()))
+        };
     }
 }

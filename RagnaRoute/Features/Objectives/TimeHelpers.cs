@@ -54,9 +54,9 @@ internal static class TimeHelpers
             > 86400 => $"{duration.Days}d{duration.Hours}h",
             > 3600 => $"{duration.Hours}h{duration.Minutes}m",
             > 60 => $"{duration.Minutes}m",
-            < -84000 => $"-{duration.Days}d{duration.Hours}h",
-            < -3600 => $"-{duration.Hours}h{duration.Minutes}m",
-            < -60 => $"-{duration.Minutes}m",
+            < -84000 => $"-{Math.Abs(duration.Days)}d{Math.Abs(duration.Hours)}h",
+            < -3600 => $"-{Math.Abs(duration.Hours)}h{Math.Abs(duration.Minutes)}m",
+            < -60 => $"-{Math.Abs(duration.Minutes)}m",
             _ => $"{duration.Seconds}s"
         };
     }

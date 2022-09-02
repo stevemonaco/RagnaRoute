@@ -6,7 +6,7 @@ using System;
 namespace RagnaRoute.Views;
 public partial class QuestHistoryView : UserControl
 {
-    private QuestHistoryViewModel? _viewModel;
+    //private QuestHistoryViewModel? _viewModel;
 
     public QuestHistoryView()
     {
@@ -18,14 +18,14 @@ public partial class QuestHistoryView : UserControl
         AvaloniaXamlLoader.Load(this);
     }
 
-    protected async override void OnDataContextChanged(EventArgs e)
-    {
-        base.OnDataContextChanged(e);
-        //_viewModel = DataContext as QuestHistoryViewModel;
+    //protected async override void OnDataContextChanged(EventArgs e)
+    //{
+    //    base.OnDataContextChanged(e);
+    //    //_viewModel = DataContext as QuestHistoryViewModel;
 
-        //if (_viewModel is not null)
-        //{
-        //    await _viewModel.Initialize();
-        //}
-    }
+    //    //if (_viewModel is not null)
+    //    //{
+    //    //    await _viewModel.Initialize();
+    //    //}
+    //}
 }

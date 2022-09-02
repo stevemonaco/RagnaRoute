@@ -30,6 +30,8 @@ public class SpawnObjective : IRecurringObjective
         _respawnMaximum = respawnMaximum;
     }
 
+    public void Update() => Update(SystemClock.Instance.GetCurrentInstant());
+
     /// <inheritdoc/>
     public void Update(Instant current)
     {
@@ -60,19 +62,24 @@ public class SpawnObjective : IRecurringObjective
     public void Recur(Instant recurTime)
     {
         LastRecurrence = recurTime;
-        TimeUntilStarting = _respawnMinimum;
-        TimeUntilEnding = _respawnMaximum;
 
         if (_lastUpdate is not null)
             UpdateRemaining(_lastUpdate.Value);
     }
 
-    public void Reset()
-    {
-        State = TimeState.Indeterminate;
-        LastCompletion = null;
-        UpdateRemaining(SystemClock.Instance.GetCurrentInstant());
-    }
+    //public void Reset()
+    //{
+    //    State = TimeState.Indeterminate;
+    //    LastCompletion = null;
+    //    UpdateRemaining(SystemClock.Instance.GetCurrentInstant());
+    //}
+
+    //public void Reset(Instant instant)
+    //{
+    //    State = TimeState.Indeterminate;
+    //    LastCompletion = instant;
+    //    UpdateRemaining(SystemClock.Instance.GetCurrentInstant());
+    //}
 
     private void UpdateRemaining(Instant current)
     {
@@ -82,6 +89,19 @@ public class SpawnObjective : IRecurringObjective
         TimeUntilStarting = _respawnMinimum - (current - LastRecurrence.Value);
         TimeUntilEnding = _respawnMaximum - (current - LastRecurrence.Value);
 
+        if (HasExceededSpawnDuration())
+        {
+            State = TimeState.Indeterminate;
+            LastRecurrence = null;
+            return;
+        }
+
         State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
+    }
+
+    private bool HasExceededSpawnDuration()
+    {
+        int timeFactor = -2;
+        return TimeUntilEnding < _respawnMaximum * timeFactor;
     }
 }

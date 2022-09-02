@@ -13,25 +13,27 @@
 			 x:CompileBindings="True"
 			 x:DataType="vm:QuestHistoryViewModel"
              x:Class="RagnaRoute.Views.QuestHistoryView">
-	<Grid RowDefinitions="auto,*">
+	<Grid RowDefinitions="auto,auto,*">
 		<StackPanel Spacing="8" Margin="10" Orientation="Horizontal">
-			<ComboBox MinWidth="200" Items="{Binding ProfileNames}" SelectedItem="{Binding SelectedProfileName}" />
+			<ComboBox MinWidth="200" Items="{Binding FamilyNames}" SelectedItem="{Binding SelectedFamilyName}" />
 			<ComboBox MinWidth="200" Items="{Binding ObjectiveNames}" SelectedItem="{Binding SelectedObjectiveName}" />
 			<Button Command="{Binding UpdateHistoryCommand}" ToolTip.Tip="Refresh" IsEnabled="{Binding SelectedObjectiveName, Converter={x:Static ObjectConverters.IsNotNull}}">
 				<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;" Foreground="#37946e" />
 			</Button>
 		</StackPanel>
+		
+		<TextBlock Grid.Row="1" Text="{Binding CompletionCount, StringFormat='Completions: {0}'}" />
 
-		<ScrollViewer Grid.Row="1">
+		<ScrollViewer Grid.Row="2">
 			<ItemsRepeater Items="{Binding Completions}">
 				<ItemsRepeater.Layout>
 					<StackLayout Orientation="Vertical" />
 				</ItemsRepeater.Layout>
 				<ItemsRepeater.ItemTemplate>
-					<DataTemplate DataType="{x:Type data:QuestCompletionDto}">
+					<DataTemplate DataType="{x:Type data:CompletionDto}">
 						<StackPanel Orientation="Horizontal">
-							<TextBlock Text="{Binding Profile}" />
-							<TextBlock Text="{Binding Name}" />
+							<TextBlock Text="{Binding FamilyName}" />
+							<TextBlock Text="{Binding ObjectiveName}" />
 							<TextBlock Text="{Binding CompletionTime}" />
 						</StackPanel>
 					</DataTemplate>

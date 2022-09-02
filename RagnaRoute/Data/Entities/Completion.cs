@@ -3,15 +3,16 @@ using NodaTime;
 
 namespace RagnaRoute.Entities;
 
-public class QuestCompletion
+public class Completion
 {
-    public int Id { get; set; }
+    [Key]
+    public int CompletionId { get; set; }
 
     [Required]
-    public string ObjectiveFamily { get; set; } = null!;
+    public Family Family { get; set; } = null!;
 
     [Required]
-    public string ObjectiveName { get; set; } = null!;
+    public Objective Objective { get; set; } = null!;
 
     [Required]
     public Instant CompletionTime { get; set; }

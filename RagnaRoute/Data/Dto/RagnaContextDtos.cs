@@ -2,4 +2,5 @@
 
 namespace RagnaRoute.Data;
 
-public record QuestCompletionDto(string Profile, string Name, Instant CompletionTime);
+public record CompletionDto(string FamilyName, string ObjectiveName, Instant CompletionTime);
+public record ObjectiveStateDto(string FamilyName, string ObjectiveName, Instant? LastCompletion, bool IsHidden);

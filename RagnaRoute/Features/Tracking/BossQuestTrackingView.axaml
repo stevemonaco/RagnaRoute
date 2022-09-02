@@ -67,7 +67,7 @@
 										<Button Margin="8,0,0,0" Command="{ReflectionBinding #items.DataContext.RecurObjectiveCommand}" CommandParameter="{Binding}" Content="Reset">
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
 										</Button>
-										<ToggleButton Margin="8,0,0,0" IsChecked="{Binding IsHidden}" ToolTip.Tip="Hide">
+										<ToggleButton Margin="8,0,0,0" IsChecked="{Binding IsHidden, Mode=OneWay}" Command="{ReflectionBinding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" ToolTip.Tip="Hide">
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7B3;"/>
 										</ToggleButton>
 									</StackPanel>

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Collections.Generic;
+using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using DynamicData;
 using DynamicData.Binding;
@@ -12,7 +13,6 @@ using NodaTime;
 using RagnaRoute.Objectives;
 using RagnaRoute.ViewExtenders;
 using RagnaRoute.Services;
-using System.Reactive.Disposables;
 
 namespace RagnaRoute.ViewModels;
 public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDisposable
@@ -24,7 +24,7 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
     [ObservableProperty] private bool _shouldShowHidden;
     [ObservableProperty] private string _filterText = string.Empty;
 
-    private static Func<TimeState, int> _timeStateOrder = (TimeState state) => state switch
+    private static Func<TimeState, int> _timeStatePriority = (TimeState state) => state switch
     {
         TimeState.During => 0,
         TimeState.After => 1,
@@ -33,6 +33,7 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
         TimeState.Indeterminate => 4,
         _ => throw new InvalidOperationException()
     };
+
     private readonly ISchedulerProvider _scheduler;
     private readonly QuestService _questService;
 
@@ -47,7 +48,7 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
             .Select(CreateTextFilter);
 
         var sorter = SortExpressionComparer<BossQuestViewModel>
-            .Ascending(x => _timeStateOrder(x.TimeState))
+            .Ascending(x => _timeStatePriority(x.TimeState))
             .ThenByAscending(x => x.TimeUntilStarting)
             .ThenByAscending(x => x.Name);
 
@@ -92,14 +93,14 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
         viewModel.Objective.Recur(instant);
         viewModel.UpdateObjective();
 
-        await _questService.AddBossQuestCompletion(Name, viewModel.Name, instant);
+        await _questService.AddCompletion(Name, viewModel.Name, instant);
     }
 
-    [RelayCommand]
-    public void ResetObjective(BossQuestViewModel viewModel)
+    [RelayCommand(AllowConcurrentExecutions = true)]
+    public async Task ToggleHidden(BossQuestViewModel viewModel)
     {
-        viewModel.Objective.Reset();
-        viewModel.UpdateObjective();
+        viewModel.IsHidden = !viewModel.IsHidden;
+        await _questService.UpsertObjectiveHiddenState(Name, viewModel.Name, viewModel.IsHidden);
     }
 
     protected virtual void Dispose(bool disposing)

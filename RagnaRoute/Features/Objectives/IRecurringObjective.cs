@@ -25,7 +25,7 @@ public interface IRecurringObjective : ITimedObjective
     void Complete(Instant? completionTime);
 
     /// <summary>
-    /// Resets the objective's completion state
+    /// Resets the objective as if the last recurrence was at the given time
     /// </summary>
-    void Reset();
+    //void Reset(Instant? resetTime);
 }
