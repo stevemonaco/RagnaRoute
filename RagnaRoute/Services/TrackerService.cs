@@ -15,14 +15,14 @@ public class TrackerService
 {
     private readonly MonsterStore _monsterStore;
     private readonly ISchedulerProvider _scheduler;
-    private readonly QuestService _questService;
+    private readonly CompletionService _completionService;
     private string _trackerPath = @"_objectives\";
 
-    public TrackerService(MonsterStore monsterStore, ISchedulerProvider scheduler, QuestService questService)
+    public TrackerService(MonsterStore monsterStore, ISchedulerProvider scheduler, CompletionService completionService)
     {
         _monsterStore = monsterStore;
         _scheduler = scheduler;
-        _questService = questService;
+        _completionService = completionService;
     }
 
     public async Task<TrackerProfileViewModel> ReadTrackerProfile(string profileFileName)
@@ -68,7 +68,7 @@ public class TrackerService
 
     private async Task<BossQuestTrackingViewModel?> ReadBossQuestGroup(TrackerGroupModel group, string content, JsonSerializerOptions options)
     {
-        var states = await _questService.GetObjectives(group.Name, false);
+        var states = await _completionService.GetObjectives(group.Name, false);
         var stateMap = states.ToDictionary(x => x.ObjectiveName, x => x);
 
         var bossQuests = JsonSerializer.Deserialize<List<BossQuestModel>>(content, options);
@@ -97,7 +97,7 @@ public class TrackerService
             }
         }
 
-        return new BossQuestTrackingViewModel(bossQuestViewModels, _scheduler, _questService)
+        return new BossQuestTrackingViewModel(bossQuestViewModels, _scheduler, _completionService)
         {
             Name = group.Name,
             DisplayName = group.Name

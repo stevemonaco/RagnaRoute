@@ -36,13 +36,13 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild
     public SourceList<CompletionDto> CompletionSource { get; }
 
     private readonly ISchedulerProvider _scheduler;
-    private readonly QuestService _questService;
+    private readonly CompletionService _completionService;
     private readonly CompositeDisposable _cleanup = new();
 
-    public QuestHistoryViewModel(ISchedulerProvider scheduler, QuestService questService)
+    public QuestHistoryViewModel(ISchedulerProvider scheduler, CompletionService completionService)
     {
         _scheduler = scheduler;
-        _questService = questService;
+        _completionService = completionService;
 
         var stringSorter = SortExpressionComparer<string>
             .Ascending(x => x);
@@ -86,7 +86,7 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild
                         return;
 
                     x.Clear();
-                    var result = await _questService.GetObjectives(SelectedFamilyName, true);
+                    var result = await _completionService.GetObjectives(SelectedFamilyName, true);
                     x.AddRange(result.Select(x => x.ObjectiveName));
                 });
 
@@ -104,7 +104,7 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild
                         return;
 
                     x.Clear();
-                    var result = await _questService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
+                    var result = await _completionService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
                     x.AddRange(result);
                     CompletionCount = result.Count;
                 });
@@ -115,7 +115,7 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild
 
     public async Task InitializeProfiles()
     {
-        var items = await _questService.GetFamilyNames();
+        var items = await _completionService.GetFamilyNames();
         ProfileNameSource.AddRange(items);
 
         SelectedFamilyName = items.FirstOrDefault();
@@ -127,7 +127,7 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild
         if (string.IsNullOrEmpty(SelectedFamilyName) || string.IsNullOrEmpty(SelectedObjectiveName))
             return;
 
-        var items = await _questService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
+        var items = await _completionService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
         CompletionSource.Edit(x =>
         {
             x.Clear();

@@ -7,11 +7,11 @@ using RagnaRoute.Data;
 using RagnaRoute.Entities;
 
 namespace RagnaRoute.Services;
-public class QuestService
+public class CompletionService
 {
 	private readonly IDbContextFactory<RagnaContext> _dbFactory;
 
-	public QuestService(IDbContextFactory<RagnaContext> dbFactory)
+	public CompletionService(IDbContextFactory<RagnaContext> dbFactory)
 	{
 		_dbFactory = dbFactory;
 	}

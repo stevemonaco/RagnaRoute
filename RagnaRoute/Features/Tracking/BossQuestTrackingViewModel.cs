@@ -35,15 +35,15 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
     };
 
     private readonly ISchedulerProvider _scheduler;
-    private readonly QuestService _questService;
+    private readonly CompletionService _completionService;
 
     private readonly IDisposable _cleanup;
     private bool _disposedValue;
 
-    public BossQuestTrackingViewModel(IEnumerable<BossQuestViewModel> bosses, ISchedulerProvider scheduler, QuestService questService)
+    public BossQuestTrackingViewModel(IEnumerable<BossQuestViewModel> bosses, ISchedulerProvider scheduler, CompletionService completionService)
     {
         _scheduler = scheduler;
-        _questService = questService;
+        _completionService = completionService;
         var filterTextChanged = this.WhenValueChanged(x => x.FilterText)
             .Select(CreateTextFilter);
 
@@ -93,14 +93,14 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
         viewModel.Objective.Recur(instant);
         viewModel.UpdateObjective();
 
-        await _questService.AddCompletion(Name, viewModel.Name, instant);
+        await _completionService.AddCompletion(Name, viewModel.Name, instant);
     }
 
     [RelayCommand(AllowConcurrentExecutions = true)]
     public async Task ToggleHidden(BossQuestViewModel viewModel)
     {
         viewModel.IsHidden = !viewModel.IsHidden;
-        await _questService.UpsertObjectiveHiddenState(Name, viewModel.Name, viewModel.IsHidden);
+        await _completionService.UpsertObjectiveHiddenState(Name, viewModel.Name, viewModel.IsHidden);
     }
 
     protected virtual void Dispose(bool disposing)

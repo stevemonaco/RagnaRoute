@@ -41,7 +41,7 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
         services.AddSingleton(monsterStore);
         services.AddTransient<TrackerService>();
         services.AddSingleton<ISchedulerProvider, SchedulerProvider>();
-        services.AddTransient<QuestService>();
+        services.AddTransient<CompletionService>();
     }
 
     public void ConfigureViews(IServiceCollection services)
