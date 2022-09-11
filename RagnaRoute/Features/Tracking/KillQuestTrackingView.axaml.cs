@@ -39,18 +39,10 @@ public partial class KillQuestTrackingView : UserControl
                 _popup.PlacementTarget = (Button)sender;
                 _popup.IsOpen = true;
 
-                await Task.Delay(2000); //, _popupCts.Token);
+                await Task.Delay(2000);
                 _popup.IsOpen = false;
                 _popup.PlacementTarget = null;
             }
         }
-
-        //var previousCts = _popupCts;
-        //if (previousCts != null)
-        //{
-        //    previousCts.Cancel();
-        //}
-
-        //_popupCts = new CancellationTokenSource();
     }
 }
