@@ -14,7 +14,7 @@ using RagnaRoute.ViewExtenders;
 
 namespace RagnaRoute.ViewModels;
 
-public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild
+public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild, IDisposable
 {
     public string DisplayName { get; } = "History";
 
@@ -38,6 +38,7 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild
     private readonly ISchedulerProvider _scheduler;
     private readonly CompletionService _completionService;
     private readonly CompositeDisposable _cleanup = new();
+    private bool _disposedValue;
 
     public QuestHistoryViewModel(ISchedulerProvider scheduler, CompletionService completionService)
     {
@@ -133,5 +134,25 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild
             x.Clear();
             x.AddRange(items);
         });
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!_disposedValue)
+        {
+            if (disposing)
+            {
+                _cleanup.Dispose();
+            }
+
+            _disposedValue = true;
+        }
+    }
+
+    public void Dispose()
+    {
+        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
     }
 }

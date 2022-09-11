@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -13,11 +12,7 @@ public partial class KillQuestTrackingViewModel : TrackingGroupViewModel
 {
     [ObservableProperty] private ObservableCollection<KillQuestViewModel> _quests = new();
 
-    private readonly ISchedulerProvider _scheduler;
     private readonly CompletionService _completionService;
-
-    private readonly IDisposable _cleanup;
-    private bool _disposedValue;
 
     public KillQuestTrackingViewModel(CompletionService completionService)
     {

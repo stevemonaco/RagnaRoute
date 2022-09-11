@@ -15,7 +15,7 @@ using RagnaRoute.ViewExtenders;
 using RagnaRoute.Services;
 
 namespace RagnaRoute.ViewModels;
-public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDisposable
+public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
 {
     public ReadOnlyObservableCollection<BossQuestViewModel> Bosses { get => _bosses; }
     private ReadOnlyObservableCollection<BossQuestViewModel> _bosses;
@@ -36,9 +36,6 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
 
     private readonly ISchedulerProvider _scheduler;
     private readonly CompletionService _completionService;
-
-    private readonly IDisposable _cleanup;
-    private bool _disposedValue;
 
     public BossQuestTrackingViewModel(IEnumerable<BossQuestViewModel> bosses, ISchedulerProvider scheduler, CompletionService completionService)
     {
@@ -65,9 +62,8 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
             .Sort(sorter)
             .ObserveOn(_scheduler.Visual)
             .Bind(out _bosses)
-            .Subscribe();
-
-        _cleanup = new CompositeDisposable(BossSource);
+            .Subscribe()
+            .DisposeWith(_cleanup);
     }
 
     private Func<BossQuestViewModel, bool> CreateTextFilter(string? text)
@@ -101,27 +97,5 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
     {
         viewModel.IsHidden = !viewModel.IsHidden;
         await _completionService.UpsertObjectiveHiddenState(Name, viewModel.Name, viewModel.IsHidden);
-    }
-
-    protected virtual void Dispose(bool disposing)
-    {
-        if (!_disposedValue)
-        {
-            if (disposing)
-            {
-                _cleanup?.Dispose();
-            }
-
-            // TODO: free unmanaged resources (unmanaged objects) and override finalizer
-            // TODO: set large fields to null
-            _disposedValue = true;
-        }
-    }
-
-    public void Dispose()
-    {
-        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
-        Dispose(disposing: true);
-        GC.SuppressFinalize(this);
     }
 }
