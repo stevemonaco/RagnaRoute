@@ -20,7 +20,7 @@ public partial class TrackerProfileViewModel : ViewModelBase
         _timeZone = timeZone;
 
         if (_timeZone is not null)
-            _clock = new ZonedClock(SystemClock.Instance, _timeZone, CalendarSystem.Julian);
+            _clock = new ZonedClock(SystemClock.Instance, _timeZone, CalendarSystem.Iso);
     }
 
     public void UpdateTime()

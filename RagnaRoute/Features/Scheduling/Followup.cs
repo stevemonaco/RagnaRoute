@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reactive.Concurrency;
 using NodaTime;
 using RagnaRoute.Objectives;
 
@@ -63,6 +64,20 @@ public class Followup : IFollowup
             {
                 return TimeHelpers.LocalDateTimesToInterval(scheduledStart, scheduledEnd, timezone);
             }
+        }
+
+        return new Followup(Next);
+    }
+
+    public static IFollowup OnInterval(Duration duration) => OnInterval(duration, duration);
+
+    public static IFollowup OnInterval(Duration minimum, Duration maximum)
+    {
+        Interval? Next(Instant current)
+        {
+            var start = current + minimum;
+            var end = current + maximum;
+            return new Interval(start, end);
         }
 
         return new Followup(Next);

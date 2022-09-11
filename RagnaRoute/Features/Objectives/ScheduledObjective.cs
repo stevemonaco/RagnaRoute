@@ -31,7 +31,9 @@ public class ScheduledObjective : IRecurringObjective
 
     public void Next()
     {
-        throw new NotImplementedException();
+        var instant = SystemClock.Instance.GetCurrentInstant();
+        _next = _followup.Next(instant);
+        Update(instant);
     }
 
     public void Complete() =>

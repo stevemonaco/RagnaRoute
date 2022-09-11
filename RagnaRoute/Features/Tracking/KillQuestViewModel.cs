@@ -2,7 +2,6 @@
 using System.Collections.ObjectModel;
 using NodaTime;
 using RagnaRoute.Objectives;
-using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RagnaRoute.ViewModels;
@@ -23,8 +22,6 @@ public partial class KillQuestViewModel : ViewModelBase
     {
         Name = name;
         Objective = objective;
-
-        //Objective.Complete(SystemClock.Instance.GetCurrentInstant());
     }
 
     public void UpdateObjective()
@@ -34,12 +31,5 @@ public partial class KillQuestViewModel : ViewModelBase
         TimeUntilStarting = (int)Math.Round(Objective.TimeUntilStarting.TotalSeconds, MidpointRounding.ToEven);
         TimeUntilEnding = (int)Math.Round(Objective.TimeUntilEnding.TotalSeconds, MidpointRounding.ToEven);
         TimeState = Objective.State;
-    }
-
-    [RelayCommand]
-    public void CompleteObjective()
-    {
-        Objective.Complete();
-        UpdateObjective();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using NodaTime;
+using RagnaRoute.Scheduling;
 
 namespace RagnaRoute.Objectives;
 public class SpawnObjective : IRecurringObjective
@@ -16,6 +17,7 @@ public class SpawnObjective : IRecurringObjective
 
     public TimeState State { get; private set; } = TimeState.Indeterminate;
 
+    private readonly IFollowup _followup;
     private readonly Duration _respawnMinimum;
     private readonly Duration _respawnMaximum;
     private Instant? _lastUpdate;
@@ -26,8 +28,7 @@ public class SpawnObjective : IRecurringObjective
 
     public SpawnObjective(Duration respawnMinimum, Duration respawnMaximum)
     {
-        _respawnMinimum = respawnMinimum;
-        _respawnMaximum = respawnMaximum;
+        _followup = Followup.OnInterval(respawnMinimum, respawnMaximum);
     }
 
     public void Update() => Update(SystemClock.Instance.GetCurrentInstant());
@@ -86,8 +87,12 @@ public class SpawnObjective : IRecurringObjective
         if (State == TimeState.Completed || LastRecurrence is null)
             return;
 
-        TimeUntilStarting = _respawnMinimum - (current - LastRecurrence.Value);
-        TimeUntilEnding = _respawnMaximum - (current - LastRecurrence.Value);
+        var next = _followup.Next(LastRecurrence.Value);
+        if (!next.HasValue)
+            return;
+
+        TimeUntilStarting = next.Value.Start - current;
+        TimeUntilEnding = next.Value.End - current;
 
         if (HasExceededSpawnDuration())
         {

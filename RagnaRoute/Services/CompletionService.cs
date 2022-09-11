@@ -20,7 +20,7 @@ public class CompletionService
 	{
 		using var context = _dbFactory.CreateDbContext();
 
-		var family = await GetOrCreateFamily(context, familyName);
+		var family = await GetOrCreateFamily(context, familyName).ConfigureAwait(false);
 		var objective = await GetOrCreateObjective(context, objectiveName, false, family).ConfigureAwait(false);
 		objective.LastCompletion = completionTime;
 

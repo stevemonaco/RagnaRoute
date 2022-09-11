@@ -1,20 +1,27 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using NodaTime;
+using RagnaRoute.Services;
+using RagnaRoute.ViewExtenders;
 
 namespace RagnaRoute.ViewModels;
 
 public partial class KillQuestTrackingViewModel : TrackingGroupViewModel
 {
     [ObservableProperty] private ObservableCollection<KillQuestViewModel> _quests = new();
-    //private readonly IClipboardService _clipboardService;
 
-    //public ReactiveCommand<string, Unit> CopyObjectiveInformationCommand { get; }
+    private readonly ISchedulerProvider _scheduler;
+    private readonly CompletionService _completionService;
 
-    public KillQuestTrackingViewModel()
+    private readonly IDisposable _cleanup;
+    private bool _disposedValue;
+
+    public KillQuestTrackingViewModel(CompletionService completionService)
     {
-        //_clipboardService = clipboardService;
-
-        //CopyObjectiveInformationCommand = ReactiveCommand.Create<string>(CopyObjectiveInformation);
+        _completionService = completionService;
     }
 
     public override void UpdateObjective()
@@ -23,8 +30,13 @@ public partial class KillQuestTrackingViewModel : TrackingGroupViewModel
             quest.UpdateObjective();
     }
 
-    //public async void CopyObjectiveInformation(string information)
-    //{
-    //    var result = await _clipboardService.CopyTextAsync(information);
-    //}
+    [RelayCommand(AllowConcurrentExecutions = true)]
+    public async Task CompleteObjectiveCommand(KillQuestViewModel viewModel)
+    {
+        var instant = SystemClock.Instance.GetCurrentInstant();
+        viewModel.Objective.Next();
+        viewModel.UpdateObjective();
+
+        await _completionService.AddCompletion(Name, viewModel.Name, instant);
+    }
 }

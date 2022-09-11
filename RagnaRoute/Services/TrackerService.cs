@@ -111,7 +111,7 @@ public class TrackerService
         if (killQuests is null)
             return null;
 
-        return new KillQuestTrackingViewModel()
+        return new KillQuestTrackingViewModel(_completionService)
         {
             Name = group.Name,
             DisplayName = group.Name,

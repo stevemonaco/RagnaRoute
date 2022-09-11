@@ -24,7 +24,7 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
     [ObservableProperty] private bool _shouldShowHidden;
     [ObservableProperty] private string _filterText = string.Empty;
 
-    private static Func<TimeState, int> _timeStatePriority = (TimeState state) => state switch
+    private static readonly Func<TimeState, int> _timeStateSortingPriority = (TimeState state) => state switch
     {
         TimeState.During => 0,
         TimeState.After => 1,
@@ -48,7 +48,7 @@ public partial class BossQuestTrackingViewModel : TrackingGroupViewModel, IDispo
             .Select(CreateTextFilter);
 
         var sorter = SortExpressionComparer<BossQuestViewModel>
-            .Ascending(x => _timeStatePriority(x.TimeState))
+            .Ascending(x => _timeStateSortingPriority(x.TimeState))
             .ThenByAscending(x => x.TimeUntilStarting)
             .ThenByAscending(x => x.Name);
 
