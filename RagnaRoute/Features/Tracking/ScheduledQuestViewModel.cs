@@ -6,19 +6,20 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RagnaRoute.ViewModels;
 
-public partial class KillQuestViewModel : ViewModelBase
+public partial class ScheduledQuestViewModel : ViewModelBase
 {
     public string Name { get; }
     public string? Description { get; init; }
     public ObservableCollection<string>? Information { get; init; }
 
-    [ObservableProperty] private int _timeUntilStarting;
-    [ObservableProperty] private int _timeUntilEnding;
+    [ObservableProperty] private Duration _timeUntilStarting;
+    [ObservableProperty] private Duration _timeUntilEnding;
     [ObservableProperty] private TimeState _timeState;
+    [ObservableProperty] private bool _isHidden;
 
     public ScheduledObjective Objective { get; }
 
-    public KillQuestViewModel(string name, ScheduledObjective objective)
+    public ScheduledQuestViewModel(string name, ScheduledObjective objective)
     {
         Name = name;
         Objective = objective;
@@ -28,8 +29,8 @@ public partial class KillQuestViewModel : ViewModelBase
     {
         Objective.Update(SystemClock.Instance.GetCurrentInstant());
 
-        TimeUntilStarting = (int)Math.Round(Objective.TimeUntilStarting.TotalSeconds, MidpointRounding.ToEven);
-        TimeUntilEnding = (int)Math.Round(Objective.TimeUntilEnding.TotalSeconds, MidpointRounding.ToEven);
+        TimeUntilStarting = Objective.TimeUntilStarting;
+        TimeUntilEnding = Objective.TimeUntilEnding;
         TimeState = Objective.State;
     }
 }

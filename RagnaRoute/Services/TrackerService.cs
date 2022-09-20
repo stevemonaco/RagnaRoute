@@ -30,7 +30,10 @@ public class TrackerService
         var jsonOptions = new JsonSerializerOptions()
         {
             PropertyNameCaseInsensitive = true,
-            Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
+            Converters =
+            {
+                new JsonStringEnumConverter(JsonNamingPolicy.CamelCase), new DateTimeZoneConverter(), new CronExpressionConverter()
+            }
         };
 
         var profileContent = await File.ReadAllTextAsync(profileFileName).ConfigureAwait(false);
@@ -38,13 +41,8 @@ public class TrackerService
 
         if (profile is null)
             throw new InvalidDataException($"Could not parse {profileFileName}");
-        
-        var zone = DateTimeZoneProviders.Tzdb.GetZoneOrNull(profile.TimeZone ?? "");
 
-        if (zone is null && profile.TimeZone is null)
-            throw new InvalidDataException($"Could not parse time zone: {profile.TimeZone}");
-
-        var profileVm = new TrackerProfileViewModel(profile.Name, zone);
+        var profileVm = new TrackerProfileViewModel(profile.Name, profile.TimeZone);
 
         foreach (var questGroup in profile.QuestGroups)
         {
@@ -54,7 +52,7 @@ public class TrackerService
             TrackingGroupViewModel? trackingVm = questGroup.Kind switch
             {
                 QuestKind.Boss => await ReadBossQuestGroup(questGroup, groupContent, jsonOptions).ConfigureAwait(false),
-                QuestKind.Kill => ReadKillQuestGroup(questGroup, groupContent, jsonOptions),
+                QuestKind.Scheduled => await ReadScheduledQuestGroup(questGroup, groupContent, jsonOptions).ConfigureAwait(false),
                 _ => throw new NotSupportedException()
             };
 
@@ -66,12 +64,12 @@ public class TrackerService
         return profileVm;
     }
 
-    private async Task<BossQuestTrackingViewModel?> ReadBossQuestGroup(TrackerGroupModel group, string content, JsonSerializerOptions options)
+    private async Task<BossQuestTrackingViewModel?> ReadBossQuestGroup(TrackerGroupModel group, string jsonContent, JsonSerializerOptions options)
     {
         var states = await _completionService.GetObjectives(group.Name, false);
         var stateMap = states.ToDictionary(x => x.ObjectiveName, x => x);
 
-        var bossQuests = JsonSerializer.Deserialize<List<BossQuestModel>>(content, options);
+        var bossQuests = JsonSerializer.Deserialize<List<BossQuestModel>>(jsonContent, options);
 
         if (bossQuests is null)
             return null;
@@ -104,18 +102,40 @@ public class TrackerService
         };
     }
 
-    private KillQuestTrackingViewModel? ReadKillQuestGroup(TrackerGroupModel group, string content, JsonSerializerOptions options)
+    private async Task<ScheduledQuestTrackingViewModel?> ReadScheduledQuestGroup(TrackerGroupModel group, string jsonContent, JsonSerializerOptions options)
     {
-        var killQuests = JsonSerializer.Deserialize<List<KillQuestModel>>(content, options);
+        var states = await _completionService.GetObjectives(group.Name, false);
+        var stateMap = states.ToDictionary(x => x.ObjectiveName, x => x);
 
-        if (killQuests is null)
+        var scheduledQuests = JsonSerializer.Deserialize<List<ScheduledQuestModel>>(jsonContent, options);
+
+        if (scheduledQuests is null)
             return null;
 
-        return new KillQuestTrackingViewModel(_completionService)
+        var scheduledQuestViewModels = scheduledQuests
+            .Select(x => x.ToViewModel())
+            .ToList();
+
+        foreach (var scheduledQuestViewModel in scheduledQuestViewModels)
+        {
+            if (stateMap.TryGetValue(scheduledQuestViewModel.Name, out var state))
+            {
+                scheduledQuestViewModel.IsHidden = state.IsHidden;
+
+                if (state.LastCompletion is Instant instant)
+                {
+                    scheduledQuestViewModel.UpdateObjective();
+                    scheduledQuestViewModel.Objective.Reset();
+                    scheduledQuestViewModel.UpdateObjective();
+                }
+            }
+        }
+
+        return new ScheduledQuestTrackingViewModel(_completionService)
         {
             Name = group.Name,
             DisplayName = group.Name,
-            Quests = new(killQuests.Select(x => x.ToViewModel()))
+            Quests = new(scheduledQuests.Select(x => x.ToViewModel()))
         };
     }
 }

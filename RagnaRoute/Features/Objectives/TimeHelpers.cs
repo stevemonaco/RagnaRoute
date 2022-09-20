@@ -1,5 +1,7 @@
 ﻿using System;
+using Cronos;
 using NodaTime;
+using RagnaRoute.Scheduling;
 
 namespace RagnaRoute.Objectives;
 
@@ -59,5 +61,43 @@ internal static class TimeHelpers
             < -60 => $"-{Math.Abs(duration.Minutes)}m",
             _ => $"{duration.Seconds}s"
         };
+    }
+
+    private static Duration[] _deltas = new Duration[]
+    {
+            Duration.FromHours(1), Duration.FromHours(12), Duration.FromDays(1),
+            Duration.FromDays(3), Duration.FromDays(7), Duration.FromDays(14),
+            Duration.FromDays(30), Duration.FromDays(90), Duration.FromDays(180),
+            Duration.FromDays(365), Duration.FromDays(3650)
+    };
+
+    public static Instant? GetPreviousOccurrence(CronSchedule followup, Instant instant)
+    {
+        var currentNext = followup.Next(instant);
+
+        Interval? anyPreviousNext = null;
+
+        foreach (var delta in _deltas)
+        {
+            anyPreviousNext = followup.Next(instant - delta);
+
+            if (anyPreviousNext!.Value.Start < currentNext!.Value.Start)
+                break;
+        }
+
+        if (anyPreviousNext!.Value.Start == currentNext!.Value.Start)
+            throw new ArgumentOutOfRangeException("Could not calculate a prior interval");
+
+        Interval? previousNext = anyPreviousNext;
+        Interval? nextVisitor;
+        while (true)
+        {
+            nextVisitor = followup.Next(previousNext.Value.Start + Duration.FromSeconds(1));
+
+            if (nextVisitor.Value.Start == currentNext.Value.Start)
+                return previousNext.Value.Start;
+
+            previousNext = nextVisitor;
+        }
     }
 }

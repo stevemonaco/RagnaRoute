@@ -17,22 +17,44 @@ public class ScheduledObjective : IRecurringObjective
 
     //private IFollowup _followup = Followup.OnDaily(new LocalTime(4, 0), Duration.FromDays(1));
     //private IFollowup _followup = Followup.OnSchedule(x => new Interval(x.Plus(Duration.FromSeconds(10)), x.Plus(Duration.FromSeconds(12))));
-    private IFollowup _followup;
+    private IScheduleIterable _schedulable;
     private Instant? _lastUpdate;
     private Interval? _next;
 
-    public ScheduledObjective(Instant start, IFollowup followup)
+    public ScheduledObjective(IScheduleIterable schedulable, Instant? lastCompletion = null)
     {
-        Start = start;
-        _followup = followup;
+        LastCompletion = lastCompletion;
 
-        _next = _followup.Next(SystemClock.Instance.GetCurrentInstant());
+        //Start = start;
+        _schedulable = schedulable;
+
+        if (lastCompletion.HasValue)
+        {
+            var completionNextStart = _schedulable.Next(lastCompletion.Value);
+            var currentNextStart = _schedulable.Next(SystemClock.Instance.GetCurrentInstant());
+
+            if (completionNextStart!.Value == currentNextStart!.Value) // Completed within the current schedule window
+            {
+                State = TimeState.Completed;
+                _next = currentNextStart.Value;
+            }
+            else
+            {
+                _next = currentNextStart.Value;
+            }
+
+            _next = _schedulable.Next(SystemClock.Instance.GetCurrentInstant());
+        }
+        else
+        {
+            _next = _schedulable.Next(SystemClock.Instance.GetCurrentInstant());
+        }
     }
 
-    public void Next()
+    public void Skip()
     {
         var instant = SystemClock.Instance.GetCurrentInstant();
-        _next = _followup.Next(instant);
+        _next = _schedulable.Next(instant);
         Update(instant);
     }
 
@@ -61,31 +83,35 @@ public class ScheduledObjective : IRecurringObjective
 
     private void UpdateRemaining(Instant current)
     {
-        if (LastCompletion is null)
-            return;
-
-        var next = _followup.Next(current);
-
-        if (_lastUpdate is not null && _lastUpdate < Start && current >= Start)
+        if (LastCompletion is null && _next is not null)
         {
-            State = TimeState.During;
-        }
+            TimeUntilStarting = _next.Value.Start - current;
+            TimeUntilEnding = _next.Value.End - current;
 
-        if (next is Interval)
-        {
-            TimeUntilStarting = next.Value.Start - current;
-            TimeUntilEnding = next.Value.End - current;
-
-            if (State != TimeState.Completed)
-                State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
+            State = TimeState.Before;
         }
         else
         {
-            TimeUntilStarting = Duration.MaxValue;
-            TimeUntilEnding = Duration.MaxValue;
+            if (_lastUpdate is not null && _lastUpdate < Start && current >= Start)
+            {
+                State = TimeState.During;
+            }
+            else if (_next is not null)
+            {
+                TimeUntilStarting = _next.Value.Start - current;
+                TimeUntilEnding = _next.Value.End - current;
 
-            if (State != TimeState.Completed)
-                State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
+                if (State != TimeState.Completed)
+                    State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
+            }
+            else
+            {
+                TimeUntilStarting = Duration.MaxValue;
+                TimeUntilEnding = Duration.MaxValue;
+
+                if (State != TimeState.Completed)
+                    State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
+            }
         }
     }
 }

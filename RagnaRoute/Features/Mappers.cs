@@ -7,20 +7,22 @@ using RagnaRoute.Objectives;
 namespace RagnaRoute.ViewModels;
 public static class Mappers
 {
-    public static KillQuestViewModel ToViewModel(this KillQuestModel model)
+    public static ScheduledQuestViewModel ToViewModel(this ScheduledQuestModel model)
     {
-        var zone = DateTimeZoneProviders.Tzdb.GetSystemDefault();
-        var clock = SystemClock.Instance.InTzdbSystemDefaultZone();
-        var localDate = clock.GetCurrentDate();
-        var localTime = new LocalTime(4, 0);
+        //var zone = DateTimeZoneProviders.Tzdb.GetSystemDefault();
+        //var clock = SystemClock.Instance.InTzdbSystemDefaultZone();
+        //var localDate = clock.GetCurrentDate();
+        //var localTime = new LocalTime(4, 0);
 
-        var zonedTime = new LocalDateTime(localDate.Year, localDate.Month, localDate.Day, localTime.Hour, localTime.Minute);
+        //var zonedTime = new LocalDateTime(localDate.Year, localDate.Month, localDate.Day, localTime.Hour, localTime.Minute);
 
-        var instant = zonedTime.InZoneLeniently(zone).ToInstant();
-        var followup = Followup.OnDaily(localTime, Duration.FromSeconds(86399));
-        var objective = new ScheduledObjective(instant, followup);
+        //var instant = zonedTime.InZoneLeniently(zone).ToInstant();
+        //var followup = Followup.OnDaily(localTime, Duration.FromSeconds(86399));
 
-        return new KillQuestViewModel(model.Name, objective)
+        var followup = new CronSchedule(model.Repeat, model.TimeZone, Duration.FromMinutes(model.Duration));
+        var objective = new ScheduledObjective(followup);
+
+        return new ScheduledQuestViewModel(model.Name, objective)
         {
             Description = model.Description,
             Information = new(model.Information)

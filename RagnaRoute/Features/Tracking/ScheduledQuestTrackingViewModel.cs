@@ -8,13 +8,13 @@ using RagnaRoute.ViewExtenders;
 
 namespace RagnaRoute.ViewModels;
 
-public partial class KillQuestTrackingViewModel : TrackingGroupViewModel
+public partial class ScheduledQuestTrackingViewModel : TrackingGroupViewModel
 {
-    [ObservableProperty] private ObservableCollection<KillQuestViewModel> _quests = new();
+    [ObservableProperty] private ObservableCollection<ScheduledQuestViewModel> _quests = new();
 
     private readonly CompletionService _completionService;
 
-    public KillQuestTrackingViewModel(CompletionService completionService)
+    public ScheduledQuestTrackingViewModel(CompletionService completionService)
     {
         _completionService = completionService;
     }
@@ -25,11 +25,11 @@ public partial class KillQuestTrackingViewModel : TrackingGroupViewModel
             quest.UpdateObjective();
     }
 
-    [RelayCommand(AllowConcurrentExecutions = true)]
-    public async Task CompleteObjectiveCommand(KillQuestViewModel viewModel)
+    [RelayCommand(AllowConcurrentExecutions = false)]
+    public async Task CompleteObjectiveCommand(ScheduledQuestViewModel viewModel)
     {
         var instant = SystemClock.Instance.GetCurrentInstant();
-        viewModel.Objective.Next();
+        viewModel.Objective.Skip();
         viewModel.UpdateObjective();
 
         await _completionService.AddCompletion(Name, viewModel.Name, instant);

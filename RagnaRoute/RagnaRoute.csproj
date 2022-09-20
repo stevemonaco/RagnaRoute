@@ -28,6 +28,7 @@
     <PackageReference Include="Avalonia.Xaml.Behaviors" Version="0.10.18" />
     <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.0.0" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+    <PackageReference Include="Cronos" Version="0.7.1" />
     <PackageReference Include="CsvHelper" Version="28.0.1" />
     <PackageReference Include="DynamicData" Version="7.10.2" />
     <PackageReference Include="EntityFrameworkCore.Sqlite.NodaTime" Version="6.0.0" />
@@ -67,6 +68,9 @@
     </Compile>
     <Compile Update="Features\Tracking\BossQuestTrackingView.axaml.cs">
       <DependentUpon>BossQuestTrackingView.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Tracking\ScheduledQuestTrackingView.axaml.cs">
+      <DependentUpon>ScheduledQuestTrackingView.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ProjectExtensions><VisualStudio><UserProperties _3objectives_4fieldboss_1json__JsonSchema="https://download.stackhawk.com/hawk/jsonconfig/hawkconfig.json" /></VisualStudio></ProjectExtensions>

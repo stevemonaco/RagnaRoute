@@ -10,8 +10,8 @@
              xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 x:CompileBindings="True"
-			 x:DataType="vm:KillQuestTrackingViewModel"
-             x:Class="RagnaRoute.Views.KillQuestTrackingView">
+			 x:DataType="vm:ScheduledQuestTrackingViewModel"
+             x:Class="RagnaRoute.Views.ScheduledQuestTrackingView">
 	<UserControl.Styles>
 		<Style Selector="Popup[IsOpen=true]">
 			<Style.Animations>
@@ -45,7 +45,7 @@
 				</ItemsRepeater.Layout>
 
 				<ItemsRepeater.ItemTemplate>
-					<DataTemplate DataType="{x:Type vm:KillQuestViewModel}">
+					<DataTemplate DataType="{x:Type vm:ScheduledQuestViewModel}">
 						<Border CornerRadius="10, 10, 6, 6" Background="Transparent" BorderThickness="2" BorderBrush="Black">
 							<i:Interaction.Behaviors>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Indeterminate}">

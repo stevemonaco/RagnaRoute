@@ -4,14 +4,9 @@ namespace RagnaRoute.Objectives;
 public interface IRecurringObjective : ITimedObjective
 {
     /// <summary>
-    /// Instant the objective was last completed
-    /// </summary>
-    Instant? LastCompletion { get; }
-
-    /// <summary>
     /// Moves the Objective to the next Followup without completing it
     /// </summary>
-    void Next();
+    void Skip();
 
     /// <summary>
     /// Completes the objective at the current time

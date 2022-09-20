@@ -1,7 +1,7 @@
 [
 	{
 		"objectiveName": "Osiris",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -10,7 +10,7 @@
 	},
 	{
 		"objectiveName": "Baphomet",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -19,7 +19,7 @@
 	},
 	{
 		"objectiveName": "Baphomet (GD)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -28,7 +28,7 @@
 	},
 	{
 		"objectiveName": "Doppelganger",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -37,7 +37,7 @@
 	},
 	{
 		"objectiveName": "Doppelganger",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -46,7 +46,7 @@
 	},
 	{
 		"objectiveName": "Mistress",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -55,7 +55,7 @@
 	},
 	{
 		"objectiveName": "Mistress (GD)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -64,7 +64,7 @@
 	},
 	{
 		"objectiveName": "Golden Thief Bug",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -73,7 +73,7 @@
 	},
 	{
 		"objectiveName": "Orc Hero",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -82,7 +82,7 @@
 	},
 	{
 		"objectiveName": "Drake",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -91,7 +91,7 @@
 	},
 	{
 		"objectiveName": "Eddga",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -100,7 +100,7 @@
 	},
 	{
 		"objectiveName": "Eddga (GD)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -109,7 +109,7 @@
 	},
 	{
 		"objectiveName": "Maya",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -118,7 +118,7 @@
 	},
 	{
 		"objectiveName": "Maya (GD)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -127,7 +127,7 @@
 	},
 	{
 		"objectiveName": "Moonlight Flower",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -136,7 +136,7 @@
 	},
 	{
 		"objectiveName": "Moonlight Flower (GD)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -145,7 +145,7 @@
 	},
 	{
 		"objectiveName": "Pharaoh",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -154,7 +154,7 @@
 	},
 	{
 		"objectiveName": "Phreeoni",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -163,7 +163,7 @@
 	},
 	{
 		"objectiveName": "Orc Lord",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -172,7 +172,7 @@
 	},
 	{
 		"objectiveName": "Knight of Windstorm",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -181,7 +181,7 @@
 	},
 	{
 		"objectiveName": "Garm",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -190,7 +190,7 @@
 	},
 	{
 		"objectiveName": "Dark Lord",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -199,7 +199,7 @@
 	},
 	{
 		"objectiveName": "Dark Lord (GD)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -208,7 +208,7 @@
 	},
 	{
 		"objectiveName": "Turtle General",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -217,7 +217,7 @@
 	},
 	{
 		"objectiveName": "Dracula",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -226,7 +226,7 @@
 	},
 	{
 		"objectiveName": "Evil Snake Lord",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 94,
 		"maximumRespawn": 104,
 		"notification": "silent",
@@ -235,7 +235,7 @@
 	},
 	{
 		"objectiveName": "Incantation Samurai",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 91,
 		"maximumRespawn": 101,
 		"notification": "silent",
@@ -244,7 +244,7 @@
 	},
 	{
 		"objectiveName": "Amon Ra",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -253,7 +253,7 @@
 	},
 	{
 		"objectiveName": "Tao Gunka",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 300,
 		"maximumRespawn": 310,
 		"notification": "silent",
@@ -262,7 +262,7 @@
 	},
 	{
 		"objectiveName": "RSX 0806",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 125,
 		"maximumRespawn": 135,
 		"notification": "silent",
@@ -271,7 +271,7 @@
 	},
 	{
 		"objectiveName": "Bacsojin",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 116,
 		"maximumRespawn": 126,
 		"notification": "silent",
@@ -280,7 +280,7 @@
 	},
 	{
 		"objectiveName": "BioLab 3",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 95,
 		"maximumRespawn": 150,
 		"notification": "silent",
@@ -288,7 +288,7 @@
 	},
 	{
 		"objectiveName": "Ygnizem",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 210,
 		"notification": "silent",
@@ -297,7 +297,7 @@
 	},
 	{
 		"objectiveName": "Vesper",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -306,7 +306,7 @@
 	},
 	{
 		"objectiveName": "Lady Tanee",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 420,
 		"maximumRespawn": 430,
 		"notification": "silent",
@@ -315,7 +315,7 @@
 	},
 	{
 		"objectiveName": "Detale",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -324,7 +324,7 @@
 	},
 	{
 		"objectiveName": "Kiel D-01",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -333,7 +333,7 @@
 	},
 	{
 		"objectiveName": "Valkyrie Randgris",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -342,7 +342,7 @@
 	},
 	{
 		"objectiveName": "Gloom Under Night",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 300,
 		"maximumRespawn": 310,
 		"notification": "silent",
@@ -351,7 +351,7 @@
 	},
 	{
 		"objectiveName": "Atroce (1)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -360,7 +360,7 @@
 	},
 	{
 		"objectiveName": "Atroce (2)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -369,7 +369,7 @@
 	},
 	{
 		"objectiveName": "Atroce (3)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -378,7 +378,7 @@
 	},
 	{
 		"objectiveName": "Atroce (4)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -387,7 +387,7 @@
 	},
 	{
 		"objectiveName": "Atroce (GD)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 600,
 		"notification": "silent",
@@ -396,7 +396,7 @@
 	},
 	{
 		"objectiveName": "Ifrit",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 660,
 		"maximumRespawn": 670,
 		"notification": "silent",
@@ -405,7 +405,7 @@
 	},
 	{
 		"objectiveName": "Fallen Bishop",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -414,7 +414,7 @@
 	},
 	{
 		"objectiveName": "Beelzebub",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 720,
 		"maximumRespawn": 730,
 		"notification": "silent",
@@ -423,7 +423,7 @@
 	},
 	{
 		"objectiveName": "Gopinich",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -432,7 +432,7 @@
 	},
 	{
 		"objectiveName": "Wounded Morroc",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 720,
 		"maximumRespawn": 730,
 		"notification": "silent",
@@ -441,7 +441,7 @@
 	},
 	{
 		"objectiveName": "Boitata",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 130,
 		"notification": "silent",
@@ -450,7 +450,7 @@
 	},
 	{
 		"objectiveName": "Queen Scaraba",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
@@ -459,7 +459,7 @@
 	},
 	{
 		"objectiveName": "Leak",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
@@ -468,7 +468,7 @@
 	},
 	{
 		"objectiveName": "Gold Queen Scaraba",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
@@ -477,7 +477,7 @@
 	},
 	{
 		"objectiveName": "Kraken",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 150,
 		"notification": "silent",
@@ -486,7 +486,7 @@
 	},
 	{
 		"objectiveName": "BioLab 4",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
@@ -494,7 +494,7 @@
 	},
 	{
 		"objectiveName": "Pyuriel",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -503,7 +503,7 @@
 	},
 	{
 		"objectiveName": "Gioia",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -512,7 +512,7 @@
 	},
 	{
 		"objectiveName": "Daehyon",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -521,7 +521,7 @@
 	},
 	{
 		"objectiveName": "Kades",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -530,7 +530,7 @@
 	},
 	{
 		"objectiveName": "Nightmare Amon Ra",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -539,7 +539,7 @@
 	},
 	{
 		"objectiveName": "The Last One (Bio2)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 240,
 		"maximumRespawn": 540,
 		"notification": "silent",
@@ -548,7 +548,7 @@
 	},
 	{
 		"objectiveName": "King of the Alley (Bio2)",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 240,
 		"maximumRespawn": 540,
 		"notification": "silent",
@@ -557,7 +557,7 @@
 	},
 	{
 		"objectiveName": "Nightmare Baphomet",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
@@ -566,7 +566,7 @@
 	},
 	{
 		"objectiveName": "Time Holder",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 120,
 		"notification": "silent",
@@ -575,7 +575,7 @@
 	},
 	{
 		"objectiveName": "BioLab 5",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 0,
 		"maximumRespawn": 0,
 		"notification": "silent",
@@ -583,7 +583,7 @@
 	},
 	{
 		"objectiveName": "Big Eggring",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 90,
 		"notification": "silent",
@@ -592,7 +592,7 @@
 	},
 	{
 		"objectiveName": "Venomous Chimera",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 300,
 		"maximumRespawn": 310,
 		"notification": "silent",
@@ -601,7 +601,7 @@
 	},
 	{
 		"objectiveName": "Spider Chariot",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -610,7 +610,7 @@
 	},
 	{
 		"objectiveName": "Furious Dracula",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -619,7 +619,7 @@
 	},
 	{
 		"objectiveName": "Furious Moonlight",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -628,7 +628,7 @@
 	},
 	{
 		"objectiveName": "Awaken Ktullanux",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -637,7 +637,7 @@
 	},
 	{
 		"objectiveName": "Ominous Turtle General",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -646,7 +646,7 @@
 	},
 	{
 		"objectiveName": "Shining Teddy Bear",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -655,7 +655,7 @@
 	},
 	{
 		"objectiveName": "Ancient Tao Gunka",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -664,7 +664,7 @@
 	},
 	{
 		"objectiveName": "Ancient Wootan Defender",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -673,7 +673,7 @@
 	},
 	{
 		"objectiveName": "R48-85-Bestia",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 30,
 		"maximumRespawn": 40,
 		"notification": "silent",
@@ -682,7 +682,7 @@
 	},
 	{
 		"objectiveName": "Rigid Muspellskoll",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -691,7 +691,7 @@
 	},
 	{
 		"objectiveName": "Contaminated Spider Queen",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -700,7 +700,7 @@
 	},
 	{
 		"objectiveName": "Contaminated Dark Lord",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 60,
 		"maximumRespawn": 70,
 		"notification": "silent",
@@ -709,7 +709,7 @@
 	},
 	{
 		"objectiveName": "Chaotic Baphomet",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -718,7 +718,7 @@
 	},
 	{
 		"objectiveName": "Jeweled Ungoliant",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 125,
 		"maximumRespawn": 135,
 		"notification": "silent",
@@ -727,7 +727,7 @@
 	},
 	{
 		"objectiveName": "Valkyrie Reginleif",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -736,7 +736,7 @@
 	},
 	{
 		"objectiveName": "Valkyrie Ingrid",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,
 		"notification": "silent",
@@ -745,7 +745,7 @@
 	},
 	{
 		"objectiveName": "Bone Detale",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -754,7 +754,7 @@
 	},
 	{
 		"objectiveName": "Deep Sea Kraken",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -763,7 +763,7 @@
 	},
 	{
 		"objectiveName": "Deep Sea Witch",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 180,
 		"maximumRespawn": 190,
 		"notification": "silent",
@@ -772,7 +772,7 @@
 	},
 	{
 		"objectiveName": "Mutant Chimera Theone",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 91,
 		"maximumRespawn": 101,
 		"notification": "silent",
@@ -781,7 +781,7 @@
 	},
 	{
 		"objectiveName": "R001-Bestia",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 91,
 		"maximumRespawn": 101,
 		"notification": "silent",
@@ -790,7 +790,7 @@
 	},
 	{
 		"objectiveName": "Witch of Death",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 91,
 		"maximumRespawn": 101,
 		"notification": "silent",
@@ -799,7 +799,7 @@
 	},
 	{
 		"objectiveName": "Silent Maya",
-		"objectiveType": "Kill",
+		"objectiveType": "boss",
 		"minimumRespawn": 120,
 		"maximumRespawn": 210,
 		"notification": "silent",

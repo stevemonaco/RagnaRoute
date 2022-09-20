@@ -1,6 +1,6 @@
 {
 	"name": "ShiningMoon",
-	"timeZone":  "Etc/GMT+8",
+	"timeZone": "Etc/GMT+8",
 	"questGroups": [
 		{
 			"name": "Field Bosses",
@@ -10,7 +10,7 @@
 		{
 			"name": "Boosters",
 			"fileName": "booster.json",
-			"kind": "kill"
+			"kind": "scheduled"
 		}
 	]
 }

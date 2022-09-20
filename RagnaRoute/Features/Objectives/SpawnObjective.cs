@@ -41,7 +41,7 @@ public class SpawnObjective : IRecurringObjective
     }
 
     /// <inheritdoc/>
-    public void Next()
+    public void Skip()
     {
         throw new NotImplementedException();
     }

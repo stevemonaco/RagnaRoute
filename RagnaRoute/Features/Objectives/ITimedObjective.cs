@@ -32,7 +32,12 @@ public interface ITimedObjective
     Duration TimeUntilEnding { get; }
 
     /// <summary>
-    /// TimeState the Objective is currently in
+    /// Instant the Objective was last completed
+    /// </summary>
+    Instant? LastCompletion { get; }
+
+    /// <summary>
+    /// Current TimeState of the Objective
     /// </summary>
     TimeState State { get; }
 

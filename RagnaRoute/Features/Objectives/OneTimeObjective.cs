@@ -6,6 +6,8 @@ public class OneTimeObjective : ITimedObjective
     public Instant Start { get; }
     public Duration Duration { get; }
 
+    public Instant? LastCompletion { get; private set; }
+
     public Instant End => Start + Duration;
 
     public Duration TimeUntilStarting { get; private set; }

@@ -7,14 +7,14 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace RagnaRoute.Views;
-public partial class KillQuestTrackingView : UserControl
+public partial class ScheduledQuestTrackingView : UserControl
 {
     private readonly IClipboardService _clipboardService;
     private readonly Grid _grid;
     private readonly Popup _popup;
     private CancellationTokenSource _popupCts;
 
-    public KillQuestTrackingView()
+    public ScheduledQuestTrackingView()
     {
         _clipboardService = new ClipboardService();
 
