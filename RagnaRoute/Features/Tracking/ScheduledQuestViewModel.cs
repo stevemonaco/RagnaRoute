@@ -27,10 +27,6 @@ public partial class ScheduledQuestViewModel : ViewModelBase
 
     public void UpdateObjective()
     {
-        Objective.Update(SystemClock.Instance.GetCurrentInstant());
-
-        TimeUntilStarting = Objective.TimeUntilStarting;
-        TimeUntilEnding = Objective.TimeUntilEnding;
-        TimeState = Objective.State;
+        
     }
 }

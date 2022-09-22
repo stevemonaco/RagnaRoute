@@ -29,25 +29,17 @@ public static class Mappers
         };
     }
 
-    public static BossQuestViewModel ToViewModel(this BossQuestModel model)
+    public static BossQuestViewModel ToViewModel(this BossQuestModel model, MonsterModel? monsterModel, ObjectiveStateDto? stateDto)
     {
-        return new BossQuestViewModel(model.ObjectiveName, Duration.FromMinutes(model.MinimumRespawn), Duration.FromMinutes(model.MaximumRespawn))
+        return new BossQuestViewModel(model.ObjectiveName, Duration.FromSeconds(model.MinimumRespawn), Duration.FromSeconds(model.MaximumRespawn), stateDto?.LastCompletion)
         {
             Id = model.MobId,
-            WarpLocation = model.WarpLocation
-        };
-    }
-
-    public static BossQuestViewModel ToViewModel(this BossQuestModel model, MonsterModel monsterModel)
-    {
-        return new BossQuestViewModel(model.ObjectiveName, Duration.FromMinutes(model.MinimumRespawn), Duration.FromMinutes(model.MaximumRespawn))
-        {
-            Id = model.MobId,
-            HP = monsterModel.HP,
-            Element = monsterModel.Element,
-            Race = monsterModel.Race,
-            Size = monsterModel.Size,
-            WarpLocation = model.WarpLocation
+            HP = monsterModel?.HP,
+            Element = monsterModel?.Element,
+            Race = monsterModel?.Race,
+            Size = monsterModel?.Size,
+            WarpLocation = model.WarpLocation,
+            IsHidden = stateDto?.IsHidden ?? false
         };
     }
 }

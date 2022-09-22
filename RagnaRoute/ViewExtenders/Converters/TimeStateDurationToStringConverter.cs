@@ -18,11 +18,12 @@ internal class TimeStateDurationToStringConverter : IMultiValueConverter
         {
             return state switch
             {
-                TimeState.Before => $"{TimeHelpers.GetStringDuration(starting)} - {TimeHelpers.GetStringDuration(ending)}",
-                TimeState.During => TimeHelpers.GetStringDuration(ending),
-                TimeState.After => TimeHelpers.GetStringDuration(ending),
-                TimeState.Completed => " ",
-                TimeState.Indeterminate => " ",
+                TimeState.AwaitingUpcoming when starting > Duration.Zero => $"{TimeHelpers.GetStringDuration(starting)} - {TimeHelpers.GetStringDuration(ending)}: Awaiting",
+                TimeState.AwaitingUpcoming when starting <= Duration.Zero => $"{TimeHelpers.GetStringDuration(ending)}: Awaiting",
+                TimeState.Active => $"Active",
+                TimeState.MaybeActive => $"{TimeHelpers.GetStringDuration(ending)}: MaybeActive",
+                TimeState.Inactive => "Inactive",
+                TimeState.Ended => $"{TimeHelpers.GetStringDuration(ending)}: Ended",
                 _ => throw new ArgumentException()
             };
         }

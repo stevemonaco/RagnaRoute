@@ -29,20 +29,23 @@
 					<DataTemplate DataType="{x:Type vm:BossQuestViewModel}">
 						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="12, 12, 4, 4">
 							<i:Interaction.Behaviors>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Indeterminate}">
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
 									<ia:ChangePropertyAction PropertyName="Background" Value="Transparent" />
 								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Completed}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#5b6ee1" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.After}">
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
 									<ia:ChangePropertyAction PropertyName="Background" Value="#37946e" />
 								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.During}">
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
 									<ia:ChangePropertyAction PropertyName="Background" Value="#df6626" />
 								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" ComparisonCondition="Equal" Value="{x:Static obj:TimeState.Before}">
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
 									<ia:ChangePropertyAction PropertyName="Background" Value="#ac3232" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#ac3232" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="#5b6ee1" />
 								</ia:DataTriggerBehavior>
 							</i:Interaction.Behaviors>
 							
@@ -64,7 +67,7 @@
 										<Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
 										</Button>
-										<Button Margin="8,0,0,0" Command="{ReflectionBinding #items.DataContext.RecurObjectiveCommand}" CommandParameter="{Binding}" Content="Reset">
+										<Button Margin="8,0,0,0" Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" Content="Reset">
 											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
 										</Button>
 										<ToggleButton Margin="8,0,0,0" IsChecked="{Binding IsHidden, Mode=OneWay}" Command="{ReflectionBinding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" ToolTip.Tip="Hide">

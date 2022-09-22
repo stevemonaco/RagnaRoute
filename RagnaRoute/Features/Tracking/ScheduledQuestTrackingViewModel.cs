@@ -21,17 +21,17 @@ public partial class ScheduledQuestTrackingViewModel : TrackingGroupViewModel
 
     public override void UpdateObjective()
     {
-        foreach (var quest in Quests)
-            quest.UpdateObjective();
+        //foreach (var quest in Quests)
+        //    quest.UpdateObjective();
     }
 
     [RelayCommand(AllowConcurrentExecutions = false)]
     public async Task CompleteObjectiveCommand(ScheduledQuestViewModel viewModel)
     {
-        var instant = SystemClock.Instance.GetCurrentInstant();
-        viewModel.Objective.Skip();
-        viewModel.UpdateObjective();
+        //var instant = SystemClock.Instance.GetCurrentInstant();
+        //viewModel.Objective.Skip();
+        //viewModel.UpdateObjective();
 
-        await _completionService.AddCompletion(Name, viewModel.Name, instant);
+        //await _completionService.AddCompletion(Name, viewModel.Name, instant);
     }
 }

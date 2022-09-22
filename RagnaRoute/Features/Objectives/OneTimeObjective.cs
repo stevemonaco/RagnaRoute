@@ -1,47 +1,91 @@
 ﻿using NodaTime;
+using RagnaRoute.Objectives.Extensions;
 
 namespace RagnaRoute.Objectives;
 public class OneTimeObjective : ITimedObjective
 {
-    public Instant Start { get; }
-    public Duration Duration { get; }
+    public Interval? Prior { get; protected set; }
+    public Interval? Ongoing { get; protected set; }
+    public Interval? Upcoming { get; protected set; }
+    public TimeState State { get; protected set; }
+    public Instant? LastCompletion { get; protected set; }
+    public ObjectiveResult? PriorResult { get; protected set; }
 
-    public Instant? LastCompletion { get; private set; }
+    private IClock _clock;
 
-    public Instant End => Start + Duration;
-
-    public Duration TimeUntilStarting { get; private set; }
-    public Duration TimeUntilEnding { get; private set; }
-    public TimeState State { get; private set; } = TimeState.Indeterminate;
-
-    public OneTimeObjective(Instant start) : this(start, Duration.Zero)
+    public OneTimeObjective(Instant start, IClock? clock = null) : this(start, null, clock)
     {
     }
 
-    public OneTimeObjective(Instant start, Duration duration)
+    public OneTimeObjective(Instant start, Duration duration, IClock? clock = null) : this(start, start + duration, clock)
     {
-        Start = start;
-        Duration = duration;
-
-        Update(SystemClock.Instance.GetCurrentInstant());
     }
 
-    public void Update(Instant current)
+    public OneTimeObjective(Interval start, IClock? clock = null) : this(start.Start, start.End, clock)
     {
-        TimeUntilStarting = Start - current;
-        TimeUntilEnding = End - current;
+    }
 
-        if (State != TimeState.Completed)
-            State = TimeHelpers.DetermineTimeState(TimeUntilStarting, TimeUntilEnding);
+    public OneTimeObjective(Instant start, Instant? end, IClock? clock = null)
+    {
+        _clock = clock ?? SystemClock.Instance;
+        var current = _clock.GetCurrentInstant();
+        var interval = new Interval(start, end);
+
+        if (interval.Contains(current))
+        {
+            State = TimeState.Active;
+            Ongoing = interval;
+        }
+        else if (current.IsBefore(interval))
+        {
+            State = TimeState.AwaitingUpcoming;
+            Upcoming = interval;
+        }
+        else if (current.IsAfter(interval))
+        {
+            State = TimeState.Ended;
+            Prior = interval;
+        }
+    }
+
+    public bool Update(Instant current)
+    {
+        var previousState = State;
+
+        if (State == TimeState.AwaitingUpcoming && current.IsWithin(Upcoming))
+        {
+            Ongoing = Upcoming;
+            Upcoming = null;
+
+            State = TimeState.Active;
+        }
+        else if (State == TimeState.Active && current.IsAfter(Ongoing))
+        {
+            Prior = Ongoing;
+            Ongoing = null;
+
+            PriorResult = ObjectiveResult.Missed;
+            State = TimeState.Ended;
+        }
+
+        return State == previousState;
     }
 
     /// <summary>
     /// Completes the Objective
     /// </summary>
-    public void Complete()
+    public bool Complete()
     {
-        State = TimeState.Completed;
-        TimeUntilStarting = Duration.MaxValue;
-        TimeUntilEnding = Duration.MaxValue;
+        if (State != TimeState.Active)
+            return false;
+
+        State = TimeState.Ended;
+        LastCompletion = _clock.GetCurrentInstant();
+        PriorResult = ObjectiveResult.Completed;
+
+        Prior = Ongoing;
+        Ongoing = null;
+        Upcoming = null;
+        return true;
     }
 }

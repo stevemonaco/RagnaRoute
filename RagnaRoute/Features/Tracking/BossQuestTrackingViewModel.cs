@@ -24,13 +24,13 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
     [ObservableProperty] private bool _shouldShowHidden;
     [ObservableProperty] private string _filterText = string.Empty;
 
-    private static readonly Func<TimeState, int> _timeStateSortingPriority = (TimeState state) => state switch
+    private static readonly Func<TimeState, int> _timeStateSortingPriority2 = (TimeState state) => state switch
     {
-        TimeState.During => 0,
-        TimeState.After => 1,
-        TimeState.Before => 2,
-        TimeState.Completed => 3,
-        TimeState.Indeterminate => 4,
+        TimeState.Active => 0,
+        TimeState.MaybeActive => 1,
+        TimeState.AwaitingUpcoming => 2,
+        TimeState.Inactive => 3,
+        TimeState.Ended => 4,
         _ => throw new InvalidOperationException()
     };
 
@@ -45,8 +45,9 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
             .Select(CreateTextFilter);
 
         var sorter = SortExpressionComparer<BossQuestViewModel>
-            .Ascending(x => _timeStateSortingPriority(x.TimeState))
+            .Ascending(x => _timeStateSortingPriority2(x.TimeState))
             .ThenByAscending(x => x.TimeUntilStarting)
+            //.ThenByAscending(x => x.TimeSinceStarted ?? Duration.Zero)
             .ThenByAscending(x => x.Name);
 
         BossSource = new();
@@ -76,20 +77,19 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
 
     public override void UpdateObjective()
     {
-        foreach (var boss in BossSource.Items.Where(x => x.TimeState != TimeState.Indeterminate))
+        foreach (var boss in BossSource.Items.Where(x => x.TimeState != TimeState.Ended))
         {
             boss.UpdateObjective();
         }
     }
 
     [RelayCommand(AllowConcurrentExecutions = true)]
-    public async Task RecurObjective(BossQuestViewModel viewModel)
+    public async Task CompleteObjective(BossQuestViewModel viewModel)
     {
-        var instant = SystemClock.Instance.GetCurrentInstant();
-        viewModel.Objective.Recur(instant);
-        viewModel.UpdateObjective();
-
-        await _completionService.AddCompletion(Name, viewModel.Name, instant);
+        if (viewModel.Objective.Complete() && viewModel.Objective.LastCompletion is Instant instant)
+        {
+            await _completionService.AddCompletion(Name, viewModel.Name, instant);
+        }
     }
 
     [RelayCommand(AllowConcurrentExecutions = true)]

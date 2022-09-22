@@ -74,28 +74,18 @@ public class TrackerService
         if (bossQuests is null)
             return null;
 
-        var bossQuestViewModels = bossQuests
-            .Select(x => x.MobId is int
-                ? x.ToViewModel(_monsterStore.Monsters.First(y => y.Id == x.MobId))
-                : x.ToViewModel())
-            .ToList();
+        var viewModels = new List<BossQuestViewModel>();
 
-        foreach (var bossQuestViewModel in bossQuestViewModels)
+        foreach (var quest in bossQuests)
         {
-            if (stateMap.TryGetValue(bossQuestViewModel.Name, out var state))
-            {
-                bossQuestViewModel.IsHidden = state.IsHidden;
+            stateMap.TryGetValue(quest.ObjectiveName, out var state);
+            var monsterModel = quest.MobId.HasValue ? _monsterStore.Monsters.First(x => x.Id == quest.MobId) : null;
 
-                if (state.LastCompletion is Instant instant)
-                {
-                    bossQuestViewModel.UpdateObjective();
-                    bossQuestViewModel.Objective.Recur(instant);
-                    bossQuestViewModel.UpdateObjective();
-                }
-            }
+            var viewModel = quest.ToViewModel(monsterModel, state);
+            viewModels.Add(viewModel);
         }
 
-        return new BossQuestTrackingViewModel(bossQuestViewModels, _scheduler, _completionService)
+        return new BossQuestTrackingViewModel(viewModels, _scheduler, _completionService)
         {
             Name = group.Name,
             DisplayName = group.Name
@@ -124,9 +114,9 @@ public class TrackerService
 
                 if (state.LastCompletion is Instant instant)
                 {
-                    scheduledQuestViewModel.UpdateObjective();
-                    scheduledQuestViewModel.Objective.Reset();
-                    scheduledQuestViewModel.UpdateObjective();
+                    //scheduledQuestViewModel.UpdateObjective();
+                    //scheduledQuestViewModel.Objective.Reset();
+                    //scheduledQuestViewModel.UpdateObjective();
                 }
             }
         }
