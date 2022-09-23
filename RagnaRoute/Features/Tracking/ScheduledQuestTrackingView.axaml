@@ -77,7 +77,7 @@
 								<Grid Grid.Row="1" Background="{StaticResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
 									<TextBlock HorizontalAlignment="Center">
 										<TextBlock.Text>
-											<MultiBinding Converter="{StaticResource TimeStateDurationToStringConverter}">
+											<MultiBinding Converter="{StaticResource ScheduledObjectiveToStringConverter}">
 												<Binding Path="TimeUntilStarting" />
 												<Binding Path="TimeUntilEnding" />
 												<Binding Path="TimeState" />

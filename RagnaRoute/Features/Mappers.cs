@@ -7,31 +7,23 @@ using RagnaRoute.Objectives;
 namespace RagnaRoute.ViewModels;
 public static class Mappers
 {
-    public static ScheduledQuestViewModel ToViewModel(this ScheduledQuestModel model)
+    public static ScheduledQuestViewModel ToViewModel(this ScheduledQuestModel model, ObjectiveStateDto? stateDto)
     {
-        //var zone = DateTimeZoneProviders.Tzdb.GetSystemDefault();
-        //var clock = SystemClock.Instance.InTzdbSystemDefaultZone();
-        //var localDate = clock.GetCurrentDate();
-        //var localTime = new LocalTime(4, 0);
-
-        //var zonedTime = new LocalDateTime(localDate.Year, localDate.Month, localDate.Day, localTime.Hour, localTime.Minute);
-
-        //var instant = zonedTime.InZoneLeniently(zone).ToInstant();
-        //var followup = Followup.OnDaily(localTime, Duration.FromSeconds(86399));
-
         var followup = new CronSchedule(model.Repeat, model.TimeZone, Duration.FromMinutes(model.Duration));
-        var objective = new ScheduledObjective(followup);
+        var objective = new ScheduledObjective(followup, stateDto?.LastCompletion, SystemClock.Instance);
 
-        return new ScheduledQuestViewModel(model.Name, objective)
+        return new ScheduledQuestViewModel(model.ObjectiveName, objective)
         {
             Description = model.Description,
-            Information = new(model.Information)
+            Information = new(model.Information),
+            IsHidden = stateDto?.IsHidden ?? false,
+            TimeState = objective.State
         };
     }
 
     public static BossQuestViewModel ToViewModel(this BossQuestModel model, MonsterModel? monsterModel, ObjectiveStateDto? stateDto)
     {
-        return new BossQuestViewModel(model.ObjectiveName, Duration.FromSeconds(model.MinimumRespawn), Duration.FromSeconds(model.MaximumRespawn), stateDto?.LastCompletion)
+        return new BossQuestViewModel(model.ObjectiveName, Duration.FromMinutes(model.MinimumRespawn), Duration.FromMinutes(model.MaximumRespawn), stateDto?.LastCompletion)
         {
             Id = model.MobId,
             HP = monsterModel?.HP,

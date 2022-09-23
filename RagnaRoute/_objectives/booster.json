@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Booster [1]",
+		"objectiveName": "Booster [1]",
 		"description": "Kill Fabre (10)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -10,7 +10,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [11]",
+		"objectiveName": "Booster [11]",
 		"description": "Kill Snake (10), Spore (10), and Wormtail (10)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -20,7 +20,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [20]",
+		"objectiveName": "Booster [20]",
 		"description": "Kill Poison Spore (20)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -30,7 +30,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [35]",
+		"objectiveName": "Booster [35]",
 		"description": "Kill Martin (30), Giearth (10), and Skeleton Worker (30)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -40,7 +40,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [50]",
+		"objectiveName": "Booster [50]",
 		"description": "Kill Swordfish (30), Merman (30), and Strouf (30)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -50,7 +50,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [65]",
+		"objectiveName": "Booster [65]",
 		"description": "Kill Munak (30), Bongun (30), and Sohee (40)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -60,7 +60,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [80]",
+		"objectiveName": "Booster [80]",
 		"description": "Kill Clock (20), Alarm (20), and Rideword (20)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -70,7 +70,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [85]",
+		"objectiveName": "Booster [85]",
 		"description": "Kill Permeter (20), Freezer (30), and Heater (30)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -80,7 +80,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [99]",
+		"objectiveName": "Booster [99]",
 		"description": "Kill [99-115] Monsters: Water/Medium/Formless (30) -> Sting and Anolian",
 		"type": "Schedule",
 		"notification": "silent",
@@ -90,7 +90,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [115]",
+		"objectiveName": "Booster [115]",
 		"description": "Kill [115-130] Monsters: Earth/Large/Demi-Human (30) -> Bungisngis",
 		"type": "Schedule",
 		"notification": "silent",
@@ -100,7 +100,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [130]",
+		"objectiveName": "Booster [130]",
 		"description": "Kill [130-145] Monsters: Dark/Small/Insect (30) -> Banshee and Horned Scaraba",
 		"type": "Schedule",
 		"notification": "silent",
@@ -110,7 +110,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [145]",
+		"objectiveName": "Booster [145]",
 		"description": "Kill [145-160] Monsters: Earth/Medium/Small (30) -> Big Ben and Neo Punk",
 		"type": "Schedule",
 		"notification": "silent",
@@ -120,7 +120,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [160]",
+		"objectiveName": "Booster [160]",
 		"description": "Kill Big Bell (60), Owl Viscount (1), Owl Marquis (1)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -130,7 +130,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [175]",
+		"objectiveName": "Booster [175]",
 		"description": "Kill Ice Ghost (20), Flame Ghost (20), Contaminated Raydric (20)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -140,7 +140,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [190]",
+		"objectiveName": "Booster [190]",
 		"description": "Kill White Porcellio (10), Abyssman (20), Jewel (10)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -150,7 +150,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [200]",
+		"objectiveName": "Booster [200]",
 		"description": "Kill Lude Gal (40)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -160,7 +160,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [215]",
+		"objectiveName": "Booster [215]",
 		"description": "Kill Mutant Chimera Amitera (40)",
 		"type": "Schedule",
 		"notification": "silent",
@@ -170,7 +170,7 @@
 		"duration": 1440
 	},
 	{
-		"name": "Booster [230]",
+		"objectiveName": "Booster [230]",
 		"description": "Kill Mutant Chimera Fulgor (40)",
 		"type": "Schedule",
 		"notification": "silent",

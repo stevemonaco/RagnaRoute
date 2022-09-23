@@ -13,6 +13,7 @@ using NodaTime;
 using RagnaRoute.Objectives;
 using RagnaRoute.ViewExtenders;
 using RagnaRoute.Services;
+using ReactiveUI;
 
 namespace RagnaRoute.ViewModels;
 public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
@@ -24,7 +25,7 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
     [ObservableProperty] private bool _shouldShowHidden;
     [ObservableProperty] private string _filterText = string.Empty;
 
-    private static readonly Func<TimeState, int> _timeStateSortingPriority2 = (TimeState state) => state switch
+    private static readonly Func<TimeState, int> _timeStateSortingPriority = (TimeState state) => state switch
     {
         TimeState.Active => 0,
         TimeState.MaybeActive => 1,
@@ -45,7 +46,7 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
             .Select(CreateTextFilter);
 
         var sorter = SortExpressionComparer<BossQuestViewModel>
-            .Ascending(x => _timeStateSortingPriority2(x.TimeState))
+            .Ascending(x => _timeStateSortingPriority(x.TimeState))
             .ThenByAscending(x => x.TimeUntilStarting)
             //.ThenByAscending(x => x.TimeSinceStarted ?? Duration.Zero)
             .ThenByAscending(x => x.Name);

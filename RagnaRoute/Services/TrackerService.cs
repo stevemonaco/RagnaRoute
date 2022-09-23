@@ -102,30 +102,20 @@ public class TrackerService
         if (scheduledQuests is null)
             return null;
 
-        var scheduledQuestViewModels = scheduledQuests
-            .Select(x => x.ToViewModel())
-            .ToList();
+        var viewModels = new List<ScheduledQuestViewModel>();
 
-        foreach (var scheduledQuestViewModel in scheduledQuestViewModels)
+        foreach (var quest in scheduledQuests)
         {
-            if (stateMap.TryGetValue(scheduledQuestViewModel.Name, out var state))
-            {
-                scheduledQuestViewModel.IsHidden = state.IsHidden;
+            stateMap.TryGetValue(quest.ObjectiveName, out var state);
 
-                if (state.LastCompletion is Instant instant)
-                {
-                    //scheduledQuestViewModel.UpdateObjective();
-                    //scheduledQuestViewModel.Objective.Reset();
-                    //scheduledQuestViewModel.UpdateObjective();
-                }
-            }
+            var viewModel = quest.ToViewModel(state);
+            viewModels.Add(viewModel);
         }
 
-        return new ScheduledQuestTrackingViewModel(_completionService)
+        return new ScheduledQuestTrackingViewModel(viewModels, _scheduler, _completionService)
         {
             Name = group.Name,
-            DisplayName = group.Name,
-            Quests = new(scheduledQuests.Select(x => x.ToViewModel()))
+            DisplayName = group.Name
         };
     }
 }

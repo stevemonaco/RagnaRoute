@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using Avalonia.Data.Converters;
 using Avalonia;
-using Avalonia.Data.Converters;
 using NodaTime;
 using RagnaRoute.Objectives;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace RagnaRoute.Converters;
-internal class TimeStateDurationToStringConverter : IMultiValueConverter
+internal class ScheduledObjectiveToStringConverter : IMultiValueConverter
 {
     public object? Convert(IList<object?> values, Type targetType, object? parameter, CultureInfo culture)
     {
@@ -20,7 +20,7 @@ internal class TimeStateDurationToStringConverter : IMultiValueConverter
             {
                 TimeState.AwaitingUpcoming when starting > Duration.Zero => $"{TimeHelpers.GetStringDuration(starting)} - {TimeHelpers.GetStringDuration(ending)}: Awaiting",
                 TimeState.AwaitingUpcoming when starting <= Duration.Zero => $"{TimeHelpers.GetStringDuration(ending)}: Awaiting",
-                TimeState.Active => $"Active",
+                TimeState.Active => $"{TimeHelpers.GetStringDuration(ending)} Remaining: Active",
                 TimeState.MaybeActive => $"{TimeHelpers.GetStringDuration(ending)}: MaybeActive",
                 TimeState.Inactive => "Inactive",
                 TimeState.Ended => $"{TimeHelpers.GetStringDuration(ending)}: Ended",

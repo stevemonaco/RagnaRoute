@@ -23,8 +23,8 @@ public class CooldownObjective : ITimedObjective
 
     public bool IsInCooldown { get; protected set; }
 
-    private IClock _clock;
-    private IFollowup _followup;
+    private readonly IClock _clock;
+    private readonly IFollowup _followup;
     private readonly Duration _cooldownMinimum;
     private readonly Duration _cooldownMaximum;
 

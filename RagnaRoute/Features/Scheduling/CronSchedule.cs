@@ -27,7 +27,7 @@ public class CronSchedule : IScheduleIterable
 
     public Interval? Next(Instant instant)
     {
-        var nextStart = _cronExpression.GetNextOccurrence(DateTimeOffset.UtcNow, _zone, true);
+        var nextStart = _cronExpression.GetNextOccurrence(instant.ToDateTimeOffset(), _zone, true);
 
         if (nextStart is not null)
         {
