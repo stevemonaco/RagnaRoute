@@ -11,9 +11,17 @@
     <Application.Styles>
 		<!--<FluentTheme Mode="Dark"/>-->
 		<sty:FluentAvaloniaTheme />
+		<StyleInclude Source="avares://RagnaRoute/Styles/GlobalStyles.axaml" />
     </Application.Styles>
 
 	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="avares://RagnaRoute/Styles/TimeStateColors.axaml" />
+				<ResourceInclude Source="avares://RagnaRoute/Styles/Icons.axaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+		
 		<con:CooldownObjectiveToStringConverter x:Key="CooldownObjectiveToStringConverter" />
 		<con:ScheduledObjectiveToStringConverter x:Key="ScheduledObjectiveToStringConverter" />
 	</Application.Resources>

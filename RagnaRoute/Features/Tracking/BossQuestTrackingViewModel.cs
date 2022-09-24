@@ -89,6 +89,7 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
     {
         if (viewModel.Objective.Complete() && viewModel.Objective.LastCompletion is Instant instant)
         {
+            viewModel.UpdateObjective();
             await _completionService.AddCompletion(Name, viewModel.Name, instant);
         }
     }

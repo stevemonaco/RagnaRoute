@@ -1,14 +1,6 @@
-﻿using System;
-using NodaTime;
-using RagnaRoute.Objectives;
-using NodaTime.Extensions;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NodaTime;
 using RagnaRoute.Scheduling;
 using RagnaRoute.Objectives.Extensions;
-using System.Reflection.Metadata.Ecma335;
 
 namespace RagnaRoute.Objectives;
 
@@ -27,6 +19,7 @@ public class CooldownObjective : ITimedObjective
     private readonly IFollowup _followup;
     private readonly Duration _cooldownMinimum;
     private readonly Duration _cooldownMaximum;
+    private const double _inactiveFactor = 3;
 
     public CooldownObjective(Duration cooldownMinimum, Duration cooldownMaximum, Instant? lastCompletion = null, IClock? clock = null)
     {
@@ -67,7 +60,7 @@ public class CooldownObjective : ITimedObjective
         }
         else if (current.IsAfter(priorNext))
         {
-            if (HasExceededSpawnDuration(current))
+            if (HasFarExceededCooldownDuration(current))
             {
                 State = TimeState.Inactive;
                 PriorResult = ObjectiveResult.Missed;
@@ -108,7 +101,7 @@ public class CooldownObjective : ITimedObjective
 
             State = TimeState.Active;
         }
-        else if (State == TimeState.Active && HasExceededSpawnDuration(current)) // current.IsAfter(Current))
+        else if (State == TimeState.Active && HasFarExceededCooldownDuration(current))
         {
             Upcoming = _followup.Next(current);
             PriorResult = ObjectiveResult.Missed;
@@ -142,14 +135,14 @@ public class CooldownObjective : ITimedObjective
         return true;
     }
 
-    private bool HasExceededSpawnDuration(Instant current)
+    private bool HasFarExceededCooldownDuration(Instant current)
     {
         if (Prior?.HasEnd is true)
         {
-            int timeFactor = 2;
+            
             var delta = current - Prior.Value.End;
 
-            return delta > _cooldownMaximum * timeFactor;
+            return delta > _cooldownMaximum * _inactiveFactor;
         }
 
         return false;

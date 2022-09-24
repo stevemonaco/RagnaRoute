@@ -48,31 +48,30 @@
 					<DataTemplate DataType="{x:Type vm:ScheduledQuestViewModel}">
 						<Border CornerRadius="10, 10, 6, 6" Background="Transparent" BorderThickness="2" BorderBrush="Black">
 							<i:Interaction.Behaviors>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="Transparent" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#37946e" />
-								</ia:DataTriggerBehavior>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#df6626" />
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource ActiveStateColor}" />
 								</ia:DataTriggerBehavior>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#ac3232" />
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource MaybeActiveStateColor}" />
 								</ia:DataTriggerBehavior>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#ac3232" />
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource AwaitingUpcomingStateColor}" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource InactiveStateColor}" />
 								</ia:DataTriggerBehavior>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#5b6ee1" />
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource EndedStateColor}" />
 								</ia:DataTriggerBehavior>
 							</i:Interaction.Behaviors>
 
-							<Grid RowDefinitions="auto,auto" ToolTip.Tip="{Binding Description}">
-								<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+							<Grid RowDefinitions="auto,auto">
+								<!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" ToolTip.Tip="{Binding Description}">
 									<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" />
-									<ui:FontIcon Margin="4,0,0,0" FontSize="24" FontWeight="Bold" FontFamily="Segoe MDL2 Assets" ToolTip.Tip="{Binding Description}" Glyph="&#xF142;" Foreground="Green" VerticalAlignment="Center" />
-								</StackPanel>
+								</StackPanel>-->
+								<Grid ToolTip.Tip="{Binding Description}" Background="Transparent">
+									<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+								</Grid>
 
 								<Grid Grid.Row="1" Background="{StaticResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
 									<TextBlock HorizontalAlignment="Center">

@@ -15,11 +15,20 @@
 	<Grid RowDefinitions="auto,*">
 		<StackPanel Margin="10" Orientation="Horizontal">
 			<TextBox MinWidth="200" Text="{Binding FilterText}" />
-			<ToggleButton Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden}" ToolTip.Tip="Show Hidden Entries">
-				<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7B3;"/>
+			<ToggleButton x:Name="globalHide" Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries">
+				<ui:PathIcon>
+					<i:Interaction.Behaviors>
+						<ia:DataTriggerBehavior Binding="{ReflectionBinding #globalHide.IsChecked, Mode=TwoWay}" Value="True">
+							<ia:ChangePropertyAction PropertyName="Data" Value="{StaticResource iconEyeOff}" />
+						</ia:DataTriggerBehavior>
+						<ia:DataTriggerBehavior Binding="{ReflectionBinding #globalHide.IsChecked, Mode=TwoWay}" Value="False">
+							<ia:ChangePropertyAction PropertyName="Data" Value="{StaticResource iconEye}" />
+						</ia:DataTriggerBehavior>
+					</i:Interaction.Behaviors>
+				</ui:PathIcon>
 			</ToggleButton>
 		</StackPanel>
-		
+
 		<ScrollViewer Grid.Row="1">
 			<ItemsRepeater x:Name="items" Items="{Binding Bosses}">
 				<ItemsRepeater.Layout>
@@ -29,49 +38,62 @@
 					<DataTemplate DataType="{x:Type vm:BossQuestViewModel}">
 						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="12, 12, 4, 4">
 							<i:Interaction.Behaviors>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="Transparent" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#37946e" />
-								</ia:DataTriggerBehavior>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#df6626" />
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource ActiveStateColor}" />
 								</ia:DataTriggerBehavior>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#ac3232" />
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource MaybeActiveStateColor}" />
 								</ia:DataTriggerBehavior>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#ac3232" />
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource AwaitingUpcomingStateColor}" />
+								</ia:DataTriggerBehavior>
+								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource InactiveStateColor}" />
 								</ia:DataTriggerBehavior>
 								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="#5b6ee1" />
+									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource EndedStateColor}" />
 								</ia:DataTriggerBehavior>
 							</i:Interaction.Behaviors>
-							
+
 							<Grid RowDefinitions="auto,auto">
-								<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" />
+								<TextBlock Margin="0,4,0,4" Text="{Binding Name}" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
 								<Grid Grid.Row="1" Background="{StaticResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
-									<TextBlock HorizontalAlignment="Center">
+									<TextBlock Margin="0,4,0,4" HorizontalAlignment="Center">
 										<TextBlock.Text>
 											<MultiBinding Converter="{StaticResource CooldownObjectiveToStringConverter}">
 												<Binding Path="TimeUntilStarting" />
 												<Binding Path="TimeUntilEnding" />
+												<Binding Path="TimeSinceStarted" />
 												<Binding Path="TimeState" />
 											</MultiBinding>
 										</TextBlock.Text>
 									</TextBlock>
 
-									<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+									<StackPanel Grid.Row="1" Margin="0,0,0,8" Spacing="8" Orientation="Horizontal" HorizontalAlignment="Center">
 										<Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
-											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
+											<ui:PathIcon Data="{StaticResource iconClipboardCopy}" />
 										</Button>
-										<Button Margin="8,0,0,0" Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" Content="Reset">
-											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
+										<Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
+											<ui:PathIcon Data="{StaticResource iconSkull}" RenderTransform="scale(-1)" />
 										</Button>
-										<ToggleButton Margin="8,0,0,0" IsChecked="{Binding IsHidden, Mode=OneWay}" Command="{ReflectionBinding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" ToolTip.Tip="Hide">
-											<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7B3;"/>
+										<ToggleButton IsChecked="{Binding IsHidden, Mode=OneWay}" Command="{ReflectionBinding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" ToolTip.Tip="Hide">
+											<i:Interaction.Behaviors>
+												<ia:DataTriggerBehavior Binding="{ReflectionBinding $self.IsChecked}" Value="True">
+													<ia:ChangePropertyAction PropertyName="Content">
+														<ia:ChangePropertyAction.Value>
+															<ui:PathIcon Data="{StaticResource iconEyeOff}" />
+														</ia:ChangePropertyAction.Value>
+													</ia:ChangePropertyAction>
+												</ia:DataTriggerBehavior>
+												<ia:DataTriggerBehavior Binding="{ReflectionBinding $self.IsChecked}" Value="False">
+													<ia:ChangePropertyAction PropertyName="Content">
+														<ia:ChangePropertyAction.Value>
+															<ui:PathIcon Data="{StaticResource iconEye}" />
+														</ia:ChangePropertyAction.Value>
+													</ia:ChangePropertyAction>
+												</ia:DataTriggerBehavior>
+											</i:Interaction.Behaviors>
 										</ToggleButton>
 									</StackPanel>
 								</Grid>

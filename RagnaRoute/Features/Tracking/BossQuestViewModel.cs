@@ -17,7 +17,7 @@ public partial class BossQuestViewModel : ViewModelBase, INavigationChild
 
     [ObservableProperty] private Duration _timeUntilStarting;
     [ObservableProperty] private Duration _timeUntilEnding;
-    [ObservableProperty] private Duration? _timeSinceStarted;
+    [ObservableProperty] private Duration _timeSinceStarted;
     [ObservableProperty] private TimeState _timeState;
     [ObservableProperty] private bool _isHidden;
 
