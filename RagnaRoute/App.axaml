@@ -9,7 +9,6 @@
     </Application.DataTemplates>
 
     <Application.Styles>
-		<!--<FluentTheme Mode="Dark"/>-->
 		<sty:FluentAvaloniaTheme />
 		<StyleInclude Source="avares://RagnaRoute/Styles/GlobalStyles.axaml" />
     </Application.Styles>

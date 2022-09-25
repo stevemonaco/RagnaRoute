@@ -35,7 +35,9 @@
 	
 	<Grid Name="grid">
 		<Popup Name="popup" IsOpen="False" PlacementMode="Bottom">
-			<TextBlock Background="Orange" Text="Text copied!" Opacity="{Binding #popup.Opacity}" />
+			<Border BorderBrush="Black" BorderThickness="1">
+				<TextBlock Background="Orange" Text="Text copied!" Opacity="{Binding #popup.Opacity}" />
+			</Border>
 		</Popup>
 		
 		<ScrollViewer HorizontalScrollBarVisibility="Disabled">
@@ -90,14 +92,14 @@
 												<DataTemplate>
 													<Button Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
 														<Button.Content>
-															<ui:PathIcon Data="{StaticResource iconClipboardCopy}" />
+															<ui:FAPathIcon Data="{StaticResource iconClipboardCopy}" />
 														</Button.Content>
 													</Button>
 												</DataTemplate>
 											</ItemsRepeater.ItemTemplate>
 										</ItemsRepeater>
 										<Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}">
-											<ui:PathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
+											<ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
 										</Button>
 									</StackPanel>
 								</Grid>

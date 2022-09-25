@@ -18,21 +18,21 @@
 			<DataTemplate x:Key="{x:Type vm:BossQuestTrackingViewModel}" DataType="vm:BossQuestTrackingViewModel">
 				<ui:NavigationViewItem Content="{Binding DisplayName}">
 					<ui:NavigationViewItem.Icon>
-						<ui:PathIcon Data="{StaticResource iconBossTracker}" RenderTransform="scaley(-1)"/>
+						<ui:FAPathIcon Data="{StaticResource iconBossTracker}" RenderTransform="scaley(-1)"/>
 					</ui:NavigationViewItem.Icon>
 				</ui:NavigationViewItem>
 			</DataTemplate>
 			<DataTemplate x:Key="{x:Type vm:ScheduledQuestTrackingViewModel}" DataType="vm:ScheduledQuestTrackingViewModel">
 				<ui:NavigationViewItem Content="{Binding DisplayName}">
 					<ui:NavigationViewItem.Icon>
-						<ui:PathIcon Data="{StaticResource iconScheduledTracker}" RenderTransform="scaley(-1)"/>
+						<ui:FAPathIcon Data="{StaticResource iconScheduledTracker}" RenderTransform="scaley(-1)"/>
 					</ui:NavigationViewItem.Icon>
 				</ui:NavigationViewItem>
 			</DataTemplate>
 			<DataTemplate x:Key="{x:Type vm:QuestHistoryViewModel}" DataType="vm:QuestHistoryViewModel">
 				<ui:NavigationViewItem Content="{Binding DisplayName}">
 					<ui:NavigationViewItem.Icon>
-						<ui:PathIcon Data="{StaticResource iconHistory}" RenderTransform="scaley(-1)"/>
+						<ui:FAPathIcon Data="{StaticResource iconHistory}" RenderTransform="scaley(-1)"/>
 					</ui:NavigationViewItem.Icon>
 				</ui:NavigationViewItem>
 			</DataTemplate>
