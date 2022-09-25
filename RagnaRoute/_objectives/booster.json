@@ -44,7 +44,7 @@
 		"description": "Kill Swordfish (30), Merman (30), and Strouf (30)",
 		"type": "Schedule",
 		"notification": "silent",
-		"information": [ "@warp iz_dun03", "@warp iz_dun03" ],
+		"information": [ "@warp iz_dun03", "@warp iz_dun04" ],
 		"timeZone": "Etc/GMT+8",
 		"repeat": "@daily",
 		"duration": 1440
@@ -54,7 +54,7 @@
 		"description": "Kill Munak (30), Bongun (30), and Sohee (40)",
 		"type": "Schedule",
 		"notification": "silent",
-		"information": [ "" ],
+		"information": [ "@warp pay_dun02", "@warp pay_dun03" ],
 		"timeZone": "Etc/GMT+8",
 		"repeat": "@daily",
 		"duration": 1440
@@ -64,7 +64,7 @@
 		"description": "Kill Clock (20), Alarm (20), and Rideword (20)",
 		"type": "Schedule",
 		"notification": "silent",
-		"information": [ "" ],
+		"information": [ "@warp c_tower2", "@warp c_tower3", "@warp c_tower3" ],
 		"timeZone": "Etc/GMT+8",
 		"repeat": "@daily",
 		"duration": 1440
