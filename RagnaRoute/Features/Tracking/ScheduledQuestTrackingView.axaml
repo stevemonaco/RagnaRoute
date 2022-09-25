@@ -17,12 +17,9 @@
 			<Style.Animations>
 				<Animation Duration="0:0:2">
 					<KeyFrame Cue="0%">
-						<Setter Property="Opacity" Value="0.0" />
-					</KeyFrame>
-					<KeyFrame Cue="10%">
 						<Setter Property="Opacity" Value="1.0" />
 					</KeyFrame>
-					<KeyFrame Cue="90%">
+					<KeyFrame Cue="75%">
 						<Setter Property="Opacity" Value="1.0" />
 					</KeyFrame>
 					<KeyFrame Cue="100%">
@@ -33,8 +30,8 @@
 		</Style>
 	</UserControl.Styles>
 	
-	<Grid Name="grid">
-		<Popup Name="popup" IsOpen="False" PlacementMode="Bottom">
+	<Grid x:Name="grid">
+		<Popup x:Name="popup" IsOpen="False" PlacementMode="Bottom">
 			<Border BorderBrush="Black" BorderThickness="1">
 				<TextBlock Background="Orange" Text="Text copied!" Opacity="{Binding #popup.Opacity}" />
 			</Border>

@@ -1,31 +1,19 @@
-using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
-using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
-using RagnaRoute.Services;
-using System.Threading;
 using System.Threading.Tasks;
+using Avalonia.Controls;
+using Avalonia.Interactivity;
+using RagnaRoute.Services;
 
 namespace RagnaRoute.Views;
 public partial class ScheduledQuestTrackingView : UserControl
 {
     private readonly IClipboardService _clipboardService;
-    private readonly Grid _grid;
-    private readonly Popup _popup;
-    private CancellationTokenSource _popupCts;
+    //private CancellationTokenSource _popupCts;
 
     public ScheduledQuestTrackingView()
     {
         _clipboardService = new ClipboardService();
 
         InitializeComponent();
-        _grid = this.FindControl<Grid>("grid");
-        _popup = this.FindControl<Popup>("popup");
-    }
-
-    private void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
     }
 
     private async void InfoButton_Clicked(object sender, RoutedEventArgs e)
@@ -36,12 +24,12 @@ public partial class ScheduledQuestTrackingView : UserControl
 
             if (result is true)
             {
-                _popup.PlacementTarget = (Button)sender;
-                _popup.IsOpen = true;
+                popup.PlacementTarget = (Button)sender;
+                popup.IsOpen = true;
 
                 await Task.Delay(2000);
-                _popup.IsOpen = false;
-                _popup.PlacementTarget = null;
+                popup.IsOpen = false;
+                popup.PlacementTarget = null;
             }
         }
     }

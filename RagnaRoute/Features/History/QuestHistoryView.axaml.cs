@@ -13,11 +13,6 @@ public partial class QuestHistoryView : UserControl
         InitializeComponent();
     }
 
-    private void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
-    }
-
     //protected async override void OnDataContextChanged(EventArgs e)
     //{
     //    base.OnDataContextChanged(e);

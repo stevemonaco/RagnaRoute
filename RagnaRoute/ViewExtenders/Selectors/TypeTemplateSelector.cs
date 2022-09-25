@@ -11,15 +11,22 @@ internal class TypeTemplateSelector : IDataTemplate
     [Content]
     public Dictionary<Type, IDataTemplate> Templates { get; } = new();
 
-    public IControl Build(object param)
+    public IControl Build(object? param)
     {
         if (param is Type key)
-            return Templates[key].Build(param);
+        {
+            var control = Templates[key].Build(param);
+            if (control is not null)
+                return control;
+            else
+                return new TextBlock { Text = $"Template not found: {key.FullName}" };
+
+        }
         else
             throw new ArgumentException(nameof(param));
     }
 
-    public bool Match(object data)
+    public bool Match(object? data)
     {
         return data is INavigationChild;
     }

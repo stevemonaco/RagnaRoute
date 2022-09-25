@@ -16,11 +16,6 @@ public partial class BossQuestTrackingView : UserControl
         _clipboardService = new ClipboardService();
     }
 
-    private void InitializeComponent()
-    {
-        AvaloniaXamlLoader.Load(this);
-    }
-
     private async void WarpLocation_Clicked(object sender, RoutedEventArgs e)
     {
         if (sender is Button button && button.DataContext is BossQuestViewModel vm && vm.WarpLocation is string location)

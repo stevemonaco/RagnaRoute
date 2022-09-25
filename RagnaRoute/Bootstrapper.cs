@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using RagnaRoute.Data;
 using RagnaRoute.Services;
 using RagnaRoute.ViewExtenders;
 using RagnaRoute.ViewModels;
-using Serilog;
 
 namespace RagnaRoute;
 public interface IAppBootstrapper<TViewModel> where TViewModel : class
@@ -25,7 +25,7 @@ public interface IAppBootstrapper<TViewModel> where TViewModel : class
 
 public class Bootstrapper : IAppBootstrapper<ShellViewModel>
 {
-    private LoggerFactory _loggerFactory;
+    private LoggerFactory? _loggerFactory;
 
     private const string _logFileName = @"log.txt";
     private const string _monsterDataFileName = @"_data/mob.csv";

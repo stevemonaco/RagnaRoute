@@ -1,10 +1,10 @@
-﻿using Avalonia.Data.Converters;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Avalonia.Data.Converters;
 using Avalonia;
 using NodaTime;
 using RagnaRoute.Objectives;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
 
 namespace RagnaRoute.Converters;
 internal class ScheduledObjectiveToStringConverter : IMultiValueConverter
