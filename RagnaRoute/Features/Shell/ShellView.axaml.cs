@@ -12,9 +12,7 @@ public partial class ShellView : Window
     public ShellView()
     {
         InitializeComponent();
-
         _objectiveTimer = new DispatcherTimer(TimeSpan.FromSeconds(1), DispatcherPriority.Normal, ObjectiveTimer_Tick);
-        _objectiveTimer.Start();
     }
 
     protected override async void OnDataContextChanged(EventArgs e)
@@ -24,6 +22,7 @@ public partial class ShellView : Window
         if (_viewModel is not null)
             await _viewModel.InitializeTrackers();
 
+        _objectiveTimer.Start();
         base.OnDataContextChanged(e);
     }
 

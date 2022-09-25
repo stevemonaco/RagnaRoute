@@ -50,7 +50,6 @@ public partial class ScheduledQuestTrackingViewModel : TrackingGroupViewModel
         var sorter = SortExpressionComparer<ScheduledQuestViewModel>
             .Ascending(x => _timeStateSortingPriority(x.TimeState))
             .ThenByAscending(x => x.TimeUntilStarting)
-            //.ThenByAscending(x => x.TimeSinceStarted ?? Duration.Zero)
             .ThenBy(x => x.Name, StringComparison.OrdinalIgnoreCase.WithNaturalSort());
 
         QuestSource = new();

@@ -17,7 +17,7 @@
 	<Application.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
-				<ResourceInclude Source="avares://RagnaRoute/Styles/TimeStateColors.axaml" />
+				<ResourceInclude Source="avares://RagnaRoute/Styles/GlobalResources.axaml" />
 				<ResourceInclude Source="avares://RagnaRoute/Styles/Icons.axaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>

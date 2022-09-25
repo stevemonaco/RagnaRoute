@@ -16,16 +16,7 @@
 		<StackPanel Margin="10" Orientation="Horizontal">
 			<TextBox MinWidth="200" Text="{Binding FilterText}" />
 			<ToggleButton x:Name="globalHide" Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries">
-				<ui:PathIcon>
-					<i:Interaction.Behaviors>
-						<ia:DataTriggerBehavior Binding="{ReflectionBinding #globalHide.IsChecked, Mode=TwoWay}" Value="True">
-							<ia:ChangePropertyAction PropertyName="Data" Value="{StaticResource iconEyeOff}" />
-						</ia:DataTriggerBehavior>
-						<ia:DataTriggerBehavior Binding="{ReflectionBinding #globalHide.IsChecked, Mode=TwoWay}" Value="False">
-							<ia:ChangePropertyAction PropertyName="Data" Value="{StaticResource iconEye}" />
-						</ia:DataTriggerBehavior>
-					</i:Interaction.Behaviors>
-				</ui:PathIcon>
+				<ui:PathIcon Data="{StaticResource iconEye}" />
 			</ToggleButton>
 		</StackPanel>
 
@@ -75,7 +66,7 @@
 											<ui:PathIcon Data="{StaticResource iconClipboardCopy}" />
 										</Button>
 										<Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
-											<ui:PathIcon Data="{StaticResource iconSkull}" RenderTransform="scale(-1)" />
+											<ui:PathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
 										</Button>
 										<ToggleButton IsChecked="{Binding IsHidden, Mode=OneWay}" Command="{ReflectionBinding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" ToolTip.Tip="Hide">
 											<i:Interaction.Behaviors>

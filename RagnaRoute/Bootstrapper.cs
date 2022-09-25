@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
@@ -7,9 +11,6 @@ using RagnaRoute.Services;
 using RagnaRoute.ViewExtenders;
 using RagnaRoute.ViewModels;
 using Serilog;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace RagnaRoute;
 public interface IAppBootstrapper<TViewModel> where TViewModel : class
@@ -87,35 +88,23 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
         return factory;
     }
 
-    public void EnsureDatabaseAvailable(ServiceProvider provider)
+    public async Task EnsureDatabaseAvailable(ServiceProvider provider)
     {
+        var stop = new Stopwatch();
+        stop.Start();
+
         using var context = provider.GetService<RagnaContext>()!;
 
-        //context.Database.EnsureDeleted();
-        context.Database.EnsureCreated();
+        //await context.Database.EnsureDeletedAsync().ConfigureAwait(false);
+        await context.Database.EnsureCreatedAsync().ConfigureAwait(false);
+        //await context.Database.MigrateAsync().ConfigureAwait(false);
     }
 
     public async Task<bool> LoadConfigurations(IServiceProvider provider)
     {
         var questHistory = provider.GetService<QuestHistoryViewModel>()!;
-        await questHistory.InitializeProfiles();
-
-        //var monsterStore = await MonsterStore.LoadMonstersFromCsvAsync(@"Assets/mob.csv");
-        //services.AddSingleton(monsterStore);
+        await questHistory.InitializeProfiles().ConfigureAwait(false);
 
         return true;
     }
-
-    //protected override void OnUnhandledException(DispatcherUnhandledExceptionEventArgs e)
-    //{
-    //    base.OnUnhandledException(e);
-
-    //    Log.Error(e.Exception, "Unhandled exception");
-
-    //    if (!_isStarting)
-    //    {
-    //        _container?.Resolve<IWindowManager>()?.ShowMessageBox($"{e.Exception.Message}", "Unhandled Exception", MessageBoxButton.OK, MessageBoxImage.Error);
-    //        e.Handled = true;
-    //    }
-    //}
 }

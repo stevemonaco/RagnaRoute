@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:ui="using:FluentAvalonia.UI.Controls"
 		xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+		xmlns:ve="using:RagnaRoute.ViewExtenders"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RagnaRoute.Views.ShellView"
         Icon="/Assets/avalonia-logo.ico"
@@ -12,6 +13,32 @@
 		x:DataType="vm:ShellViewModel"
 		UseLayoutRounding="True"
         Title="RagnaRoute">
+	<Window.Resources>
+		<ve:MenuTemplateSelector x:Key="menuTemplateSelector">
+			<DataTemplate x:Key="{x:Type vm:BossQuestTrackingViewModel}" DataType="vm:BossQuestTrackingViewModel">
+				<ui:NavigationViewItem Content="{Binding DisplayName}">
+					<ui:NavigationViewItem.Icon>
+						<ui:PathIcon Data="{StaticResource iconBossTracker}" RenderTransform="scaley(-1)"/>
+					</ui:NavigationViewItem.Icon>
+				</ui:NavigationViewItem>
+			</DataTemplate>
+			<DataTemplate x:Key="{x:Type vm:ScheduledQuestTrackingViewModel}" DataType="vm:ScheduledQuestTrackingViewModel">
+				<ui:NavigationViewItem Content="{Binding DisplayName}">
+					<ui:NavigationViewItem.Icon>
+						<ui:PathIcon Data="{StaticResource iconScheduledTracker}" RenderTransform="scaley(-1)"/>
+					</ui:NavigationViewItem.Icon>
+				</ui:NavigationViewItem>
+			</DataTemplate>
+			<DataTemplate x:Key="{x:Type vm:QuestHistoryViewModel}" DataType="vm:QuestHistoryViewModel">
+				<ui:NavigationViewItem Content="{Binding DisplayName}">
+					<ui:NavigationViewItem.Icon>
+						<ui:PathIcon Data="{StaticResource iconHistory}" RenderTransform="scaley(-1)"/>
+					</ui:NavigationViewItem.Icon>
+				</ui:NavigationViewItem>
+			</DataTemplate>
+		</ve:MenuTemplateSelector>
+	</Window.Resources>
+	
 	<Grid RowDefinitions="auto, *">			
 		<Grid ColumnDefinitions="auto, *" Margin="10,5,10,10">
 			<TextBlock Text="RagnaRoute" />
@@ -21,17 +48,7 @@
 			</StackPanel>
 		</Grid>
 			
-		<ui:NavigationView x:Name="nav" Grid.Row="1" SelectedItem="{Binding SelectedMenuItem}" PaneDisplayMode="Auto" MenuItems="{Binding MenuItems}" IsSettingsVisible="False">
-			<ui:NavigationView.MenuItemTemplate>
-				<DataTemplate DataType="{x:Type vm:INavigationChild}">
-					<ui:NavigationViewItem Content="{Binding DisplayName}">
-						<ui:NavigationViewItem.Icon>
-							<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEC4F;"/>
-						</ui:NavigationViewItem.Icon>
-					</ui:NavigationViewItem>
-				</DataTemplate>
-			</ui:NavigationView.MenuItemTemplate>
-
+		<ui:NavigationView x:Name="nav" Grid.Row="1" SelectedItem="{Binding SelectedMenuItem}" PaneDisplayMode="Auto" MenuItems="{Binding MenuItems}" MenuItemTemplateSelector="{StaticResource menuTemplateSelector}" IsSettingsVisible="False">
 			<ui:NavigationView.Content>
 				<ContentControl Content="{Binding #nav.SelectedItem}" />
 			</ui:NavigationView.Content>

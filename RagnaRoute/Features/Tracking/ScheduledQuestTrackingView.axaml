@@ -66,9 +66,6 @@
 							</i:Interaction.Behaviors>
 
 							<Grid RowDefinitions="auto,auto">
-								<!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" ToolTip.Tip="{Binding Description}">
-									<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" />
-								</StackPanel>-->
 								<Grid ToolTip.Tip="{Binding Description}" Background="Transparent">
 									<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
 								</Grid>
@@ -84,7 +81,7 @@
 										</TextBlock.Text>
 									</TextBlock>
 
-									<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+									<StackPanel Grid.Row="1" Spacing="8" Orientation="Horizontal" HorizontalAlignment="Center">
 										<ItemsRepeater Items="{Binding Information}">
 											<ItemsRepeater.Layout>
 												<StackLayout Orientation="Horizontal" Spacing="8" />
@@ -93,13 +90,15 @@
 												<DataTemplate>
 													<Button Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
 														<Button.Content>
-															<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xF0E3;"/>
+															<ui:PathIcon Data="{StaticResource iconClipboardCopy}" />
 														</Button.Content>
 													</Button>
 												</DataTemplate>
 											</ItemsRepeater.ItemTemplate>
 										</ItemsRepeater>
-										<Button HorizontalAlignment="Right" Margin="8,0,0,0" Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" Content="Complete" />
+										<Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}">
+											<ui:PathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
+										</Button>
 									</StackPanel>
 								</Grid>
 							</Grid>

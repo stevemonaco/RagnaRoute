@@ -3,7 +3,6 @@ using RagnaRoute.Scheduling;
 using RagnaRoute.Objectives.Extensions;
 
 namespace RagnaRoute.Objectives;
-
 public class CooldownObjective : ITimedObjective
 {
     public Interval? Prior { get; protected set; }
@@ -12,14 +11,12 @@ public class CooldownObjective : ITimedObjective
     public TimeState State { get; protected set; }
     public Instant? LastCompletion { get; protected set; }
     public ObjectiveResult? PriorResult { get; protected set; }
-
-    public bool IsInCooldown { get; protected set; }
+    public double? InactiveFactor { get; set; } = 3;
 
     private readonly IClock _clock;
     private readonly IFollowup _followup;
     private readonly Duration _cooldownMinimum;
     private readonly Duration _cooldownMaximum;
-    private const double _inactiveFactor = 3;
 
     public CooldownObjective(Duration cooldownMinimum, Duration cooldownMaximum, Instant? lastCompletion = null, IClock? clock = null)
     {
@@ -126,6 +123,7 @@ public class CooldownObjective : ITimedObjective
         Ongoing = null;
         Upcoming = _followup.Next(current);
         PriorResult = ObjectiveResult.Completed;
+        LastCompletion = current;
 
         if (Upcoming is null)
             State = TimeState.Ended;
@@ -137,12 +135,10 @@ public class CooldownObjective : ITimedObjective
 
     private bool HasFarExceededCooldownDuration(Instant current)
     {
-        if (Prior?.HasEnd is true)
+        if (Prior?.HasEnd is true && InactiveFactor.HasValue)
         {
-            
             var delta = current - Prior.Value.End;
-
-            return delta > _cooldownMaximum * _inactiveFactor;
+            return delta > _cooldownMaximum * InactiveFactor.Value;
         }
 
         return false;

@@ -1,10 +1,12 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:sys="using:System">
+	<sys:Double x:Key="NavigationViewItemOnLeftIconBoxHeight">24</sys:Double>
+	
+	<!-- TimeState Colors -->
 	<Color x:Key="ActiveStateColor">#227653</Color>
 	<Color x:Key="MaybeActiveStateColor">#39B884</Color>
 	<Color x:Key="AwaitingUpcomingStateColor">#DF6626</Color>
 	<Color x:Key="InactiveStateColor">Transparent</Color>
 	<Color x:Key="EndedStateColor">#ac3232</Color>
-
-	<!--#df6626 #5b6ee1 #ac3232 #37946e #39B8A4-->
 </ResourceDictionary>

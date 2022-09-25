@@ -5,8 +5,8 @@ using System.Reactive.Disposables;
 namespace RagnaRoute.ViewModels;
 public abstract partial class TrackingGroupViewModel : ViewModelBase, INavigationChild, IDisposable
 {
-    [ObservableProperty] private string _name;
-    [ObservableProperty] private string _displayName;
+    [ObservableProperty] private string _name = null!;
+    [ObservableProperty] private string _displayName = null!;
 
     protected CompositeDisposable _cleanup = new();
     private bool _disposedValue;

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-using NodaTime;
 using RagnaRoute.ViewExtenders;
 using RagnaRoute.Data;
 using RagnaRoute.ViewModels;
@@ -79,6 +78,7 @@ public class TrackerService
         foreach (var quest in bossQuests)
         {
             stateMap.TryGetValue(quest.ObjectiveName, out var state);
+
             var monsterModel = quest.MobId.HasValue ? _monsterStore.Monsters.First(x => x.Id == quest.MobId) : null;
 
             var viewModel = quest.ToViewModel(monsterModel, state);

@@ -9,7 +9,7 @@ public partial class TrackerProfileViewModel : ViewModelBase
 
     public ObservableCollection<TrackingGroupViewModel> TrackingGroups { get; } = new();
     [ObservableProperty] private TrackingGroupViewModel? _selectedTracker;
-    [ObservableProperty] private string _trackerTime;
+    [ObservableProperty] private string _trackerTime = string.Empty;
 
     private DateTimeZone? _timeZone;
     private ZonedClock? _clock;

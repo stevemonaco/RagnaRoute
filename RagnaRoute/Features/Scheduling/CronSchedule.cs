@@ -61,6 +61,9 @@ public class CronSchedule : IScheduleIterable
         {
             nextVisitor = Next(previousNext.Value.Start + Duration.FromSeconds(1));
 
+            if (nextVisitor is null)
+                throw new ArgumentOutOfRangeException("Scheduler ran out of future objectives before finding a prior interval");
+
             if (nextVisitor.Value.Start == currentNext.Value.Start)
                 return new Interval(previousNext.Value.Start, previousNext.Value.Start + _duration);
 

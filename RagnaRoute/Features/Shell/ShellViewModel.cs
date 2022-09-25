@@ -1,9 +1,8 @@
-using System.Threading.Tasks;
-using RagnaRoute.Data;
-using RagnaRoute.Services;
-using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
+using RagnaRoute.Services;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RagnaRoute.ViewModels;
 public partial class ShellViewModel : ViewModelBase
@@ -12,16 +11,14 @@ public partial class ShellViewModel : ViewModelBase
 
     [ObservableProperty] private TrackerProfileViewModel? _trackerProfile;
 
-    [ObservableProperty] private ViewModelBase _selectedMenuItem;
-    [ObservableProperty] private ObservableCollection<ViewModelBase> _menuItems;
+    [ObservableProperty] private ViewModelBase _selectedMenuItem = null!;
+    [ObservableProperty] private ObservableCollection<ViewModelBase> _menuItems = null!;
 
-    private readonly MonsterStore _monsterStore;
     private readonly TrackerService _trackerService;
     private readonly QuestHistoryViewModel _questHistoryViewModel;
 
-    public ShellViewModel(MonsterStore monsterStore, TrackerService trackerService, QuestHistoryViewModel questHistoryViewModel)
+    public ShellViewModel(TrackerService trackerService, QuestHistoryViewModel questHistoryViewModel)
     {
-        _monsterStore = monsterStore;
         _trackerService = trackerService;
         _questHistoryViewModel = questHistoryViewModel;
     }

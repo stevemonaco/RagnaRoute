@@ -7,11 +7,6 @@ namespace RagnaRoute.Objectives;
 
 internal static class TimeHelpers
 {
-    //public static ZonedDateTime ToZonedDateTime(this Instant instant)
-    //{
-
-    //}
-
     /// <summary>
     /// Constructs an Interval from two LocalDateTime using the system default time zone
     /// </summary>
@@ -58,34 +53,4 @@ internal static class TimeHelpers
             Duration.FromDays(30), Duration.FromDays(90), Duration.FromDays(180),
             Duration.FromDays(365), Duration.FromDays(3650)
     };
-
-    public static Instant? GetPreviousOccurrence(CronSchedule followup, Instant instant)
-    {
-        var currentNext = followup.Next(instant);
-
-        Interval? anyPreviousNext = null;
-
-        foreach (var delta in _deltas)
-        {
-            anyPreviousNext = followup.Next(instant - delta);
-
-            if (anyPreviousNext!.Value.Start < currentNext!.Value.Start)
-                break;
-        }
-
-        if (anyPreviousNext!.Value.Start == currentNext!.Value.Start)
-            throw new ArgumentOutOfRangeException("Could not calculate a prior interval");
-
-        Interval? previousNext = anyPreviousNext;
-        Interval? nextVisitor;
-        while (true)
-        {
-            nextVisitor = followup.Next(previousNext.Value.Start + Duration.FromSeconds(1));
-
-            if (nextVisitor.Value.Start == currentNext.Value.Start)
-                return previousNext.Value.Start;
-
-            previousNext = nextVisitor;
-        }
-    }
 }

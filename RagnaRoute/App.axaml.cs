@@ -29,7 +29,7 @@ public partial class App : Application
         bootstrapper.ConfigureDbContext(services);
 
         var provider = services.BuildServiceProvider();
-        bootstrapper.EnsureDatabaseAvailable(provider);
+        await bootstrapper.EnsureDatabaseAvailable(provider);
         await bootstrapper.LoadConfigurations(provider);
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
