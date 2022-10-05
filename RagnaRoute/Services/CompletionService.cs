@@ -59,7 +59,7 @@ public class CompletionService
 			.ConfigureAwait(false);
     }
 
-	public async Task<ICollection<ObjectiveStateDto>> GetObjectives(string familyName, bool requireCompletion)
+	public async Task<ICollection<ObjectiveStateDto>> GetObjectivesForFamily(string familyName)
 	{
         using var context = _dbFactory.CreateDbContext();
 
@@ -67,15 +67,25 @@ public class CompletionService
 			.Include(x => x.Family)
 			.Where(x => x.Family.Name == familyName);
 
-		if (requireCompletion)
-			query = query.Where(x => x.LastCompletion != null);
-
         return await query.Select(x => new ObjectiveStateDto(familyName, x.Name, x.LastCompletion, x.IsHidden))
 			.ToListAsync()
 			.ConfigureAwait(false);
     }
 
-	public async Task UpsertObjectiveHiddenState(string familyName, string objectiveName, bool isHidden)
+    public async Task<ICollection<ObjectiveStateDto>> GetCompletedObjectivesForFamily(string familyName)
+    {
+        using var context = _dbFactory.CreateDbContext();
+
+        return await context.Objectives.AsNoTracking()
+            .Include(x => x.Family)
+            .Where(x => x.Family.Name == familyName)
+			.Where(x => x.LastCompletion != null)
+			.Select(x => new ObjectiveStateDto(familyName, x.Name, x.LastCompletion, x.IsHidden))
+            .ToListAsync()
+            .ConfigureAwait(false);
+    }
+
+    public async Task UpsertObjectiveHiddenState(string familyName, string objectiveName, bool isHidden)
 	{
 		using var context = _dbFactory.CreateDbContext();
 

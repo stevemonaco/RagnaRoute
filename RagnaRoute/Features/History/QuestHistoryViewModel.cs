@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DynamicData;
@@ -31,7 +32,7 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild, ID
     public ReadOnlyObservableCollection<CompletionDto> Completions { get => _completions; }
     private ReadOnlyObservableCollection<CompletionDto> _completions;
 
-    public SourceList<string> ProfileNameSource { get; }
+    public SourceList<string> FamilyNameSource { get; }
     public SourceList<string> ObjectiveNameSource { get; }
     public SourceList<CompletionDto> CompletionSource { get; }
 
@@ -51,8 +52,8 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild, ID
         var timeSorter = SortExpressionComparer<CompletionDto>
             .Descending(x => x.CompletionTime);
 
-        ProfileNameSource = new();
-        ProfileNameSource.Connect()
+        FamilyNameSource = new();
+        FamilyNameSource.Connect()
             .ObserveOn(_scheduler.Background)
             .Sort(stringSorter)
             .ObserveOn(_scheduler.Visual)
@@ -78,62 +79,103 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild, ID
             .Subscribe()
             .DisposeWith(_cleanup);
 
-        this.WhenPropertyChanged(x => x.SelectedFamilyName)
-            .Do(x =>
-            {
-                ObjectiveNameSource.Edit(async x =>
-                {
-                    if (SelectedFamilyName is null)
-                        return;
+        //this.WhenPropertyChanged(x => x.SelectedFamilyName)
+        //    .ObserveOn(_scheduler.Visual)
+        //    .Do(x =>
+        //    {
+        //        ObjectiveNameSource.Edit(async x =>
+        //        {
+        //            x.Clear();
 
-                    x.Clear();
-                    var result = await _completionService.GetObjectives(SelectedFamilyName, true);
-                    x.AddRange(result.Select(x => x.ObjectiveName));
-                });
+        //            if (SelectedFamilyName is null)
+        //                return;
 
-                SelectedObjectiveName = ObjectiveNameSource.Items.FirstOrDefault();
-            })
-            .Subscribe()
-            .DisposeWith(_cleanup);
+        //            var result = await _completionService.GetCompletedObjectivesForFamily(SelectedFamilyName);
+        //            x.AddRange(result.Select(x => x.ObjectiveName));
+        //        });
+        //    })
+        //    .Subscribe()
+        //    .DisposeWith(_cleanup);
 
-        this.WhenPropertyChanged(x => x.SelectedObjectiveName)
-            .Do(x =>
-            {
-                CompletionSource.Edit(async x =>
-                {
-                    if (SelectedFamilyName is null || SelectedObjectiveName is null)
-                        return;
+        //this.WhenPropertyChanged(x => x.SelectedObjectiveName)
+        //    .ObserveOn(_scheduler.Visual)
+        //    .Do(x =>
+        //    {
+        //        CompletionSource.Edit(async x =>
+        //        {
+        //            x.Clear();
 
-                    x.Clear();
-                    var result = await _completionService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
-                    x.AddRange(result);
-                    CompletionCount = result.Count;
-                });
-            })
-            .Subscribe()
-            .DisposeWith(_cleanup);
+        //            if (SelectedFamilyName is null || SelectedObjectiveName is null)
+        //                return;
+
+        //            var result = await _completionService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
+        //            x.AddRange(result);
+        //            CompletionCount = result.Count;
+        //        });
+        //    })
+        //    .Subscribe()
+        //    .DisposeWith(_cleanup);
     }
 
     public async Task InitializeProfiles()
     {
-        var items = await _completionService.GetFamilyNames();
-        ProfileNameSource.AddRange(items);
+        //await RefreshCommand.ExecuteAsync(null);
 
-        SelectedFamilyName = items.FirstOrDefault();
+        var items = await _completionService.GetFamilyNames().ConfigureAwait(true);
+        FamilyNameSource.AddRange(items);
+
+        SelectedFamilyName = FamilyNameSource.Items.FirstOrDefault();
     }
 
-    [RelayCommand]
-    public async Task UpdateHistory()
+    partial void OnSelectedFamilyNameChanged(string? value)
     {
-        if (string.IsNullOrEmpty(SelectedFamilyName) || string.IsNullOrEmpty(SelectedObjectiveName))
-            return;
-
-        var items = await _completionService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
-        CompletionSource.Edit(x =>
+        ObjectiveNameSource.Edit(async x =>
         {
             x.Clear();
-            x.AddRange(items);
+
+            if (SelectedFamilyName is null)
+                return;
+
+            var result = await _completionService.GetCompletedObjectivesForFamily(SelectedFamilyName);
+            x.AddRange(result.Select(x => x.ObjectiveName));
         });
+    }
+
+    partial void OnSelectedObjectiveNameChanged(string? value)
+    {
+        CompletionSource.Edit(async x =>
+        {
+            x.Clear();
+
+            if (SelectedFamilyName is null || SelectedObjectiveName is null)
+                return;
+
+            var result = await _completionService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
+            x.AddRange(result);
+            CompletionCount = result.Count;
+        });
+    }
+
+    [RelayCommand(AllowConcurrentExecutions = false)]
+    public async Task Refresh()
+    {
+        var selectedFamilyName = SelectedFamilyName;
+        var selectedObjectiveName = SelectedObjectiveName;
+
+        ObjectiveNameSource.Clear();
+        CompletionSource.Clear();
+        FamilyNameSource.Clear();
+
+        var items = await _completionService.GetFamilyNames().ConfigureAwait(true);
+        FamilyNameSource.AddRange(items);
+
+        await Task.Delay(1000);
+
+        SelectedFamilyName = FamilyNameSource.Items.FirstOrDefault(x => x == selectedFamilyName) ?? FamilyNameSource.Items.FirstOrDefault();
+        //OnPropertyChanged(nameof(SelectedFamilyName));
+
+        await Task.Delay(1000);
+        SelectedObjectiveName = ObjectiveNames.FirstOrDefault(x => x == selectedObjectiveName);
     }
 
     protected virtual void Dispose(bool disposing)

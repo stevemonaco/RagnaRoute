@@ -15,15 +15,15 @@
              x:Class="RagnaRoute.Views.QuestHistoryView">
 	<Grid RowDefinitions="auto,auto,*">
 		<StackPanel Spacing="8" Margin="10" Orientation="Horizontal">
-			<ComboBox MinWidth="200" Items="{Binding FamilyNames}" SelectedItem="{Binding SelectedFamilyName}" />
-			<ComboBox MinWidth="200" Items="{Binding ObjectiveNames}" SelectedItem="{Binding SelectedObjectiveName}" />
-			<Button Command="{Binding UpdateHistoryCommand}" ToolTip.Tip="Refresh" IsEnabled="{Binding SelectedObjectiveName, Converter={x:Static ObjectConverters.IsNotNull}}">
-				<ui:FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;" Foreground="#37946e" />
+			<ComboBox MinWidth="200" Items="{Binding FamilyNames, Mode=OneTime}" SelectedItem="{Binding SelectedFamilyName, Mode=TwoWay}" />
+			<ComboBox MinWidth="200" Items="{Binding ObjectiveNames, Mode=OneTime}" SelectedItem="{Binding SelectedObjectiveName, Mode=TwoWay}" />
+			<Button Command="{Binding RefreshCommand}" ToolTip.Tip="Refresh">
+				<ui:FAPathIcon Data="{StaticResource iconRefresh}" Foreground="{StaticResource RefreshColor}" />
 			</Button>
 		</StackPanel>
 		
 		<TextBlock Grid.Row="1" Text="{Binding CompletionCount, StringFormat='Completions: {0}'}" />
-
+		
 		<ScrollViewer Grid.Row="2">
 			<ItemsRepeater Items="{Binding Completions}">
 				<ItemsRepeater.Layout>
@@ -32,9 +32,7 @@
 				<ItemsRepeater.ItemTemplate>
 					<DataTemplate DataType="{x:Type data:CompletionDto}">
 						<StackPanel Orientation="Horizontal">
-							<TextBlock Text="{Binding FamilyName}" />
-							<TextBlock Text="{Binding ObjectiveName}" />
-							<TextBlock Text="{Binding CompletionTime}" />
+							<TextBlock Text="{Binding CompletionTime, Converter={x:Static con:AppConverters.InstantToLocalString}}" />
 						</StackPanel>
 					</DataTemplate>
 				</ItemsRepeater.ItemTemplate>

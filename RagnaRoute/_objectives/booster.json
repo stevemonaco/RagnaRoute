@@ -64,7 +64,7 @@
 		"description": "Kill Clock (20), Alarm (20), and Rideword (20)",
 		"type": "Schedule",
 		"notification": "silent",
-		"information": [ "@warp c_tower2", "@warp c_tower3", "@warp c_tower3" ],
+		"information": [ "@warp c_tower2", "@warp c_tower3", "@warp c_tower1" ],
 		"timeZone": "Etc/GMT+8",
 		"repeat": "@daily",
 		"duration": 1440

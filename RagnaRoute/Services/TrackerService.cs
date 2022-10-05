@@ -65,7 +65,7 @@ public class TrackerService
 
     private async Task<BossQuestTrackingViewModel?> ReadBossQuestGroup(TrackerGroupModel group, string jsonContent, JsonSerializerOptions options)
     {
-        var states = await _completionService.GetObjectives(group.Name, false);
+        var states = await _completionService.GetObjectivesForFamily(group.Name);
         var stateMap = states.ToDictionary(x => x.ObjectiveName, x => x);
 
         var bossQuests = JsonSerializer.Deserialize<List<BossQuestModel>>(jsonContent, options);
@@ -94,7 +94,7 @@ public class TrackerService
 
     private async Task<ScheduledQuestTrackingViewModel?> ReadScheduledQuestGroup(TrackerGroupModel group, string jsonContent, JsonSerializerOptions options)
     {
-        var states = await _completionService.GetObjectives(group.Name, false);
+        var states = await _completionService.GetObjectivesForFamily(group.Name);
         var stateMap = states.ToDictionary(x => x.ObjectiveName, x => x);
 
         var scheduledQuests = JsonSerializer.Deserialize<List<ScheduledQuestModel>>(jsonContent, options);
