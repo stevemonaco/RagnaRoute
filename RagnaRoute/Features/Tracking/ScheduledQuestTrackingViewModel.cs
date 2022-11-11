@@ -84,10 +84,11 @@ public partial class ScheduledQuestTrackingViewModel : TrackingGroupViewModel
     }
 
     [RelayCommand(AllowConcurrentExecutions = false)]
-    public async Task CompleteObjectiveCommand(ScheduledQuestViewModel viewModel)
+    public async Task CompleteObjective(ScheduledQuestViewModel viewModel)
     {
         if (viewModel.Objective.Complete())
         {
+            viewModel.UpdateObjective();
             var instant = SystemClock.Instance.GetCurrentInstant();
             await _completionService.AddCompletion(Name, viewModel.Name, instant);
         }
