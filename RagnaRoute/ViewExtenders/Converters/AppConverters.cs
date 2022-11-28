@@ -21,4 +21,7 @@ public static class AppConverters
             var time = x.InZone(zone);
             return time.ToString(culture.DateTimeFormat.FullDateTimePattern, culture);
         });
+
+    public static readonly CooldownObjectiveToStringConverter CooldownObjectiveToString = new();
+    public static readonly ScheduledObjectiveToStringConverter ScheduledObjectiveToString = new();
 }

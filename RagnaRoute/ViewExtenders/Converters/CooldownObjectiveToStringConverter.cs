@@ -7,7 +7,7 @@ using NodaTime;
 using RagnaRoute.Objectives;
 
 namespace RagnaRoute.Converters;
-internal class CooldownObjectiveToStringConverter : IMultiValueConverter
+public sealed class CooldownObjectiveToStringConverter : IMultiValueConverter
 {
     public object? Convert(IList<object?> values, Type targetType, object? parameter, CultureInfo culture)
     {
