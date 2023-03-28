@@ -11,7 +11,7 @@ internal class TypeTemplateSelector : IDataTemplate
     [Content]
     public Dictionary<Type, IDataTemplate> Templates { get; } = new();
 
-    public IControl Build(object? param)
+    public Control Build(object? param)
     {
         if (param is Type key)
         {

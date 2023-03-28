@@ -1,111 +1,119 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:ui="using:FluentAvalonia.UI.Controls"
-			 xmlns:vm="using:RagnaRoute.ViewModels"
-			 xmlns:con="using:RagnaRoute.Converters"
-			 xmlns:obj="using:RagnaRoute.Objectives"
-             xmlns:i="using:Avalonia.Xaml.Interactivity"
-             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-			 x:CompileBindings="True"
-			 x:DataType="vm:ScheduledQuestTrackingViewModel"
-             x:Class="RagnaRoute.Views.ScheduledQuestTrackingView">
-	<UserControl.Styles>
-		<Style Selector="Popup[IsOpen=true]">
-			<Style.Animations>
-				<Animation Duration="0:0:2">
-					<KeyFrame Cue="0%">
-						<Setter Property="Opacity" Value="1.0" />
-					</KeyFrame>
-					<KeyFrame Cue="75%">
-						<Setter Property="Opacity" Value="1.0" />
-					</KeyFrame>
-					<KeyFrame Cue="100%">
-						<Setter Property="Opacity" Value="0.0" />
-					</KeyFrame>
-				</Animation>
-			</Style.Animations>
-		</Style>
-	</UserControl.Styles>
-	
-	<Grid x:Name="grid">
-		<Popup x:Name="popup" IsOpen="False" PlacementMode="Bottom">
-			<Border BorderBrush="Black" BorderThickness="1">
-				<TextBlock Background="Orange" Text="Text copied!" Opacity="{Binding #popup.Opacity}" />
-			</Border>
-		</Popup>
-		
-		<ScrollViewer HorizontalScrollBarVisibility="Disabled">
-			<ItemsRepeater x:Name="items" Items="{Binding Quests}" Margin="8 0 8 0">
-				<ItemsRepeater.Layout>
-					<UniformGridLayout Orientation="Horizontal" MinItemWidth="300" ItemsStretch="None" MinRowSpacing="8" MinColumnSpacing="8" />
-				</ItemsRepeater.Layout>
+<UserControl
+    x:Class="RagnaRoute.Views.ScheduledQuestTrackingView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:con="using:RagnaRoute.Converters"
+    xmlns:i="using:Avalonia.Xaml.Interactivity"
+    xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+    xmlns:obj="using:RagnaRoute.Objectives"
+    xmlns:ui="using:FluentAvalonia.UI.Controls"
+    xmlns:vm="using:RagnaRoute.ViewModels"
+    x:CompileBindings="True"
+    x:DataType="vm:ScheduledQuestTrackingViewModel">
+    <UserControl.Styles>
+        <Style Selector="Popup[IsOpen=true]">
+            <Style.Animations>
+                <Animation Duration="0:0:2">
+                    <KeyFrame Cue="0%">
+                        <Setter Property="Opacity" Value="1.0" />
+                    </KeyFrame>
+                    <KeyFrame Cue="75%">
+                        <Setter Property="Opacity" Value="1.0" />
+                    </KeyFrame>
+                    <KeyFrame Cue="100%">
+                        <Setter Property="Opacity" Value="0.0" />
+                    </KeyFrame>
+                </Animation>
+            </Style.Animations>
+        </Style>
+    </UserControl.Styles>
 
-				<ItemsRepeater.ItemTemplate>
-					<DataTemplate DataType="{x:Type vm:ScheduledQuestViewModel}">
-						<Border CornerRadius="10, 10, 6, 6" Background="Transparent" BorderThickness="2" BorderBrush="Black">
-							<i:Interaction.Behaviors>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource ActiveStateColor}" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource MaybeActiveStateColor}" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource AwaitingUpcomingStateColor}" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource InactiveStateColor}" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource EndedStateColor}" />
-								</ia:DataTriggerBehavior>
-							</i:Interaction.Behaviors>
+    <Grid x:Name="grid">
+        <Popup x:Name="popup" IsOpen="False" PlacementMode="Bottom">
+            <Border BorderBrush="Black" BorderThickness="1">
+                <TextBlock Background="Orange" Opacity="{Binding #popup.Opacity}" Text="Text copied!" />
+            </Border>
+        </Popup>
 
-							<Grid RowDefinitions="auto,auto">
-								<Grid ToolTip.Tip="{Binding Description}" Background="Transparent">
-									<TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
-								</Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+            <ItemsRepeater x:Name="items" Margin="8,0,8,0" Items="{Binding Quests}">
+                <ItemsRepeater.Layout>
+                    <UniformGridLayout
+                        ItemsStretch="None"
+                        MinColumnSpacing="8"
+                        MinItemWidth="300"
+                        MinRowSpacing="8"
+                        Orientation="Horizontal" />
+                </ItemsRepeater.Layout>
 
-								<Grid Grid.Row="1" Background="{StaticResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
-									<TextBlock HorizontalAlignment="Center">
-										<TextBlock.Text>
-											<MultiBinding Converter="{x:Static con:AppConverters.ScheduledObjectiveToString}">
-												<Binding Path="TimeUntilStarting" />
-												<Binding Path="TimeUntilEnding" />
-												<Binding Path="TimeState" />
-											</MultiBinding>
-										</TextBlock.Text>
-									</TextBlock>
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate DataType="{x:Type vm:ScheduledQuestViewModel}">
+                        <Border Background="Transparent" BorderBrush="Black" BorderThickness="2" CornerRadius="10, 10, 6, 6">
+                            <i:Interaction.Behaviors>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource ActiveStateColor}" />
+                                </ia:DataTriggerBehavior>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource MaybeActiveStateColor}" />
+                                </ia:DataTriggerBehavior>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource AwaitingUpcomingStateColor}" />
+                                </ia:DataTriggerBehavior>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource InactiveStateColor}" />
+                                </ia:DataTriggerBehavior>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource EndedStateColor}" />
+                                </ia:DataTriggerBehavior>
+                            </i:Interaction.Behaviors>
 
-									<StackPanel Grid.Row="1" Spacing="8" Orientation="Horizontal" HorizontalAlignment="Center">
-										<ItemsRepeater Items="{Binding Information}">
-											<ItemsRepeater.Layout>
-												<StackLayout Orientation="Horizontal" Spacing="8" />
-											</ItemsRepeater.Layout>
-											<ItemsRepeater.ItemTemplate>
-												<DataTemplate>
-													<Button Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
-														<Button.Content>
-															<ui:FAPathIcon Data="{StaticResource iconClipboardCopy}" />
-														</Button.Content>
-													</Button>
-												</DataTemplate>
-											</ItemsRepeater.ItemTemplate>
-										</ItemsRepeater>
-										<Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}">
-											<ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
-										</Button>
-									</StackPanel>
-								</Grid>
-							</Grid>
-						</Border>
+                            <Grid RowDefinitions="auto,auto">
+                                <Grid Background="Transparent" ToolTip.Tip="{Binding Description}">
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        FontSize="16"
+                                        FontWeight="Bold"
+                                        Text="{Binding Name}" />
+                                </Grid>
 
-					</DataTemplate>
-				</ItemsRepeater.ItemTemplate>
-			</ItemsRepeater>
-		</ScrollViewer>
-	</Grid>
+                                <Grid Grid.Row="1" Background="{DynamicResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
+                                    <TextBlock HorizontalAlignment="Center">
+                                        <TextBlock.Text>
+                                            <MultiBinding Converter="{x:Static con:AppConverters.ScheduledObjectiveToString}">
+                                                <Binding Path="TimeUntilStarting" />
+                                                <Binding Path="TimeUntilEnding" />
+                                                <Binding Path="TimeState" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+
+                                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal" Spacing="8">
+                                        <ItemsRepeater Items="{Binding Information}">
+                                            <ItemsRepeater.Layout>
+                                                <StackLayout Orientation="Horizontal" Spacing="8" />
+                                            </ItemsRepeater.Layout>
+                                            <ItemsRepeater.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Button Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
+                                                        <Button.Content>
+                                                            <ui:FAPathIcon Data="{StaticResource iconClipboardCopy}" />
+                                                        </Button.Content>
+                                                    </Button>
+                                                </DataTemplate>
+                                            </ItemsRepeater.ItemTemplate>
+                                        </ItemsRepeater>
+                                        <Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}">
+                                            <ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
+                                        </Button>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </Border>
+
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+        </ScrollViewer>
+    </Grid>
 </UserControl>

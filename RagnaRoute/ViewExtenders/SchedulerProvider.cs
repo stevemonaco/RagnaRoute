@@ -1,5 +1,5 @@
 ﻿using System.Reactive.Concurrency;
-using Avalonia.Threading;
+using Avalonia.ReactiveUI;
 
 namespace RagnaRoute.ViewExtenders;
 

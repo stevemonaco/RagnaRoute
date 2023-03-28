@@ -18,7 +18,7 @@ public partial class App : Application
     public override async void OnFrameworkInitializationCompleted()
     {
         // Remove Avalonia data validation so that Mvvm Toolkit's data validation works
-        ExpressionObserver.DataValidators.RemoveAll(x => x is DataAnnotationsValidationPlugin);
+        //ExpressionObserver.DataValidators.RemoveAll(x => x is DataAnnotationsValidationPlugin);
 
         var services = new ServiceCollection();
         var bootstrapper = new Bootstrapper();

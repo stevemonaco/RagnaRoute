@@ -1,98 +1,112 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:vm="using:RagnaRoute.ViewModels"
-			 xmlns:con="using:RagnaRoute.Converters"
-			 xmlns:ui="using:FluentAvalonia.UI.Controls"
-			 xmlns:obj="using:RagnaRoute.Objectives"
-             xmlns:i="using:Avalonia.Xaml.Interactivity"
-             xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-			 x:CompileBindings="True"
-			 x:DataType="vm:BossQuestTrackingViewModel"
-             x:Class="RagnaRoute.Views.BossQuestTrackingView">	
-	<Grid RowDefinitions="auto,*">
-		<StackPanel Margin="10" Orientation="Horizontal">
-			<TextBox MinWidth="200" Text="{Binding FilterText}" />
-			<ToggleButton x:Name="globalHide" Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries">
-				<ui:FAPathIcon Data="{StaticResource iconEye}" />
-			</ToggleButton>
-		</StackPanel>
+<UserControl
+    x:Class="RagnaRoute.Views.BossQuestTrackingView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:con="using:RagnaRoute.Converters"
+    xmlns:i="using:Avalonia.Xaml.Interactivity"
+    xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
+    xmlns:obj="using:RagnaRoute.Objectives"
+    xmlns:ui="using:FluentAvalonia.UI.Controls"
+    xmlns:vm="using:RagnaRoute.ViewModels"
+    x:CompileBindings="True"
+    x:DataType="vm:BossQuestTrackingViewModel">
+    <Grid RowDefinitions="auto,*">
+        <StackPanel Margin="10" Orientation="Horizontal">
+            <TextBox MinWidth="200" Text="{Binding FilterText}" />
+            <ToggleButton x:Name="globalHide" Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries">
+                <ui:FAPathIcon Data="{StaticResource iconEye}" />
+            </ToggleButton>
+        </StackPanel>
 
-		<ScrollViewer Grid.Row="1">
-			<ItemsRepeater x:Name="items" Items="{Binding Bosses}">
-				<ItemsRepeater.Layout>
-					<UniformGridLayout Orientation="Horizontal" MinItemWidth="300" ItemsStretch="None" MinRowSpacing="4" MinColumnSpacing="4" />
-				</ItemsRepeater.Layout>
-				<ItemsRepeater.ItemTemplate>
-					<DataTemplate DataType="{x:Type vm:BossQuestViewModel}">
-						<Border BorderBrush="Black" BorderThickness="2" CornerRadius="12, 12, 4, 4">
-							<i:Interaction.Behaviors>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource ActiveStateColor}" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource MaybeActiveStateColor}" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource AwaitingUpcomingStateColor}" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource InactiveStateColor}" />
-								</ia:DataTriggerBehavior>
-								<ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
-									<ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource EndedStateColor}" />
-								</ia:DataTriggerBehavior>
-							</i:Interaction.Behaviors>
+        <ScrollViewer Grid.Row="1">
+            <ItemsRepeater x:Name="items" Items="{Binding Bosses}">
+                <ItemsRepeater.Layout>
+                    <UniformGridLayout
+                        ItemsStretch="None"
+                        MinColumnSpacing="4"
+                        MinItemWidth="300"
+                        MinRowSpacing="4"
+                        Orientation="Horizontal" />
+                </ItemsRepeater.Layout>
+                <ItemsRepeater.ItemTemplate>
+                    <DataTemplate DataType="{x:Type vm:BossQuestViewModel}">
+                        <Border BorderBrush="Black" BorderThickness="2" CornerRadius="12, 12, 4, 4">
+                            <i:Interaction.Behaviors>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource ActiveStateColor}" />
+                                </ia:DataTriggerBehavior>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource MaybeActiveStateColor}" />
+                                </ia:DataTriggerBehavior>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource AwaitingUpcomingStateColor}" />
+                                </ia:DataTriggerBehavior>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource InactiveStateColor}" />
+                                </ia:DataTriggerBehavior>
+                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
+                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource EndedStateColor}" />
+                                </ia:DataTriggerBehavior>
+                            </i:Interaction.Behaviors>
 
-							<Grid RowDefinitions="auto,auto">
-								<TextBlock Margin="0,4,0,4" Text="{Binding Name}" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            <Grid RowDefinitions="auto,auto">
+                                <TextBlock
+                                    Margin="0,4,0,4"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="18"
+                                    FontWeight="Bold"
+                                    Text="{Binding Name}" />
 
-								<Grid Grid.Row="1" Background="{StaticResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
-									<TextBlock Margin="0,4,0,4" HorizontalAlignment="Center">
-										<TextBlock.Text>
-											<MultiBinding Converter="{x:Static con:AppConverters.CooldownObjectiveToString}">
-												<Binding Path="TimeUntilStarting" />
-												<Binding Path="TimeUntilEnding" />
-												<Binding Path="TimeSinceStarted" />
-												<Binding Path="TimeState" />
-											</MultiBinding>
-										</TextBlock.Text>
-									</TextBlock>
+                                <Grid Grid.Row="1" Background="{DynamicResource NavigationViewDefaultPaneBackground}" RowDefinitions="auto,auto">
+                                    <TextBlock Margin="0,4,0,4" HorizontalAlignment="Center">
+                                        <TextBlock.Text>
+                                            <MultiBinding Converter="{x:Static con:AppConverters.CooldownObjectiveToString}">
+                                                <Binding Path="TimeUntilStarting" />
+                                                <Binding Path="TimeUntilEnding" />
+                                                <Binding Path="TimeSinceStarted" />
+                                                <Binding Path="TimeState" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
 
-									<StackPanel Grid.Row="1" Margin="0,0,0,8" Spacing="8" Orientation="Horizontal" HorizontalAlignment="Center">
-										<Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
-											<ui:FAPathIcon Data="{StaticResource iconClipboardCopy}" />
-										</Button>
-										<Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
-											<ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
-										</Button>
-										<ToggleButton IsChecked="{Binding IsHidden, Mode=OneWay}" Command="{ReflectionBinding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" ToolTip.Tip="Hide">
-											<i:Interaction.Behaviors>
-												<ia:DataTriggerBehavior Binding="{ReflectionBinding $self.IsChecked}" Value="True">
-													<ia:ChangePropertyAction PropertyName="Content">
-														<ia:ChangePropertyAction.Value>
-															<ui:FAPathIcon Data="{StaticResource iconEyeOff}" />
-														</ia:ChangePropertyAction.Value>
-													</ia:ChangePropertyAction>
-												</ia:DataTriggerBehavior>
-												<ia:DataTriggerBehavior Binding="{ReflectionBinding $self.IsChecked}" Value="False">
-													<ia:ChangePropertyAction PropertyName="Content">
-														<ia:ChangePropertyAction.Value>
-															<ui:FAPathIcon Data="{StaticResource iconEye}" />
-														</ia:ChangePropertyAction.Value>
-													</ia:ChangePropertyAction>
-												</ia:DataTriggerBehavior>
-											</i:Interaction.Behaviors>
-										</ToggleButton>
-									</StackPanel>
-								</Grid>
-							</Grid>
-						</Border>
-					</DataTemplate>
-				</ItemsRepeater.ItemTemplate>
-			</ItemsRepeater>
-		</ScrollViewer>
-	</Grid>
+                                    <StackPanel
+                                        Grid.Row="1"
+                                        Margin="0,0,0,8"
+                                        HorizontalAlignment="Center"
+                                        Orientation="Horizontal"
+                                        Spacing="8">
+                                        <Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
+                                            <ui:FAPathIcon Data="{StaticResource iconClipboardCopy}" />
+                                        </Button>
+                                        <Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
+                                            <ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
+                                        </Button>
+                                        <ToggleButton Command="{ReflectionBinding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsHidden, Mode=OneWay}" ToolTip.Tip="Hide">
+                                            <i:Interaction.Behaviors>
+                                                <ia:DataTriggerBehavior Binding="{Binding IsHidden}" Value="True">
+                                                    <ia:ChangePropertyAction PropertyName="Content">
+                                                        <ia:ChangePropertyAction.Value>
+                                                            <ui:FAPathIcon Data="{StaticResource iconEyeOff}" />
+                                                        </ia:ChangePropertyAction.Value>
+                                                    </ia:ChangePropertyAction>
+                                                </ia:DataTriggerBehavior>
+                                                <ia:DataTriggerBehavior Binding="{Binding IsHidden}" Value="False">
+                                                    <ia:ChangePropertyAction PropertyName="Content">
+                                                        <ia:ChangePropertyAction.Value>
+                                                            <ui:FAPathIcon Data="{StaticResource iconEye}" />
+                                                        </ia:ChangePropertyAction.Value>
+                                                    </ia:ChangePropertyAction>
+                                                </ia:DataTriggerBehavior>
+                                            </i:Interaction.Behaviors>
+                                        </ToggleButton>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsRepeater.ItemTemplate>
+            </ItemsRepeater>
+        </ScrollViewer>
+    </Grid>
 </UserControl>
