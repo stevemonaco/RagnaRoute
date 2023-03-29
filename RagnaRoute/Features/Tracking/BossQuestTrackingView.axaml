@@ -79,10 +79,10 @@
                                         <Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
                                             <ui:FAPathIcon Data="{StaticResource iconClipboardCopy}" />
                                         </Button>
-                                        <Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
+                                        <Button Command="{Binding #items.((vm:BossQuestTrackingViewModel)DataContext).CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
                                             <ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
                                         </Button>
-                                        <ToggleButton Command="{ReflectionBinding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsHidden, Mode=OneWay}" ToolTip.Tip="Hide">
+                                        <ToggleButton Command="{Binding #items.((vm:BossQuestTrackingViewModel)DataContext).ToggleHiddenCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsHidden, Mode=OneWay}" ToolTip.Tip="Hide">
                                             <i:Interaction.Behaviors>
                                                 <ia:DataTriggerBehavior Binding="{Binding IsHidden}" Value="True">
                                                     <ia:ChangePropertyAction PropertyName="Content">

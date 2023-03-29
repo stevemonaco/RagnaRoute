@@ -103,7 +103,7 @@
                                                 </DataTemplate>
                                             </ItemsRepeater.ItemTemplate>
                                         </ItemsRepeater>
-                                        <Button Command="{ReflectionBinding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}">
+                                        <Button Command="{Binding #items.((vm:ScheduledQuestTrackingViewModel)DataContext).CompleteObjectiveCommand}" CommandParameter="{Binding}">
                                             <ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
                                         </Button>
                                     </StackPanel>
