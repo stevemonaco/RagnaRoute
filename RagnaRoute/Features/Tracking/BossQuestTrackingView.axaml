@@ -19,7 +19,7 @@
         </StackPanel>
 
         <ScrollViewer Grid.Row="1">
-            <ItemsRepeater x:Name="items" Items="{Binding Bosses}">
+            <ItemsRepeater x:Name="items" ItemsSource="{Binding Bosses}">
                 <ItemsRepeater.Layout>
                     <UniformGridLayout
                         ItemsStretch="None"

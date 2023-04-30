@@ -13,8 +13,8 @@
     x:DataType="vm:QuestHistoryViewModel">
     <Grid RowDefinitions="auto,auto,*">
         <StackPanel Margin="10" Orientation="Horizontal" Spacing="8">
-            <ComboBox MinWidth="200" Items="{Binding FamilyNames, Mode=OneTime}" SelectedItem="{Binding SelectedFamilyName, Mode=TwoWay}" />
-            <ComboBox MinWidth="200" Items="{Binding ObjectiveNames, Mode=OneTime}" SelectedItem="{Binding SelectedObjectiveName, Mode=TwoWay}" />
+            <ComboBox MinWidth="200" ItemsSource="{Binding FamilyNames, Mode=OneTime}" SelectedItem="{Binding SelectedFamilyName, Mode=TwoWay}" />
+            <ComboBox MinWidth="200" ItemsSource="{Binding ObjectiveNames, Mode=OneTime}" SelectedItem="{Binding SelectedObjectiveName, Mode=TwoWay}" />
             <Button Command="{Binding RefreshCommand}" ToolTip.Tip="Refresh">
                 <ui:FAPathIcon Data="{StaticResource iconRefresh}" Foreground="{StaticResource RefreshColor}" />
             </Button>
@@ -23,7 +23,7 @@
         <TextBlock Grid.Row="1" Text="{Binding CompletionCount, StringFormat='Completions: {0}'}" />
 
         <ScrollViewer Grid.Row="2">
-            <ItemsRepeater Items="{Binding Completions}">
+            <ItemsRepeater ItemsSource="{Binding Completions}">
                 <ItemsRepeater.Layout>
                     <StackLayout Orientation="Vertical" />
                 </ItemsRepeater.Layout>

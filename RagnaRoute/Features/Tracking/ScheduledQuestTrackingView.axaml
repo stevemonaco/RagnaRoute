@@ -36,7 +36,7 @@
         </Popup>
 
         <ScrollViewer HorizontalScrollBarVisibility="Disabled">
-            <ItemsRepeater x:Name="items" Margin="8,0,8,0" Items="{Binding Quests}">
+            <ItemsRepeater x:Name="items" Margin="8,0,8,0" ItemsSource="{Binding Quests}">
                 <ItemsRepeater.Layout>
                     <UniformGridLayout
                         ItemsStretch="None"
@@ -89,7 +89,7 @@
                                     </TextBlock>
 
                                     <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal" Spacing="8">
-                                        <ItemsRepeater Items="{Binding Information}">
+                                        <ItemsRepeater ItemsSource="{Binding Information}">
                                             <ItemsRepeater.Layout>
                                                 <StackLayout Orientation="Horizontal" Spacing="8" />
                                             </ItemsRepeater.Layout>
