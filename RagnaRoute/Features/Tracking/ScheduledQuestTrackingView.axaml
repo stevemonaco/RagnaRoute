@@ -3,10 +3,11 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:con="using:RagnaRoute.Converters"
+    xmlns:fac="using:FluentAvalonia.UI.Controls"
     xmlns:i="using:Avalonia.Xaml.Interactivity"
     xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
     xmlns:obj="using:RagnaRoute.Objectives"
-    xmlns:ui="using:FluentAvalonia.UI.Controls"
+    xmlns:res="using:RagnaRoute.Resources"
     xmlns:vm="using:RagnaRoute.ViewModels"
     x:CompileBindings="True"
     x:DataType="vm:ScheduledQuestTrackingViewModel">
@@ -97,14 +98,14 @@
                                                 <DataTemplate>
                                                     <Button Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
                                                         <Button.Content>
-                                                            <ui:FAPathIcon Data="{StaticResource iconClipboardCopy}" />
+                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.ClipboardCopy}" />
                                                         </Button.Content>
                                                     </Button>
                                                 </DataTemplate>
                                             </ItemsRepeater.ItemTemplate>
                                         </ItemsRepeater>
                                         <Button Command="{Binding #items.((vm:ScheduledQuestTrackingViewModel)DataContext).CompleteObjectiveCommand}" CommandParameter="{Binding}">
-                                            <ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
+                                            <fac:FAPathIcon Classes="vflip" Data="{x:Static res:AppIcons.Skull}" />
                                         </Button>
                                     </StackPanel>
                                 </Grid>

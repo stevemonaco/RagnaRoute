@@ -2,7 +2,8 @@
     x:Class="RagnaRoute.Views.ShellView"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:ui="using:FluentAvalonia.UI.Controls"
+    xmlns:fac="using:FluentAvalonia.UI.Controls"
+    xmlns:res="using:RagnaRoute.Resources"
     xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
     xmlns:ve="using:RagnaRoute.ViewExtenders"
     xmlns:vm="using:RagnaRoute.ViewModels"
@@ -11,33 +12,28 @@
     x:DataType="vm:ShellViewModel"
     Icon="/Assets/avalonia-logo.ico"
     UseLayoutRounding="True">
-    <Window.Styles>
-        <Style Selector="ui|NavigationViewItem.flip ui|FAPathIcon">
-            <Setter Property="RenderTransform" Value="scaley(-1)" />
-        </Style>
-    </Window.Styles>
     <Window.Resources>
         <ve:MenuTemplateSelector x:Key="menuTemplateSelector">
             <DataTemplate x:Key="{x:Type vm:BossQuestTrackingViewModel}" DataType="vm:BossQuestTrackingViewModel">
-                <ui:NavigationViewItem Classes="flip" Content="{Binding DisplayName}">
-                    <ui:NavigationViewItem.IconSource>
-                        <ui:PathIconSource Data="{StaticResource iconBossTracker}" />
-                    </ui:NavigationViewItem.IconSource>
-                </ui:NavigationViewItem>
+                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}">
+                    <fac:NavigationViewItem.IconSource>
+                        <fac:PathIconSource Data="{x:Static res:AppIcons.BossTracker}" />
+                    </fac:NavigationViewItem.IconSource>
+                </fac:NavigationViewItem>
             </DataTemplate>
             <DataTemplate x:Key="{x:Type vm:ScheduledQuestTrackingViewModel}" DataType="vm:ScheduledQuestTrackingViewModel">
-                <ui:NavigationViewItem Classes="flip" Content="{Binding DisplayName}">
-                    <ui:NavigationViewItem.IconSource>
-                        <ui:PathIconSource Data="{StaticResource iconScheduledTracker}" />
-                    </ui:NavigationViewItem.IconSource>
-                </ui:NavigationViewItem>
+                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}">
+                    <fac:NavigationViewItem.IconSource>
+                        <fac:PathIconSource Data="{x:Static res:AppIcons.ScheduledTracker}" />
+                    </fac:NavigationViewItem.IconSource>
+                </fac:NavigationViewItem>
             </DataTemplate>
             <DataTemplate x:Key="{x:Type vm:QuestHistoryViewModel}" DataType="vm:QuestHistoryViewModel">
-                <ui:NavigationViewItem Classes="flip" Content="{Binding DisplayName}">
-                    <ui:NavigationViewItem.IconSource>
-                        <ui:PathIconSource Data="{StaticResource iconHistory}" />
-                    </ui:NavigationViewItem.IconSource>
-                </ui:NavigationViewItem>
+                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}">
+                    <fac:NavigationViewItem.IconSource>
+                        <fac:PathIconSource Data="{x:Static res:AppIcons.History}" />
+                    </fac:NavigationViewItem.IconSource>
+                </fac:NavigationViewItem>
             </DataTemplate>
         </ve:MenuTemplateSelector>
     </Window.Resources>
@@ -51,7 +47,7 @@
             </StackPanel>
         </Grid>
 
-        <ui:NavigationView
+        <fac:NavigationView
             x:Name="nav"
             Grid.Row="1"
             IsSettingsVisible="False"
@@ -59,9 +55,9 @@
             MenuItemsSource="{Binding MenuItems}"
             PaneDisplayMode="Auto"
             SelectedItem="{Binding SelectedMenuItem}">
-            <ui:NavigationView.Content>
+            <fac:NavigationView.Content>
                 <ContentControl Content="{Binding #nav.SelectedItem}" />
-            </ui:NavigationView.Content>
+            </fac:NavigationView.Content>
 
             <!--<ui:NavigationView.MenuItems>
 				<ui:NavigationViewItem Content="MVPs" />
@@ -77,6 +73,6 @@
 				<ui:NavigationViewItem Content="Eden Mission 200-230+" />
 				<ui:NavigationViewItem Content="Market" />
 			</ui:NavigationView.MenuItems>-->
-        </ui:NavigationView>
+        </fac:NavigationView>
     </Grid>
 </Window>

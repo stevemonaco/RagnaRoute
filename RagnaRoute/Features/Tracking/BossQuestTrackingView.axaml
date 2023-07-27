@@ -3,10 +3,11 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:con="using:RagnaRoute.Converters"
+    xmlns:fac="using:FluentAvalonia.UI.Controls"
     xmlns:i="using:Avalonia.Xaml.Interactivity"
     xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
     xmlns:obj="using:RagnaRoute.Objectives"
-    xmlns:ui="using:FluentAvalonia.UI.Controls"
+    xmlns:res="using:RagnaRoute.Resources"
     xmlns:vm="using:RagnaRoute.ViewModels"
     x:CompileBindings="True"
     x:DataType="vm:BossQuestTrackingViewModel">
@@ -14,7 +15,7 @@
         <StackPanel Margin="10" Orientation="Horizontal">
             <TextBox MinWidth="200" Text="{Binding FilterText}" />
             <ToggleButton x:Name="globalHide" Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries">
-                <ui:FAPathIcon Data="{StaticResource iconEye}" />
+                <fac:FAPathIcon Data="{x:Static res:AppIcons.Eye}" />
             </ToggleButton>
         </StackPanel>
 
@@ -77,24 +78,24 @@
                                         Orientation="Horizontal"
                                         Spacing="8">
                                         <Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
-                                            <ui:FAPathIcon Data="{StaticResource iconClipboardCopy}" />
+                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.ClipboardCopy}" />
                                         </Button>
                                         <Button Command="{Binding #items.((vm:BossQuestTrackingViewModel)DataContext).CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
-                                            <ui:FAPathIcon Data="{StaticResource iconSkull}" RenderTransform="scaley(-1)" />
+                                            <fac:FAPathIcon Classes="vflip" Data="{x:Static res:AppIcons.Skull}" />
                                         </Button>
                                         <ToggleButton Command="{Binding #items.((vm:BossQuestTrackingViewModel)DataContext).ToggleHiddenCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsHidden, Mode=OneWay}" ToolTip.Tip="Hide">
                                             <i:Interaction.Behaviors>
                                                 <ia:DataTriggerBehavior Binding="{Binding IsHidden}" Value="True">
                                                     <ia:ChangePropertyAction PropertyName="Content">
                                                         <ia:ChangePropertyAction.Value>
-                                                            <ui:FAPathIcon Data="{StaticResource iconEyeOff}" />
+                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.EyeOff}" />
                                                         </ia:ChangePropertyAction.Value>
                                                     </ia:ChangePropertyAction>
                                                 </ia:DataTriggerBehavior>
                                                 <ia:DataTriggerBehavior Binding="{Binding IsHidden}" Value="False">
                                                     <ia:ChangePropertyAction PropertyName="Content">
                                                         <ia:ChangePropertyAction.Value>
-                                                            <ui:FAPathIcon Data="{StaticResource iconEye}" />
+                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.Eye}" />
                                                         </ia:ChangePropertyAction.Value>
                                                     </ia:ChangePropertyAction>
                                                 </ia:DataTriggerBehavior>

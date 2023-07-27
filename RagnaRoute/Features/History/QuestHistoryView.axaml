@@ -4,10 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:con="using:RagnaRoute.Converters"
     xmlns:data="using:RagnaRoute.Data"
+    xmlns:fac="using:FluentAvalonia.UI.Controls"
     xmlns:i="using:Avalonia.Xaml.Interactivity"
     xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
     xmlns:obj="using:RagnaRoute.Objectives"
-    xmlns:ui="using:FluentAvalonia.UI.Controls"
+    xmlns:res="using:RagnaRoute.Resources"
     xmlns:vm="using:RagnaRoute.ViewModels"
     x:CompileBindings="True"
     x:DataType="vm:QuestHistoryViewModel">
@@ -16,7 +17,7 @@
             <ComboBox MinWidth="200" ItemsSource="{Binding FamilyNames, Mode=OneTime}" SelectedItem="{Binding SelectedFamilyName, Mode=TwoWay}" />
             <ComboBox MinWidth="200" ItemsSource="{Binding ObjectiveNames, Mode=OneTime}" SelectedItem="{Binding SelectedObjectiveName, Mode=TwoWay}" />
             <Button Command="{Binding RefreshCommand}" ToolTip.Tip="Refresh">
-                <ui:FAPathIcon Data="{StaticResource iconRefresh}" Foreground="{StaticResource RefreshColor}" />
+                <fac:FAPathIcon Data="{x:Static res:AppIcons.Refresh}" Foreground="{StaticResource RefreshColor}" />
             </Button>
         </StackPanel>
 
