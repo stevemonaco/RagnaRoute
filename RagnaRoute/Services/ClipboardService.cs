@@ -13,11 +13,13 @@ public interface IClipboardService
 
 public class ClipboardService : IClipboardService
 {
+    private IClipboard? _clipboard = GetClipboard();
+
     public async Task<bool> CopyTextAsync(string text)
     {
-        if (GetClipboard() is { } clipboard)
+        if (_clipboard is not null)
         {
-            await clipboard.SetTextAsync(text);
+            await _clipboard.SetTextAsync(text);
             return true;
         }
 
