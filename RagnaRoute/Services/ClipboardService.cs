@@ -26,11 +26,11 @@ public class ClipboardService : IClipboardService
 
     private static IClipboard? GetClipboard()
     {
-        if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime lifetime)
+        return Application.Current?.ApplicationLifetime switch
         {
-            if (TopLevel.GetTopLevel(lifetime.MainWindow)?.Clipboard is { } clipboard)
-                return clipboard;
-        }
-        return null;
+            IClassicDesktopStyleApplicationLifetime desktop => TopLevel.GetTopLevel(desktop.MainWindow)?.Clipboard,
+            ISingleViewApplicationLifetime singleView => TopLevel.GetTopLevel(singleView.MainView)?.Clipboard,
+            _ => null
+        };
     }
 }
