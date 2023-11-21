@@ -4,8 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:con="using:RagnaRoute.Converters"
     xmlns:fac="using:FluentAvalonia.UI.Controls"
-    xmlns:i="using:Avalonia.Xaml.Interactivity"
-    xmlns:ia="using:Avalonia.Xaml.Interactions.Core"
     xmlns:obj="using:RagnaRoute.Objectives"
     xmlns:res="using:RagnaRoute.Resources"
     xmlns:vm="using:RagnaRoute.ViewModels"
@@ -50,23 +48,23 @@
                 <ItemsRepeater.ItemTemplate>
                     <DataTemplate DataType="{x:Type vm:ScheduledQuestViewModel}">
                         <Border Background="Transparent" BorderBrush="Black" BorderThickness="2" CornerRadius="10, 10, 6, 6">
-                            <i:Interaction.Behaviors>
-                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
-                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource ActiveStateColor}" />
-                                </ia:DataTriggerBehavior>
-                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
-                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource MaybeActiveStateColor}" />
-                                </ia:DataTriggerBehavior>
-                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
-                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource AwaitingUpcomingStateColor}" />
-                                </ia:DataTriggerBehavior>
-                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
-                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource InactiveStateColor}" />
-                                </ia:DataTriggerBehavior>
-                                <ia:DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
-                                    <ia:ChangePropertyAction PropertyName="Background" Value="{StaticResource EndedStateColor}" />
-                                </ia:DataTriggerBehavior>
-                            </i:Interaction.Behaviors>
+                            <Interaction.Behaviors>
+                                <DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Active}">
+                                    <ChangePropertyAction PropertyName="Background" Value="{StaticResource ActiveStateColor}" />
+                                </DataTriggerBehavior>
+                                <DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.MaybeActive}">
+                                    <ChangePropertyAction PropertyName="Background" Value="{StaticResource MaybeActiveStateColor}" />
+                                </DataTriggerBehavior>
+                                <DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.AwaitingUpcoming}">
+                                    <ChangePropertyAction PropertyName="Background" Value="{StaticResource AwaitingUpcomingStateColor}" />
+                                </DataTriggerBehavior>
+                                <DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Inactive}">
+                                    <ChangePropertyAction PropertyName="Background" Value="{StaticResource InactiveStateColor}" />
+                                </DataTriggerBehavior>
+                                <DataTriggerBehavior Binding="{Binding TimeState}" Value="{x:Static obj:TimeState.Ended}">
+                                    <ChangePropertyAction PropertyName="Background" Value="{StaticResource EndedStateColor}" />
+                                </DataTriggerBehavior>
+                            </Interaction.Behaviors>
 
                             <Grid RowDefinitions="auto,auto">
                                 <Grid Background="Transparent" ToolTip.Tip="{Binding Description}">
