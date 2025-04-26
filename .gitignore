@@ -483,3 +483,4 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 /.idea/.idea.RagnaRoute/.idea/avalonia.xml
+/RagnaRoute/_objectives/Completions.sqlite
