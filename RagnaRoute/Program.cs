@@ -1,4 +1,5 @@
 using Avalonia;
+using Microsoft.Extensions.Hosting;
 using Serilog;
 using System;
 
@@ -32,4 +33,14 @@ internal class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .LogToTrace();
+
+    // EF Core uses this method at design time to access the DbContext
+    public static IHostBuilder CreateHostBuilder(string[] args)
+        => Host.CreateDefaultBuilder(args)
+        .ConfigureServices(services =>
+        {
+            var bootstrapper = new Bootstrapper();
+            bootstrapper.ConfigureServices(services);
+            bootstrapper.ConfigureDbContext(services);
+        });
 }

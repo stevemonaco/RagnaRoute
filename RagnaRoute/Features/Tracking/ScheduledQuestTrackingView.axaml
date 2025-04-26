@@ -28,9 +28,9 @@
     </UserControl.Styles>
 
     <Grid x:Name="grid">
-        <Popup x:Name="popup" IsOpen="False" PlacementMode="Bottom">
-            <Border BorderBrush="Black" BorderThickness="1">
-                <TextBlock Background="Orange" Opacity="{Binding #popup.Opacity}" Text="Text copied!" />
+        <Popup x:Name="popup" IsOpen="False" Placement="Bottom">
+            <Border Background="#344E41" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
+                <TextBlock Padding="8" FontWeight="Bold" Opacity="{Binding #popup.Opacity}" Text="Warp copied ✔" />
             </Border>
         </Popup>
 
@@ -102,7 +102,7 @@
                                                 </DataTemplate>
                                             </ItemsRepeater.ItemTemplate>
                                         </ItemsRepeater>
-                                        <Button Command="{Binding #items.((vm:ScheduledQuestTrackingViewModel)DataContext).CompleteObjectiveCommand}" CommandParameter="{Binding}">
+                                        <Button Command="{Binding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}">
                                             <fac:FAPathIcon Classes="vflip" Data="{x:Static res:AppIcons.Skull}" />
                                         </Button>
                                     </StackPanel>

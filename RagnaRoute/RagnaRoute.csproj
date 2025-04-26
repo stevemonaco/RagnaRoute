@@ -11,35 +11,37 @@
     <TrimmerRootDescriptor Include="TrimRoots.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AvaloniaResource Include="Assets\**" />
-    <AvaloniaResource Remove="Assets\mob.csv" />
-    <None Remove=".gitignore" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.0.10" />
-    <PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="11.0.10" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.0.10" />
-    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
-    <PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.0.10.1" />
-    <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.2.2" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-    <PackageReference Include="Cronos" Version="0.8.4" />
-    <PackageReference Include="CsvHelper" Version="31.0.2" />
-    <PackageReference Include="DynamicData" Version="8.3.27" />
-    <PackageReference Include="EntityFrameworkCore.Sqlite.NodaTime" Version="8.0.1" />
-    <PackageReference Include="FluentAvaloniaUI" Version="2.0.5" />
+    <PackageReference Include="Avalonia" Version="11.3.0-rc1" />
+    <PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="11.1.5" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.0-rc1" />
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.3.0-rc1" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.3.0-rc1" />
+    <PackageReference Include="Avalonia.Xaml.Behaviors" Version="11.3.0-rc1" />
+    <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.4.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Cronos" Version="0.10.0" />
+    <PackageReference Include="CsvHelper" Version="33.0.1" />
+    <PackageReference Include="DynamicData" Version="9.2.1" />
+    <PackageReference Include="EntityFrameworkCore.Sqlite.NodaTime" Version="9.1.0" />
+    <PackageReference Include="FluentAvaloniaUI" Version="2.3.0" />
     <PackageReference Include="Humanizer.Core" Version="2.14.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.3" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
-    <PackageReference Include="NaturalSort.Extension" Version="4.2.0" />
-    <PackageReference Include="NodaTime" Version="3.1.11" />
-    <PackageReference Include="Serilog" Version="3.1.1" />
-    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
-    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.4" />
+    <PackageReference Include="NaturalSort.Extension" Version="4.3.0" />
+    <PackageReference Include="NodaTime" Version="3.2.2" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="9.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
     <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+    <PackageReference Include="HotAvalonia" Version="3.0.0" PrivateAssets="All" />
   </ItemGroup>
+  
   <ItemGroup>
     <None Update="_data\mob.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

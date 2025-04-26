@@ -27,7 +27,7 @@ public partial class ScheduledQuestTrackingView : UserControl
                 popup.PlacementTarget = (Button)sender;
                 popup.IsOpen = true;
 
-                await Task.Delay(2000);
+                await Task.Delay(1000);
                 popup.IsOpen = false;
                 popup.PlacementTarget = null;
             }

@@ -1,5 +1,4 @@
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
 using RagnaRoute.ViewModels;
 using System;
 
@@ -13,7 +12,7 @@ public partial class QuestHistoryView : UserControl
         InitializeComponent();
     }
 
-    protected async override void OnDataContextChanged(EventArgs e)
+    protected override void OnDataContextChanged(EventArgs e)
     {
         base.OnDataContextChanged(e);
         _viewModel = DataContext as QuestHistoryViewModel;

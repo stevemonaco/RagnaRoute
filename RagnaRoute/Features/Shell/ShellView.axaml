@@ -58,21 +58,6 @@
             <fac:NavigationView.Content>
                 <ContentControl Content="{Binding #nav.SelectedItem}" />
             </fac:NavigationView.Content>
-
-            <!--<ui:NavigationView.MenuItems>
-				<ui:NavigationViewItem Content="MVPs" />
-				<ui:NavigationViewItem Content="Daily Instances" />
-				<ui:NavigationViewItem Content="Eden Mission 1-39" />
-				<ui:NavigationViewItem Content="Eden Mission 40-69" />
-				<ui:NavigationViewItem Content="Eden Mission 70-99" />
-				<ui:NavigationViewItem Content="Eden Mission 100-110" />
-				<ui:NavigationViewItem Content="Eden Mission 120-140" />
-				<ui:NavigationViewItem Content="Eden Mission 130-190" />
-				<ui:NavigationViewItem Content="Eden Mission 175+" />
-				<ui:NavigationViewItem Content="Eden Mission 200+" />
-				<ui:NavigationViewItem Content="Eden Mission 200-230+" />
-				<ui:NavigationViewItem Content="Market" />
-			</ui:NavigationView.MenuItems>-->
         </fac:NavigationView>
     </Grid>
 </Window>
