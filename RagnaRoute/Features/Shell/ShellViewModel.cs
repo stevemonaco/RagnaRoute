@@ -11,8 +11,8 @@ public partial class ShellViewModel : ViewModelBase
 
     [ObservableProperty] private TrackerProfileViewModel? _trackerProfile;
 
-    [ObservableProperty] private ViewModelBase _selectedMenuItem = null!;
-    [ObservableProperty] private ObservableCollection<ViewModelBase> _menuItems = null!;
+    [ObservableProperty] private PageViewModel? _selectedMenuItem = null!;
+    [ObservableProperty] private ObservableCollection<PageViewModel> _menuItems = null!;
 
     private readonly TrackerService _trackerService;
     private readonly QuestHistoryViewModel _questHistoryViewModel;
@@ -27,7 +27,7 @@ public partial class ShellViewModel : ViewModelBase
     {
         TrackerProfile = await _trackerService.ReadTrackerProfile(_profileFileName);
 
-        var items = new ObservableCollection<ViewModelBase>(TrackerProfile.TrackingGroups);
+        var items = new ObservableCollection<PageViewModel>(TrackerProfile.TrackingGroups);
         items.Add(_questHistoryViewModel);
         MenuItems = items;
     }

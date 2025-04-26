@@ -9,4 +9,8 @@
     <Color x:Key="AwaitingUpcomingStateColor">#DF6626</Color>
     <Color x:Key="InactiveStateColor">Transparent</Color>
     <Color x:Key="EndedStateColor">#ac3232</Color>
+
+    <SolidColorBrush x:Key="ToggleButtonBackgroundChecked" Color="Transparent" />
+    <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPressed" Color="Transparent" />
+    <SolidColorBrush x:Key="ToggleButtonBackgroundCheckedPointerOver" Color="Transparent" />
 </ResourceDictionary>

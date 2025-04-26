@@ -9,30 +9,9 @@
     xmlns:vm="using:RagnaRoute.ViewModels"
     x:CompileBindings="True"
     x:DataType="vm:ScheduledQuestTrackingViewModel">
-    <UserControl.Styles>
-        <Style Selector="Popup[IsOpen=true]">
-            <Style.Animations>
-                <Animation Duration="0:0:2">
-                    <KeyFrame Cue="0%">
-                        <Setter Property="Opacity" Value="1.0" />
-                    </KeyFrame>
-                    <KeyFrame Cue="75%">
-                        <Setter Property="Opacity" Value="1.0" />
-                    </KeyFrame>
-                    <KeyFrame Cue="100%">
-                        <Setter Property="Opacity" Value="0.0" />
-                    </KeyFrame>
-                </Animation>
-            </Style.Animations>
-        </Style>
-    </UserControl.Styles>
 
     <Grid x:Name="grid">
-        <Popup x:Name="popup" IsOpen="False" Placement="Bottom">
-            <Border Background="#344E41" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
-                <TextBlock Padding="8" FontWeight="Bold" Opacity="{Binding #popup.Opacity}" Text="Warp copied ✔" />
-            </Border>
-        </Popup>
+        <Popup x:Name="popup" Classes="copy" IsOpen="False" />
 
         <ScrollViewer HorizontalScrollBarVisibility="Disabled">
             <ItemsRepeater x:Name="items" Margin="8,0,8,0" ItemsSource="{Binding Quests}">
@@ -94,7 +73,7 @@
                                             </ItemsRepeater.Layout>
                                             <ItemsRepeater.ItemTemplate>
                                                 <DataTemplate>
-                                                    <Button Click="InfoButton_Clicked" ToolTip.Tip="{Binding}">
+                                                    <Button Click="InfoButton_Clicked" Theme="{StaticResource TransparentButton}" ToolTip.Tip="{Binding}">
                                                         <Button.Content>
                                                             <fac:FAPathIcon Data="{x:Static res:AppIcons.ClipboardCopy}" />
                                                         </Button.Content>
@@ -102,7 +81,7 @@
                                                 </DataTemplate>
                                             </ItemsRepeater.ItemTemplate>
                                         </ItemsRepeater>
-                                        <Button Command="{Binding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}">
+                                        <Button Command="{Binding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" Theme="{StaticResource TransparentButton}">
                                             <fac:FAPathIcon Classes="vflip" Data="{x:Static res:AppIcons.Skull}" />
                                         </Button>
                                     </StackPanel>

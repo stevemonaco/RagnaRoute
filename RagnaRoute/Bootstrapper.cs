@@ -97,7 +97,7 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
 
         //await context.Database.EnsureDeletedAsync().ConfigureAwait(false);
         await context.Database.EnsureCreatedAsync().ConfigureAwait(false);
-        //await context.Database.MigrateAsync().ConfigureAwait(false);
+        await context.Database.MigrateAsync().ConfigureAwait(false);
     }
 
     public async Task<bool> LoadConfigurations(IServiceProvider provider)

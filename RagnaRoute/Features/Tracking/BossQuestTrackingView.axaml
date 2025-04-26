@@ -9,18 +9,50 @@
     xmlns:vm="using:RagnaRoute.ViewModels"
     x:CompileBindings="True"
     x:DataType="vm:BossQuestTrackingViewModel">
-    <Grid RowDefinitions="auto,*">
-        <Popup x:Name="popup" IsOpen="False" Placement="Bottom">
-            <Border Background="#344E41" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
-                <TextBlock Padding="8" FontWeight="Bold" Opacity="{Binding #popup.Opacity}" Text="Warp copied ✔" />
-            </Border>
-        </Popup>
+    <UserControl.Styles>
+        <Style Selector="ToggleButton.hide">
+            <Setter Property="Theme" Value="{StaticResource TransparentToggleButton}" />
+            <Style Selector="^:checked">
+                <Setter Property="Content">
+                    <Template>
+                        <fac:FAPathIcon Data="{x:Static res:AppIcons.EyeOff}" Foreground="#663399" />
+                    </Template>
+                </Setter>
+            </Style>
+            <Style Selector="^:unchecked">
+                <Setter Property="Content">
+                    <Template>
+                        <fac:FAPathIcon Data="{x:Static res:AppIcons.Eye}}" />
+                    </Template>
+                </Setter>
+            </Style>
+        </Style>
+        <Style Selector="ToggleButton.favorite">
+            <Setter Property="Theme" Value="{StaticResource TransparentToggleButton}" />
+            <Style Selector="^:checked">
+                <Setter Property="Content">
+                    <Template>
+                        <fac:FAPathIcon Data="{x:Static res:AppIcons.FavoriteFilled}" Foreground="#7A1712" />
+                    </Template>
+                </Setter>
+            </Style>
+            <Style Selector="^:unchecked">
+                <Setter Property="Content">
+                    <Template>
+                        <fac:FAPathIcon Data="{x:Static res:AppIcons.FavoriteEmpty}" />
+                    </Template>
+                </Setter>
+            </Style>
+        </Style>
+    </UserControl.Styles>
 
-        <StackPanel Margin="10" Orientation="Horizontal">
-            <TextBox MinWidth="200" Text="{Binding FilterText}" />
-            <ToggleButton x:Name="globalHide" Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries">
-                <fac:FAPathIcon Data="{x:Static res:AppIcons.Eye}" />
-            </ToggleButton>
+
+    <Grid RowDefinitions="auto,*">
+        <Popup x:Name="popup" Classes="copy" IsOpen="False" />
+
+        <StackPanel Margin="10" Orientation="Horizontal" Spacing="4">
+            <TextBox Watermark="Boss name..."  MinWidth="200" Text="{Binding FilterText}" />
+            <ToggleButton x:Name="globalHide" Classes="hide" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries" />
         </StackPanel>
 
         <ScrollViewer Grid.Row="1">
@@ -80,49 +112,31 @@
                                         Margin="0,0,0,8"
                                         HorizontalAlignment="Center"
                                         Orientation="Horizontal"
-                                        Spacing="8">
-                                        <Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
+                                        Spacing="4">
+                                        <Button Click="WarpLocation_Clicked" Theme="{StaticResource TransparentButton}" ToolTip.Tip="{Binding WarpLocation}">
                                             <fac:FAPathIcon Data="{x:Static res:AppIcons.ClipboardCopy}" />
                                         </Button>
-                                        <Button Command="{Binding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
+                                        <Button
+                                            Command="{Binding #items.DataContext.CompleteObjectiveCommand}"
+                                            CommandParameter="{Binding}"
+                                            IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}"
+                                            Theme="{StaticResource TransparentButton}"
+                                            ToolTip.Tip="Complete">
                                             <fac:FAPathIcon Classes="vflip" Data="{x:Static res:AppIcons.Skull}" />
                                         </Button>
-                                        <ToggleButton Command="{Binding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsHidden, Mode=OneWay}" ToolTip.Tip="Hide">
-                                            <Interaction.Behaviors>
-                                                <DataTriggerBehavior Binding="{Binding IsHidden}" Value="True">
-                                                    <ChangePropertyAction PropertyName="Content">
-                                                        <ChangePropertyAction.Value>
-                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.EyeOff}" />
-                                                        </ChangePropertyAction.Value>
-                                                    </ChangePropertyAction>
-                                                </DataTriggerBehavior>
-                                                <DataTriggerBehavior Binding="{Binding IsHidden}" Value="False">
-                                                    <ChangePropertyAction PropertyName="Content">
-                                                        <ChangePropertyAction.Value>
-                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.Eye}" />
-                                                        </ChangePropertyAction.Value>
-                                                    </ChangePropertyAction>
-                                                </DataTriggerBehavior>
-                                            </Interaction.Behaviors>
-                                        </ToggleButton>
-                                        <ToggleButton Command="{Binding #items.DataContext.ToggleFavoriteCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsFavorite, Mode=OneWay}" ToolTip.Tip="Mark as Favorite">
-                                            <Interaction.Behaviors>
-                                                <DataTriggerBehavior Binding="{Binding IsFavorite}" Value="True">
-                                                    <ChangePropertyAction PropertyName="Content">
-                                                        <ChangePropertyAction.Value>
-                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.FavoriteFilled}" />
-                                                        </ChangePropertyAction.Value>
-                                                    </ChangePropertyAction>
-                                                </DataTriggerBehavior>
-                                                <DataTriggerBehavior Binding="{Binding IsFavorite}" Value="False">
-                                                    <ChangePropertyAction PropertyName="Content">
-                                                        <ChangePropertyAction.Value>
-                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.FavoriteEmpty}" Foreground="Red" />
-                                                        </ChangePropertyAction.Value>
-                                                    </ChangePropertyAction>
-                                                </DataTriggerBehavior>
-                                            </Interaction.Behaviors>
-                                        </ToggleButton>
+                                        <ToggleButton
+                                            Classes="hide"
+                                            Command="{Binding #items.DataContext.ToggleHiddenCommand}"
+                                            CommandParameter="{Binding}"
+                                            IsChecked="{Binding IsHidden, Mode=OneWay}"
+                                            ToolTip.Tip="Hide" />
+                                        <ToggleButton
+                                            Classes="favorite"
+                                            Command="{Binding #items.DataContext.ToggleFavoriteCommand}"
+                                            CommandParameter="{Binding}"
+                                            IsChecked="{Binding IsFavorite, Mode=OneWay}"
+                                            Theme="{StaticResource TransparentToggleButton}"
+                                            ToolTip.Tip="Mark as Favorite" />
                                     </StackPanel>
                                 </Grid>
                             </Grid>

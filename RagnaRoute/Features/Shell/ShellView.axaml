@@ -15,21 +15,21 @@
     <Window.Resources>
         <ve:MenuTemplateSelector x:Key="menuTemplateSelector">
             <DataTemplate x:Key="{x:Type vm:BossQuestTrackingViewModel}" DataType="vm:BossQuestTrackingViewModel">
-                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}">
+                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}" FontSize="26">
                     <fac:NavigationViewItem.IconSource>
                         <fac:PathIconSource Data="{x:Static res:AppIcons.BossTracker}" />
                     </fac:NavigationViewItem.IconSource>
                 </fac:NavigationViewItem>
             </DataTemplate>
             <DataTemplate x:Key="{x:Type vm:ScheduledQuestTrackingViewModel}" DataType="vm:ScheduledQuestTrackingViewModel">
-                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}">
+                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}" FontSize="26">
                     <fac:NavigationViewItem.IconSource>
                         <fac:PathIconSource Data="{x:Static res:AppIcons.ScheduledTracker}" />
                     </fac:NavigationViewItem.IconSource>
                 </fac:NavigationViewItem>
             </DataTemplate>
             <DataTemplate x:Key="{x:Type vm:QuestHistoryViewModel}" DataType="vm:QuestHistoryViewModel">
-                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}">
+                <fac:NavigationViewItem Classes="vflip" Content="{Binding DisplayName}" FontSize="26">
                     <fac:NavigationViewItem.IconSource>
                         <fac:PathIconSource Data="{x:Static res:AppIcons.History}" />
                     </fac:NavigationViewItem.IconSource>

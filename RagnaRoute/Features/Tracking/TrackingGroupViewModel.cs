@@ -3,10 +3,9 @@ using System;
 using System.Reactive.Disposables;
 
 namespace RagnaRoute.ViewModels;
-public abstract partial class TrackingGroupViewModel : ViewModelBase, INavigationChild, IDisposable
+public abstract partial class TrackingGroupViewModel : PageViewModel, IDisposable
 {
     [ObservableProperty] private string _name = null!;
-    [ObservableProperty] private string _displayName = null!;
 
     protected CompositeDisposable _cleanup = new();
     private bool _disposedValue;

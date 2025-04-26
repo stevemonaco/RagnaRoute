@@ -67,7 +67,8 @@ public class CompletionService
 			.Include(x => x.Family)
 			.Where(x => x.Family.Name == familyName);
 
-        return await query.Select(x => new ObjectiveStateDto(familyName, x.Name, x.LastCompletion, x.IsHidden, x.IsFavorite))
+        return await query
+			.Select(x => new ObjectiveStateDto(familyName, x.Name, x.LastCompletion, x.IsHidden, x.IsFavorite))
 			.ToListAsync()
 			.ConfigureAwait(false);
     }
@@ -109,29 +110,29 @@ public class CompletionService
         await context.SaveChangesAsync().ConfigureAwait(false);
     }
 
-    public async Task UpsertObjectiveFavoriteState(string familyName, string objectiveName, bool isHidden)
+    public async Task UpsertObjectiveFavoriteState(string familyName, string objectiveName, bool isFavorite)
     {
-        //using var context = _dbFactory.CreateDbContext();
+		using var context = _dbFactory.CreateDbContext();
 
-        //var objective = await context.Objectives
-        //    .Include(x => x.Family)
-        //    .Where(x => x.Family.Name == familyName && x.Name == objectiveName)
-        //    .SingleOrDefaultAsync()
-        //    .ConfigureAwait(false);
+		var objective = await context.Objectives
+			.Include(x => x.Family)
+			.Where(x => x.Family.Name == familyName && x.Name == objectiveName)
+			.SingleOrDefaultAsync()
+			.ConfigureAwait(false);
 
-        //if (objective is not null)
-        //{
-        //    objective.IsHidden = isHidden;
-        //}
-        //else
-        //{
-        //    var family = await GetOrCreateFamily(context, familyName).ConfigureAwait(false);
-        //    var newObjective = new Objective { IsHidden = isHidden, Name = objectiveName, Family = family };
-        //    context.Objectives.Add(newObjective);
-        //}
+		if (objective is not null)
+		{
+			objective.IsFavorite = isFavorite;
+		}
+		else
+		{
+			var family = await GetOrCreateFamily(context, familyName).ConfigureAwait(false);
+			var newObjective = new Objective { IsFavorite = isFavorite, Name = objectiveName, Family = family };
+			context.Objectives.Add(newObjective);
+		}
 
-        //await context.SaveChangesAsync().ConfigureAwait(false);
-    }
+		await context.SaveChangesAsync().ConfigureAwait(false);
+	}
 
     private async Task<Family> GetOrCreateFamily(RagnaContext context, string name)
 	{

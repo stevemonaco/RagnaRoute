@@ -36,7 +36,7 @@
 		"mobId": 1046
 	},
 	{
-		"objectiveName": "Doppelganger",
+		"objectiveName": "Doppelganger (GD)",
 		"objectiveType": "boss",
 		"minimumRespawn": 480,
 		"maximumRespawn": 490,

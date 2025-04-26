@@ -4,9 +4,8 @@ using RagnaRoute.Data;
 using RagnaRoute.Objectives;
 
 namespace RagnaRoute.ViewModels;
-public partial class BossQuestViewModel : ViewModelBase, INavigationChild
+public partial class BossQuestViewModel : ViewModelBase
 {
-    public string DisplayName => Name;
     public string Name { get; }
     public int? Id { get; init; }
     public long? HP { get; init; }

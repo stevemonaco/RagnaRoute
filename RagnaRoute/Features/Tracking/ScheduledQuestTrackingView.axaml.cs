@@ -1,13 +1,16 @@
 using System.Threading.Tasks;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using RagnaRoute.Animations;
 using RagnaRoute.Services;
+using RagnaRoute.ViewExtenders;
+using RagnaRoute.ViewModels;
 
 namespace RagnaRoute.Views;
 public partial class ScheduledQuestTrackingView : UserControl
 {
     private readonly IClipboardService _clipboardService;
-    //private CancellationTokenSource _popupCts;
+    private ResettableOperationRunner _copyPopupRunner = new();
 
     public ScheduledQuestTrackingView()
     {
@@ -18,19 +21,28 @@ public partial class ScheduledQuestTrackingView : UserControl
 
     private async void InfoButton_Clicked(object sender, RoutedEventArgs e)
     {
-        if (sender is Button { DataContext: string model })
-        {
-            var result = await _clipboardService.CopyTextAsync(model);
+        if (sender is not Button { DataContext: string model })
+            return;
 
-            if (result is true)
+        await _copyPopupRunner.ExecuteOperationAsync(async token =>
+        {
+            try
             {
+                var wasCopied = await _clipboardService.CopyTextAsync(model);
+
+                if (!wasCopied)
+                    return;
+
                 popup.PlacementTarget = (Button)sender;
                 popup.IsOpen = true;
 
-                await Task.Delay(1000);
+                await PrebuiltAnimations.PopupFade.RunAsync(popup, token);
+            }
+            finally
+            {
                 popup.IsOpen = false;
                 popup.PlacementTarget = null;
             }
-        }
+        });
     }
 }

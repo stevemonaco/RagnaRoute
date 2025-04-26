@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Threading;
@@ -21,7 +22,10 @@ public partial class ShellView : Window
         _viewModel = DataContext as ShellViewModel;
 
         if (_viewModel is not null)
+        {
             await _viewModel.InitializeTrackers();
+            _viewModel.SelectedMenuItem = _viewModel.MenuItems.FirstOrDefault(x => x is BossQuestTrackingViewModel);
+        }
 
         _objectiveTimer.Start();
         base.OnDataContextChanged(e);

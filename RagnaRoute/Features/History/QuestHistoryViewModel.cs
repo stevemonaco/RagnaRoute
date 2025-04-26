@@ -4,8 +4,6 @@ using System.Linq;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DynamicData;
@@ -16,10 +14,8 @@ using RagnaRoute.ViewExtenders;
 
 namespace RagnaRoute.ViewModels;
 
-public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild, IDisposable
+public partial class QuestHistoryViewModel : PageViewModel, IDisposable
 {
-    public string DisplayName { get; } = "History";
-
     [ObservableProperty] private string? _selectedFamilyName;
     [ObservableProperty] private string? _selectedObjectiveName;
     [ObservableProperty] private int? _completionCount;
@@ -46,6 +42,8 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild, ID
     {
         _scheduler = scheduler;
         _completionService = completionService;
+
+        DisplayName = "History";
 
         var stringSorter = SortExpressionComparer<string>
             .Ascending(x => x);
@@ -79,43 +77,6 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild, ID
             .Bind(out _completions)
             .Subscribe()
             .DisposeWith(_cleanup);
-
-        //this.WhenPropertyChanged(x => x.SelectedFamilyName)
-        //    .ObserveOn(_scheduler.Visual)
-        //    .Do(x =>
-        //    {
-        //        ObjectiveNameSource.Edit(async x =>
-        //        {
-        //            x.Clear();
-
-        //            if (SelectedFamilyName is null)
-        //                return;
-
-        //            var result = await _completionService.GetCompletedObjectivesForFamily(SelectedFamilyName);
-        //            x.AddRange(result.Select(x => x.ObjectiveName));
-        //        });
-        //    })
-        //    .Subscribe()
-        //    .DisposeWith(_cleanup);
-
-        //this.WhenPropertyChanged(x => x.SelectedObjectiveName)
-        //    .ObserveOn(_scheduler.Visual)
-        //    .Do(x =>
-        //    {
-        //        CompletionSource.Edit(async x =>
-        //        {
-        //            x.Clear();
-
-        //            if (SelectedFamilyName is null || SelectedObjectiveName is null)
-        //                return;
-
-        //            var result = await _completionService.GetCompletions(SelectedFamilyName, SelectedObjectiveName);
-        //            x.AddRange(result);
-        //            CompletionCount = result.Count;
-        //        });
-        //    })
-        //    .Subscribe()
-        //    .DisposeWith(_cleanup);
     }
 
     public async Task InitializeProfiles()
@@ -173,7 +134,6 @@ public partial class QuestHistoryViewModel : ViewModelBase, INavigationChild, ID
         await Task.Delay(1000);
 
         SelectedFamilyName = FamilyNameSource.Items.FirstOrDefault(x => x == selectedFamilyName) ?? FamilyNameSource.Items.FirstOrDefault();
-        //OnPropertyChanged(nameof(SelectedFamilyName));
 
         await Task.Delay(1000);
         SelectedObjectiveName = ObjectiveNames.FirstOrDefault(x => x == selectedObjectiveName);

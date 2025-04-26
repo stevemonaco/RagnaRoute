@@ -41,6 +41,7 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
     {
         _scheduler = scheduler;
         _completionService = completionService;
+
         var filterTextChanged = this.WhenValueChanged(x => x.FilterText)
             .Select(CreateTextFilter);
 
@@ -70,7 +71,7 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
 
     private Func<BossQuestViewModel, bool> CreateTextFilter(string? text)
     {
-        if (text is string { Length: >= 2} )
+        if (text is string { Length: >= 1} )
             return boss => boss.Name.Contains(text, StringComparison.OrdinalIgnoreCase);
 
         return boss => true;
@@ -105,6 +106,6 @@ public sealed partial class BossQuestTrackingViewModel : TrackingGroupViewModel
     public async Task ToggleFavorite(BossQuestViewModel viewModel)
     {
         viewModel.IsFavorite = !viewModel.IsFavorite;
-        await _completionService.UpsertObjectiveHiddenState(Name, viewModel.Name, viewModel.IsFavorite);
+        await _completionService.UpsertObjectiveFavoriteState(Name, viewModel.Name, viewModel.IsFavorite);
     }
 }
