@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RagnaRoute.ViewExtenders;
 using RagnaRoute.Animations;
 using Avalonia.Threading;
+using FluentAvalonia.UI.Controls;
 
 namespace RagnaRoute.Views;
 public partial class BossQuestTrackingView : UserControl
@@ -22,7 +23,7 @@ public partial class BossQuestTrackingView : UserControl
 
     private async void WarpLocation_Clicked(object sender, RoutedEventArgs e)
     {
-        if (sender is not Button { DataContext: BossQuestViewModel { WarpLocation: string location } })
+        if (sender is not Button { DataContext: BossQuestViewModel { WarpLocation: string location }, Content : FAPathIcon copyIcon })
             return;
 
         await _copyPopupRunner.ExecuteOperationAsync(async token =>
@@ -35,9 +36,12 @@ public partial class BossQuestTrackingView : UserControl
                     return;
 
                 popup.PlacementTarget = (Button)sender;
+                popup.Opacity = 1d;
                 popup.IsOpen = true;
 
-                await PrebuiltAnimations.PopupFade.RunAsync(popup, token);
+                var popupAnimation = PrebuiltAnimations.PopupFade.RunAsync(popup, token);
+                var iconAnimation = PrebuiltAnimations.CopyIconColorShift.RunAsync(copyIcon, token);
+                await Task.WhenAll(popupAnimation, iconAnimation);
             }
             finally
             {

@@ -51,7 +51,7 @@
         <Popup x:Name="popup" Classes="copy" IsOpen="False" />
 
         <StackPanel Margin="10" Orientation="Horizontal" Spacing="4">
-            <TextBox Watermark="Boss name..."  MinWidth="200" Text="{Binding FilterText}" />
+            <TextBox MinWidth="200" Text="{Binding FilterText}" Watermark="Boss name..." />
             <ToggleButton x:Name="globalHide" Classes="hide" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries" />
         </StackPanel>
 
