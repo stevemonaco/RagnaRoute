@@ -19,5 +19,8 @@ public class Objective
     [Required]
     public bool IsHidden { get; set; }
 
+    [Required]
+    public bool IsFavorite { get; set; }
+
     public Instant? LastCompletion { get; set; }
 }

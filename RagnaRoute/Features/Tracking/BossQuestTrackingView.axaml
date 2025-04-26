@@ -10,6 +10,12 @@
     x:CompileBindings="True"
     x:DataType="vm:BossQuestTrackingViewModel">
     <Grid RowDefinitions="auto,*">
+        <Popup x:Name="popup" IsOpen="False" Placement="Bottom">
+            <Border Background="#344E41" BorderBrush="Black" BorderThickness="1" CornerRadius="4">
+                <TextBlock Padding="8" FontWeight="Bold" Opacity="{Binding #popup.Opacity}" Text="Warp copied ✔" />
+            </Border>
+        </Popup>
+
         <StackPanel Margin="10" Orientation="Horizontal">
             <TextBox MinWidth="200" Text="{Binding FilterText}" />
             <ToggleButton x:Name="globalHide" Margin="4,0,0,0" IsChecked="{Binding ShouldShowHidden, Mode=TwoWay}" ToolTip.Tip="Show Hidden Entries">
@@ -78,10 +84,10 @@
                                         <Button Click="WarpLocation_Clicked" ToolTip.Tip="{Binding WarpLocation}">
                                             <fac:FAPathIcon Data="{x:Static res:AppIcons.ClipboardCopy}" />
                                         </Button>
-                                        <Button Command="{Binding #items.((vm:BossQuestTrackingViewModel)DataContext).CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
+                                        <Button Command="{Binding #items.DataContext.CompleteObjectiveCommand}" CommandParameter="{Binding}" IsEnabled="{Binding TimeState, Converter={x:Static con:AppConverters.TimeStateToEnabled}}" ToolTip.Tip="Complete">
                                             <fac:FAPathIcon Classes="vflip" Data="{x:Static res:AppIcons.Skull}" />
                                         </Button>
-                                        <ToggleButton Command="{Binding #items.((vm:BossQuestTrackingViewModel)DataContext).ToggleHiddenCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsHidden, Mode=OneWay}" ToolTip.Tip="Hide">
+                                        <ToggleButton Command="{Binding #items.DataContext.ToggleHiddenCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsHidden, Mode=OneWay}" ToolTip.Tip="Hide">
                                             <Interaction.Behaviors>
                                                 <DataTriggerBehavior Binding="{Binding IsHidden}" Value="True">
                                                     <ChangePropertyAction PropertyName="Content">
@@ -94,6 +100,24 @@
                                                     <ChangePropertyAction PropertyName="Content">
                                                         <ChangePropertyAction.Value>
                                                             <fac:FAPathIcon Data="{x:Static res:AppIcons.Eye}" />
+                                                        </ChangePropertyAction.Value>
+                                                    </ChangePropertyAction>
+                                                </DataTriggerBehavior>
+                                            </Interaction.Behaviors>
+                                        </ToggleButton>
+                                        <ToggleButton Command="{Binding #items.DataContext.ToggleFavoriteCommand}" CommandParameter="{Binding}" IsChecked="{Binding IsFavorite, Mode=OneWay}" ToolTip.Tip="Mark as Favorite">
+                                            <Interaction.Behaviors>
+                                                <DataTriggerBehavior Binding="{Binding IsFavorite}" Value="True">
+                                                    <ChangePropertyAction PropertyName="Content">
+                                                        <ChangePropertyAction.Value>
+                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.FavoriteFilled}" />
+                                                        </ChangePropertyAction.Value>
+                                                    </ChangePropertyAction>
+                                                </DataTriggerBehavior>
+                                                <DataTriggerBehavior Binding="{Binding IsFavorite}" Value="False">
+                                                    <ChangePropertyAction PropertyName="Content">
+                                                        <ChangePropertyAction.Value>
+                                                            <fac:FAPathIcon Data="{x:Static res:AppIcons.FavoriteEmpty}" Foreground="Red" />
                                                         </ChangePropertyAction.Value>
                                                     </ChangePropertyAction>
                                                 </DataTriggerBehavior>

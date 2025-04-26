@@ -30,7 +30,8 @@ public static class Mappers
             Race = monsterModel?.Race,
             Size = monsterModel?.Size,
             WarpLocation = model.WarpLocation,
-            IsHidden = stateDto?.IsHidden ?? false
+            IsHidden = stateDto?.IsHidden ?? false,
+            IsFavorite = stateDto?.IsFavorite ?? false,
         };
     }
 }
