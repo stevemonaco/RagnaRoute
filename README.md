@@ -2,7 +2,7 @@ RagnaRoute is a Ragnarok Online boss spawn and quest tracker.
 
 Open sourced for demonstration only. This project will not be maintained or improved.
 
-
+![TransparentBrushTransitions Screencapture](Images/ragnaroute-bosstracker.gif)
 
 ## Background
 
