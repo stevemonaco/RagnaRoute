@@ -95,7 +95,7 @@ public class Bootstrapper : IAppBootstrapper<ShellViewModel>
 
         using var context = provider.GetService<RagnaContext>()!;
 
-        await context.Database.EnsureDeletedAsync().ConfigureAwait(false);
+        //await context.Database.EnsureDeletedAsync().ConfigureAwait(false);
         await context.Database.EnsureCreatedAsync().ConfigureAwait(false);
         await context.Database.MigrateAsync().ConfigureAwait(false);
     }
